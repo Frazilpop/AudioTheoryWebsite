@@ -10,7 +10,7 @@ html { margin:0; padding:0; }
 
 body {
     background-color: #fcfbfa !important;
-    font-family: futura_md_btmedium, Arial, Helvetica, sans-serif;
+    font-family: futura_lt_btlight, Arial, Helvetica, sans-serif;
 }
 .center-image {
     margin-left:auto;
@@ -19,13 +19,13 @@ body {
 }
 
 .home-button:hover{
-    color: #fcfbfa!important;
+    color: #ffff!important;
     background: #acb8af;
     text-decoration: none !important;
 
 }
 .home-button:active{
-    color: #fcfbfa !important;
+    color: #ffff !important;
     background: #4f6653;
     text-decoration: none !important;
 
@@ -37,7 +37,6 @@ body {
     box-sizing: border-box;
     padding: 7px 10px;
     font-size: 16px;
-    font-weight: 600;
     background: transparent;
     border: 1px solid #2c383b;
     text-align: center;
@@ -75,6 +74,14 @@ body {
     margin-left: auto;
     margin-right: auto;
     max-width:550px;
+}
+.feature-image {
+    max-width: 100%;
+}
+@media(min-width:550px) {
+    .feature-image {
+        max-width: 550px;
+    }
 }
 
 
@@ -240,4 +247,12 @@ h6 span.spacer {
     font-weight: normal;
     font-style: normal;
 
+}
+
+@font-face {
+    font-family: 'fonts/futura_lt_btlight';
+    src: url('fonts/futural-webfont.woff2') format('woff2'),
+         url('fonts/futural-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }

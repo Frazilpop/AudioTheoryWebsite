@@ -14,3 +14,11 @@
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'futura_lt_btlight';
+    src: url('futural-webfont.woff2') format('woff2'),
+         url('futural-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
