@@ -1,0 +1,243 @@
+@charset "UTF-8";
+/* CSS Document */
+* {
+
+	box-sizing:border-box; -moz-box-sizing:border-box;
+	-webkit-font-smoothing:antialiased; -moz-font-smoothing:antialiased; -o-font-smoothing:antialiased; -ms-font-smoothing:antialiased; font-smoothing:antialiased; }
+
+    
+html { margin:0; padding:0; }
+
+body {
+    background-color: #fcfbfa !important;
+    font-family: futura_md_btmedium, Arial, Helvetica, sans-serif;
+}
+.center-image {
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+
+.home-button:hover{
+    color: #fcfbfa!important;
+    background: #acb8af;
+    text-decoration: none !important;
+
+}
+.home-button:active{
+    color: #fcfbfa !important;
+    background: #4f6653;
+    text-decoration: none !important;
+
+}
+.home-button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    box-sizing: border-box;
+    padding: 7px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    background: transparent;
+    border: 1px solid #2c383b;
+    text-align: center;
+    color: #2c383b!important;
+    text-decoration: none !important;
+
+}
+.home-button:link {
+    text-decoration: none !important;
+}
+.no-decoration {
+    text-decoration: none !important;
+}
+.width-15 {
+    max-width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.half-space {
+    padding-top: 7px;
+}
+.footer {
+    background: #464f51;
+
+}
+.body-text {
+    color: #2c383b;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 1.6
+}
+.intro-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width:550px;
+}
+
+
+/* Headers and text */
+
+h1 { font-size:1.5em; color:#444; margin:35px 0px 100px 0px; text-align:center; font-family: futura_md_btmedium, Arial, Helvetica, sans-serif; }
+h2 { font-size:1.3em; color:#f5f5f5; text-align:center; margin:30px 0px 0px 0px; font-family: futura_md_btmedium, Arial, Helvetica, sans-serif; font-weight: normal }
+h3 { font-size:1.5em; color:#444; margin:20px 0px 30px 0px; text-align:center; font-family: futura_md_btmedium, Arial, Helvetica, sans-serif; }
+h4 { font-size:1.5em; color:#444;  text-align:center; font-family: futura_md_btmedium, Arial, Helvetica, sans-serif; }
+h5 { font-size:1.5em; color:#444; margin:00px 0px 25px 0px; text-align:center; font-family: futura_md_btmedium, Arial, Helvetica, sans-serif; }
+h7 { font-size:1.2em  em; color:#f5f5f5; margin:0px 0px 0px 0px; text-align:center; font-family: futura_md_btmedium, Arial, Helvetica, sans-serif; }
+
+.standardtext { margin: 0 auto 20px auto; width:850px; color:#333; font-family: futura_md_btmedium, Trebuchet MS, Arial, Helvetica, sans-serif;  }
+
+.nobullet { list-style:none; width:850px; margin:0 auto 20px auto; padding:0;  }
+
+
+
+/* navigation */
+
+#nav { margin:0 0 20px 0 }
+#nav ul { list-style:none; margin:0; padding:0px 30px; text-align:center; }
+#nav ul li { display:inline-block; font-family:futura_md_btmedium; }
+#nav ul li a { color:#f5f5f5; text-decoration:none; padding:6px 45px; display:inline-block }
+#nav ul li a:hover { color:#666666; background:#dcdcdc; }
+
+#nav ul li a.nav_sel { color:#CCC }
+
+
+/*left and right divs */
+#left {
+  margin-left: auto;
+  position: absolute;
+	padding-left: 60px;
+	margin-right: 15px;
+	padding-top: 40px;
+	float: left;
+}
+
+#center {
+  margin-left: auto;
+    position: absolute;
+    padding-left: 325px;
+    margin-right: 15px;
+    padding-top: 80px;
+    float: none
+}
+
+#gif {
+    margin-left: auto;
+    margin-right: auto;
+	margin-right: 0px;
+	padding-top: 110px;
+	float: none
+}
+#gif2 {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 25px;
+    padding-left: 25px;
+	margin-right: 0px;
+	padding-top: 11 0px;
+	float: none
+}
+#text {
+  margin-left: auto;
+  margin-right: auto;
+
+	padding-left: 155px;
+	margin-right: 155px;
+	padding-top: 0px;
+	float: none
+}
+#text2 {
+  margin-left: auto;
+  margin-right: auto;
+
+	padding-left: 165px;
+	margin-right: 165px;
+	padding-top: 0px;
+	float: none
+}
+
+#right{
+margin-left: auto;
+text-align:right;
+	padding-left: 800px;
+	margin-right: 15px;
+	padding-top: 00px;
+	float: right;
+}
+
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+h6 { 
+   position: absolute; 
+   top: 200px; 
+   left: 0; 
+   width: 100%; 
+    text-align: center;
+}
+h6 span { 
+   color: black; 
+   font: 24px/45px futura_md_btmedium, Sans-Serif; 
+   background: rgb(0, 0, 0); /* fallback color */
+   background: #fff;
+   padding: 10px; 
+   font-weight: normal;
+       
+    
+}
+h6 span.spacer {
+   padding:00px 5px;
+}
+/* web fonts */
+
+@font-face {
+    font-family: 'AnuDawItalic';
+    src: url('fonts/ANUDI___-webfont.eot');
+    src: url('fonts/ANUDI___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ANUDI___-webfont.woff') format('woff'),
+         url('fonts/ANUDI___-webfont.ttf') format('truetype'),
+         url('fonts/ANUDI___-webfont.svg#AnuDawItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'AftasansItalic';
+    src: url('fonts/AftaSansThin-Italic-webfont.eot');
+    src: url('fonts/AftaSansThin-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/AftaSansThin-Italic-webfont.woff') format('woff'),
+         url('fonts/AftaSansThin-Italic-webfont.ttf') format('truetype'),
+         url('fonts/AftaSansThin-Italic-webfont.svg#AftasansItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'AftasansRegular';
+    src: url('fonts/AftaSansThin-Regular-webfont.eot');
+    src: url('fonts/AftaSansThin-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/AftaSansThin-Regular-webfont.woff') format('woff'),
+         url('fonts/AftaSansThin-Regular-webfont.ttf') format('truetype'),
+         url('fonts/AftaSansThin-Regular-webfont.svg#AftasansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'futura_md_btmedium';
+    src: url('fonts/futumd__-webfont.eot');
+    src: url('fonts/futumd__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/futumd__-webfont.woff2') format('woff2'),
+         url('fonts/futumd__-webfont.woff') format('woff'),
+         url('fonts/futumd__-webfont.ttf') format('truetype'),
+         url('fonts/futumd__-webfont.svg#futura_md_btmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
