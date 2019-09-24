@@ -11,6 +11,7 @@ html { margin:0; padding:0; }
 body {
     background-color: #fcfbfa !important;
     font-family: futura_lt_btlight, Arial, Helvetica, sans-serif;
+    color:172022;
 }
 .center-image {
     margin-left:auto;
@@ -19,13 +20,13 @@ body {
 }
 
 .home-button:hover{
-    color: #ffff!important;
+    color: white!important;
     background: #acb8af;
     text-decoration: none !important;
 
 }
 .home-button:active{
-    color: #ffff !important;
+    color: white !important;
     background: #4f6653;
     text-decoration: none !important;
 
@@ -38,9 +39,9 @@ body {
     padding: 7px 10px;
     font-size: 16px;
     background: transparent;
-    border: 1px solid #2c383b;
+    border: 1px solid #172022;
     text-align: center;
-    color: #2c383b!important;
+    color: #172022!important;
     text-decoration: none !important;
 
 }
