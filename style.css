@@ -33,18 +33,20 @@ body {
         max-width: 1200px;
     }
 }
+.drop-shadow {
+    filter: drop-shadow(5px 5px 4px rgba(44,56,59,0.4));
+}
+.padded-container {
+    padding:0px 30px;
+}
 /* */
 
-/* Header and Footer */
-footer {
-    background: #464f51;
-}
-
- /* Style the header */
+/* Style the header */
 header {
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #b8b8b8;
+    background: #ffffffb0;
     height: 60px;
     position: fixed;
     align-items: center;
@@ -52,11 +54,10 @@ header {
     display: flex;
     font-family: 'futura_lt_btlight', Arial, Helvetica, sans-serif;
     max-height: 60px !important;
-
+    z-index: 1;
 }
 
 /* Page content */
-
 .sticky {
     position: fixed;
     top: 0;
@@ -122,13 +123,16 @@ header {
 
 
 
-.width-15 {
+.width-160 {
     max-width: 160px;
     margin-left: auto;
     margin-right: auto;
 }
 .half-space {
     padding-top: 7px;
+}
+.padding-bottom-12 {
+    padding-bottom: 12px;
 }
 
 .body-text {
@@ -138,25 +142,24 @@ header {
     text-align: center;
     font-size: 1.6
 }
-.intro-text {
-    text-align: center;
+.text-block {
+    padding: 0px 30px;
+    max-width:680px;
+    line-height: 1.45rem;
+    font-size:1rem;
     margin-left: auto;
     margin-right: auto;
-    max-width:550px;
-    line-height: 1.4rem;
-    font-size:.9rem;
 }
 
 
 .newsletter-title {
-    font-size: 130%;
+    font-size: 1.2rem;
     padding-bottom: 15px;
     padding-top: 15px;
 }
-.center-text {
+.align-center {
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+
 }
 
 
@@ -214,7 +217,7 @@ header {
 
 /* Headers and text */
 h1 { font-size:1.5em;  margin:35px 0px 100px 0px; text-align:center; font-family: futura_md_btmedium, Arial, Helvetica, sans-serif; }
-h2 { font-size:1.3em;  text-align:center; margin:30px 0px 0px 0px; font-family: futura_md_btmedium, Arial, Helvetica, sans-serif; font-weight: normal }
+h2 { font-size:1.1rem; }
 h3 { font-size:1.5em;  margin:20px 0px 30px 0px; text-align:center; font-family: futura_md_btmedium, Arial, Helvetica, sans-serif; }
 h4 { font-size:1.5em; color:#444;  text-align:center; font-family: futura_md_btmedium, Arial, Helvetica, sans-serif; }
 h5 { font-size:1.5em; color:#444; margin:00px 0px 25px 0px; text-align:center; font-family: futura_md_btmedium, Arial, Helvetica, sans-serif; }
