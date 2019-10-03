@@ -5,7 +5,6 @@
 	box-sizing:border-box; -moz-box-sizing:border-box;
 	-webkit-font-smoothing:antialiased; -moz-font-smoothing:antialiased; -o-font-smoothing:antialiased; -ms-font-smoothing:antialiased; font-smoothing:antialiased; }
 
-    
 html { margin:0; padding:0; }
 
 body {
@@ -13,9 +12,7 @@ body {
     font-family: 'futura_lt_btlight', Arial, Helvetica, sans-serif;
     color:172022;
     margin: 0;
-
 }
-
 
 /* Images */
 .center-image {
@@ -28,7 +25,7 @@ body {
         max-width: 550px;
     }
 }
-@media(min-width:1200px) {
+@media(min-width:1260px) {
     .feature-image-1200 {
         max-width: 1200px;
     }
@@ -39,9 +36,33 @@ body {
 .padded-container {
     padding:0px 30px;
 }
+.border-image {
+    border: 1px solid white;
+}
+img {
+    max-width: 100%;
+}
+.feature-logo {
+    max-width: 400px;
+    padding-bottom: 10px;
+    padding-top: 100px;
+
+}
+@media (max-width: 480px) {
+    .feature-logo {
+        padding-left: 30px;
+        padding-right: 30px;
+        max-width: 100%;
+    }
+}
+.float-right {
+    float: right;
+    margin-right: 40px;
+    margin-left: auto;
+}
 /* */
 
-/* Style the header */
+/* Header */
 header {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -66,7 +87,6 @@ header {
     max-height: 60px;
     padding-top: 10px;
     padding-bottom: 10px;
-
 }
 
 .sticky + .content {
@@ -78,7 +98,7 @@ header {
 .home-button:hover{
     color: white;
     background: #acb8af;
-    text-decoration: none ;
+    text-decoration: none;
 
 }
 .home-button:active{
@@ -96,45 +116,76 @@ header {
     border: 1px solid #172022;
     text-align: center;
     color: #172022;
-    text-decoration: none ;
-
+    text-decoration: none;
+    cursor:pointer;
 }
 .home-button:link {
-    text-decoration: none ;
+    text-decoration: none;
 }
 .no-decoration {
-    text-decoration: none ;
+    text-decoration: none;
 }
 .home-button:link {
-    text-decoration: none ;
+    text-decoration: none;
 }
 .alt-button-col {
     background: #4f6653;
     color: white;
     border: none;
-
 }
 .alt-button-col:active{
     background: #4f6653;
     color: white;
     border: none;
 }
+.width-160 {
+    max-width: 160px;
+}
+.inline-button-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.display-inline-block {
+    display: inline-block;
+}
+.inline-button {
+    padding: 5px 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.break-m {
+    display: none;
+}
+.button-side-text {
+    display: inline-block
+}
+@media (max-width: 767px) {
+    .break-m {
+        display: block;
+        padding-top: 15px;
+    }
+    .button-side-text {
+        padding: 0px 30px;
+
+    }
+
+}
 /* */
 
 
-
-.width-160 {
-    max-width: 160px;
-    margin-left: auto;
-    margin-right: auto;
-}
 .half-space {
     padding-top: 7px;
 }
-.padding-bottom-12 {
+.padding-bottom-12-d {
     padding-bottom: 12px;
 }
-
+@media (max-width: 767px) {
+    .padding-bottom-12-d {
+        padding-bottom: 4px;
+    }
+}
 .body-text {
     color: #2c383b;
     margin-left: auto;
@@ -150,18 +201,35 @@ header {
     margin-left: auto;
     margin-right: auto;
 }
-
+.padding-top {
+    padding-top: 35px;
+}
+.padding-bottom {
+    padding-bottom: 55px;
+}
+@media(max-width: 480px) {
+    .padding-top {
+        padding-top: 30px;
+    }
+    .padding-bottom {
+        padding-bottom: 30px;
+    }
+}
 
 .newsletter-title {
     font-size: 1.2rem;
     padding-bottom: 15px;
     padding-top: 15px;
 }
-.align-center {
+.align-center-d {
     text-align: center;
 
 }
-
+@media(max-width: 767px) {
+    .align-center-d {
+        text-align: left;   
+    }
+}
 
 /* Sign Up */
 .sign-up-box {
@@ -176,12 +244,12 @@ header {
     background-color:#ffffff;
     font-size: 100%;
     border: 1px solid rgba(36,28,21,0.3);
+    box-sizing:border-box;
 }
-@media(max-width:420px) {
+@media(max-width:767px) {
     .sign-up-box {
         min-width: 100%;;
         max-width: 100%;;
-
     }
 }
 #mc_embed_signup .button {
@@ -198,6 +266,7 @@ header {
     text-decoration: none !important;
     min-width: 150px;
     margin-bottom: 40px;
+    cursor:pointer;
 }
 #mc_embed_signup .button:hover{
     color: white!important;
@@ -211,87 +280,35 @@ header {
     text-decoration: none !important;
 
 }
+@media(max-width:767px) {
+    #mc_embed_signup .button {
+        min-width: 100%;
+    }   
+}
 /* */
 
 
 
 /* Headers and text */
-h1 { font-size:1.5em;  margin:35px 0px 100px 0px; text-align:center; font-family: futura_md_btmedium, Arial, Helvetica, sans-serif; }
-h2 { font-size:1.1rem; }
-h3 { font-size:1.5em;  margin:20px 0px 30px 0px; text-align:center; font-family: futura_md_btmedium, Arial, Helvetica, sans-serif; }
-h4 { font-size:1.5em; color:#444;  text-align:center; font-family: futura_md_btmedium, Arial, Helvetica, sans-serif; }
-h5 { font-size:1.5em; color:#444; margin:00px 0px 25px 0px; text-align:center; font-family: futura_md_btmedium, Arial, Helvetica, sans-serif; }
-h7 { font-size:1.2em  em; color:#f5f5f5; margin:0px 0px 0px 0px; text-align:center; font-family: futura_md_btmedium, Arial, Helvetica, sans-serif; }
-.standardtext { margin: 0 auto 20px auto; width:850px; color:#333; font-family: futura_md_btmedium, Trebuchet MS, Arial, Helvetica, sans-serif;  }
-.nobullet { list-style:none; width:850px; margin:0 auto 20px auto; padding:0;  }
+h1 { font-size:1.5em; margin:0px; }
+h2 { font-size:1.2rem; margin:0px; }
+
 /* */
 
+/* footer */
+footer { background: #464f51; }
+footer ul { list-style:none; margin:0; padding:0px 30px; text-align:center; }
+footer ul li { display:inline-block;}
+footer ul li a { color:rgba(255, 255, 255, 0.651); text-decoration:none; padding:12px 45px; display:inline-block }
+@media(max-width: 767px) { footer ul li { display:block; padding: 5px 0px;}}
+footer ul li a:hover { color:#e9e9e9; }
+.copywright { background: #303839; padding:10px 0px 8px 15px;color:rgba(255, 255, 255, 0.651); font-weight: 200; font-size: .8rem; }
+/* */
 
-
-/* web fonts */
-@font-face {
-    font-family: 'AnuDawItalic';
-    src: url('fonts/ANUDI___-webfont.eot');
-    src: url('fonts/ANUDI___-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/ANUDI___-webfont.woff') format('woff'),
-         url('fonts/ANUDI___-webfont.ttf') format('truetype'),
-         url('fonts/ANUDI___-webfont.svg#AnuDawItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+/* bullet list */
+ul.bullet { list-style-type: circle; padding-bottom: 20px; }
+li.b { padding-bottom: 15px; }
+@media(max-width: 480px) {
+    ul.bullet {  padding-left:15px;  }
 }
-
-@font-face {
-    font-family: 'AftasansItalic';
-    src: url('fonts/AftaSansThin-Italic-webfont.eot');
-    src: url('fonts/AftaSansThin-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/AftaSansThin-Italic-webfont.woff') format('woff'),
-         url('fonts/AftaSansThin-Italic-webfont.ttf') format('truetype'),
-         url('fonts/AftaSansThin-Italic-webfont.svg#AftasansItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'AftasansRegular';
-    src: url('fonts/AftaSansThin-Regular-webfont.eot');
-    src: url('fonts/AftaSansThin-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/AftaSansThin-Regular-webfont.woff') format('woff'),
-         url('fonts/AftaSansThin-Regular-webfont.ttf') format('truetype'),
-         url('fonts/AftaSansThin-Regular-webfont.svg#AftasansRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'futura_md_btmedium';
-    src: url('fonts/futumd__-webfont.eot');
-    src: url('fonts/futumd__-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/futumd__-webfont.woff2') format('woff2'),
-         url('fonts/futumd__-webfont.woff') format('woff'),
-         url('fonts/futumd__-webfont.ttf') format('truetype'),
-         url('fonts/futumd__-webfont.svg#futura_md_btmedium') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'ElleFuturaBook';
-    src: url('fonts/ElleFuturaBook-.eot');
-    src: url('fonts/ElleFuturaBook.eot?#iefix') format('embedded-opentype'),
-         url('fonts/ElleFuturaBook.woff2') format('woff2'),
-         url('fonts/ElleFuturaBook.woff') format('woff'),
-         url('fonts/ElleFuturaBook.ttf') format('truetype'),
-         url('fonts/ElleFuturaBook.svg#ElleFuturaBook') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'futura_lt_btlight';
-    src: url('fonts/futural-webfont.woff2') format('woff2'),
-         url('fonts/futural-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+/* */
