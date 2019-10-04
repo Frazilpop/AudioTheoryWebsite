@@ -67,3 +67,13 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
+@font-face {
+    font-family: 'futura_lt_btlight_italic';
+    src: url('fonts/futura-lt-bt-light-italic_19012-webfont.woff2') format('woff2'),
+         url('fonts/futura-lt-bt-light-italic_19012-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

@@ -30,7 +30,7 @@
 <div class="half-space"></div><br>
 
 <div class="padded-container">
-    <img class="center-image feature-image-1200 border-image drop-shadow" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/CMS_Pages/Gallery/AC_190719_22.jpg" alt="" />
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-1200 border-image drop-shadow" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/CMS_Pages/Gallery/AC_190719_22.jpg" alt="" />
 </div>
 
 <div class="text-block align-center-d padding-top padding-bottom">
@@ -39,7 +39,7 @@
 </div>
 
 <div class="padded-container">
-    <img class="center-image feature-image-1200 border-image drop-shadow" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/CMS_Pages/Gallery/hare-living-room-image--gallery-AC_170718_15.jpg" alt="" />
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-1200 border-image drop-shadow" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/CMS_Pages/Gallery/hare-living-room-image--gallery-AC_170718_15.jpg" alt="" />
 </div>
 
 <div class="text-block padding-top">
@@ -55,7 +55,7 @@
 </div>
 
 <div class="padded-container">
-    <img class="center-image feature-image-1200 border-image drop-shadow" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/CMS_Pages/Gallery/foxglove-sitting-room-image---gallery-AC_140318_08.jpg" alt="" />
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-1200 border-image drop-shadow" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/CMS_Pages/Gallery/foxglove-sitting-room-image---gallery-AC_140318_08.jpg" alt="" />
 </div>
 
 
@@ -64,7 +64,7 @@
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 </div>
 
-<div class="inline-button-container">
+<div class="inline-button-container padding-bottom">
     <div class="button-side-text">
 
         Minima veniam, quis
@@ -89,27 +89,11 @@
 </div>
 
 <div class="padded-container">
-        <img class="center-image feature-image-1200 border-image drop-shadow" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/CMS_Pages/Gallery/guinea-fowl-sitting-room-image---gallery-AC_1307_26Ba_B_.jpg" alt="" />
-    </div>
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-1200 border-image drop-shadow" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/CMS_Pages/Gallery/guinea-fowl-sitting-room-image---gallery-AC_1307_26Ba_B_.jpg" alt="" />
+</div>
 
 
 
-
-     <!-- Trigger the Modal -->
-<img id="myImg" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/CMS_Pages/Gallery/guinea-fowl-sitting-room-image---gallery-AC_1307_26Ba_B_.jpg" alt="Snow" style="width:100%;max-width:300px">
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- The Close Button -->
-  <span class="close">&times;</span>
-
-  <!-- Modal Content (The Image) -->
-  <img class="modal-content" id="img01">
-
-  <!-- Modal Caption (Image Text) -->
-  <div id="caption"></div>
-</div> 
 <!-- 2 -->
 
 
@@ -132,9 +116,16 @@
         
         </div>
     </form>
-    </div>
-    <!--End Signup Form-->
 </div>
+<!--End Signup Form-->
+</div>
+
+<!-- Modal -->
+<div id="modal-c" class="modal">
+<span class="close">&times;</span>
+<img class="modal-content" id="img01">
+</div> 
+<!-- End Modal -->
 
 <footer>
     <ul>
