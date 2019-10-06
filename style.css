@@ -64,7 +64,7 @@ img {
 
 }
 .logo-offset {
-    margin-right:95px;
+    margin-right:90px;
 }
 @media (max-width: 480px) {
     .feature-logo {
@@ -78,8 +78,16 @@ img {
     margin-right: 20px;
     margin-left: auto;
 }
+.float-left {
+    float: left;
+    margin-left: 20px;
+    margin-right: auto;
+}
 .inner-right {
     margin-right: 40px;
+}
+.inner-left {
+    margin-left: 40px;
 }
 /* */
 
