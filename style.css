@@ -59,6 +59,9 @@ img {
     padding-bottom: 30px;
 
 }
+.icon-logo {
+    min-width: 25px;
+}
 .logo-padding {
     padding-top: 100px;
 
@@ -372,6 +375,23 @@ footer ul li a { color:rgb(56, 56, 56); text-decoration:none; padding:12px 45px;
 @media(max-width: 767px) { footer ul li { display:block; padding: 5px 0px;}}
 footer ul li a:hover { color:#8a8a8a; }
 .copywright { background: #363636; padding:10px 0px 8px 15px;color:rgba(255, 255, 255, 0.651); font-weight: 200; font-size: .8rem; }
+/* */
+
+/* nav */
+nav { margin-left: auto; margin-right: auto; display: inline-block; }
+nav ul { list-style:none; margin:0; padding:0px 30px; text-align:center; }
+nav ul li { display:inline-block;}
+nav ul li a { color:rgb(56, 56, 56); text-decoration:none; padding:12px 45px; display:inline-block; min-width: 170px; max-width: 170px; white-space: nowrap; }
+@media(max-width: 767px) { nav ul li { display:block; padding: 5px 0px;}}
+nav ul li a:hover { color:#8a8a8a; }
+@media(max-width: 840px)  {
+.hide-reduced-width {
+    display:none;
+}
+.less-padding-reduced-width {
+    padding-top: 30px;
+}
+}
 /* */
 
 /* bullet list */
