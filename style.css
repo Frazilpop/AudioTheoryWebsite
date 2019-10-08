@@ -486,6 +486,27 @@ li.b { padding-bottom: 15px; }
 }
 /* */
 
+/* Display at alt. widths */
+@media (max-width: 767px){
+    .display-reduced {
+      display: inline;
+    }
+    .hide-reduced {
+        display: none;
+    }
+}
+@media (min-width: 768px){
+    .display-reduced {
+      display: none;
+    }
+    .hide-reduced {
+        display: inline;
+    }
+}
+/* */
+
+
+
 /* hover */
 .hover_image:hover {text-decoration: none}
 .hide_image {display:none}

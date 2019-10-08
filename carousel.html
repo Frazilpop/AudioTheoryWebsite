@@ -22,6 +22,7 @@
   text-align: center;
   color: #4f5458;
   background: white;
+
 }
 .slick-prev {
     background: url("images/left-arrow-transparent-01.png" ) no-repeat 0 0;
@@ -51,13 +52,14 @@
     z-index: 1;
 
 }
+
 @media all and (min-width:1240px),print {
 
 .slick-prev {
-    margin-left:-50px;
+    margin-left:-35px;
 }
 .slick-next {
-    margin-right:-50px;
+    margin-right:-35px;
 }
 
 }
@@ -74,23 +76,22 @@
 
 <!-- Carousel -->
 <div class="padded-container">
+    <div class='slider-container padding-top '>
+        <div class='slick-slider drop-shadow'>
+            <div>
+                <img class="feature-image-960" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/Category-carousel-home-collection-_AC_260719_07_.jpg" alt="Kitchen" />
+                <span class="grid-name">Image 2</span>
+            </div>
+            <div>
+                <img class="feature-image-960" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/category-carousel-home-collection-_AC_1307_25_.jpg" alt="Kitchen" />
+            </div>
+            <div>
+                <img class="feature-image-960" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/category-carousel-home-collection-autumn-_AC_090718_01a_.jpg" alt="Kitchen" />
+            </div>
 
-<div class='slider-container padding-top drop-shadow'>
-    <div class='slick-slider'>
-        <div>
-            <img class="drop-shadow-light feature-image-960" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/Category-carousel-home-collection-_AC_260719_07_.jpg" alt="Kitchen" />
         </div>
-        <div>
-            <img class="drop-shadow-light feature-image-960" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/category-carousel-home-collection-_AC_1307_25_.jpg" alt="Kitchen" />
-        </div>
-        <div>
-            <img class="drop-shadow-light feature-image-960" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/category-carousel-home-collection-autumn-_AC_090718_01a_.jpg" alt="Kitchen" />
-        </div>
-
     </div>
 </div>
-</div>
-
 <!-- // Carousel -->
 
 
@@ -128,7 +129,11 @@
 
 <script>
 $(".slick-slider").slick({
-	dots: true
+	dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear'
 });
 </script>
 </body>
