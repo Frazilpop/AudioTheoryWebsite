@@ -13,10 +13,8 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <style>
-.container {
+.slider-container {
   margin: 0 auto;
-  padding: 40px;
-  width: 80%;
   max-width: 960px;
 }
 
@@ -31,11 +29,11 @@
 .slick-next {
     background: url("images/right-arrow-transparent-01.png" ) no-repeat 0 0;
 }
-.slick-prev {
-    background: url("images/left-arrow-transparent-01.png" ) no-repeat 0 0;
+.slick-prev:hover {
+    background: url("images/left-arrow-transparent-01-h.png" ) no-repeat 0 0;
 }
-.slick-next {
-    background: url("images/right-arrow-transparent-01.png" ) no-repeat 0 0;
+.slick-next:hover {
+    background: url("images/right-arrow-transparent-01-h.png" ) no-repeat 0 0;
 }
 .slick-next, .slick-prev {
     width: 40px;
@@ -56,10 +54,10 @@
 @media all and (min-width:1240px),print {
 
 .slick-prev {
-    margin-left:-60px;
+    margin-left:-50px;
 }
 .slick-next {
-    margin-right:-60px;
+    margin-right:-50px;
 }
 
 }
@@ -70,20 +68,32 @@
 
 
 <body>
-    <div class='container'>
-        <div class='single-item'>
-            <div>
-                <img class="drop-shadow-light" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/Category-carousel-home-collection-_AC_260719_07_.jpg" alt="Kitchen" />
-            </div>
-            <div>
-                <img class="drop-shadow-light" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/category-carousel-home-collection-_AC_1307_25_.jpg" alt="Kitchen" />
-            </div>
-            <div>
-                <img class="drop-shadow-light" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/category-carousel-home-collection-autumn-_AC_090718_01a_.jpg" alt="Kitchen" />
-            </div>
-  
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/Category-carousel-home-collection-_AC_260719_07_.jpg" alt="" />
+</div>
+
+<!-- Carousel -->
+<div class="padded-container">
+
+<div class='slider-container padding-top drop-shadow'>
+    <div class='slick-slider'>
+        <div>
+            <img class="drop-shadow-light feature-image-960" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/Category-carousel-home-collection-_AC_260719_07_.jpg" alt="Kitchen" />
         </div>
-      </div>
+        <div>
+            <img class="drop-shadow-light feature-image-960" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/category-carousel-home-collection-_AC_1307_25_.jpg" alt="Kitchen" />
+        </div>
+        <div>
+            <img class="drop-shadow-light feature-image-960" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/category-carousel-home-collection-autumn-_AC_090718_01a_.jpg" alt="Kitchen" />
+        </div>
+
+    </div>
+</div>
+</div>
+
+<!-- // Carousel -->
+
+
 <!-- Grid -->
 <div class=" ">
     <div class="row">
@@ -117,7 +127,7 @@
 <script type="text/javascript" src="scripts.js"></script>
 
 <script>
-$(".single-item").slick({
+$(".slick-slider").slick({
 	dots: true
 });
 </script>
