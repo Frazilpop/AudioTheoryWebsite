@@ -4,3 +4,43 @@ body {
 header {
   background: #d0d4d2d2 !important;
 }
+
+
+/* Buttons */
+.home-button:hover{
+  color: white;
+  background: #acb8af;
+}
+.home-button:active{
+  color: white ;
+  background: #4f6653;
+}
+.home-button {
+  border: 1px solid #172022;
+  color: #172022;
+
+}
+.alt-button-col {
+  background: #4f6653;
+  color: white;
+}
+.alt-button-col:active{
+  background: #4f6653;
+  color: white;
+}
+.sign-up-box {
+  border-radius: 2px;
+}
+.button {
+  border-radius: 0px;
+}
+.home-button {
+  border-radius: 0px;
+}
+/* */
+
+/* Footer */
+footer { background: #464f51; }
+.copywright { background: #303839;  }
+footer ul li a { color:rgba(255, 255, 255, 0.651); }
+
