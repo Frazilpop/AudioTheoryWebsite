@@ -39,8 +39,10 @@ body {
         max-width: 960px;
     }
 }
-.feature-image-960 {
-    max-width: 100%;
+@media(max-width:959px) {
+    .feature-image-960 {
+        max-width: 100%;
+    }
 }
 
 .drop-shadow {
@@ -265,9 +267,13 @@ header {
     max-width:880px;
 }
 .quote-attribution {
-padding-top: 20px;
+    padding-top: 20px;
 }
-
+@media (max-width: 767px) {
+    .quote-attribution {
+        padding-left: 60px;
+    }
+}
 
 
 .padding-top {
@@ -300,6 +306,7 @@ padding-top: 20px;
 @media(max-width: 767px) {
     .align-center-d {
         text-align: left;   
+        padding-left: 30px;
     }
 }
 
@@ -598,7 +605,7 @@ li.b { padding-bottom: 15px; }
 
 }
 .carousel-caption {
-    background: #303839; 
+    background: #3a4142;; 
     color: #ffffff;
     padding:10px 0px;
 }
