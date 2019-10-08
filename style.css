@@ -34,12 +34,12 @@ body {
         max-width: 1200px;
     }
 }
-@media(min-width:960px) {
+@media(min-width:1020px) {
     .feature-image-960 {
         max-width: 960px;
     }
 }
-@media(max-width:959px) {
+@media(max-width:1019px) {
     .feature-image-960 {
         max-width: 100%;
     }
@@ -494,13 +494,13 @@ li.b { padding-bottom: 15px; }
 /* */
 
 /* Display at alt. widths */
-@media (max-width: 767px){
+@media (max-width: 1020px){
    
     .hide-reduced {
         display: none;
     }
 }
-@media (min-width: 768px){
+@media (min-width: 1019px){
     .display-reduced {
       display: none;
     }
