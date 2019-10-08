@@ -55,13 +55,18 @@
 
 @media all and (min-width:1240px),print {
 
-.slick-prev {
-    margin-left:-35px;
-}
-.slick-next {
-    margin-right:-35px;
-}
+    .slick-prev {
+        margin-left:-35px;
+    }
+    .slick-next {
+        margin-right:-35px;
+    }
 
+}
+.carousel-caption {
+    background: #303839; 
+    color: #ffffff;
+    padding:10px 0px;
 }
 </style>
 <!--// New -->
@@ -80,13 +85,17 @@
         <div class='slick-slider drop-shadow'>
             <div>
                 <img class="feature-image-960" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/Category-carousel-home-collection-_AC_260719_07_.jpg" alt="Kitchen" />
-                <span class="grid-name">Image 2</span>
+                <span class="grid-name carousel-caption">Image 1</span>
             </div>
             <div>
                 <img class="feature-image-960" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/category-carousel-home-collection-_AC_1307_25_.jpg" alt="Kitchen" />
+                <span class="grid-name carousel-caption">Image 2</span>
+
             </div>
             <div>
                 <img class="feature-image-960" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/category-carousel-home-collection-autumn-_AC_090718_01a_.jpg" alt="Kitchen" />
+                <span class="grid-name carousel-caption">Image 3</span>
+
             </div>
 
         </div>
@@ -125,6 +134,13 @@
 </div>
 <!-- // Grid -->
 
+<!-- Modal -->
+<div id="modal-c" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+</div> 
+<!-- End Modal -->
+        
 <script type="text/javascript" src="scripts.js"></script>
 
 <script>
