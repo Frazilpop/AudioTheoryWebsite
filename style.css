@@ -305,9 +305,15 @@ header {
 
 .newsletter-title {
     font-size: 110%;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding-bottom: 15px;
     padding-top: 15px;
+}
+.left-aligned-title {
+    font-size: 1.8rem;
+    padding-left: 30px;
+    padding-right: 30px;
+
 }
 .align-center-d {
     text-align: center;
@@ -400,6 +406,24 @@ footer ul li a { color:rgb(56, 56, 56); text-decoration:none; padding:12px 45px;
 @media(max-width: 767px) { footer ul li { display:block; padding: 5px 0px;}}
 footer ul li a:hover { color:#8a8a8a; }
 .copywright { background: #363636; padding:10px 0px 8px 15px;color:rgba(255, 255, 255, 0.651); font-weight: 200; font-size: .8rem; }
+
+
+/* stick footer */
+.page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -30px; 
+  }
+  .page-wrap:after {
+    content: "";
+    display: block;
+  }
+  .site-footer, .page-wrap:after {
+    height: 30px; 
+  }
+  .site-footer {
+    background: orange;
+  }
 /* */
 
 /* nav */
@@ -547,6 +571,19 @@ li.b { padding-bottom: 15px; }
     flex: 33.33%;
     padding: 29px;
 }
+.column-4-reduced-padding {
+    flex: 25%;
+    padding: 10px;
+}
+@media (max-width: 1220px) {
+    .column-4 {
+        padding: 2.5%;
+    }
+    .row {
+
+    }
+}
+
 .image-grid {
     max-width:1210px;
     margin-left:auto;
@@ -622,4 +659,9 @@ li.b { padding-bottom: 15px; }
     background: #3a4142;; 
     color: #ffffff;
     padding:10px 0px;
+}
+
+hr {
+    border-top: .1px solid #d3d3d336 !important;
+    margin: 22px 30px;
 }
