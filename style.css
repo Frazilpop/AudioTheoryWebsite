@@ -261,6 +261,14 @@ header {
     margin-left: auto;
     margin-right: auto;
 }
+@media (max-width:768px) {
+    .text-block {
+        max-width:900px;
+        font-size:1.2rem;
+
+    }
+
+}
 .quote-block {
     padding:30px 60px;
     line-height: 1.45rem;
