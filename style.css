@@ -313,7 +313,10 @@ header {
     font-size: 1.8rem;
     padding-left: 30px;
     padding-right: 30px;
-
+}
+.left-aligned-body {
+    padding-left: 30px;
+    padding-right: 30px;
 }
 .align-center-d {
     text-align: center;
@@ -567,7 +570,7 @@ li.b { padding-bottom: 15px; }
     flex: 25%;
     padding: 10px;
 }
-.column-4 {
+.column {
     flex: 1;
     padding: 29px;
 }
@@ -577,7 +580,7 @@ li.b { padding-bottom: 15px; }
     padding: 10px;
 }
 @media (max-width: 1220px) {
-    .column-4 {
+    .column {
         padding: 2.5%;
     }
     .l {
