@@ -12,14 +12,19 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+$(function() {
+  $('#side-nav').load('nav.html');
+});
+</script>
+
 </head>
 
 
 <body>
 
 
-<section class="nav" data-include="nav"></section>
-
+<div id="side-nav"></div>
 <!-- Grid -->
 <div class=" ">
         <div class="row">

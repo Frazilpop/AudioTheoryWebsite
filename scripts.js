@@ -41,6 +41,3 @@ $("#menu-toggle").click(function (e) {
   $("#wrapper").toggleClass("toggled");
 });
 
-$(function() {
-  $('#side-nav').load('nav.html');
-});
