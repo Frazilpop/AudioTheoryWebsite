@@ -568,9 +568,10 @@ li.b { padding-bottom: 15px; }
     padding: 10px;
 }
 .column-4 {
-    flex: 33.33%;
+    flex: 1;
     padding: 29px;
 }
+
 .column-4-reduced-padding {
     flex: 25%;
     padding: 10px;
@@ -579,9 +580,13 @@ li.b { padding-bottom: 15px; }
     .column-4 {
         padding: 2.5%;
     }
-    .row {
-
+    .l {
+        padding-left: 29px;
     }
+    .r {
+        padding-right: 29px;
+    }
+    
 }
 
 .image-grid {
