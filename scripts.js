@@ -28,9 +28,16 @@ $(function(){
 });
 
 $(".slick-slider").slick({
-	dots: true,
+  dots: true,
+  /*
     infinite: true,
     speed: 500,
     fade: true,
-    cssEase: 'linear'
+    cssEase: 'linear' */
 });
+
+$("#menu-toggle").click(function (e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+});
+

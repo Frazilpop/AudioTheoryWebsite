@@ -2,71 +2,66 @@
 <html>
 <head>
 <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-<title>Carousel</title>
+<title>Side Nav</title>
 <link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
 <link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
 <link rel="stylesheet" type= "text/css" href= "style.css" />
 <link rel="stylesheet" type= "text/css" href= "SWD.css" />
 <link rel="stylesheet" type= "text/css" href= "fonts.css" />
+<link rel="stylesheet" type= "text/css" href= "nav.css" />
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script> 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 
 <body>
-<div class="padded-container">
-    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/Category-carousel-home-collection-_AC_260719_07_.jpg" alt="" />
+
+<!-- #region nav-left -->
+<div id="wrapper">
+<div id="sidebar-wrapper">
+<ul class="sidebar-nav"> <br><br>
+<li> <a href="#">Home</a>
+</li>
+<li><a href="what-we-do">Something</a>
+</li>
+<li><a href="the-building">Something</a>
+</li>
+<li><a href="volunteer">Something</a>
+</li>
+</ul>
 </div>
+<div id="page-content-wrapper"><div class="nav-icon" id="menu-toggle"></div>
 
-<!-- Mobile Carousel -->
-<div class="padded-container display-reduced">
-    <div class='slider-container padding-top '>
-        <div class='slick-slider drop-shadow'>
-            <div>
-                <img class="feature-image-960" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/Category-carousel-home-collection-_AC_260719_07_.jpg" alt="Kitchen" />
-                <span class="grid-name carousel-caption">Image 1</span>
-            </div>
-            <div>
-                <img class="feature-image-960" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/category-carousel-home-collection-_AC_1307_25_.jpg" alt="Kitchen" />
-                <span class="grid-name carousel-caption">Image 2</span>
-
-            </div>
-            <div>
-                <img class="feature-image-960" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/category-carousel-home-collection-autumn-_AC_090718_01a_.jpg" alt="Kitchen" />
-                <span class="grid-name carousel-caption">Image 3</span>
-
-            </div>
-
-        </div>
-    </div>
-</div>
-<!-- // Mobile Carousel -->
-
+<div class="container-fluid">
+<!-- endregion -->
 
 <!-- Grid -->
 <div class=" ">
     <div class="row">
 
-        <div class="column-3-reduced-padding">
+        <div class="column-4-reduced-padding">
             <a href="#">
                 <img class="drop-shadow-light" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/Category-carousel-home-collection-_AC_260719_07_.jpg" alt="Kitchen" />
 
             </a> <span class="grid-name">Image 1</span>
         </div>
 
-        <div class="column-3-reduced-padding">
+        <div class="column-4-reduced-padding">
             <a href="#">
                 <img class="drop-shadow-light" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/category-carousel-home-collection-_AC_1307_25_.jpg" alt="Sitting Room" />
 
             </a> <span class="grid-name">Image 2</span>
         </div>
 
-        <div class="column-3-reduced-padding">
+        <div class="column-4-reduced-padding">
             <a href="#">
                 <img class="drop-shadow-light" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/Category_Carousel/Home_Collection/category-carousel-home-collection-autumn-_AC_090718_01a_.jpg" alt="Sitting Room" />
 
             </a> <span class="grid-name">Image 3</span>
         </div>
+        
+
+
 
     </div>
 
@@ -79,12 +74,18 @@
     <img class="modal-content" id="img01">
 </div> 
 <!-- End Modal -->
-        
+
+
+
+
+<!-- #region right-left -->
+</div>
+</div>
+<!-- /#page-content-wrapper -->
+</div>
+<!-- #endregion -->
+  
 <script type="text/javascript" src="scripts.js"></script>
-
-<script>
-
-</script>
 </body>
 
 </html> 
