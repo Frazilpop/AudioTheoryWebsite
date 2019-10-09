@@ -80,12 +80,12 @@ img {
 }
 @media (max-width: 480px) {
     .feature-logo {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
         max-width: 90%;
     }
     .logo-offset {
-        margin-right:0px;
+        margin-right:20px;
     }
 }
 .float-right {
@@ -280,12 +280,18 @@ header {
 }
 @media (max-width: 767px) {
     .quote-attribution {
-        padding-left: 60px;
+        padding-left: 20px;
+    }
+    .quote-block {
+        padding: 30px 45px;
     }
 }
 
 
 .padding-top {
+    padding-top: 35px;
+}
+.padding-top-r {
     padding-top: 35px;
 }
 .padding-top-reduced {
@@ -298,16 +304,24 @@ header {
     .padding-top {
         padding-top: 30px;
     }
+   
     .padding-bottom {
         padding-bottom: 30px;
     }
 }
+@media(max-width: 767px) {
+    
+    .padding-top-r {
+        padding-top: 10px;
+    }
 
+}
 .newsletter-title {
     font-size: 110%;
     font-size: 1.4rem;
     padding-bottom: 15px;
     padding-top: 15px;
+    line-height: 1.1;
 }
 .left-aligned-title {
     font-size: 1.8rem;
