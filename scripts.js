@@ -35,3 +35,12 @@ $(".slick-slider").slick({
     fade: true,
     cssEase: 'linear' */
 });
+
+$("#menu-toggle").click(function (e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+});
+
+$(function() {
+  $('#side-nav').load('nav.html');
+});
