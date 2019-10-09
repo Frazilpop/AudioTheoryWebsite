@@ -84,6 +84,9 @@ img {
         padding-right: 30px;
         max-width: 100%;
     }
+    .logo-offset {
+        margin-right:0px;
+    }
 }
 .float-right {
     float: right;
@@ -263,7 +266,7 @@ header {
 }
 
 .quote-block {
-    padding:30px 60px;
+    padding:00px 60px;
     line-height: 1.45rem;
     font-size: 100%;
     font-size:1rem;
@@ -307,6 +310,10 @@ header {
     padding-top: 15px;
 }
 .align-center-d {
+    text-align: center;
+
+}
+.align-center {
     text-align: center;
 
 }
