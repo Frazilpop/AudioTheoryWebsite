@@ -184,14 +184,14 @@ header {
     text-decoration: none;
 }
 .alt-button-col {
-    background: #7eb9d8;
+    background: #5fb4e1;;
     color: white;
     border: none;
 
 }
 
 .alt-button-col:hover{
-    background: #65b8e2;
+    background: #6dc0e9;
     color: white;
     border: none;
 }
@@ -213,7 +213,7 @@ header {
     display: inline-block;
 }
 .inline-button {
-    padding: 5px 30px;
+    padding: 5px 20px;
     margin-left: 10px;
     margin-right: 10px;
 }
