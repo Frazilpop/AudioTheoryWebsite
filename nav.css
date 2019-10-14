@@ -1,6 +1,6 @@
 body, html {
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 #wrapper {
     padding-left: 0;
@@ -99,7 +99,7 @@ body, html {
     background: rgba(255, 255, 255, 0.6);
 }
 
-
+/* full width on larger screens */
 @media(min-width:1200px) {
     #wrapper {
         padding-left: 250px;
@@ -122,15 +122,15 @@ body, html {
         margin-right: 0;
     }
 }
+/* */
 
-
+/* icon */
 .nav-icon {
     background: url("images/menu-icon.svg" ) no-repeat 0 0;
     width: 20px;
     height: 20px;
-
 }
-
 .nav-icon:hover {
     background: url("images/menu-icon-h.svg" ) no-repeat 0 0;
 }
+/* */

@@ -16,6 +16,10 @@ body {
     color:172022;
     margin: 0;
 }
+a {
+    color: #172022 !important;
+    text-decoration: none !important;
+  }
 .italic {
     font-family: 'futura_lt_btlight_italic', Arial, Helvetica, sans-serif;
 
@@ -635,6 +639,11 @@ li.b { padding-bottom: 15px; }
     margin-left:auto;
     margin-right:auto;
 }
+.container-c {
+    max-width:1210px;
+    margin-left:auto;
+    margin-right:auto;
+}
 .grid-name {
     margin-left: auto;
     margin-right: auto;
@@ -710,4 +719,17 @@ li.b { padding-bottom: 15px; }
 hr {
     border-top: .1px solid #d3d3d336 !important;
     margin: 22px 30px;
+}
+
+.logo-button {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 0px;
+    padding-bottom: 0px;
+}
+    
+
+.steam-logo {
+    width: 25px;
+    height: 25px;
 }
