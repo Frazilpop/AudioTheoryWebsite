@@ -139,7 +139,29 @@ header {
     margin-left: auto;
     display: inline-block;
 }
+@media (max-width: 767px) {
+    .available-for {
+        float: left;
+        margin-left: 20px;
+        width: 70%;
+    }
+    .top-c {
+        float: right;
+        margin-left: auto;
+    }
+}
 
+@media (max-width: 580px) {
+    .available-for {
+        font-size: .7rem;
+        margin-left: 10px;
+        width: 72%;
+        margin-right: 0px !important;
+    }
+    .inner-right {
+        margin-right: 20px;
+    }
+}
 /* Page content */
 .sticky {
     position: fixed;
@@ -171,6 +193,8 @@ header {
     background: #32424d;
 }
 .home-button {
+    overflow: hidden;
+    white-space: nowrap;
     margin-left: auto;
     margin-right: auto;
     display: block;
