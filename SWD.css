@@ -53,3 +53,7 @@ footer ul li a { color:rgba(255, 255, 255, 0.651); }
   background: url(https://www.susiewatsondesigns.co.uk/static/frontend/Swd/default/en_GB/images/svg/heart-striped-w.svg) no-repeat 0 0;
 
 }
+
+#border-img-2px {
+  border: 2px solid white;
+}

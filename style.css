@@ -7,7 +7,6 @@
 
 html { margin:0; padding:0;font-size: 100%; }
 
-
 body {
     background-color: #e6e6e6 !important;
     font-family: 'futura_lt_btlight', Arial, Helvetica, sans-serif;
@@ -23,6 +22,16 @@ a {
 .italic {
     font-family: 'futura_lt_btlight_italic', Arial, Helvetica, sans-serif;
 
+}
+hr {
+    border-top: .1px solid #d3d3d336 !important;
+    margin: 22px 30px;
+}
+.url-dark-green {
+    color: #738778 !important;
+}
+.url-dark-green:hover {
+    color: #98a79c !important;
 }
 
 /* Images */
@@ -156,7 +165,6 @@ header {
     color: white;
     background: #65b8e2;
     text-decoration: none;
-
 }
 .home-button:active{
     color: white ;
@@ -176,7 +184,6 @@ header {
     text-decoration: none;
     cursor:pointer;
     border-radius: 4px;
-
 }
 .home-button:link {
     text-decoration: none;
@@ -191,9 +198,7 @@ header {
     background: #5fb4e1;;
     color: white;
     border: none;
-
 }
-
 .alt-button-col:hover{
     background: #6dc0e9;
     color: white;
@@ -238,9 +243,19 @@ header {
     }
 
 }
+.logo-button {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 0px;
+    padding-bottom: 0px;
+}
+.steam-logo {
+    width: 25px;
+    height: 25px;
+}
 /* */
 
-
+/* Misc. body */
 .half-space {
     padding-top: 7px;
 }
@@ -290,8 +305,6 @@ header {
         padding: 30px 45px;
     }
 }
-
-
 .padding-top {
     padding-top: 35px;
 }
@@ -350,6 +363,7 @@ header {
         padding-left: 20px;
     }
 }
+/* */
 
 /* Sign Up */
 .sign-up-box {
@@ -410,8 +424,6 @@ header {
     }   
 }
 /* */
-
-
 
 /* Headers and text */
 h1 { font-size:1.5em; margin:0px; }
@@ -553,8 +565,7 @@ li.b { padding-bottom: 15px; }
 /* */
 
 /* Display at alt. widths */
-@media (max-width: 1020px){
-   
+@media (max-width: 1020px){   
     .hide-reduced {
         display: none;
     }
@@ -566,8 +577,6 @@ li.b { padding-bottom: 15px; }
    
 }
 /* */
-
-
 
 /* hover */
 .hover_image:hover {text-decoration: none}
@@ -592,7 +601,6 @@ li.b { padding-bottom: 15px; }
     flex: 1;
     padding: 29px;
 }
-
 .column-4-reduced-padding {
     flex: 25%;
     padding: 10px;
@@ -607,9 +615,7 @@ li.b { padding-bottom: 15px; }
     .r {
         padding-right: 29px;
     }
-    
 }
-
 .image-grid {
     max-width:1210px;
     margin-left:auto;
@@ -642,7 +648,6 @@ li.b { padding-bottom: 15px; }
     margin: 0 auto;
     max-width: 960px;
 }
-
 .slick-slide {
     text-align: center;
     color: #4f5458;
@@ -676,7 +681,6 @@ li.b { padding-bottom: 15px; }
     margin-right:30px;
     z-index: 1;
 }
-
 @media all and (min-width:1240px),print {
     .slick-prev {
         margin-left:-35px;
@@ -691,21 +695,58 @@ li.b { padding-bottom: 15px; }
     color: #ffffff;
     padding:10px 0px;
 }
+/* */
 
-hr {
-    border-top: .1px solid #d3d3d336 !important;
-    margin: 22px 30px;
+/* grid */
+.wrapper-c {
+    margin: 0 auto;
+    max-width: 1240px;
 }
 
-.logo-button {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-right: 0px;
-    padding-bottom: 0px;
+.gridImage {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    height: auto;
 }
-    
+.grid-item-title {
+    text-align: center;
+    display: block;
+    padding-top: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 19px;
+    font-size: 2.3rem;
+}
+.grid-item-description {
+    text-align: center;
+    display: block;
+    padding-top: 12px;
+    font-size: 14px;
+    white-space: normal;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
 
-.steam-logo {
-    width: 25px;
-    height: 25px;
 }
+.grid-item-note {
+    padding-top: 10px;
+    text-align: center;
+    display: block;
+}
+@media (max-width:480px) {
+    .grid-item-description {
+        max-width: 100%;
+        text-align: left;
+    }
+    .grid-item-title {
+        text-align: left;
+    }
+    .grid-item-note {
+        text-align: left;
+    }
+}
+.grid-article {
+    padding-top: 40px;
+}
+/* */
