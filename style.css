@@ -456,7 +456,11 @@ h2 { font-size:1.2rem; margin:0px; }
 /* */
 
 /* footer */
-footer { background: #f1f1f1; }
+footer { 
+    background: #f1f1f1; 
+    left: 0;
+    bottom: 0;
+}
 footer ul { list-style:none; margin:0; padding:0px 30px; text-align:center; }
 footer ul li { display:inline-block;}
 footer ul li a { color:rgb(56, 56, 56); text-decoration:none; padding:12px 45px; display:inline-block }
@@ -491,12 +495,18 @@ nav ul li a { color:rgb(56, 56, 56); text-decoration:none; padding:12px 45px; di
 @media(max-width: 767px) { nav ul li { display:block; padding: 5px 0px;}}
 nav ul li a:hover { color:#8a8a8a; }
 @media(max-width: 840px)  {
-.hide-reduced-width {
-    display:none;
+    .hide-reduced-width {
+        display:none;
+    }
+    .less-padding-reduced-width {
+        padding-top: 30px;
 }
-.less-padding-reduced-width {
-    padding-top: 30px;
 }
+.header-nav-icon {
+    margin-right: auto;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 8px;
 }
 /* */
 
