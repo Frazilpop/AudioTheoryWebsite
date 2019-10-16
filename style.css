@@ -9,10 +9,11 @@ html { margin:0; padding:0;font-size: 100% !important; }
 
 body {
     background-color: #e6e6e6 !important;
-    font-family: 'futura_lt_btlight', Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    font-size: 1rem;
-    color:172022;
+    font-family: 'futura_lt_btlight', Arial, Helvetica, sans-serif !important;
+    font-size: 100% !important;
+    font-size: 1rem !important;
+    line-height: 1.4rem !important;
+    color:#172022 !important;
     margin: 0;
 }
 a {
@@ -730,6 +731,9 @@ li.b { padding-bottom: 15px; }
     color: #ffffff;
     padding:10px 0px;
 }
+.slick-slide img {
+    width:100%;
+}
 /* */
 
 /* grid */
@@ -784,5 +788,22 @@ li.b { padding-bottom: 15px; }
 }
 .grid-article {
     padding-top: 40px;
+}
+/* */
+
+/* mobile show and hide */
+.desktop-only {
+    display: initial !important;
+}
+.mobile-only {
+    display: none !important;
+}
+@media (max-width: 767px) {
+    .desktop-only {
+        display: none !important;
+    }
+    .mobile-only {
+        display: initial !important;
+    }
 }
 /* */
