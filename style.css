@@ -271,12 +271,15 @@ header {
 .logo-button {
     padding-left: 10px;
     padding-right: 10px;
-    margin-right: 0px;
+    margin: 0px !important;
+    padding-top: 0px;
     padding-bottom: 0px;
 }
 .steam-logo {
     width: 25px;
     height: 25px;
+    top: 2px;
+    position: relative;
 }
 /* */
 
@@ -290,6 +293,9 @@ header {
 @media (max-width: 767px) {
     .padding-bottom-12-d {
         padding-bottom: 4px;
+    }
+    .button-rh {
+        padding-left: 0px !important;
     }
 }
 .body-text {
