@@ -5,7 +5,7 @@
 	box-sizing:border-box; -moz-box-sizing:border-box;
 	-webkit-font-smoothing:antialiased; -moz-font-smoothing:antialiased; -o-font-smoothing:antialiased; -ms-font-smoothing:antialiased; font-smoothing:antialiased; }
 
-html { margin:0; padding:0;font-size: 100%; }
+html { margin:0; padding:0;font-size: 100% !important; }
 
 body {
     background-color: #e6e6e6 !important;
@@ -460,6 +460,7 @@ footer {
     background: #f1f1f1; 
     left: 0;
     bottom: 0;
+    
 }
 footer ul { list-style:none; margin:0; padding:0px 30px; text-align:center; }
 footer ul li { display:inline-block;}
@@ -735,6 +736,7 @@ li.b { padding-bottom: 15px; }
 .wrapper-c {
     margin: 0 auto;
     max-width: 1240px;
+    overflow: hidden;
 }
 
 .gridImage {
