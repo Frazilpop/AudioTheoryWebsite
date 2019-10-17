@@ -1,0 +1,323 @@
+<!-- #region head -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog</title>
+<link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+<link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+<link rel="stylesheet" type= "text/css" href= "style.css" />
+<link rel="stylesheet" type= "text/css" href= "SWD.css" />
+<link rel="stylesheet" type= "text/css" href= "fonts.css" />
+<link rel="stylesheet" type= "text/css" href= "nav.css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+<link href="https://fonts.googleapis.com/css?family=Lusitana&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+<!-- endregion -->
+
+<!-- #region nav-left -->
+<div id="wrapper">
+<div id="sidebar-wrapper">
+<ul class="sidebar-nav"> <br><br>
+<li> <a href="#">Home</a>
+</li>
+<li><a href="what-we-do">Something</a>
+</li>
+<li><a href="the-building">Something</a>
+</li>
+<li><a href="volunteer">Something</a>
+</li>
+</ul>
+</div>
+<div id="page-content-wrapper">
+
+<div class="container-fluid">
+<header>
+    <div class="nav-icon header-nav-icon" id="menu-toggle"></div>
+    <div class="align-center-d width-160 float-right">
+        <a href="" class="no-decoration">
+        
+        <div class="home-button alt-button-col">
+                SWD test
+        </div>
+        </a>
+    </div>
+</header>
+<!-- endregion -->
+
+<!-- #region page-content -->
+
+
+<style>
+.full-width-image-c {
+    width: 100% !important;
+    max-width: initial !important;
+    position: relative;
+    z-index: -1;
+}
+#maincontent {
+    max-width: 100% !important;
+    padding: 0px !important;
+}
+.container-c {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-top: -150px;
+    background: #d0d4d2;
+    background: #ecedec;
+    padding-bottom: 20px;
+}
+.content-text-block {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+
+}
+.blog-title {
+    font-size: 33px;
+    font-weight: 600;
+    padding-top: 10px !important;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Lusitana', serif;
+    text-align: center;
+    color: #2c383b;
+}
+.padded-hr {
+    border-bottom: 1px solid #8a9191 !important;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding-top: 20px;
+}
+.columns .column.main {
+    margin-bottom: -10px;
+    padding-bottom: 0px;
+}
+.bottom-feature-image {
+    margin-top: -100px;
+}
+.store-image {
+    border: 2px solid #ffffff !important;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+@media (max-width: 767px) {
+
+    .blog-title {
+        text-align: left;
+
+    }
+    .padded-hr {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .content-text-block {
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+    .container-c {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: -4px;
+        padding-top: 20px;
+
+    }
+    .content-text-block {
+        padding-top: 25px;
+        padding-bottom: 30px;
+    }
+    .blog-title {
+        padding-left: 20px;
+    }
+    .page-header {
+        margin-bottom:0px !important;
+        border-bottom: none !important;
+    }
+    .block-search .control {
+        border-top: none !important;
+    }
+    .bottom-feature-image {
+        margin-top: 0px;
+    }
+    .page-footer {
+        margin-top: 0px;
+    }
+    .footer.content {
+        border-top: none!important;
+    }
+} 
+
+.image-grid {
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+
+}
+.col-f-outer {
+    min-width: 32.85%;
+    max-width: 32.85%;
+    display: inline-block;
+    white-space: nowrap;
+}
+.col-f-outer-double {
+    min-width: 65.7%;
+    max-width: 65.7%;
+    display: inline-block;
+    white-space: nowrap;
+}
+.col-float-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.col-inner-image {
+    border: 1px solid white;
+}
+.col-margin-l {
+    margin-left: 8px;
+}
+.col-margin-r {
+    margin-right: 8px;
+}
+.col-margin-c {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.white-border-1px {
+    border: 1px solid white !important;
+    box-sizing: border-box;
+}
+</style>
+
+<img class="center-image feature-logo logo-padding" src="images/SWD-logo.svg" alt="" />
+
+
+<img class="full-width-image-c" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/CMS_Pages/Blog/2019/10_October/blog-image-07.jpg"  alt="Autumn Table" />
+
+<div class="container-c">
+
+<!--Title Area-->
+
+<div class="page-title-wrapper padding-top-z">
+    <h1 class="page-title blog-title">
+        <span class="base " data-ui-id="page-title-wrapper">Rage, against the dying of the light...</span>
+    </h1>
+</div>
+<div class="padded-hr"></div>
+<!--//Title Area-->
+
+
+<!--**Blocks start here**-->
+
+<!--Full Width Text Block-->
+<div class="content-text-block">
+There is a tree at the bottom of our garden that gives perfect shade in summer. It is where we go, trailing dogs and blankets and grandchildren, to escape the midday sun. This year in particular, we could still be found there in late September enjoying the garden as the first leaves begin to fall and the sun bleeds away in to a rich, flame-red sky.
+<br><br>
+But now, the clocks are about to go back and our shady sanctuary is covered in a canopy of apricot and yellow.  The ground is wet and there are damsons nestling like jewels in the long grass. Back in the nineteenth century these little fruits were sent to the cotton mills for their rich, plum-coloured dye and I too have found inspiration in this rich, restorative colour. There are touches of it in many of my soft-furnishing and fabrics.  I think it brings such warmth to a room, welcoming you in like an outstretched hand.
+</div>
+<!--//Full Width Text Block-->
+
+
+<!--#region Double Banner Set-->
+
+<!--Desktop image set (x3)-->
+<div class="image-grid desktop-only">
+    <div class="col-f-outer-double col-float-left">
+        <div class="col-margin-r">
+            <!--Image 1 (left)-->
+            <img class="col-inner-image" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/CMS_Pages/Blog/2019/10_October/blog-image-03.jpg" alt="Autumn Cushions" />
+        </div>
+    </div>
+    
+    <div class="col-f-outer col-float-right">
+            <div class="col-margin-l">
+            <!--Image 2 (right)-->
+            <img class="col-inner-image" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/CMS_Pages/Blog/2019/10_October/blog-image-02.jpg" alt="Autumn Glass" />
+        </div>
+
+    </div>
+</div>
+<!--#endregion Double Banner Set-->
+
+
+<!--Mobile Carousel-->
+<div class='mobile-only slider-container  '>
+    <div class='slick-slider'>
+        <div>
+            <img class="white-border-1px" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/CMS_Pages/Blog/2019/10_October/blog-image-06.jpg" alt="Autumn Cushions" />
+        </div>
+        <div>
+            <img class="white-border-1px" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/CMS_Pages/Blog/2019/10_October/blog-image-02.jpg" alt="Autumn Glass" />
+        </div>
+
+    </div>
+</div>
+<!--//Mobile Carousel-->
+
+<!--// Title banners-->
+
+<!--Full Width Text Block-->
+<div class="content-text-block">
+In Northern countries like ours, there is a deep imperative to prepare for Winter.  We take great pleasure in this ritual, of gathering up and preserving: dahlias for the kitchen table, berries for jam, logs for the fire. 
+At this time of year, it is the house – and not the garden, that is once again the focus of our love and attention.
+</div>
+
+<!--//Full Width Text Block-->
+
+
+<img class="white-border-1px store-image" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/CMS_Pages/Blog/2019/10_October/blog-image-04.jpg"  alt="Autumn Garden" />
+
+<!--Full Width Text Block-->
+<div class="content-text-block">
+October, more than any other month, provokes us to pay attention, to enjoy its rich splendours before they fade away. Already, the blackberries are almost over and up in the eaves, the swallows are preparing to leave.  Each passing day is filled with pangs of melancholy.  But I take comfort in the knowledge that it won’t be forever.  Spring will return and before then, there is the festive season to lighten the darkness.
+All the more reason to light candles, and fill the house with warmth and colour!
+This is what I love best about the rich variety of the seasons in England: nothing stays the same.
+</div>
+<!--//Full Width Text Block-->
+</div>
+<img class="full-width-image-c bottom-feature-image" src="https://media.susiewatsondesigns.co.uk/media/wysiwyg/CMS_Pages/Blog/2019/10_October/blog-image-09.jpg"  alt="Autumn Table" />
+
+
+
+<!-- endregion -->
+
+<!-- #region site footer -->
+<!-- Modal -->
+<div id="modal-c" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+</div> 
+<!-- End Modal -->
+
+<footer>
+<div class="copywright align-center-d">
+    Copyright ©2019, Susie Watson Designs
+</div>
+</footer>
+
+<!-- right-left -->
+</div>
+</div>
+<!-- page-content-wrapper -->
+</div>
+<!-- end right left -->
+<br><br>
+<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html> 
+<!-- endregion -->
