@@ -189,6 +189,11 @@ header {
 .button-side-text {
     padding-right: 10px;
 }
+@media(max-width:480px) {
+    .button-side-text {
+        display: none !important;
+    }
+}
 .top-button {
     display: inline !important;
     top: 4px;
@@ -289,7 +294,7 @@ header {
     height: 25px;
     max-height: 25px;
     overflow: hidden;
-    top: 1.5px;
+    top: 1px;
     position: relative;
 }
 /* */
@@ -921,6 +926,9 @@ li.b { padding-bottom: 15px; }
     }
     .padded-hr {
         margin-left: 0px;
+        margin-right: 0px;
+    }
+    .float-right {
         margin-right: 0px;
     }
 }
