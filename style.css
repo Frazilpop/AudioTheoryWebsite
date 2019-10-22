@@ -758,6 +758,7 @@ li.b { padding-bottom: 15px; }
 
 }
 .carousel-caption {
+    position: relative !important;
     background: #3a4142;; 
     color: #ffffff;
     padding:10px 0px;
