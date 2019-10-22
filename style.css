@@ -189,7 +189,7 @@ header {
 .button-side-text {
     padding-right: 10px;
 }
-@media(max-width:480px) {
+@media(max-width:767px) {
     .button-side-text {
         display: none !important;
     }
