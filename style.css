@@ -490,7 +490,7 @@ footer ul { list-style:none; margin:0; padding:0px 30px; text-align:center; }
 footer ul li { display:inline-block;}
 footer ul li a { color:rgb(56, 56, 56); text-decoration:none; padding:12px 45px; display:inline-block }
 @media(max-width: 767px) { footer ul li { display:block; padding: 5px 0px;}}
-footer ul li a:hover { color:#8a8a8a; }
+footer ul li a:hover { color:#8a8a8a !important; }
 .copywright { background: #363636; padding:10px 0px 8px 15px;color:rgba(255, 255, 255, 0.651); font-weight: 200; font-size: .8rem; }
 
 
@@ -905,6 +905,7 @@ li.b { padding-bottom: 15px; }
     margin-right: 80px;
     padding-top: 20px;
 }
+
 .columns .column.main {
     margin-bottom: -10px;
     padding-bottom: 0px;
@@ -932,6 +933,12 @@ li.b { padding-bottom: 15px; }
     .float-right {
         margin-right: 0px;
     }
+}
+.short-hr {
+    max-width: 900px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 @media (max-width: 767px) {
 
