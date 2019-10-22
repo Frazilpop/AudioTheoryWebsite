@@ -516,6 +516,9 @@ nav ul li a:hover { color:#8a8a8a; }
     margin-left: 20px;
     margin-top: 8px;
 }
+.sidebar-nav li a {
+    color: #b3b3b3 !important;
+  }
 /* */
 
 /* bullet list */
@@ -674,6 +677,11 @@ li.b { padding-bottom: 15px; }
     margin-left:auto;
     margin-right:auto;
 }
+.c-full {
+    max-width: 100% !important;
+    background: #ffff;
+}
+
 .grid-name {
     margin-left: auto;
     margin-right: auto;
@@ -841,9 +849,11 @@ li.b { padding-bottom: 15px; }
     padding-left: 80px;
     padding-right: 80px;
     margin-top: -150px;
-    background: #d0d4d2;
-    background: #ecedec;
+    background: #ffffff;
     padding-bottom: 20px;
+}
+.margin-top-c {
+    margin-top: -20%;
 }
 .content-text-block {
     padding-left: 80px;
@@ -859,9 +869,17 @@ li.b { padding-bottom: 15px; }
     padding-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Lusitana', serif;
-    text-align: center;
     color: #2c383b;
+}
+.user-guide {
+    padding-bottom:0px !important;
+}
+.align-center-b {
+    text-align: center;
+}
+.lusitana {
+    font-family: 'Lusitana', serif;
+
 }
 .padded-hr {
     border-bottom: 1px solid #8a9191 !important;
@@ -882,9 +900,21 @@ li.b { padding-bottom: 15px; }
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
+@media (max-width: 1200px) {
+
+    .content-text-block {
+        padding-left: 0px;
+        padding-right: 0px;
+
+    }
+    .padded-hr {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
 @media (max-width: 767px) {
 
-    .blog-title {
+    .align-center-b {
         text-align: left;
 
     }
@@ -903,6 +933,9 @@ li.b { padding-bottom: 15px; }
         margin-top: -4px;
         padding-top: 20px;
 
+    }
+    .margin-top-c {
+        margin-top: -10%;
     }
     .content-text-block {
         padding-top: 25px;
@@ -969,3 +1002,19 @@ li.b { padding-bottom: 15px; }
     box-sizing: border-box;
 }
 /* */
+
+/* faq */
+
+.cms-sub-heading {
+    font-size: 1.1rem;
+    color: #282828;
+    font-weight: bold;
+}
+.dashed-line {
+    border-top-style: dashed;
+    border-width: .5px;
+}
+.faq-break {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}

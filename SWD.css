@@ -57,6 +57,7 @@ footer ul li a { color:rgba(255, 255, 255, 0.651); }
 #border-img-2px {
   border: 2px solid white;
 }
-.sidebar-nav li a {
-  color: #b3b3b3 !important;
+.container-c {
+  background: #ecedec;
+
 }
