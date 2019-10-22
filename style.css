@@ -278,7 +278,9 @@ header {
 .steam-logo {
     width: 25px;
     height: 25px;
-    top: 2px;
+    max-height: 25px;
+    overflow: hidden;
+    top: 1.5px;
     position: relative;
 }
 /* */
