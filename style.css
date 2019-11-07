@@ -265,6 +265,11 @@ header {
     margin-left: 10px;
     margin-right: 10px;
 }
+.inline-button-r {
+    padding: 10px 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 .break-m {
     display: none;
 }
@@ -491,7 +496,7 @@ footer ul li { display:inline-block;}
 footer ul li a { color:rgb(56, 56, 56); text-decoration:none; padding:12px 45px; display:inline-block }
 @media(max-width: 767px) { footer ul li { display:block; padding: 5px 0px;}}
 footer ul li a:hover { color:#8a8a8a !important; }
-.copywright { background: #363636; padding:10px 0px 8px 15px;color:rgba(255, 255, 255, 0.651); font-weight: 200; font-size: .8rem; }
+.copywright { background: #363636; padding:10px 10px 8px 15px;color:rgba(255, 255, 255, 0.651); font-weight: 200; font-size: .8rem; }
 
 
 /* stick footer */
