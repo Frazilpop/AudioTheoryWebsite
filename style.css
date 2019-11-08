@@ -187,7 +187,7 @@ header {
 
 }
 .button-side-text {
-    padding-right: 10px;
+    padding-right: 5px;
 } /*
 @media(max-width:767px) {
     .button-side-text {
@@ -205,7 +205,7 @@ header {
 }
 .home-button:active{
     color: white ;
-    background: #32424d;
+    background: #5ca4c9;
 }
 .home-button {
     overflow: hidden;
@@ -261,7 +261,7 @@ header {
     display: inline-block;
 }
 .inline-button {
-    padding: 5px 20px;
+    padding: 8px 20px;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -1055,5 +1055,52 @@ li.b { padding-bottom: 15px; }
     padding-bottom: 40px;
 }
 .alt-button-padding {
-    padding:15px !important;
+    padding:10px 25px !important;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.med-spacer {
+    margin-top: 35px;
+    display: block !important;
+}
+@media(max-width:520px) {
+    .top-button {
+        margin-left: 30px;
+        margin-right: 30px;
+
+    }
+    .top-button {
+        display: block !important;
+        padding:8px 25px !important;
+
+    }
+    .button-side-text {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-bottom:8px;
+    }
+    header {
+        height: 110px !important;
+        max-height: 110px !important;
+        background: #ffffffe3;
+    }
+    .logo-padding {
+        padding-top: 130px;
+    }
+    .r-c {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        float: initial; 
+
+    }
+    .top-c {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        float: initial; 
+        padding-left:0px !important;
+        padding-right: 0px !important;
+    }
 }
