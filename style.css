@@ -1054,3 +1054,6 @@ li.b { padding-bottom: 15px; }
 .user-guide-screenshot {
     padding-bottom: 40px;
 }
+.alt-button-padding {
+    padding:15px !important;
+}
