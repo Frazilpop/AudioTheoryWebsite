@@ -188,12 +188,12 @@ header {
 }
 .button-side-text {
     padding-right: 10px;
-}
+} /*
 @media(max-width:767px) {
     .button-side-text {
         display: none !important;
     }
-}
+} */
 .top-button {
     display: inline !important;
     top: 4px;
