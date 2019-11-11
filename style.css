@@ -1135,3 +1135,15 @@ li.b { padding-bottom: 15px; }
     padding:3px 17px; */
 
 }
+
+header .min {
+
+}
+
+h2 .main-title {
+    font-weight: 600;
+}
+.update-item {
+    display: block;
+    padding-left: 20px;
+}
