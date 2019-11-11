@@ -591,6 +591,7 @@ li.b { padding-bottom: 15px; }
   display: block;
   width: 90%;
   max-width: 1200px;
+  border-radius: 0px !important;
 }
 #caption {
   margin: auto;
