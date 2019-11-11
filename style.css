@@ -34,7 +34,12 @@ hr {
 .url-dark-green:hover {
     color: #98a79c !important;
 }
-
+.url-dark {
+    color: #737373 !important;
+}
+.url-dark:hover {
+    color: #8b8b8b !important;
+}
 /* Images */
 .center-image {
     margin-left:auto;
@@ -1116,4 +1121,17 @@ li.b { padding-bottom: 15px; }
 
 .article-title {
     padding-bottom: 25px;
+}
+
+.center-text-message {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom:18.9px;
+
+    /*
+    background:#d9d9d9;
+
+    padding:3px 17px; */
+
 }
