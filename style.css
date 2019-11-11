@@ -89,6 +89,11 @@ img {
     padding-top: 100px;
 
 }
+
+.logo-padding-r {
+    padding-top: 80px;
+
+}
 .logo-offset {
     margin-right:90px;
 }
@@ -480,7 +485,7 @@ header {
 
 /* Headers and text */
 h1 { font-size:1.5em; margin:0px; }
-h2 { font-size:1.2rem; margin:0px; }
+h2 { font-size:1.2rem; margin:0px;line-height: 2.5rem !important;margin-top:0px !important }
 
 /* */
 
@@ -1089,6 +1094,9 @@ li.b { padding-bottom: 15px; }
     .logo-padding {
         padding-top: 130px;
     }
+    .logo-padding-r {
+        padding-top: 110px;
+    }
     .r-c {
         margin-left: auto;
         margin-right: auto;
@@ -1104,4 +1112,8 @@ li.b { padding-bottom: 15px; }
         padding-left:0px !important;
         padding-right: 0px !important;
     }
+}
+
+.article-title {
+    padding-bottom: 25px;
 }
