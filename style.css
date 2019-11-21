@@ -5,7 +5,7 @@
 	box-sizing:border-box; -moz-box-sizing:border-box;
 	-webkit-font-smoothing:antialiased; -moz-font-smoothing:antialiased; -o-font-smoothing:antialiased; -ms-font-smoothing:antialiased; font-smoothing:antialiased; }
 
-html { margin:0; padding:0;font-size: 100% !important;     overflow-x: hidden;}
+html { margin:0; padding:0;font-size: 100% !important; }
 
 body {
     background-color: #e6e6e6 !important;
