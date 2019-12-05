@@ -1185,22 +1185,22 @@ h2 .main-title {
 }
 
 .grid-item-title-l {
-    text-align: left!important;
-    display: block!important;
-    padding-top: 0px!important;
-    text-overflow: ellipsis!important;
-    white-space: nowrap!important;
-    font-size: 1.6rem!important;
+    text-align: left;
+    display: block;
+    padding-top: 0px;
+    text-overflow: ellipsis;
+    font-size: 1.5rem;
+    line-height: 1.15;
 }
 .grid-item-description-l {
-    text-align: left!important;
-    display: block!important;
-    padding-top: 15px!important;
-    white-space: normal!important;
-    margin-left: auto!important;
-    margin-right: auto!important;
-    font-size:.9rem!important;
-    line-height: 1.45!important;
+    text-align: left;
+    display: block;
+    padding-top: 15px;
+    white-space: normal;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:.9rem;
+    line-height: 1.45;
 }
 .read-more-arrow {
     width:15px!important;
@@ -1225,4 +1225,38 @@ h2 .main-title {
 }
 .article-slider .slick-slide {
     background: initial!important;
+}
+.article-slider .slick-dots {
+    display: none !important;
+}
+.wrapper-d .slick-slider {
+    margin-bottom: 0px !important;
+}
+.article-slider .slick-prev {
+    display: none !important; 
+}
+.article-slider .slick-next {
+    background: url("images/read-more-arrow-light.svg" ) no-repeat 0 0;
+}
+.article-slider .slick-prev {
+    background: url("images/read-more-arrow-light-left.svg" ) no-repeat 0 0;
+}
+.article-slider .slick-next:hover {
+    background: url("images/read-more-arrow-light-h.svg" ) no-repeat 0 0;
+}
+.article-slider .slick-prev:hover {
+    background: url("images/read-more-arrow-light-left-h.svg" ) no-repeat 0 0;
+}
+.article-slider .slick-next:active {
+    background: url("images/read-more-arrow-light-p.svg" ) no-repeat 0 0;
+}
+.article-slider .slick-prev:active {
+    background: url("images/read-more-arrow-light-left-p.svg" ) no-repeat 0 0;
+}
+
+.slick-slide:focus {outline:none;}
+.slick-slide::-moz-focus-inner {border:0;}
+.article-slider-item {
+    padding-left: 15px;
+    padding-right: 15px;
 }
