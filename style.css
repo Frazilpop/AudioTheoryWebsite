@@ -799,7 +799,6 @@ li.b { padding-bottom: 15px; }
 .wrapper-d {
     margin: 0 auto;
     max-width: 1600px;
-    overflow: hidden;
 }
 
 .gridImage {
@@ -1174,46 +1173,56 @@ h2 .main-title {
 }
 
 .grid-article-outline {
-    border: 1px solid #8a9191;
-    margin-top: 40px;
-    margin-bottom: 30px;
+    border: 1px solid #8a9191!important;
+    margin-top: 40px!important;
+    margin-bottom: 30px!important;
 }
 .grid-article-outline:hover {
-    box-shadow: 0px 0px 20px 5px rgba(119,118,118,0.25);
+    box-shadow: 0px 0px 20px 5px rgba(119,118,118,0.25)!important;
 }
 .inner-article-padding {
-    padding: 25px 35px 30px 35px;
+    padding: 25px 35px 30px 35px!important;
 }
 
 .grid-item-title-l {
-    text-align: left;
-    display: block;
-    padding-top: 0px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-size: 1.6rem;
+    text-align: left!important;
+    display: block!important;
+    padding-top: 0px!important;
+    text-overflow: ellipsis!important;
+    white-space: nowrap!important;
+    font-size: 1.6rem!important;
 }
 .grid-item-description-l {
-    text-align: left;
-    display: block;
-    padding-top: 15px;
-    white-space: normal;
-    margin-left: auto;
-    margin-right: auto;
-    font-size:.9rem;
-    line-height: 1.45;
+    text-align: left!important;
+    display: block!important;
+    padding-top: 15px!important;
+    white-space: normal!important;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    font-size:.9rem!important;
+    line-height: 1.45!important;
 }
 .read-more-arrow {
-    width:15px;
+    width:15px!important;
     margin-top: -1px;
+    display: inline!important;
+
 }
 .grid-item-note-l {
-    text-align: left;
-    display: inline;
+    text-align: left!important;
+    display: inline!important;
 }
 .read-more-bottom-section {
-    padding-top: 10px;
+    padding-top: 10px!important;
+    text-align: left !important;
+
 }
 .more-text {
-    padding-left: 8px;
+    padding-left: 8px!important;
+}
+.read-more-bottom-section .slick-slide {
+    text-align: left !important;
+}
+.article-slider .slick-slide {
+    background: initial!important;
 }
