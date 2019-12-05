@@ -796,6 +796,11 @@ li.b { padding-bottom: 15px; }
     max-width: 1240px;
     overflow: hidden;
 }
+.wrapper-d {
+    margin: 0 auto;
+    max-width: 1600px;
+    overflow: hidden;
+}
 
 .gridImage {
     max-width: 100%;
@@ -921,7 +926,10 @@ li.b { padding-bottom: 15px; }
     margin-right: 80px;
     padding-top: 20px;
 }
-
+.full-hr {
+    border-bottom: 1px solid #8a9191 !important;
+    padding-top: 15px;
+}
 .columns .column.main {
     margin-bottom: -10px;
     padding-bottom: 0px;
@@ -1157,4 +1165,40 @@ h2 .main-title {
 .update-item {
     display: block;
     padding-left: 20px;
+}
+.padding-15 {
+    padding: 0px 15px;
+}
+.article-set-title {
+    font-size: 1.2rem;
+}
+
+.grid-article-outline {
+    border: 1px solid #8a9191;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.grid-article-outline:hover {
+    box-shadow: 0px 0px 20px 5px rgba(119,118,118,0.25);
+}
+.inner-article-padding {
+    padding: 30px;
+}
+
+.grid-item-title-l {
+    text-align: left;
+    display: block;
+    padding-top: 0px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1.6rem;
+}
+.grid-item-description-l {
+    text-align: left;
+    display: block;
+    padding-top: 12px;
+    white-space: normal;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:.9rem;
 }

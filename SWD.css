@@ -16,7 +16,6 @@ header {
   background: #4f6653;
 }
 .home-button {
-  border: 1px solid #172022;
   color: #172022;
 
 }
@@ -31,12 +30,7 @@ header {
 .sign-up-box {
   border-radius: 2px;
 }
-.button {
-  border-radius: 0px;
-}
-.home-button {
-  border-radius: 0px;
-}
+
 /* */
 
 /* Footer */
