@@ -1182,7 +1182,7 @@ h2 .main-title {
     box-shadow: 0px 0px 20px 5px rgba(119,118,118,0.25);
 }
 .inner-article-padding {
-    padding: 30px;
+    padding: 25px 35px 30px 35px;
 }
 
 .grid-item-title-l {
@@ -1196,9 +1196,24 @@ h2 .main-title {
 .grid-item-description-l {
     text-align: left;
     display: block;
-    padding-top: 12px;
+    padding-top: 15px;
     white-space: normal;
     margin-left: auto;
     margin-right: auto;
     font-size:.9rem;
+    line-height: 1.45;
+}
+.read-more-arrow {
+    width:15px;
+    margin-top: -1px;
+}
+.grid-item-note-l {
+    text-align: left;
+    display: inline;
+}
+.read-more-bottom-section {
+    padding-top: 10px;
+}
+.more-text {
+    padding-left: 8px;
 }
