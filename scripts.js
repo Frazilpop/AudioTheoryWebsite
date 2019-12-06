@@ -11,7 +11,6 @@ function openModal(img) {
 
 var span = document.getElementsByClassName("close")[0];
 var body = document.body;
-
 span.onclick = function() {
   modal.style.display = "none";
   body.classList.remove("no-scroll");
@@ -83,5 +82,14 @@ rightArrow.onclick = function() {
   leftArrow.style.display = "block";
   leftArrow.style.setProperty('display', 'block', 'important');
 
+
+} 
+
+
+var loadMoreContent = document.getElementsByClassName("load-more-content")[0];
+var loadMoreButton = document.getElementsByClassName("load-more-button")[0];
+
+loadMoreButton.onclick = function() {
+  loadMoreContent.style.display = "block";
 
 } 
