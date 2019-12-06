@@ -91,5 +91,6 @@ var loadMoreButton = document.getElementsByClassName("load-more-button")[0];
 
 loadMoreButton.onclick = function() {
   loadMoreContent.style.display = "block";
+  loadMoreButton.style.display = "none";
 
 } 
