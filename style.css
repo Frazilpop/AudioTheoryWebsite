@@ -1260,3 +1260,6 @@ h2 .main-title {
     padding-left: 15px;
     padding-right: 15px;
 }
+.load-more-content {
+    display: none;
+}
