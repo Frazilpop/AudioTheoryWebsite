@@ -1189,7 +1189,7 @@ h2 .main-title {
     display: block;
     padding-top: 0px;
     text-overflow: ellipsis;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 1.15;
 }
 .grid-item-description-l {
@@ -1263,3 +1263,5 @@ h2 .main-title {
 .load-more-content {
     display: none;
 }
+
+
