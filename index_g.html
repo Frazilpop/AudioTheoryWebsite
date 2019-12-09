@@ -14,15 +14,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
 <link href="https://fonts.googleapis.com/css?family=Lusitana&display=swap" rel="stylesheet">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149487950-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-149487950-1');
-</script>
+<link rel="canonical" href="https://audiotheory.co/" />
 <!-- Facebook Pixel Code -->
 <script>
     !function(f,b,e,v,n,t,s)
@@ -40,42 +32,32 @@
     src="https://www.facebook.com/tr?id=701042950385257&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Facebook Pixel Code -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149487950-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-149487950-2');
+</script>
 </head>
 <body>
 <!-- endregion -->
 
-<!-- #region nav-left -->
-<div id="wrapper">
-<div id="sidebar-wrapper">
-<ul class="sidebar-nav"> <br><br>
-<li> <a href="index.html">Home</a>
-</li>
-<li><a href="user.html">User Guide</a>
-</li>
-<li><a href="faq.html">FAQ</a>
-</li>
-<li><a href="update.html">Update Log</a>
-</li>
-<li><a href="press.html">Press</a>
-</li>
-<li><a href="contact.html">Contact</a>
-</li>
-</ul>
-</div>
-<div id="page-content-wrapper">
 
-<div class="container-fluid">
+
 <header> 
-<div class="nav-icon header-nav-icon" id="menu-toggle"></div>
-<div class="float-right">
-<div class="align-center-d inner-right top-c">
-    <span class="button-side-text">Available for MacOS and Windows </span>     
-    <a href="https://gumroad.com/l/audiotheory" class="no-decoration" onclick="gtag('event','purchase direct (top)');">
-        <div class="home-button top-button inline-button">
-            Purchase Direct
+
+<div class="float-right r-c">
+    <div class="align-center-d inner-right top-c">
+        <span class="button-side-text">Available for MacOS and Windows </span>
+        <a href="https://gumroad.com/l/audiotheory" class="no-decoration" onclick="gtag('event','purchase direct (top)');">
+        <div class="home-button top-button  inline-button" >
+                Purchase Direct
+        </div>
+        </a>
     </div>
-    </a>
-</div>
 </div>
 </header>
 <!-- endregion -->
@@ -161,7 +143,7 @@
 
 
 <div class="text-block padding-top-r">
-
+ 
         <ul class="bullet">
             <li class="b"><strong>Seamlessly transcribe</strong> between piano and guitar using a straight-forward colour coding system and notation highlighting. 
                 Play a note on the keyboard to instantly see where it is in your chords and on your fretboard.</li>
@@ -180,7 +162,7 @@
 </div>
 
 
-<div class="align-center-d padding-top padding-bottom text-block">
+<div class="align-center-d padding-top padding-bottom text-block desktop-only">
     <div class="quote-block">
             “The idea behind the software is customisation. It all started when I couldn’t find a diagram of a left-handed fretboard tuned half-a-step-down and had to create my own. 
         Then I tuned back to E and had to update my diagram. Then I wanted to share it with a right handed bass player and... well you get the idea. 
@@ -194,6 +176,9 @@
     
 </div>
 
+<div class="med-spacer mobile-only">
+</div>
+
 <div class="inline-button-container padding-bottom " >
     <div class="align-center-d text-block">
 
@@ -201,14 +186,14 @@
         <div class="desktop-only"><br></div>
         <div class="break-m"></div>
 
-        It can be downloaded dirctly or through Steam.
-    </div><br><br>
+        It can be downloaded through Steam or purchased directly.
+    </div><br><br class="desktop-only">
     
     <div class="break-m"></div>
 
     <div class="align-center display-inline-block">
-        <a href="https://store.steampowered.com/app/1176110/AudioTheory_Guitars/" class="no-decoration" onclick="gtag('event','purchase Steam');">
-        <div class="home-button inline-button alt-button-col"> Steam
+        <a href="https://store.steampowered.com/app/1176110/AudioTheory_Guitars/" class="no-decoration" onclick="gtag('event','purchase Steam');"> 
+        <div class="home-button inline-button alt-button-padding"> Steam
             <img class="steam-logo" src="images/steam-logo-s.png">
 
         </div>
@@ -217,7 +202,7 @@
 
     <div class="align-center display-inline-block button-rh">
         <a href="https://gumroad.com/l/audiotheory" class="no-decoration" onclick="gtag('event','purchase direct (body)');">
-        <div class="home-button inline-button alt-button-col">
+        <div class="home-button inline-button alt-button-padding">
                 Purchase Direct
         </div>
         </a>
@@ -229,54 +214,26 @@
 
 
 <!-- #region footer -->
-<div class="align-center-d text-block padding-top">
-        <!-- Signup Form -->
-        <div id="mc_embed_signup">
-            <form action="https://gmail.us20.list-manage.com/subscribe/post?u=5e36fd2a9ea42cc4f8b2ce7f9&amp;id=3d4c39abbe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-                <div id="mc_embed_signup_scroll">
-                <div class="newsletter-title">For news and updates subscribe to our newsletter:</div>
-            <div class="mc-field-group">
-                <input type="email" value="" placeholder="email address" name="EMAIL" class="required email sign-up-box" id="mce-EMAIL">
-            </div>
-                <div id="mce-responses" class="clear">
-                    <div class="response" id="mce-error-response" style="display:none"></div>
-                    <div class="response" id="mce-success-response" style="display:none"></div>
-                </div>
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5e36fd2a9ea42cc4f8b2ce7f9_3d4c39abbe" tabindex="-1" value=""></div>
-                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-        
-                
-                </div>
-            </form>
-        </div>
-        <!--End Signup Form-->
-        </div>
-        
-        <!-- Modal -->
-        <div id="modal-c" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-        </div> 
-        <!-- End Modal -->
+<div class="padding-bottom padding-top" >
+
+
+</div>
+  
+<!-- Modal -->
+<div id="modal-c" class="modal">
+<span class="close">&times;</span>
+<img class="modal-content" id="img01">
+</div> 
+<!-- End Modal -->
     
 <footer>
-<ul>
-<li><a href="user.html">User Guide</a></li>
-<li><a href="faq.html">FAQ</a></li>
-<li><a href="press.html">Press</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-<div class="copywright align-center-d">
+
+    
+<div class="copywright align-center">
     Copyright ©2019, AudioTheory
 </div>
 </footer>
-<!-- right-left -->
-</div>
-</div>
-<!-- page-content-wrapper -->
-</div>
-<!-- end right left -->
-<br><br>
+
 <script type="text/javascript" src="scripts.js"></script>
 </body>
 </html> 
