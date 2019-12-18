@@ -91,12 +91,12 @@ img {
     min-width: 25px;
 }
 .logo-padding {
-    padding-top: 100px;
+    padding-top: 30px;
 
 }
 
 .logo-padding-r {
-    padding-top: 80px;
+  /*  padding-top: 80px; */
 
 }
 .logo-offset {
@@ -140,7 +140,6 @@ header {
     border-bottom: 1px solid #b8b8b8;
     background: #ffffffb0;
     height: 60px;
-    position: fixed;
     align-items: center;
     width: 100%;
     display: flex;
@@ -545,8 +544,14 @@ nav ul li a:hover { color:#8a8a8a; }
 .header-nav-icon {
     margin-right: auto;
     display: inline-block;
-    margin-left: 20px;
-    margin-top: 8px;
+    margin-left: 11px;
+    margin-top: 0px;
+}
+.header-nav-icon_c {
+    margin-right: auto;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 .sidebar-nav li a {
     color: #b3b3b3 !important;
@@ -1103,12 +1108,7 @@ li.b { padding-bottom: 15px; }
         max-height: 110px !important;
         background: #ffffffe3;
     }
-    .logo-padding {
-        padding-top: 130px;
-    }
-    .logo-padding-r {
-        padding-top: 110px;
-    }
+
     .r-c {
         margin-left: auto;
         margin-right: auto;

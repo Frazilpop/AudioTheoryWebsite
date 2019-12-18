@@ -74,7 +74,10 @@ $("#menu-toggle").click(function (e) {
   e.preventDefault();
   $("#wrapper").toggleClass("toggled");
 });
-
+$("#menu-toggle_c").click(function (e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+});
 var leftArrow = document.getElementsByClassName("slick-prev")[0];
 var rightArrow = document.getElementsByClassName("slick-next")[0];
 
@@ -93,4 +96,5 @@ loadMoreButton.onclick = function() {
   loadMoreContent.style.display = "block";
   loadMoreButton.style.display = "none";
 
-} 
+}
+
