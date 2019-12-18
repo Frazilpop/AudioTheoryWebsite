@@ -138,7 +138,7 @@ header {
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #b8b8b8;
-    background: #ffffffb0;
+    background: #f7f7f7;
     height: 60px;
     align-items: center;
     width: 100%;
@@ -545,7 +545,7 @@ nav ul li a:hover { color:#8a8a8a; }
     margin-right: auto;
     display: inline-block;
     margin-left: 11px;
-    margin-top: 0px;
+    margin-top: 10px;
 }
 .header-nav-icon_c {
     margin-right: auto;
@@ -1176,7 +1176,21 @@ h2 .main-title {
     border: 1px solid #8a9191!important;
     margin-top: 40px!important;
     margin-bottom: 30px!important;
+    height: 420px;
+
 }
+@media (min-width:540px) {
+    .grid-article-outline {
+        height: 400px;
+    }
+}
+
+@media (min-width:1200px) {
+    .grid-article-outline {
+        height: 420px;
+    }
+}
+
 .grid-article-outline:hover {
     box-shadow: 0px 0px 20px 5px rgba(119,118,118,0.25)!important;
 }
@@ -1254,6 +1268,12 @@ h2 .main-title {
     background: url("images/read-more-arrow-light-left-p.svg" ) no-repeat 0 0;
 }
 
+body:after{
+    position: absolute; overflow: hidden; left: -50000px; content: 
+    url("images/read-more-arrow-light-h.svg" ) url("images/read-more-arrow-light-left-h.svg" ) url("images/read-more-arrow-light-left-h.svg" ) url("images/read-more-arrow-light-p.svg" )
+    url("images/menu-icon.svg" ) url("images/menu-icon_l.svg" );
+}
+
 .slick-slide:focus {outline:none;}
 .slick-slide::-moz-focus-inner {border:0;}
 .article-slider-item {
@@ -1264,4 +1284,49 @@ h2 .main-title {
     display: none;
 }
 
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56%;
+  position: relative;
+}
+@media(max-width: 480px) {
+    .iframe-container {
+        padding-top: 55.4%;
+    }
+}
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
 
+.close:hover {
+    background: #c4c4c4;
+}
+.close:active {
+    background: #a1a1a1;
+}
+
+.close {
+    opacity: 1 !important;
+    text-shadow: none !important;
+    color:#404040 !important;
+    text-align: center;
+    padding-top: 4.4px;
+    background: #eae7e7;
+    width:33px;
+    height: 33px;
+    border-radius: 50%;
+    font-family: 'futura_md_btmedium';
+    top: 25px;
+    right: 25px;
+}
+
+@media (max-width:600px) {
+    header {
+        display: none !important;
+    }
+}
