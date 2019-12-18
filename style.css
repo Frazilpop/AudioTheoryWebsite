@@ -1176,18 +1176,18 @@ h2 .main-title {
     border: 1px solid #8a9191!important;
     margin-top: 40px!important;
     margin-bottom: 30px!important;
-    height: 380px;
+    min-height: 380px;
 
 }
 @media (min-width:540px) {
     .grid-article-outline {
-        height: 400px;
+        min-height: 400px;
     }
 }
 
 @media (min-width:1200px) {
     .grid-article-outline {
-        height: 420px;
+        min-height: 420px;
     }
 }
 
