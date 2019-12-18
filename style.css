@@ -1330,3 +1330,8 @@ body:after{
         display: none !important;
     }
 }
+
+.bold-menu-item {
+        font-family: 'futura_md_btmedium';
+
+}
