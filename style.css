@@ -924,12 +924,14 @@ li.b { padding-bottom: 15px; }
 
 }
 .padded-hr {
+    border-color: #8a9191;
     border-bottom: 1px solid #8a9191 !important;
     margin-left: 80px;
     margin-right: 80px;
     padding-top: 20px;
 }
 .full-hr {
+    border-color: #8a9191;
     border-bottom: 1px solid #8a9191 !important;
     padding-top: 15px;
 }
