@@ -1303,7 +1303,6 @@ body:after{
 .close:active {
     background: #a1a1a1;
 }
-
 .close {
     opacity: 1 !important;
     text-shadow: none !important;
@@ -1326,6 +1325,8 @@ body:after{
 }
 
 .bold-menu-item {
-        font-family: 'futura_md_btmedium';
-
+    font-family: 'futura_md_btmedium';
+}
+.update-title {
+    padding-bottom: 5px;
 }
