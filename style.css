@@ -1343,3 +1343,10 @@ body:after{
 .update-title {
     padding-bottom: 5px;
 }
+
+@media(max-width:480px) {
+    .slick-slider-single {
+        padding-bottom: 0px!important;
+        margin-bottom: 0px!important;
+    }
+}
