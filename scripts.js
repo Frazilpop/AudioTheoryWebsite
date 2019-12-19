@@ -15,10 +15,7 @@ span.onclick = function() {
   modal.style.display = "none";
   body.classList.remove("no-scroll");
 
-} 
-
-
-
+}
 
 $(function(){
   var includes = $('[data-include]');
@@ -40,6 +37,7 @@ $(".slick-slider-single").slick({
   dots: true,
   slidesToShow: 4,
   slidesToScroll: 1,
+  adaptiveHeight: false,
   responsive: [
     {
       breakpoint: 1200,
@@ -80,21 +78,21 @@ $("#menu-toggle_c").click(function (e) {
 });
 var leftArrow = document.getElementsByClassName("slick-prev")[0];
 var rightArrow = document.getElementsByClassName("slick-next")[0];
-
-rightArrow.onclick = function() {
-  leftArrow.style.display = "block";
-  leftArrow.style.setProperty('display', 'block', 'important');
-
-
-} 
+if (rightArrow != null) {
+  rightArrow.onclick = function() {
+    leftArrow.style.display = "block";
+    leftArrow.style.setProperty('display', 'block', 'important');
 
 
+  } 
+}
 var loadMoreContent = document.getElementsByClassName("load-more-content")[0];
 var loadMoreButton = document.getElementsByClassName("load-more-button")[0];
+if (loadMoreButton != null) {
+  loadMoreButton.onclick = function() {
+    loadMoreContent.style.display = "block";
+    loadMoreButton.style.display = "none";
 
-loadMoreButton.onclick = function() {
-  loadMoreContent.style.display = "block";
-  loadMoreButton.style.display = "none";
-
+  }
 }
 
