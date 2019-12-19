@@ -1079,8 +1079,8 @@ li.b { padding-bottom: 15px; }
 .dashed-line {
     border-top-style: dashed;
     border-width: 1px;
-    height: 1px;
-    border-bottom: 1px solid #8a9191 !important;
+    height: .5px;
+    border-color: #8a9191;
 }
 .faq-break {
     margin-top: 40px;
@@ -1342,11 +1342,4 @@ body:after{
 }
 .update-title {
     padding-bottom: 5px;
-}
-
-@media(max-width:480px) {
-    .slick-slider-single {
-        padding-bottom: 0px!important;
-        margin-bottom: 0px!important;
-    }
 }
