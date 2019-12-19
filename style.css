@@ -717,7 +717,7 @@ li.b { padding-bottom: 15px; }
 }
 .c-full {
     max-width: 100% !important;
-    background: #ffff;
+    background: #e6e6e6;
 }
 
 .grid-name {
@@ -892,7 +892,6 @@ li.b { padding-bottom: 15px; }
     padding-left: 80px;
     padding-right: 80px;
     margin-top: -150px;
-    background: #ffffff;
     padding-bottom: 20px;
 }
 .margin-top-c {
