@@ -68,10 +68,10 @@ hr {
 }
 
 .drop-shadow {
-    filter: drop-shadow(8px 8px 8px rgba(22, 22, 22, 0.678));
+  box-shadow: 5px 5px 8px 0 rgba(22, 22, 22, 0.25), 0 6px 20px 0 rgba(22, 22, 22, 0.19);
 }
 .drop-shadow-light {
-    filter: drop-shadow(5px 5px 4px rgba(22, 22, 22, 0.411));
+  box-shadow: 5px 5px 8px 0 rgba(22, 22, 22, 0.1), 0 6px 20px 0 rgba(22, 22, 22, 0.05);
 }
 .padded-container {
     padding:0px 20px;
