@@ -1342,14 +1342,16 @@ body:after{
     padding-bottom: 5px;
     font-weight: 700;
 }
-.slick-track{
+
+
+.article-slider .slick-track{
     display: flex;
 }
-.slick-slide{
+.article-slider .slick-slide{
     display: flex;
     height: auto;
 }
-.slick-initialized .slick-slide {
+.article-slider .slick-initialized .slick-slide {
     display: flex!important;
 }
 .button-intro {
