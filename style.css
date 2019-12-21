@@ -74,7 +74,7 @@ hr {
   box-shadow: 5px 5px 8px 0 rgba(22, 22, 22, 0.1), 0 6px 20px 0 rgba(22, 22, 22, 0.05);
 }
 .padded-container {
-    padding:0px 20px;
+    padding:0px 15px;
 }
 .border-image {
     border: 2px solid white;
@@ -869,12 +869,18 @@ li.b { padding-bottom: 15px; }
 .mobile-only {
     display: none !important;
 }
+.mobile-only-block {
+    display: none !important;
+}
 @media (max-width: 767px) {
     .desktop-only {
         display: none !important;
     }
     .mobile-only {
         display: initial !important;
+    }
+    .mobile-only-block {
+        display: block !important;
     }
 }
 /* */
@@ -1357,7 +1363,14 @@ body:after{
 .button-intro {
     padding-bottom: 25px;
 }
+
+@media (max-width:767px) {
+    .slick-slider-single {
+        margin-bottom: 10px !important;
+    }
+}
 @media (max-width:480px) {
+   
     .mobile-block-button {
         display: block;
         padding: 0px;
