@@ -1350,15 +1350,18 @@ body:after{
 }
 
 
-.article-slider .slick-track{
+.slick-slider-single .slick-track{
     display: flex;
 }
-.article-slider .slick-slide{
+.slick-slider-single .slick-slide{
     display: flex;
     height: auto;
 }
-.article-slider .slick-initialized .slick-slide {
+.slick-slider-single .slick-initialized .slick-slide {
     display: flex!important;
+}
+.slick-slide {
+    max-height: 100% !important;
 }
 .button-intro {
     padding-bottom: 25px;
@@ -1380,4 +1383,9 @@ body:after{
     .button-rh {
         margin-top: 10px;
     }
+}
+.row {
+    margin-left: 5px !important;
+    margin-right: 5px!important;
+
 }
