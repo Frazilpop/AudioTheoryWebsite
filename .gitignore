@@ -1,9 +1,4 @@
-
-fonts/.DS_Store
-.DS_Store
-.DS_Store
-.DS_Store
-.DS_Store
-.DS_Store
-.DS_Store
-.DS_Store
+archive/
+*.DS_Store
+*.meta
+SWD*
