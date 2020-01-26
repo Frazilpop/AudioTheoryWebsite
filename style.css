@@ -188,6 +188,39 @@ header {
 .sticky + .content {
     padding-top: 60px;
 } 
+.mobile-p{
+    margin-bottom: 30px;
+}
+@media (min-width: 481px) {
+    .sticky-m {
+        display: none;
+    }
+  .mobile-p{
+        display: none;
+    }
+}
+
+.sticky-m {
+    background: #363636;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    min-height: 60px;
+    max-height: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 1;
+}
+.sticky-m:after {
+    padding-bottom:
+}
+.sticky-m + .content {
+    padding-top: 60px;
+} 
+.static-logo-m {
+    max-width: 70%;
+    max-height: 45px;
+}
 /* */
 
 /* Buttons */
@@ -561,7 +594,7 @@ nav ul li a:hover { color:#8a8a8a; }
 .header-nav-icon_c {
     margin-right: auto;
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 11px;
     margin-top: 10px;
 }
 .sidebar-nav li a {
@@ -816,7 +849,11 @@ li.b { padding-bottom: 15px; }
     margin: 0 auto;
     max-width: 1600px;
 }
-
+.wrapper-e {
+    margin: 0 auto;
+    max-width: 1980px;
+    overflow: hidden;
+}
 .gridImage {
     max-width: 100%;
     margin: 0 auto;
@@ -830,12 +867,12 @@ li.b { padding-bottom: 15px; }
     text-overflow: ellipsis;
     white-space: nowrap;
     font-size: 19px;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
 }
 .grid-item-description {
     text-align: center;
     display: block;
-    padding-top: 12px;
+    padding-top: 10px;
     font-size: 14px;
     white-space: normal;
     margin-left: auto;
@@ -884,6 +921,12 @@ li.b { padding-bottom: 15px; }
     }
     .mobile-only-block {
         display: block !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hide-mobile {
+        display: none !important;
     }
 }
 /* */
@@ -1372,7 +1415,13 @@ body:after{
     }
 }
 @media (max-width:480px) {
-   
+    .article-title-reduced-mobile {
+        font-size: 1.3rem;
+    }
+    .grid-item-description-reduced-mobile {
+        padding-top: 8px;
+    }
+
     .mobile-block-button {
         display: block;
         padding: 0px;
@@ -1395,4 +1444,28 @@ p {
     display: block;
     padding-top: 5px;
     padding-bottom: 15px;
+}
+.reduced-grid-padding{
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}
+.reduced-grid-container{
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}
+@media(min-width:992px) {
+    .reduced-grid-padding{
+        padding-left: 10px!important;
+        padding-right: 10px!important;
+    }
+    .reduced-grid-container{
+        padding-left: 10px!important;
+        padding-right: 10px!important;
+    }
+}
+@media (max-width: 767px) {
+
+.article-text-container {
+    padding-left: 10px !important;
+}
 }

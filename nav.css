@@ -133,6 +133,24 @@ body {
 .nav-icon:hover {
     background: url("images/menu-icon.svg" ) no-repeat 0 0;
 }
+
+.nav-icon-sticky-m {
+    background: url("images/menu-icon-h.svg" ) no-repeat 0 0;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    z-index: 1;
+}
+.nav-icon-sticky-m:hover {
+    background: url("images/menu-icon.svg" ) no-repeat 0 0;
+}
+@media(max-width:480px) {
+
+    .nav-icon-sticky-m {
+        background: url("images/menu-icon-h_l.svg" ) no-repeat 0 0;
+
+    }
+}
 .nav-icon-alt {
     background: url("images/menu-icon-h_l.svg" ) no-repeat 0 0;
     width: 40px;

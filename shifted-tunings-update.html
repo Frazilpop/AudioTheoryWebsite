@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-<title>Exact Chord Playback Update</title>
+<title>Shifted Tunings Update</title>
 <link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
 <link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
 <link rel="stylesheet" type= "text/css" href= "style.css" />
@@ -73,57 +73,47 @@
 </div>
 
 <div class="align-center-d article-title">
-    <h2><span class="main-title">AudioTheory Guitars – 1.7.0</span><br>Exact Chord Playback + Scale Playback Update</h2>
+    <h2><span class="main-title">AudioTheory Guitars – 1.8.0</span><br>Shifted Tunings Update</h2>
 </div>
 <div class="half-space"></div>
 
 <div class="padded-container">
-    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory-exact-playback-1080p.jpg" alt="Exact chord playback" />
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/Tuning-update-title.jpg" alt="AudioTheory Guitars custom tuning" />
 </div>
 
 <div class="text-block padding-top padding-bottom">
     <!--&-->
-    AudioTheory Guitars version 1.7.0 includes a few miscellaneous bug fixes and two brand new features – exact chord playback and play buttons on the full screen scale selector to preview how each scale sounds.
+    AudioTheory Guitars version 1.8.0 introduces shifted guitar tunings. This means the fretboard and chord diagrams can now display relative to any systematic increases or decrease of standard E tuning, with an option to lower (or 'drop') the 6th string as required.
     <!--&-->
 </div>
 
 <div class="padded-container">
-    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/Exact-chord-playback-60.gif" alt="Playback gif F chord" />
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/tuning-update-01.jpg" alt="AudioTheory Guitars custom tuning" />
 </div>
 
 <div class="text-block padding-top padding-bottom">
     <!--&-->
-    <strong>Exact Chord Playback</strong>
+    Shifted tunings means support for any tuning where all the strings are tuned by the the same interval relative to E tuning (EADGBE). Combined with the option to lower the 6th string (as in Drop D, Drop C tuning etc...) this means a total of 24 tuning options.
 <br><br>
-Version 1.5.0 introduced ‘octave fretboard playback’, allowing for note highlighting at the specific octave on the fretboard. This has been extended to cover chords, and renamed in the settings simply to 'playback' to reflect this change. The two options for this work as follows:
-<br><br>
-<strong>Global</strong>
-<br><br>
-All instances of a pressed note are highlighted across the diagrams
-<br><br>
-<strong>Exact</strong>
-<br><br>
-The specific instance of a note is highlighted across the diagrams. For the keyboard/ fretboard this will be the note at the selected octave. For chords, this is the note at the point it is played within the chord. This is great for understanding exactly how a chord is to be played, as you can use the 'play' button net to each chord to see an exact visual representation of it highlighted on the fretboard.
+In terms of using these new tunings, they can be found in the 'guitars' tab in the settings. As for chords, open chords are still selected by relative chord shape (not sound) from the mini pop-up. I'm looking at options to choose by both in a future update.
     <!--&-->
 </div>
 
 <div class="padded-container">
-    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/Scale-playback-60.gif" alt="scale payback gif" />
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/tuning-update-03.jpg" alt="AudioTheory Guitars capo setting" />
 </div>
 
-<div class="text-block padding-top padding-bottom">
+<div class="text-block padding-top">
     <!--&-->
-    <strong>Scale Playback</strong>
+    <strong>So what else is new?</strong>
 <br><br>
-There is now a play button next to each scale preview on the fullscreen scale selector. Press this and the set of scale notes will play through in order, providing an audio preview for how the scale sounds.
+Well, there's a new and improved method for setting a capo. Now you can click on the desired number on the fretboard and... ta-da! When a capo is applied there is a new capo icon that appears below the open strings that can be used to remove it. At least for now the existing plus/ minus selector still exists (although relegated to the settings cog) however I'm thinking about removing it in the future.
+<br><br>
+I'm also pleased to report that numerous code optimisations go live with this latest update, in part to support the new tuning settings and in part to improve general performance of the application. I pleased to inform you that AudioTheory Guitars is running better than ever.
     <!--&-->
 </div>
 
-<div class="padded-container">
-    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory-c-chord-exact.png" alt="C chord exact" />
-</div>
-
-<div class="text-block padding-top padding-bottom">
+<div class="text-block padding-bottom">
         <div class="dashed-line faq-break"></div>
         All updates are free for owners of AudioTheory Guitars. If you purchased directly then you can download the latest version from your Gumroad account. 
         For Steam users, new updates can be downloaded through the Steam client. 
