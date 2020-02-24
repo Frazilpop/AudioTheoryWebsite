@@ -19,7 +19,7 @@ body {
 a {
     color: #172022 !important;
     text-decoration: none !important;
-  }
+}
 .italic {
     font-family: 'futura_lt_btlight_italic', Arial, Helvetica, sans-serif;
 
@@ -67,6 +67,17 @@ hr {
     }
 }
 
+@media(min-width:960px) {
+    .feature-image-960-s {
+        max-width: 960px;
+    }
+}
+@media(max-width:960px) {
+    .feature-image-960 {
+        max-width: 100%;
+    }
+}
+
 .drop-shadow {
   box-shadow: 5px 5px 8px 0 rgba(22, 22, 22, 0.25), 0 6px 20px 0 rgba(22, 22, 22, 0.19);
 }
@@ -95,8 +106,8 @@ img {
 
 }
 
-.logo-padding-r {
-  /*  padding-top: 80px; */
+.logo-padding-sticky {
+    padding-top: 95px;
 
 }
 .logo-offset {
@@ -109,6 +120,15 @@ img {
         max-width: 90%;
     }
     .logo-offset {
+        margin-right:20px;
+    }
+}
+.logo-offset-r {
+    margin-right:15px;
+}
+@media (max-width: 480px) {
+
+    .logo-offset-r {
         margin-right:20px;
     }
 }
@@ -210,9 +230,6 @@ header {
     padding-top: 10px;
     padding-bottom: 10px;
     z-index: 1;
-}
-.sticky-m:after {
-    padding-bottom:
 }
 .sticky-m + .content {
     padding-top: 60px;
@@ -590,12 +607,14 @@ nav ul li a:hover { color:#8a8a8a; }
     display: inline-block;
     margin-left: 11px;
     margin-top: 10px;
+
 }
 .header-nav-icon_c {
     margin-right: auto;
     display: inline-block;
     margin-left: 11px;
     margin-top: 10px;
+
 }
 .sidebar-nav li a {
     color: #b3b3b3 !important;
@@ -630,6 +649,9 @@ li.b { padding-bottom: 15px; }
   background-color: rgba(0,0,0,0.9); 
   -ms-overflow-style: none; 
   scrollbar-width: none !important;
+}
+.modal-content {
+    background-color: initial !important;
 }
 .no-scroll {
   overflow: hidden;
@@ -1469,3 +1491,8 @@ p {
     padding-left: 10px !important;
 }
 }
+.appstore-button {
+    display: inline-block !important;
+    margin-right: 20px;
+}
+

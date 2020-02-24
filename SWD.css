@@ -36,7 +36,7 @@ header {
 /* Footer */
 footer { background: #464f51; }
 .copywright { background: #303839;  }
-footer ul li a { color:rgba(255, 255, 255, 0.651); }
+footer ul li a { color:rgba(255, 255, 255, 0.651)!important; }
 
 
 .logo-button span {
