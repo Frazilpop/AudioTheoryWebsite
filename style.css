@@ -1496,3 +1496,12 @@ p {
     margin-right: 20px;
 }
 
+.win, .mac { display:none; }
+@media screen and (min-width:0\0) and (min-resolution: +72dpi) { .win { display:block; } }
+@media \0screen\,screen\9 { .win { display:initial; } }
+_:-moz-tree-row(hover), .win { display:none; }
+@media screen and (-moz-windows-theme) { .win { display:block; } }
+@media screen and (-moz-os-version) { .win { display:block; } }
+@supports (-moz-osx-font-smoothing:auto) { .mac { display:block; } }
+@media screen and (-webkit-max-device-pixel-ratio:1) and (min-color-index:0) { .mac  { display:block; } }
+
