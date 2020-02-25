@@ -243,3 +243,24 @@ footer {
 .padding-top-ex {
     padding-top: 120px;
 }
+.inline-button-s {
+    display: inline!important ;
+    padding: 7px 17px;
+    background: #171515;
+    border:.5px solid #e6e6e673;
+    padding-top: 8px;
+    padding-left:17px;
+    padding-right:17px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+
+.header-dark {
+    background: #3a394094;
+}
+
+@media (max-width:720px) {
+    header {
+        display: none !important;
+    }
+}
