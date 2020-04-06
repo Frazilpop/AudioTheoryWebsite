@@ -1492,70 +1492,11 @@ p {
 }
 @media (max-width: 767px) {
 
-.article-text-container {
-    padding-left: 10px !important;
-}
+    .article-text-container {
+        padding-left: 10px !important;
+    }
 }
 .appstore-button {
     display: inline-block !important;
     margin-right: 20px;
 }
-
-/* Hide all possibilities in advance */
-.firefox, .msie, .safari, .chrome, .win, .mac { display:none; }
-
-/* Detect Internet Explorer 9 or Greater */
-@media screen and (min-width:0\0) and (min-resolution: +72dpi) { .msie, .win { display:block; } }
-
-/* Detect Internet Explorer 8 or Lower and veru old versions of Firefox */
-@media \0screen\,screen\9 { .msie, .win { display:block; } }
-
-/* Detect any version of Firefox */
-_:-moz-tree-row(hover), .firefox { display:block; }
-
-/* Rule out any straggling Internet Explorer References */
-_:-moz-tree-row(hover), .msie, .win { display:none; }
-
-/* Detect Windows Firefox 4 or newer */
-@media screen and (-moz-windows-theme) { .win, .firefox { display:block; } }
-
-/* Detect Windows Firefox 25 or newer */
-@media screen and (-moz-os-version) { .win, .firefox { display:block; } }
-
-/* Detect Mac Firefox 25 or newer */
-@supports (-moz-osx-font-smoothing:auto) { .mac, .firefox { display:block; } }
-
-/* Detect Chrome 22+ (and Safari 6.1+) */
-@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm), screen and(-webkit-min-device-pixel-ratio:0) {
-  .chrome { display:block; }
-}
-
-/* Detect Chrome 28+ */
-@media screen and (-webkit-min-device-pixel-ratio:0) { @supports (background-attachment:local) {
-    .chrome { display:block; }
-  }
-}
-
-/* Remove Chrome refs in Firefox */
-_:-moz-tree-row(hover), .chrome { display:none !important; }
-@media screen and (-moz-windows-theme) { .chrome { display:none !important; } }
-@media screen and (-moz-os-version) { .chrome { display:none !important; } }
-@supports (-moz-osx-font-smoothing:auto) { .chrome { display:none !important; } }
-
-    
-/* Detect Mac Safari 6.1 or newer, hide any straggling Chrome references */
-@media screen and (-webkit-max-device-pixel-ratio:1) and (min-color-index:0) {
-    .mac, .safari { display:block; } 
-    .chrome { display:none; } 
-}
-
-/* Safari 10.1+ */
-
-@media not all and (min-resolution:.001dpcm) { @media {
-      .mac, .safari { display:block; } 
-    .win { display:none; } 
-    .chrome { display:none; } 
-    .firefox { display:none !important; } 
-
-}}
-
