@@ -116,7 +116,7 @@ img {
 
 }
 .logo-offset {
-    margin-right:90px;
+    margin-right:40px;
 }
 @media (max-width: 480px) {
     .feature-logo {
