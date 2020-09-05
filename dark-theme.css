@@ -28,6 +28,11 @@ a {
 .gradient-dark-blue {
     background: radial-gradient(circle at 50% 880px, rgb(70, 60, 100), #22253a 70%);
 }
+.gradient-dark-blue-alt {
+    background: radial-gradient(circle at 50% 480px, rgb(70, 60, 100), #22253a 70%);
+}
+
+
 .gradient-teal {
     background: rgba(0, 0, 0, 0) radial-gradient(circle at 25% center, rgb(31, 170, 142), rgb(11, 137, 187) 170%);
 }
@@ -117,6 +122,13 @@ footer {
 .padded-keyboard {
     padding-left: 30px;
     padding-right: 30px;
+
+}
+.padded-drum-grid {
+    max-width: 84%;
+    padding-left: 60px;
+    padding-right: 30px;
+
 
 }
 .block-set-container {
@@ -263,4 +275,12 @@ footer {
     header {
         display: none !important;
     }
+}
+
+ul.bullet {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.slick-slider {
+    margin-bottom: 0px!important;
 }

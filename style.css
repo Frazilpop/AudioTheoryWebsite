@@ -51,6 +51,12 @@ hr {
         max-width: 550px;
     }
 }
+
+@media(min-width:800px) {
+    .feature-image-800 {
+        max-width: 800px;
+    }
+}
 @media(min-width:1260px) {
     .feature-image-1200 {
         max-width: 1200px;
@@ -103,6 +109,16 @@ img {
     padding-bottom: 30px;
 
 }
+
+.feature-logo-large {
+    max-width: 760px;
+    padding-bottom: 30px;
+
+
+}
+.fa-logo-offset{
+    padding-left: 33px;
+}
 .icon-logo {
     min-width: 25px;
 }
@@ -123,6 +139,14 @@ img {
         padding-left: 20px;
         padding-right: 20px;
         max-width: 90%;
+    }
+    .feature-logo-large {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 70px;
+    }
+    .fa-logo-offset {
+        padding-left: 14px;
     }
     .logo-offset {
         margin-right:20px;
@@ -414,6 +438,37 @@ header {
 .quote-attribution {
     padding-top: 20px;
 }
+.logo-inline {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 12%;
+    outline: 0;
+}
+@media (max-width: 1000px) {
+    .logo-inline {
+        width: 18%;
+    }
+}
+
+.logo-display {
+    max-height: 40px;
+    max-width: 130px;
+    background-repeat: no-repeat;
+
+}
+.logo-block {
+    max-width: 130px;
+    max-height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.logo-set-container {
+    display: block;
+    padding-bottom: 30px;
+    text-align: center;
+}
 @media (max-width: 767px) {
     .quote-attribution {
         padding-left: 20px;
@@ -431,6 +486,9 @@ header {
 .padding-top-r {
     padding-top: 15px;
 }
+.padding-top-25 {
+    padding-top: 25px;
+}
 .padding-top-reduced {
     padding-top: 20px;
 }
@@ -445,6 +503,31 @@ header {
     .padding-bottom {
         padding-bottom: 30px;
     }
+
+    .logo-set-container {
+        display: block;
+    }
+    .logo-inline {
+        display: block;
+        width: 30%;
+        margin-top: 5px;
+    }
+    .logo-display {
+        max-width: inherit;
+        max-height: inherit;
+    }
+
+}
+
+.no-padding {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.center-grid {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 /*
 @media(max-width: 767px) {
@@ -622,8 +705,12 @@ nav ul li a:hover { color:#8a8a8a; }
 
 }
 .sidebar-nav li a {
-    color: #b3b3b3 !important;
-  }
+color: #b3b3b3 !important;
+}
+.nav-padding-top {
+padding-top: 35px;
+line-height: 0px;
+}
 /* */
 
 /* bullet list */
@@ -757,6 +844,14 @@ li.b { padding-bottom: 15px; }
     margin-right: auto;
     text-align: center;
 }
+.column-2-reduced-padding {
+    flex: 40%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 .column {
     flex: 1;
     padding: 29px;
@@ -812,6 +907,10 @@ li.b { padding-bottom: 15px; }
 .slider-container {
     margin: 0 auto;
     max-width: 960px;
+}
+.slider-container-1100 {
+    margin: 0 auto;
+    max-width: 1100px;
 }
 .slick-slide {
     text-align: center;
@@ -958,6 +1057,31 @@ li.b { padding-bottom: 15px; }
 }
 /* */
 
+
+/* padding */
+
+.padding-top-10 {
+    padding-top: 10px;
+}
+.padding-top-15 {
+    padding-top: 15px;
+}
+.padding-bottom-5 {
+    padding-bottom: 5px;
+}
+.padding-bottom-10 {
+    padding-bottom: 10px;
+}
+.padding-bottom-20 {
+    padding-bottom: 20px;
+}
+.padding-bottom-25 {
+    padding-bottom: 25px;
+}
+.padding-bottom-30 {
+    padding-bottom: 30px;
+}
+
 /* article */
 .full-width-image-c {
     width: 100% !important;
@@ -1030,6 +1154,7 @@ li.b { padding-bottom: 15px; }
 .bottom-feature-image {
     margin-top: -100px;
 }
+
 .store-image {
     border: 2px solid #ffffff !important;
     box-sizing: border-box;
@@ -1149,6 +1274,17 @@ li.b { padding-bottom: 15px; }
     font-size: 1.1rem;
     color: #282828;
     font-weight: bold;
+}
+.cms-sub-heading-med {
+    font-size: 1.6rem;
+    color: #282828;
+    font-weight: bold;
+}
+.cms-sub-heading-large {
+    font-size: 33px;
+    font-weight: 600;
+    color: #282828;
+
 }
 .dashed-line {
     border-top-style: dashed;
@@ -1349,7 +1485,7 @@ h2 .main-title {
 }
 
 body:after{
-    position: absolute; overflow: hidden; left: -50000px; content: 
+    display: none; content: 
     url("images/read-more-arrow-light-h.svg" ) url("images/read-more-arrow-light-left-h.svg" ) url("images/read-more-arrow-light-left-h.svg" ) url("images/read-more-arrow-light-p.svg" )
     url("images/menu-icon.svg" ) url("images/menu-icon_l.svg" );
 }
@@ -1499,4 +1635,10 @@ p {
 .appstore-button {
     display: inline-block !important;
     margin-right: 20px;
+}
+.p-2 {
+    padding: 0px !important;
+}
+.small-print {
+    font-size: 70%;
 }
