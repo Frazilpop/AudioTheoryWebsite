@@ -1485,7 +1485,7 @@ h2 .main-title {
 }
 
 body:after{
-    display: none; content: 
+    position: absolute; overflow: hidden; left: -50000px; content: 
     url("images/read-more-arrow-light-h.svg" ) url("images/read-more-arrow-light-left-h.svg" ) url("images/read-more-arrow-light-left-h.svg" ) url("images/read-more-arrow-light-p.svg" )
     url("images/menu-icon.svg" ) url("images/menu-icon_l.svg" );
 }
