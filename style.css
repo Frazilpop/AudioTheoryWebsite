@@ -1722,8 +1722,11 @@ p {
   }
   .image-spacer {
     padding-top: 30%;
-}
+    }
+    .block-with-image {
+        min-height: inherit !important;
 
+    }
 
 }
 
@@ -1734,3 +1737,5 @@ p {
 .no-outline {
     border: initial!important;
 }
+
+.grid
