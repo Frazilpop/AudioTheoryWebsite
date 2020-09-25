@@ -52,23 +52,23 @@
     <div class="nav-icon-alt header-nav-icon_c" id="menu-toggle_c"></div>
     <li> <a href="index.html">Home</a>
     </li>
-    <li class="nav-padding-top"><a href="landing.html"> <span class="bold-menu-item">AudioTheory Guitars</span></a>
+    <li class="nav-padding-top"><a href="guitars.html"> <span class="bold-menu-item">AudioTheory Guitars</span></a>
     </li>
     <li><a href="user.html">User Guide</a>
     </li>
     <li><a href="update.html">Update Log</a>
     </li>
-    <li><a href="https://gumroad.com/l/audiotheory">Purchase</a>
+    <li><a href="https://gumroad.com/l/audiotheory" onclick="gtag('event','purchase direct guitars (nav)');">Purchase</a>
     
     <li class="nav-padding-top"><a href="grids.html"><span class="bold-menu-item">AudioTheory Grids</span></a>
     </li>
+    
     <li><a href="grids-user-guide.html">User Guide</a>
     </li>
     
     <li><a href="grids-update-log.html">Update Log</a>
     </li>
-    <li><a href="https://gumroad.com/l/audiotheory-grids">Purchase</a>
-    
+    <li><a href="https://gumroad.com/l/audiotheory-grids" onclick="gtag('event','purchase direct grids (nav)');">Purchase</a>
     <li class="nav-padding-top"><a href="faq.html">FAQ</a>
     </li>
     <li><a href="press.html">Press</a>
@@ -82,35 +82,31 @@
 <!--#region page-content-->
 <!--H*-->
 <header class="sticky header-dark"> 
-<div class="float-right">
-<div class="align-center-d inner-right top-c"><!--note: remove inner-right if using appstore button-->
-    <span class="button-side-text">Now available for MacOS and Windows </span>
-    <a href="https://store.steampowered.com/app/1370780/AudioTheory_Grids/" class="no-decoration" onclick="gtag('event','purchase steam top (Landing)');">
-
-    <div class="appstore-button ">
-        <div class="home-button inline-button-s"> Steam
-            <img class="steam-logo" src="images/steam-logo-s.png">
-        </div>
+    <div class="float-right">
+    <div class="align-center-d top-c">
+        <span class="button-side-text">Now available for MacOS and Windows </span>
+        <a href="https://store.steampowered.com/app/1370780/AudioTheory_Grids/" class="no-decoration" onclick="gtag('event','purchase steam top grids (Landing)');">
+    
+          <div class="appstore-button ">
+            <div class="home-button inline-button-s"> Steam
+                <img class="steam-logo" src="images/steam-logo-s.png">
+    
+            </div>
+                
+              </div>
+        </a>
+              <a href="https://apps.apple.com/app/id1531850151" class="no-decoration" onclick="gtag('event','purchase mac app store grids (Landing)');">
+    
+    
+              <div class="appstore-button">
+                <img src="images/Appstore-Badge-w.svg" alt="" />
+                    
+                  </div>
+        </a>
     </div>
-    </a>
-
-    <!--
-    <a href="https://apps.apple.com/gb/app/audiotheory-guitars/id1492337444" class="no-decoration" onclick="gtag('event','purchase mac app store (Landing)');">
-        <div class="appstore-button">
-            <img src="images/Appstore-Badge-w.svg" alt="" />
-        </div>
-    </a>
--->
-
-    <a href="https://gumroad.com/l/audiotheory-grids" class="no-decoration" onclick="gtag('event','purchase direct (top)');">
-        <div class="home-button top-button inline-button">
-          Purchase Direct
-        </div>
-      </a>
-</div>
-</div>
-</header>
-<!-- 1 -->
+    </div>
+    </header>
+    <!-- 1 -->
 
 <!-- #region gradient-purple -->
 <div class="gradient-dark-blue">
@@ -233,8 +229,8 @@
         </p>
     </div>
 
-     <!--
-    <a href="https://apps.apple.com/gb/app/audiotheory-guitars/id1492337444" class="no-decoration" onclick="gtag('event','purchase mac app store (landing, body)');">
+     
+    <a href="https://apps.apple.com/app/id1531850151" class="no-decoration" onclick="gtag('event','purchase mac app store grids (landing, body)');">
         <div class="appstore-button-body">
       <img src="images/Appstore-Badge-b.svg" alt="" />
           
@@ -243,10 +239,10 @@
 
     <br><br>
 
-   -->
+   
 
     <div class="align-center display-inline-block mobile-block-button">
-        <a href="https://store.steampowered.com/app/1370780/AudioTheory_Grids/" class="no-decoration" onclick="gtag('event','purchase Steam (Landing)');">
+        <a href="https://store.steampowered.com/app/1370780/AudioTheory_Grids/" class="no-decoration" onclick="gtag('event','purchase Steam grids (Landing)');">
         <div class="home-button inline-button"> Steam
             <img class="steam-logo" src="images/steam-logo-s.png">
 
@@ -256,7 +252,7 @@
 
 
     <div class="align-center display-inline-block button-rh mobile-block-button">
-        <a href="https://gumroad.com/l/audiotheory-grids" class="no-decoration" onclick="gtag('event','purchase direct (Landing)');">
+        <a href="https://gumroad.com/l/audiotheory-grids" class="no-decoration" onclick="gtag('event','purchase direct grids (Landing)');">
         <div class="home-button inline-button">
                 Purchase Direct
         </div>
