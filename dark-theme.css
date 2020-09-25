@@ -230,12 +230,16 @@ footer {
     
     }
 
-    .padding-20-top-mobile {
-        padding-top: 20px!important;
+   
+
+}
+
+@media(max-width: 768px) {
+    .padding-30-top-mobile {
+        padding-top: 30px!important;
         padding-bottom: 0px!important;
     
     }
-
 }
 
 .padded-piano {
