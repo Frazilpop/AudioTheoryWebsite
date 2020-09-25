@@ -109,12 +109,17 @@ img {
     padding-bottom: 30px;
 
 }
-
+.feature-logo-medium {
+    max-width: 550px;
+    padding-bottom: 30px;
+}
 .feature-logo-large {
     max-width: 760px;
     padding-bottom: 30px;
-
-
+}
+.feature-logo-extra-large {
+    max-width: 1100px;
+    padding-bottom: 30px;
 }
 .fa-logo-offset{
     padding-left: 33px;
@@ -611,7 +616,7 @@ header {
     background: transparent;
     border: 1px solid #172022;
     text-align: center;
-    color: #172022!important;
+    color: #172022;
     text-decoration: none !important;
     min-width: 150px;
     margin-bottom: 40px;
@@ -1641,4 +1646,91 @@ p {
 }
 .small-print {
     font-size: 70%;
+}
+.no-padding-bottom {
+    padding-bottom: 0px!important;
+}
+.outline-sign-up-box {
+  /*  background-color: #81cadb; */
+  border: 1px solid  #e8e8e8;
+      border-radius: 25px;
+      padding-top: 30px;
+      padding-bottom: 5px;
+      padding-left: 45px;
+      padding-right: 45px;
+}
+
+.shift-up-image {
+    position: absolute;
+    top: 20%;
+}
+
+
+
+.image-spacer {
+    width: 100%;
+    padding-top: 30%;
+}
+@media (max-width:960px) {
+  .image-spacer {
+    padding-top: 20%;
+  }
+}
+@media (min-width:1900px) {
+  .image-spacer {
+    padding-top: 35%;
+  }
+}
+.curved-edges {
+    border-radius: 15px;
+}
+
+.offset-h-subtitle {
+  top: -15px;
+  position: relative;
+    color: #e8e8e8!important;
+    display: block;
+
+}
+@media (min-width:481px) and (max-width:1100px) {
+  .offset-h-subtitle {
+    display: none;
+
+  }
+}
+@media (min-width:481px) {
+
+.text-block-large-text {
+    font-size: 1.15rem !important;
+    line-height: 1.7rem !important;
+}
+}
+.top-alt-bg {
+  position: relative;
+  z-index: -2;
+}
+.shift-up-image-a {
+    position: absolute;
+    background: #111114 !important;
+    top: 0%;
+    height: 500px;
+}
+
+@media (max-width:480px) {
+  .shift-up-image {
+      top: 25%;
+  }
+  .image-spacer {
+    padding-top: 30%;
+}
+
+
+}
+
+.no-margin-top {
+    margin-top: 0px !important;
+}
+
+.no-outline {
+    border: initial!important;
 }
