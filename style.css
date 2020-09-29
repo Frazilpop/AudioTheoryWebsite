@@ -1745,3 +1745,8 @@ p {
 .no-outline {
     border: initial!important;
 }
+
+.software-promo {
+    padding-left: 20px;
+    padding-right: 20px;
+}
