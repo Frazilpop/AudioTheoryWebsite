@@ -1,0 +1,223 @@
+<!--#region head-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>Extended Chord Selector Update</title>
+<link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+<link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+<link rel="stylesheet" type= "text/css" href= "style.css" />
+<link rel="stylesheet" type= "text/css" href= "fonts.css" />
+<link rel="stylesheet" type= "text/css" href= "nav.css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+<link href="https://fonts.googleapis.com/css?family=Lusitana&display=swap" rel="stylesheet">
+<!--Global site tag (gtag.js) - Google Analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149487950-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-149487950-1');
+</script>
+<!--Facebook Pixel Code-->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '701042950385257');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=701042950385257&ev=PageView&noscript=1"
+  /></noscript>
+  <!--End Facebook Pixel Code-->
+</head>
+<body>
+<!--#endregion-->
+
+<!--#region nav-left-->
+<div id="wrapper">
+<div id="sidebar-wrapper">
+<ul class="sidebar-nav">
+<div class="nav-icon-alt header-nav-icon_c" id="menu-toggle_c"></div>
+<li> <a href="index.html">Home</a>
+</li>
+<li class="nav-padding-top"><a href="guitars.html"> <span class="bold-menu-item">AudioTheory Guitars</span></a>
+</li>
+<li><a href="user.html">User Guide</a>
+</li>
+<li><a href="update.html">Update Log</a>
+</li>
+<li><a href="https://gumroad.com/l/audiotheory" onclick="gtag('event','purchase direct guitars (nav)');">Purchase</a>
+
+<li class="nav-padding-top"><a href="grids.html"><span class="bold-menu-item">AudioTheory Grids</span></a>
+</li>
+
+<li><a href="grids-user-guide.html">User Guide</a>
+</li>
+
+<li><a href="grids-update-log.html">Update Log</a>
+</li>
+<li><a href="https://gumroad.com/l/audiotheory-grids" onclick="gtag('event','purchase direct grids (nav)');">Purchase</a>
+<li class="nav-padding-top"><a href="faq.html">FAQ</a>
+</li>
+<li><a href="press.html">Press</a>
+</li>
+</li>
+</ul>
+</div>
+</div>
+<div class="nav-icon header-nav-icon" id="menu-toggle"></div>
+<!--#endregion-->
+<!--#region page-content-->
+<!--H-->
+<div class="logo-offset">
+    <img class="center-image feature-logo logo-padding-r" src="" alt="" />
+</div>
+
+<div class="align-center-d article-title">
+    <h2><span class="main-title">AudioTheory Guitars – 1.14.0</span><br>Extended Chord Selector Update</h2>
+</div>
+<div class="half-space"></div>
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory-Extended-Chords.jpeg" alt="AudioTheory Extended Chord Selector" />
+</div>
+
+<!-- #region text block -->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    AudioTheory Guitars version 1.14.0 extends the chord library and introduces some new features to support this larger selection of chords. This includes an option to cycle between alternate chord shapes as well as new selector tools.
+    <!--&-->
+</div>
+<!-- #endregion text block -->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory-Extended-Chord-Selector-01.jpeg" alt="AudioTheory Extended Chord Selector" />
+</div>
+
+<!-- #region text block -->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <strong>So let's have a look at everything that's new:</strong>
+    <br><br>
+    
+–Extended barre and power chord library. This has been completely overhauled to now support 5+ power chord shapes per note and 6+ barre chord shapes per note. This means there is now approx. 4x as many power and barre chords than before!
+<br><br>
+–To make this larger amount of chords manageable the mini 'Quick Select' popout as well as the fullscreen chord selector have both been reworked. Barre and power chords can now be loaded by selecting a combination of a root note and chord type.
+<br><br>
+–Some chords have more than one shape. There is a new 'cycle chord' button which is a circle with two arrows inside it. For any supported chord, this can be pressed to cycle between the alternate shapes.
+    <!--&-->
+</div>
+<!-- #endregion text block -->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory-Extended-Chord-Selector-02.jpeg" alt="AudioTheory Extended Chord Selector" />
+</div>
+
+<!-- #region text block -->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <strong>The following alternate chord shapes have been added:</strong>
+<br><br>
+
+–Alt. barre chord shapes (Major, Minor and Major 7th).
+<br><br>
+–Alt. power chord shapes to optionally include an additional root note with the 3rd finger.
+<br><br>
+–Alt. F and B open chord shapes.
+<br><br>
+–Alt. shapes for all open Major 7th guitar chords.
+<br><br>
+–The cycle chord button can be used to alternate Dim7 chord positions (these chords were already in the application but this is a new way to swap between them).
+
+<!--&-->
+</div>
+<!-- #endregion text block -->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory-Extended-Chord-Selector-03.jpeg" alt="AudioTheory Extended Chord Selector" />
+</div>
+
+<!-- #region text block -->
+<div class="text-block padding-top ">
+    <!--&-->
+    <strong>Aside from chords there are a couple more miscellaneous features this update adds:</strong>
+<br><br>
+–The loaded preset file name now displays in light grey above the fretboard.
+<br><br>
+–Manual scale preset changes (as in adding or removing notes in the bottom left box) are referenced against the main scale library. If a manual combination matches a library preset then this will apply the correct <a class="url-dark-green" href="scale-based-highlighting-update.html">relative scale highlighting</a> (for example if you manually entered in the G Major scale it would automatically adjust the highlighting on the F# note to blue).
+<br><br>
+–Some miscellaneous bug fixes
+    <!--&-->
+</div>
+<!-- #endregion text block -->
+
+<div class="text-block padding-bottom">
+        <div class="dashed-line faq-break"></div>
+        All updates are free for owners of AudioTheory Guitars. If you purchased directly then you can download the latest version from your Gumroad account. 
+        For Steam users, new updates can be downloaded through the Steam client. 
+        <br><br>For new customers, you will be purchasing and downloading the latest version.
+</div>
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory-Extended-Chord-Selector-04.jpeg" alt="barre chord note playback" />
+</div>
+
+<!--F-->
+<!--#endregion-->
+
+<!--#region footer-->
+<div class="align-center-d text-block padding-top">
+<!--Signup Form-->
+<div id="mc_embed_signup">
+    <form action="https://gmail.us20.list-manage.com/subscribe/post?u=5e36fd2a9ea42cc4f8b2ce7f9&amp;id=3d4c39abbe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+        <div id="mc_embed_signup_scroll">
+        <div class="newsletter-title">For news and updates subscribe to our newsletter:</div>
+        <div class="mc-field-group">
+            <input type="email" value="" placeholder="email address" name="EMAIL" class="required email sign-up-box" id="mce-EMAIL">
+        </div>
+        <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5e36fd2a9ea42cc4f8b2ce7f9_3d4c39abbe" tabindex="-1" value=""></div>
+        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+        </div>
+    </form>
+</div>
+<!--End Signup Form-->
+</div>
+        
+<!--Modal-->
+<div id="modal-c" class="modal">
+<span class="close">&times;</span>
+<img class="modal-content" id="img01">
+</div> 
+<!--End Modal-->
+
+<footer>
+<ul>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="press.html">Press</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<div class="copywright align-center-d">
+    Copyright ©2020, AudioTheory
+</div>
+</footer>
+
+<!--page-content-wrapper-->
+</div>
+<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html> 
+<!--#endregion-->
