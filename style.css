@@ -24,6 +24,7 @@ a {
     font-family: 'futura_lt_btlight_italic', Arial, Helvetica, sans-serif;
 
 }
+
 hr {
     border-top: .1px solid #d3d3d336 !important;
     margin: 22px 30px;
@@ -1749,4 +1750,7 @@ p {
 .software-promo {
     padding-left: 20px;
     padding-right: 20px;
+}
+.indent-block {
+    margin-left: 40px;
 }
