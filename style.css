@@ -22,9 +22,30 @@ a {
 }
 .italic {
     font-family: 'futura_lt_btlight_italic', Arial, Helvetica, sans-serif;
-
 }
-
+.sj-dialog-0 .dialog-msg-0 {
+    font-family: 'futura_lt_btlight', Arial, Helvetica, sans-serif !important;
+}
+.additional-info-0 {
+    display: none !important;
+}
+.button-0 {
+    font-family: 'futura_lt_btlight', Arial, Helvetica, sans-serif !important;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    box-sizing: border-box;
+    padding: 16px 10px;
+    background: transparent;
+    border: 1px solid #172022;
+    text-align: center;
+    color: #172022;
+    text-decoration: none;
+    cursor:pointer;
+    border-radius: 4px;
+}
 hr {
     border-top: .1px solid #d3d3d336 !important;
     margin: 22px 30px;
