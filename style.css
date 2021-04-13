@@ -46,6 +46,29 @@ a {
     cursor:pointer;
     border-radius: 4px;
 }
+.sj-dialog--1691395329 .dialog-msg--1691395329 {
+    font-family: 'futura_lt_btlight', Arial, Helvetica, sans-serif !important;
+}
+.additional-info--1691395329 {
+    display: none !important;
+}
+.button--1691395329 {
+    font-family: 'futura_lt_btlight', Arial, Helvetica, sans-serif !important;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    box-sizing: border-box;
+    padding: 16px 10px;
+    background: transparent;
+    border: 1px solid #172022;
+    text-align: center;
+    color: #172022;
+    text-decoration: none;
+    cursor:pointer;
+    border-radius: 4px;
+}
 hr {
     border-top: .1px solid #d3d3d336 !important;
     margin: 22px 30px;
