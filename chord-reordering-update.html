@@ -1,0 +1,268 @@
+<!--#region head-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>Chord Reordering Update</title>
+<link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+<link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+<link rel="stylesheet" type= "text/css" href= "style.css" />
+<link rel="stylesheet" type= "text/css" href= "fonts.css" />
+<link rel="stylesheet" type= "text/css" href= "nav.css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+<link href="https://fonts.googleapis.com/css?family=Lusitana&display=swap" rel="stylesheet">
+<!--#region Cookie notice-->
+<script>
+window.__SJ_BAR_CLR__ = "#3e3e3e";
+</script>
+<script src="https://cdn.jsdelivr.net/gh/sprucejoy/cookie-consent-autoblock-gdpr/cookie-consent.js" crossorigin="anonymous"></script>
+<!--#endregion-->
+<!--Global site tag (gtag.js) - Google Analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149487950-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-149487950-1');
+</script>
+<!--Facebook Pixel Code-->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '701042950385257');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=701042950385257&ev=PageView&noscript=1"
+  /></noscript>
+  <!--End Facebook Pixel Code-->
+</head>
+<body>
+<!--#endregion-->
+
+<!--#region nav-left-->
+<div id="wrapper">
+<div id="sidebar-wrapper">
+<ul class="sidebar-nav">
+<div class="nav-icon-alt header-nav-icon_c" id="menu-toggle_c"></div>
+<li> <a href="index.html">Home</a>
+</li>
+<li class="nav-padding-top"><a href="guitars.html"> <span class="bold-menu-item">AudioTheory Guitars</span></a>
+</li>
+<li><a href="user.html">User Guide</a>
+</li>
+<li><a href="update.html">Update Log</a>
+</li>
+<li><a href="https://gumroad.com/l/audiotheory" onclick="gtag('event','purchase direct guitars (nav)');">Purchase</a>
+
+<li class="nav-padding-top"><a href="grids.html"><span class="bold-menu-item">AudioTheory Grids</span></a>
+</li>
+
+<li><a href="grids-user-guide.html">User Guide</a>
+</li>
+
+<li><a href="grids-update-log.html">Update Log</a>
+</li>
+<li><a href="https://gumroad.com/l/audiotheory-grids" onclick="gtag('event','purchase direct grids (nav)');">Purchase</a>
+<li class="nav-padding-top"><a href="faq.html">FAQ</a>
+</li>
+<li><a href="press.html">Press</a>
+</li>
+</li>
+</ul>
+</div>
+</div>
+<div class="nav-icon header-nav-icon" id="menu-toggle"></div>
+<!--#endregion-->
+<!--#region page-content-->
+<!--H-->
+<div class="logo-offset">
+    <img class="center-image feature-logo logo-padding-r" src="" alt="" />
+</div>
+
+<div class="align-center-d article-title">
+    <h2><span class="main-title">AudioTheory Guitars – 1.17.0</span><br>Chord Reordering Update</h2>
+</div>
+<div class="half-space"></div>
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_Guitars_drag_chord_title.jpeg" alt="AudioTheory Chord Reordering title" />
+</div>
+
+<!-- #region text block -->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <h3>Chord Reordering</h3>
+<br>
+Whilst some of the updates have predominantly focused around a single big feature, this one is more of a collection of smaller improvements. Still, chord reordering is perhaps the most exciting new addition. It's simple but useful, when hovering over chords in the main application 'chord box' you will see a new arrow icon. You can click and drag the chord using this icon, allowing you to quickly reorder the selection of chords.
+   <br><br> <!--&-->
+</div>
+<!-- #endregion text block -->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_Guitars_Drag Chord.gif" alt="AudioTheory Chord Reordering gif" />
+</div>
+
+<!-- #region text block -->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <h3>Relative Note Naming</h3>
+<br>
+Back in the <a class="url-dark-green" href="relative-highlighting-update.html">1.13.0</a> update, Fixed do solfège was added in as an alternate format for displaying the note names. As an extension of this I have now added in two further options for the names to display using relative values. These are movable do solfège (Do Re Mi...) and relative Roman numerals (I II III...). Both display the notes relative to the selected scale preset, making them useful for understanding or learning a new scale.
+  <br><br>  <!--&-->
+</div>
+<!-- #endregion text block -->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_Guitars_Relative_notes.png" alt="AudioTheory Chord relative notes" />
+</div>
+
+<!-- #region text block -->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+  <br>  When using relative names you will notice a combination of uppercase and lowercase characters. These can be used to quickly see the pattern of major/ minor and diminished chords within the scale. For example, a major scale goes For example a major scale goes...
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;I – major<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ii – minor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;iii – minor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;IV – major<br>
+&nbsp;&nbsp;&nbsp;&nbsp;V – major<br>
+&nbsp;&nbsp;&nbsp;&nbsp;vi° – dim
+<br><br>
+    <!--&-->
+</div>
+<!-- #endregion text block -->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_Guitars_DSP_settings.png" alt="AudioTheory DSP settings" />
+</div>
+
+<!-- #region text block -->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <h3>DSP Latency Settings</h3>
+<br>
+I've added in some new optimisations to the app's latency settings (this is the fractional delay between input and playback). The DSP buffer size can now be configured (between 1024 and 32 samples) in the settings, with the idea being that a lower buffer size will result in less latency, but as this requires more CPU power you may incur audio distortions if it's reduced too much.
+<br><br>
+The buffer also now starts out at a platform-optimised size, meaning latency has been reduced without the need to adjust the settings, however full control is now available to tweak this further.
+<br>
+<br>
+<!--#region Dashed Line-->
+<br>
+<div class="dashed-line"></div>
+<br>
+<!--#endregion Dashed Line-->
+
+<h3>Hotkeys</h3>
+<br>
+Some app hotkeys are now in place to optimise control of the app:
+<br><br>
+Num keys 1–4: quickly swamp note languages<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;	1 – English<br>
+&nbsp;&nbsp;&nbsp;&nbsp;	2 – Fixed Do solfège<br>
+&nbsp;&nbsp;&nbsp;&nbsp;	3 – Relative Roman numerals<br>
+&nbsp;&nbsp;&nbsp;&nbsp;	4 – Movable Do solfège<br>
+	<br>
+Ctrl (Windows)/Cmd (Mac) –O: Open preset from file<br>
+Ctrl (Windows)/Cmd (Mac) –S: Save preset to file<br>
+Ctrl (Windows)/Cmd (Mac) Shift –O: Toggle keyboard overlay view<br>
+Ctrl (Windows)/Cmd (Mac) Shift –M: Toggle mute<br>
+Ctrl (Windows)/Cmd (Mac) –K: Toggle QWERTY keyboard input<br>
+Ctrl (Windows)/Cmd (Mac) –L: Toggle lock to scale
+<br>
+    <!--&-->
+</div>
+<!-- #endregion text block -->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_Guitars_Drag_Chord_Screenshot.png" alt="AudioTheory screenshot" />
+</div>
+
+<!-- #region text block -->
+<div class="text-block padding-top">
+    <!--&-->
+    <h3>And the rest...</h3>
+<br>Here's a quick round-up of everything else that's changed:
+<br><br>
+<ul>
+<li> Improved MIDI response for highlighting. This works alongside the latency settings to improve MIDI input support for the app.</li>
+<li> Optimisations have been made to how note presses are handled as well as how the app buttons work. This results in a slight performance boost.</li>
+<li> The saved file name is no longer displayed if the save dialogue box is cancelled</li>
+<li> Fix for scale highlighting overlapping with note selection box at reduced application widths</li>
+<li>The 'set from chords' button now updates to a specific scale preset if a match is found</li>
+<li> Fixed a bug where one of the Grapefruit synth high C notes played at the wrong octave</li>
+<li> App now launches in windowed mode as default (once it's been run once it will continue to load using the last used resolution settings)</li>
+</ul>
+    <!--&-->
+</div>
+<!-- #endregion text block -->
+
+<div class="text-block padding-bottom">
+        <div class="dashed-line faq-break"></div>
+        All updates are free for owners of AudioTheory Guitars. If you purchased directly then you can download the latest version from your Gumroad account. 
+        For Steam users, new updates can be downloaded through the Steam client. 
+        <br><br>For new customers, you will be purchasing and downloading the latest version.
+</div>
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/a-chord-pressed-overlay.png" alt="barre chord note playback" />
+</div>
+
+<!--F-->
+<!--#endregion-->
+
+<!--#region footer-->
+<div class="align-center-d text-block padding-top">
+<!--Signup Form-->
+<div id="mc_embed_signup">
+    <form action="https://gmail.us20.list-manage.com/subscribe/post?u=5e36fd2a9ea42cc4f8b2ce7f9&amp;id=3d4c39abbe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+        <div id="mc_embed_signup_scroll">
+        <div class="newsletter-title">For news and updates subscribe to our newsletter:</div>
+        <div class="mc-field-group">
+            <input type="email" value="" placeholder="email address" name="EMAIL" class="required email sign-up-box" id="mce-EMAIL">
+        </div>
+        <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5e36fd2a9ea42cc4f8b2ce7f9_3d4c39abbe" tabindex="-1" value=""></div>
+        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+        </div>
+    </form>
+</div>
+<!--End Signup Form-->
+</div>
+        
+<!--Modal-->
+<div id="modal-c" class="modal">
+<span class="close">&times;</span>
+<img class="modal-content" id="img01">
+</div> 
+<!--End Modal-->
+
+<footer>
+<ul>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="press.html">Press</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<div class="copywright align-center-d">
+    Copyright ©2021, AudioTheory
+</div>
+</footer>
+
+<!--page-content-wrapper-->
+</div>
+<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html> 
+<!--#endregion-->
