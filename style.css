@@ -1799,3 +1799,6 @@ p {
 .indent-block {
     margin-left: 40px;
 }
+.subtitle {
+    padding-bottom: 25px;
+}
