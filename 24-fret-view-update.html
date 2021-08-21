@@ -1,0 +1,272 @@
+<!--#region head-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>24 Fret View Update</title>
+<link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+<link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+<link rel="stylesheet" type= "text/css" href= "style.css" />
+<link rel="stylesheet" type= "text/css" href= "fonts.css" />
+<link rel="stylesheet" type= "text/css" href= "nav.css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+<link href="https://fonts.googleapis.com/css?family=Lusitana&display=swap" rel="stylesheet">
+<!--#region Cookie notice-->
+<script>
+window.__SJ_BAR_CLR__ = "#3e3e3e";
+</script>
+<script src="https://cdn.jsdelivr.net/gh/sprucejoy/cookie-consent-autoblock-gdpr/cookie-consent.js" crossorigin="anonymous"></script>
+<!--#endregion-->
+<!--Global site tag (gtag.js) - Google Analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149487950-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-149487950-1');
+</script>
+<!--Facebook Pixel Code-->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '701042950385257');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=701042950385257&ev=PageView&noscript=1"
+  /></noscript>
+  <!--End Facebook Pixel Code-->
+</head>
+<body>
+<!--#endregion-->
+
+<!--#region nav-left-->
+<div id="wrapper">
+<div id="sidebar-wrapper">
+<ul class="sidebar-nav">
+<div class="nav-icon-alt header-nav-icon_c" id="menu-toggle_c"></div>
+<li> <a href="index.html">Home</a>
+</li>
+<li class="nav-padding-top"><a href="guitars.html"> <span class="bold-menu-item">AudioTheory Guitars</span></a>
+</li>
+<li><a href="user.html">User Guide</a>
+</li>
+<li><a href="update.html">Update Log</a>
+</li>
+<li><a href="https://gumroad.com/l/audiotheory" onclick="gtag('event','purchase direct guitars (nav)');">Purchase</a>
+
+<li class="nav-padding-top"><a href="grids.html"><span class="bold-menu-item">AudioTheory Grids</span></a>
+</li>
+
+<li><a href="grids-user-guide.html">User Guide</a>
+</li>
+
+<li><a href="grids-update-log.html">Update Log</a>
+</li>
+<li><a href="https://gumroad.com/l/audiotheory-grids" onclick="gtag('event','purchase direct grids (nav)');">Purchase</a>
+<li class="nav-padding-top"><a href="faq.html">FAQ</a>
+</li>
+<li><a href="press.html">Press</a>
+</li>
+</li>
+</ul>
+</div>
+</div>
+<div class="nav-icon header-nav-icon" id="menu-toggle"></div>
+<!--#endregion-->
+<!--#region page-content-->
+<!--H-->
+<div class="logo-offset">
+    <img class="center-image feature-logo logo-padding-r" src="" alt="" />
+</div>
+
+<div class="align-center-d article-title">
+    <h2><span class="main-title">AudioTheory Guitars – 1.18.0</span><br>24 Fret View + Improved Chord Selector Update</h2>
+</div>
+<div class="half-space"></div>
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory-Guitars-24-fret-view-title.jpeg" alt="AudioTheory Guitars 24 Fret View title" />
+</div>
+
+<!-- #region text block -->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    AudioTheory Guitars version 1.18.0 is here and this update adds in some exciting new features. These include the option for a 24 note fretboard (as an alternative to the existing 15 fret view) and a new chord selector for open chords.
+    <!--&-->
+</div>
+<!-- #endregion text block -->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_24_fret_update_screenshot_01.png" alt="AudioTheory Guitars new chord selector" />
+</div>
+
+<!--#region Text Block with subtitle-->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <h3>
+    <div class="subtitle">Improved Chord Selector</div>
+    </h3>
+    <!--&-->
+    The first new feature is an improved chord selector for open chords. This mirrors the layout already in place for power and barre chords, where you select a cord as a combination of a root note and position. It's easier to use as there are less buttons than before, you can see from the selector itself which chord is currently loaded, and I've added a set of open chords for the sharp/ flat notes so there's a whole bunch of new chord shapes to choose from too.
+    <!--&-->
+</div>
+<!--#endregion Text Block with subtitle-->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_24_fret_update_screenshot_09.png" alt="AudioTheory Guitars fullscreen chord selector" />
+</div>
+
+<!--#region Text Block with subtitle-->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <h3>
+    <div class="subtitle">24 Fret View</div>
+    </h3>
+    <!--&-->
+    This is the option to select a full 24 fretboard diagram as an alternative to the default 15 fret diagram. This lets you see two octaves at once, and comes in handy for a few obscure chord/ capo combinations that go past fret 15.
+    <!--&-->
+</div>
+<!--#endregion Text Block with subtitle-->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_24_fret_update_screenshot_03.png" alt="AudioTheory Guitars 24 fret view" />
+</div>
+
+<!-- #region text block -->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    You can choose the desired fretboard size from the options popup.
+    <!--&-->
+</div>
+<!-- #endregion text block -->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_24_fret_update_screenshot_10_a.png" alt="AudioTheory Guitars 24 fret view options" />
+</div>
+
+<!--#region Text Block with subtitle-->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <h3>
+    <div class="subtitle">Relative shape/ exact note selection options for chords</div>
+    </h3>
+    <!--&-->
+    When you have a capo applied on the fretboard, you will see an additional tab for choosing between a 'relative shape' and 'exact root note', which are two different ways to think about the chord you are selecting.
+    <!--&-->
+</div>
+<!--#endregion Text Block with subtitle-->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory-Guitars-Relative-Capo.png" alt="AudioTheory Guitars relative capo" />
+</div>
+
+<!-- #region text block -->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    'Relative shape' was the only selection method previously. This is what you typically see on online tabs for songs played with a capo. For example, a C cord 'shape' will always be the same, but the actual root note of the chord increases with the capo. So at capo position 3, the actual chord being played is a D# (C+3).
+<br><br>
+It will depend on the context, but working with shapes is often the easiest way to understand what you're playing. However, for the times where you want to see the exact chord for the selected root note, you've now got the option to identify a chord this way too.
+    <!--&-->
+</div>
+<!-- #endregion text block -->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_24_fret_update_screenshot_11.png" alt="AudioTheory Guitars chord highlighting" />
+</div>
+
+<!--#region Text Block with subtitle-->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <h3>
+    <div class="subtitle">Clear Highlighting Delay</div>
+    </h3>
+    <!--&-->
+    There's another new option in the settings too, this is three different time durations for which the keyboard colour highlighting will clear once input is no longer received. By default this is turned off, which means as soon as you unpress a note then it stops being highlighted – what you see on screen directly matches up to the input.
+<br><br>
+The two alternatives are a short (roughly .2 seconds) and a long (roughly 1 second) delay before the highlighting is cleared. These are primarily designed for fast piano players – if you're quickly sending input via a connected MIDI device then real-time highlighting means that the notes are sometimes only highlighted for a very small amount of time, and this is a great way to keep them emphasised for longer.
+    <!--&-->
+</div>
+<!--#endregion Text Block with subtitle-->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_24_fret_update_screenshot_05.png" alt="AudioTheory Guitars fulscreen fretboard" />
+</div>
+
+<!-- #region text block -->
+<div class="text-block padding-top">
+    <!--&-->
+    One more change, the per-string tuning settings have been moved into the options popup. This makes the fullscreen fretboard view look a bit neater.
+    <!--&-->
+</div>
+<!-- #endregion text block -->
+
+<div class="text-block padding-bottom">
+        <div class="dashed-line faq-break"></div>
+        All updates are free for owners of AudioTheory Guitars. If you purchased directly then you can download the latest version from your Gumroad account. 
+        For Steam users, new updates can be downloaded through the Steam client. 
+        <br><br>For new customers, you will be purchasing and downloading the latest version.
+</div>
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/a-chord-pressed-overlay.png" alt="barre chord note playback" />
+</div>
+
+<!--F-->
+<!--#endregion-->
+
+<!--#region footer-->
+<div class="align-center-d text-block padding-top">
+<!--Signup Form-->
+<div id="mc_embed_signup">
+    <form action="https://gmail.us20.list-manage.com/subscribe/post?u=5e36fd2a9ea42cc4f8b2ce7f9&amp;id=3d4c39abbe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+        <div id="mc_embed_signup_scroll">
+        <div class="newsletter-title">For news and updates subscribe to our newsletter:</div>
+        <div class="mc-field-group">
+            <input type="email" value="" placeholder="email address" name="EMAIL" class="required email sign-up-box" id="mce-EMAIL">
+        </div>
+        <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5e36fd2a9ea42cc4f8b2ce7f9_3d4c39abbe" tabindex="-1" value=""></div>
+        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+        </div>
+    </form>
+</div>
+<!--End Signup Form-->
+</div>
+        
+<!--Modal-->
+<div id="modal-c" class="modal">
+<span class="close">&times;</span>
+<img class="modal-content" id="img01">
+</div> 
+<!--End Modal-->
+
+<footer>
+<ul>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="press.html">Press</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<div class="copywright align-center-d">
+    Copyright ©2021, AudioTheory
+</div>
+</footer>
+
+<!--page-content-wrapper-->
+</div>
+<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html> 
+<!--#endregion-->

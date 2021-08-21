@@ -1802,3 +1802,6 @@ p {
 .subtitle {
     padding-bottom: 25px;
 }
+h3 {
+    margin-top: 0px !important;
+}
