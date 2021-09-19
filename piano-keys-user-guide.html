@@ -110,7 +110,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
         <!--Full Width Text Block-->
         <div class="content-text-block center">
-        <!--Panel-->
+        <!--#region Panel-->
   
 
           
@@ -134,9 +134,9 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
                     
         
         </div>
-        <!--//Panel-->
+        <!--#endregion panel-->
     
-        <!--Panel-->
+        <!--#region panel-->
         <div class="dashed-line faq-break"></div>
 
         <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-01.jpg"  alt="Keyboard Screenshot" />
@@ -152,7 +152,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
                 The on-screen piano accepts input from any of the following sources:
                 <br>
                 <br>
-                <strong style="color: #282828">MIDI</strong> – AudioTheory Piano Keys works best when you connect a MIDI device. This could either be an electric piano/ keyboard or MIDI controller. With this connected you will recieve highlighting and audio feedback in real time when playing.
+                <strong style="color: #282828">MIDI</strong> – AudioTheory Piano Keys works best when you connect a MIDI device. This could either be an electric piano/ keyboard or MIDI controller. With this connected you will receive highlighting and audio feedback in real time when playing.
                 <br>
                 <br>
                 You will need ensure the input octave on your device matches that of the application, if these are not aligned then you will find the highlighting is shifted to a different position on the on-screen piano. You can set the input octave in the application settings (opened using the cog in the top right of the interface). If you find yourself changing this setting frequently then there is also an option to add it to the on-screen piano toolbar for easy access.
@@ -168,12 +168,14 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
                 The on-screen piano has additional options to customise how the application handles playback, including a sustain feature and instrument selector. There are also options to display or hide the keyboard note overlay as well as a 'lock to scale' feature where only notes selected in the scale will give audio feedback.
                 <br>
                 <br>
-                You will also notice an octave selector, this specifically controls the playback (output) octave. It can be consigured independantly from the MIDI (input) octave so you can control how the application recieves audio in and how it plays it out seperatly.
+                You will also notice an octave selector, this specifically controls the playback (output) octave. It can be configured independently from the MIDI (input) octave so you can control how the application receives audio in and how it plays it out separately.
                 <!--//text-->
                     
            
         </div>
-        <!--//Panel-->
+        <!--#endregion panel-->
+
+        <!--#region panel-->
         <div class="dashed-line faq-break"></div>
 
         <span class="cms-sub-heading">Playback</span>
@@ -183,63 +185,346 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
             <br>
             
                 <!--text-->
-                As you play notes on the keyboard you will recieve visual and audio highlighting feedback as defined by your settings. This will display across both the on-screen piano and all loaded diagrams, giving you an overview of how what you're playing fits relative to scales and chords.
+                As you play notes on the keyboard you will receive visual and audio highlighting feedback as defined by your settings. This will display across both the on-screen piano and all loaded diagrams, giving you an overview of how what you're playing fits relative to scales and chords.
                 <br>
                 <br>
-                If you have any issues with MIDI input, there is an indicator in the settings which details exactly what input the application is recieving. This can be used to diagnose any issues you may encounter (e.g. if no notes were hlighlighting this could be used to asses if the input octave was out of range, or if the device was not properly connected to the computer). 
+                If you have any issues with MIDI input, there is an indicator in the settings which details exactly what input the application is receiving. This can be used to diagnose any issues you may encounter (e.g. if no notes were highlighting this could be used to asses if the input octave was out of range, or if the device was not properly connected to the computer). 
 
                 <!--//text-->
                     
            
         </div>
-        <!--//Panel-->
+        <!--#endregion panel-->
     
     
     
     
-        <!--Panel-->
+        <!--region panel-->
         <div class="dashed-line faq-break"></div>
 
-        <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-03.jpg"  alt="Chords Screenshot" />
-
-        
-         
-        <span class="cms-sub-heading">Scale</span>
+        <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-03.jpg"  alt="Scales Screenshot" />
+        <span class="cms-sub-heading">Scale Presets</span>
 
         <div id="collapse3" class="">
 
             <br>
             
-                <!--text-->
+                <!--#region text-->
                 The note boxes in the bottom left of the screen can be used to exclude specific notes from the keyboard, as well as the chord and wheel diagrams. 
                 The 'scale' button provides preset options for using a standard piano scale.
                 <br><br>
                 <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-03-popup.jpg"  alt="Scale Popup" />
 
-                The 'all scales' can be used to access a fullscreen scale selector which lets you view sets of scale diagrams side by side and choose one to load.
-                <br><br>
-                <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-03-scale.jpg"  alt="Scale Selector" />
-
-
-                Here you have a fullscreen view where you can play and choose between the scale presets.
-                <br><br>
                 When a scale preset has been selected, the note highlighting updates to be context dependant. For example, if C♯/ D♭ is to be presented as C♯ in the selected scale the highlight colour will be yellow (the colour used for C). But when it's to be displayed as D♭ it will highlight in orange (the colour for D).
 
-                                <br><br>
-                                You can also control this manually by pressing the note name directly. For example, if you want C♯ to display as D♭ then press the label here and the highlighting and names will adjust accordingly.                                <br><br>
+                <br><br>
+                You can also control this manually by pressing the note name directly. For example, if you want C♯ to display as D♭ then press the label here and the highlighting and names will adjust accordingly.                                <br><br>
 
                 <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-scale.jpg"  alt="scale based highlighting" />
 
+                The 'all scales' button can be used to access the full scale library, where you can view sets of scale diagrams side by side and choose one to load.
 
-                <!--//text-->
+
+                <!--#endregion text-->
+
+        </div>
+        <!--#endregion panel-->
+
+        <!--#region panel-->
+        <div class="dashed-line faq-break"></div>
+
+        <span class="cms-sub-heading">Scale Library</span>
+
+        <div id="collapse3" class="">
+
+            <br>
+            
+                <img class="drop-shadow user-guide-screenshot" src="images/user-guide-piano-scale-library.jpg"  alt="Scale Selector" />
 
 
+                The scale library is a fullscreen view where you can play and choose between the scale presets. There is also a play button next to each scale, which will play through its contained notes in order.
+
+
+                <!--#endregion text-->
+
+        </div>
+        <!--#endregion panel-->
+
+
+        <!--#region panel-->
+        <div class="dashed-line faq-break"></div>
+
+        <span class="cms-sub-heading">Real-Time Scale Highlighting</span>
+
+        <div id="collapse3" class="">
+
+            <br>
+            
+                <img class="drop-shadow user-guide-screenshot" src="images/user-guide-scale-highlighting.jpg"  alt="scale highlighting" />
+
+                This is the second row of piano keys that sits just above the on-screen piano. It is one of the application's more advanced features, but once understood it is a very powerful tool for quickly understanding how a note you play fits into two scales at the same time. Receiving this feedback in real-time makes it a useful tool for improvising.
+                <br><br>
+                Scale highlighting is most useful when you are using a scale preset. This is because (as long as 'auto' mode is set on the right hand side) the application will automatically display major/ minor or dim scales relevant to the context of the main scale you are working in.
+                <br><br>
+                The above screenshot illustrates how this works in practice. Here the main scale preset loaded is C Major and the 2nd note in this scale, D, is being played. The 2nd position of a Major scale is associated with a minor chord, which here would be D minor (D, F, A). As such it is the minor scale that is relevant to this context.
+                <br><br>
+                So when pressing the D note we are able to see the relevant scale for this note, and you will notice that it is highlighted against the C Major scale too (here this means that B♭ is marked up as position VI, but it is greyed out as B♭ is not part of C Major). As such, the notes we are viewing that are not greyed out show the D minor scale progression, but also filtered to our main song key (C Major).
+                <br><br>
+                The settings to the left and right of the scale highlighting view offer additional customisations in regard to how this works. On the left you will see the name of the displaying scale and also an option to turn off the dual highlighting filter.
+                <br><br>
+                There is also a hold mode, which allows you to keep the 2nd scale displaying even when additional input is received. By default, AudioTheory Piano Keys has its own algorithm for identifying the desired root note when a large amount of input (chords/ multiple notes at once) is received. Typically this will be to display the scale for the lowest input note received, which in most cases will be desirable. For example, if the D Minor chord is played this means that the D Minor scale will always show, regardless of the order (which may be milliseconds apart) between which input is registered for the three notes.
+                <br><br>
+                Hold mode gives additional manual control over this, allowing you to press a button on the keyboard and keep the current scale on screen for the duration of the press. By default the hold button is Left Shift, but there is also an option to remap it, and change the behaviour of this button to a toggle (rather than having the requirement for it to be continuously pressed down).
+                <br><br>
+                On the right hand side are options to configure the scale type used. As above, the 'auto' option is recommended for use with a scale preset as this will display the major/ minor or diminished scale relevant to the context. However you can alternatively specify a different scale type (or subsections such pentatonic or blues) to use.
+               
+                <!--#endregion text-->
+
+        </div>
+        <!--#endregion panel-->
+        
+
+        <!--#region panel-->
+        <div class="dashed-line faq-break"></div>
 
         
+            
+        <span class="cms-sub-heading">The Scale Wheel</span>
+
+        <div id="collapse4" class="">
+
+            <br>
+            
+                <!--#region text-->
+                The scale wheel is a new way to view a scale preset. The wheel will display in chromatic mode when no scale is loaded, but once you have a set a preset it will display over the wheel too. 
+                <br><br>
+                The main use of the scale wheel is that it allows you to see how a scale operates as a set of fixed, relative positions. This is to say that the wheel displays as 12 evenly spaced indicators, where as the piano itself moves unevenly between white and black notes. 
+                As such, you have a diagram where you can easily observe how all scales of the same type (major/ minor etc.) use the same set of intervals. The scale wheel also consistently places the root note at the 12 o clock position on the wheel, again this allows the scale to be viewed primarily as a set of 'relative' notes, with the starting point and interval size not changing.
+                <br><br>
+                <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-scale-wheel.jpg"  alt="scale wheel" />
+                You can see here the difference between the two modes. When no scale is loaded the wheel displays with an empty center, however when the available notes match a scale preset, the details for this scale appear in the middle of the wheel and the notes in the scale are listed underneath too. 
+                The scale wheel works best like this as you have a few extra features, but it can also be used with any custom subsection of notes that don't match a specific preset.
+                <br><br>
+                The advantage of using a scale preset is that the application knows which chords within that scale are major, minor or diminished, and indicates this across the relative positions using the following shorthand:
+                <br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;Uppercase – note in scale plays as a major chord<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;Lowercase – note in scale plays as a minor chord<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;Lowercase° – note in scale plays as a diminished chord<br>
+                <br><br>
+                There are a couple more ways in which you can interact with the scale wheel. By clicking and dragging the outer wheel (the dark grey band with the note names) you can quickly swap the scale root note. Upon doing so, this will load the scale fully into the application so the note highlighting will adjust everywhere. You can also click on the scale type to quickly swap between the Major and Minor scales for the current root note.
+                <!--#endregion text-->
+
         </div>
-        <!--//Panel-->
+        <!--#endregion panel-->
+
+
+        <!--#region panel-->
+        <div class="dashed-line faq-break"></div>
+
+        
+            
+        <span class="cms-sub-heading">Piano Chords</span>
+
+        <div id="collapse4" class="">
+
+            <br>
+            
+                <!--#region text-->
+                Piano chords are loaded into the main top left area of the screen. By default, when setting a scale preset the corresponding set of chords are loaded too, although this can be turned off in the settings if desired. There is space for up to 12 chords so additional chords can be added by pressing the '+' icon on any blank space. Alternatively, each piano chord has a mini cog icon under it. You can press this button to bring up the settings for that individual chord, which includes an option to swap it out.
+                <br><br>
+                <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-piano-chords.jpg"  alt="scale wheel" />
+                Each chord has a couple more options that sit just underneath it. The play button can be used to directly play back the chord. There is also a green tick which only shows when the chord is playing, this is useful for playing and verifying chord shapes using a MIDI device.
+                <br><br>
+                When hovering the mouse over a chord you will also see an arrow icon, this can be used to drag the chord around and quickly rearrange chords within your view.
+                <br><br>
+                The double arrow icon in the bottom right will display if the chord can play across more than octave on the diagram. If this is the case, you can press the button to cycle between the octave positions and the diagram will update accordingly.
+                <!--#endregion text-->
+
+        </div>
+        <!--#endregion panel-->
+
+        <!--#region panel-->
+        <div class="dashed-line faq-break"></div>
+        <span class="cms-sub-heading">Piano Chord Library</span>
+
+        <div id="collapse4" class="">
+
+            <br>
+                <!--#region text-->
+                When swapping out a piano chord you will be taken to the piano chord library, where you can select a new chord to load. In this view, chords are initially sorted by type and you can choose an option using the selector at the top and then view the relative chords for this type below.
+                <br><br>
+                <img class="drop-shadow user-guide-screenshot" src="images/user-guide-piano-chord-libaray.jpg"  alt="piano chord library" />
+
+                There is also a button in the top right that lets you load the full set into the main application view all at once.
+                <!--#endregion text-->
+
+        </div>
+        <!--#endregion panel-->
     
+        <!--#region panel-->
+        <div class="dashed-line faq-break"></div>
+        <span class="cms-sub-heading">Application View</span>
+
+        <div id="collapse4" class="">
+
+            <br>
+            <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-view-options.jpg"  alt="piano chord library" />
+
+                <!--#region text-->
+                There are numerous options to customise the application view that are contained within the box in the bottom right of the screen. This box too can be hidden by pressing the cross button (visible when hovering over the area) or opened up by pressing the eye button (only visible when the box is already closed).
+                <br>
+                <br>
+                The view options here control which items display in the top two thirds. By default this is both the chords set and scale wheel, but you can instead choose to focus on just one of these items. There are also buttons here to open up the chord or scale libraries.
+                <!--#endregion text-->
+
+        </div>
+        <!--#endregion panel-->
+
     
+        <!--#region panel-->
+        <div class="dashed-line faq-break"></div>
+        <span class="cms-sub-heading">Ear Training Exercises</span>
+
+        <div id="collapse4" class="">
+
+            <br>
+                <!--#region text-->
+                The application view settings in the bottom right are also where you can swap between the main 'piano practice' mode and the set of included ear training exercises. In 'ear training' mode the view options below are replaced with mode-specific options for configuring the exercises.<br><br>
+                <img class="drop-shadow user-guide-screenshot" src="images/user-guide-ear-training-main.jpg"  alt="ear training" />
+
+                Initially when you select the ear training mode you will be prompted to start a game using the button. Ahead of this, you can adjust the game configuration using the options in the bottom right. During the game, you can swap modes at any time. Any other changes to the settings (including changes to the current scale preset) will take affect from the next round (e.g. if you exclude the note C, it may still be present in the current round, it will only be from the next round onwards that it won't be used).
+               <br><br>
+               <img class="drop-shadow user-guide-screenshot" src="images/user-screenshot-chord-match-selector.jpg"  alt="ear training" />
+                When the 'chord match' exercise is selected you will also see a chord type selector on the right hand size of the screen. This will let you choose which chord types will be presented at random for you to identify.
+               
+               <!--#endregion text-->
+
+        </div>
+        <!--#endregion panel-->
+
+        <!--#region panel-->
+        <div class="dashed-line faq-break"></div>
+        <span class="cms-sub-heading">Ear Training – Higher or Lower</span>
+
+        <div id="collapse4" class="">
+
+            <br>
+
+                <!--#region text-->
+                <img class="drop-shadow user-guide-screenshot" src="images/user-guide-higher-or-lower.jpg"  alt="higher or lower" />
+                'Higher or Lower' is a good training exercise to start out with as it is the easiest and most straight forward. In this mode you are presented with two notes and must identify if the first is higher or lower (or the same) as the second. This game references the current scale preset, so you can play it with a subsection of the notes if desired. Note that with this game if the number of octaves is increased from 1 to 3 (set in the bottom right) this makes the game easier, as it results in a typically greater (more obvious) differentiation in pitch between the randomly selected notes.
+                
+                <!--#endregion text-->
+
+        </div>
+        <!--#endregion panel-->
+
+        <!--#region panel-->
+        <div class="dashed-line faq-break"></div>
+        <span class="cms-sub-heading">Ear Training – Note Match</span>
+
+        <div id="collapse4" class="">
+
+            <br>
+
+                <!--#region text-->
+                <img class="drop-shadow user-guide-screenshot" src="images/user-guide-note-match.jpg"  alt="higher or lower" />
+
+                'Note Match' is in many ways a more advanced version of 'H'igher or Lower', but in this exercise you must identify the exact note match. This can be made easier by using a subsection of notes (for example the C Major scale). It can be made harder by swapping setting the number of octaves to use (found in the bottom right) from 1 to 3, as this means a much wider selection of notes are used.
+                <br>
+                <br>
+                A tip for this exercise is to make use of the main on-screen piano, you can press the notes here to match up the sound before selecting your answer.
+               
+                <!--#endregion text-->
+
+        </div>
+        <!--#endregion panel-->
+
+        <!--#region panel-->
+        <div class="dashed-line faq-break"></div>
+        <span class="cms-sub-heading">Ear Training – Chord Match</span>
+
+        <div id="collapse4" class="">
+
+            <br>
+
+                <!--#region text-->
+                <img class="drop-shadow user-guide-screenshot" src="images/user-guide-chord-match.jpg"  alt="higher or lower" />
+
+                'Chord Match' is the most advanced exercise, however it's also the one with the largest degree of configuration, as you can define exactly which root notes and which chord types are used.
+                <br>
+                <br>
+                A tip for this exercise is therefore to start out with a restricted set of chords, you can even choose a single root note and work on differentiating between chord types only. As you become more familiar with an initial set, you can then start to add in additional chord types.
+                <br>
+                <br>
+                As above, you can make use of the on-screen piano (although here you will likely need a MIDI device to successfully play the chords) to match up sounds.
+                <!--#endregion text-->
+
+        </div>
+        <!--#endregion panel-->
+
+
+        <!--#region panel-->
+        <div class="dashed-line faq-break"></div>
+        <span class="cms-sub-heading">Settings</span>
+
+        <div id="collapse4" class="">
+
+            <br>
+
+                <!--#region text-->
+                <img class="drop-shadow user-guide-screenshot" src="images/user-guide-piano-keys-settings.jpg"  alt="higher or lower" />
+                The application settings can be opened using the cog icon in the top left. Here you have numerous configuration settings including some tools for debugging MIDI input, and configuration for various other elements of the application. These include visual customisations, such as different backgrounds and a highlighting delay that keeps note colours on the screen for longer.
+                <!--#endregion text-->
+
+        </div>
+        <!--#endregion panel-->
+
+        <!--#region panel-->
+        <div class="dashed-line faq-break"></div>
+        <span class="cms-sub-heading">Settings – Save and Load</span>
+
+        <div id="collapse4" class="">
+
+            <br>
+
+                <!--#region text-->
+                The Save and Load icons found within the settings can be used to write your current view to a plain text file and then load it back into the application. This works well for quickly swapping between arrangements.
+                <!--#endregion text-->
+
+        </div>
+        <!--#endregion panel-->
+
+        <!--#region panel-->
+        <div class="dashed-line faq-break"></div>
+        <span class="cms-sub-heading">Settings – Note Names</span>
+
+        <div id="collapse4" class="">
+
+            <br>
+
+                <!--#region text-->
+                As well as the default English note names it is possible to change over the notes to either used fixed do solfège (Do, Re, Mi...) or to use relative names (relative Do or relative roman numerals). Please note that relative names require a scale preset to be loaded (as this is what they will be relative to) and otherwise the notes will not display.
+                <!--#endregion text-->
+
+        </div>
+        <!--#endregion panel-->
+
+        <!--#region panel-->
+        <div class="dashed-line faq-break"></div>
+        <span class="cms-sub-heading">Settings – DSP</span>
+
+        <div id="collapse4" class="">
+
+            <br>
+
+                <!--#region text-->
+                The DSP settings control the audio latency of the application, a lower DSP value means less latency (the delay between input and audio output) however this requires more CPU power. This will typically result in audio glitches such as pops and clicks if the DSP is set too low.
+                <!--#endregion text-->
+
+        </div>
+        <!--#endregion panel-->
+        
 
         <div class="dashed-line faq-break"></div>
 
