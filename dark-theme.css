@@ -132,7 +132,16 @@ footer {
     max-width: 84%;
     padding-left: 60px;
     padding-right: 30px;
-
+}
+.padded-scale-wheel {
+    max-width: 55%;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
 
 }
 .block-set-container {
