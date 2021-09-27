@@ -61,7 +61,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 </li>
 <li><a href="user.html">User Guide</a>
 </li>
-<li><a href="update.html">Update Log</a>
+<li><a href="guitars-update-log.html">Update Log</a>
 </li>
 <!--
 <li><a href="https://gumroad.com/l/audiotheory" onclick="gtag('event','purchase direct guitars (nav)');">Purchase</a>-->
@@ -124,6 +124,24 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
         <!--Full Width Text Block-->
         <div class="content-text-block center">
+          <!--#region contents-->
+          <a class="url-dark-green"href="#collapse1">Getting Started</a><br>
+          <a class="url-dark-green"href="#input">Input</a><br>
+          <a class="url-dark-green"href="#Playback">Playback</a><br>
+          <a class="url-dark-green"href="#Scale-Presets">Scale Presets</a><br>
+          <a class="url-dark-green"href="#Scale Library">Scale Library</a><br>
+          <a class="url-dark-green"href="#Guitar Chords">Guitar Chords</a><br>
+          <a class="url-dark-green"href="#Guitar Fretboard">Guitar Fretboard</a><br>
+          <a class="url-dark-green"href="#Piano Chord Library">Fullscreen Fretboard</a><br>
+          <a class="url-dark-green"href="#Minimalist Mode">Minimalist Mode</a><br><br>
+          <a class="url-dark-green"href="#Settings">Settings</a><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<a class="url-dark-green"href="#Settings – Tuning & Guitar Configuration">Settings – Tuning & Guitar Configuration</a><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<a class="url-dark-green"href="#Settings – Save and Load Presets">Settings – Save and Load Presets</a><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<a class="url-dark-green"href="#Settings – Note Names">Settings – Note Names</a><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<a class="url-dark-green"href="#Settings – DSP">Settings – DSP</a><br>
+          <br><br>
+           <!--#endregion contents-->
+
         <!--Panel-->
   
 
@@ -151,12 +169,12 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
         <!--//Panel-->
     
         <!--Panel-->
-        <div class="dashed-line faq-break"></div>
+        <div class="dashed-line faq-break" id="input"></div>
 
         <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-01.jpg"  alt="Keyboard Screenshot" />
 
             
-        <span class="cms-sub-heading">Piano</span>
+        <span class="cms-sub-heading">Input</span>
 
 
         <div id="collapse2" class="">
@@ -187,6 +205,27 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
            
         </div>
         <!--//Panel-->
+
+        <!--#region panel-->
+        <div class="dashed-line faq-break" id="Playback"></div>
+
+        <span class="cms-sub-heading">Playback</span>
+
+
+        <div id="collapse2" class="">
+            <br>
+            
+                <!--text-->
+                As you play notes on the keyboard you will receive visual and audio highlighting feedback as defined by your settings. This will display across both the on-screen piano and all loaded diagrams, giving you an overview of how what you're playing fits relative to the guitar fretboard and selected chords.
+                <br>
+                <br>
+                If you have any issues with MIDI input, there is an indicator in the settings which details exactly what input the application is receiving. This can be used to diagnose any issues you may encounter (e.g. if no notes were highlighting this could be used to asses if the input octave was out of range, or if the device was not properly connected to the computer). 
+
+                <!--//text-->
+                    
+            
+        </div>
+        <!--#endregion panel-->
     
     
     
@@ -198,7 +237,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
         
          
-        <span class="cms-sub-heading">Scale</span>
+        <span class="cms-sub-heading">Scale Presets</span>
 
         <div id="collapse3" class="">
 
@@ -210,12 +249,12 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
                 <br><br>
                 <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-03-popup.jpg"  alt="Scale Popup" />
 
-                The preset select popup also reveals the 'all scales' button which can be used to access the fullscreen scale selector.
+                The preset select popup also reveals the 'all scales' button which can be used to access the full Scale Library.
                 <br><br>
                 <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-03-scale.jpg"  alt="Scale Selector" />
 
 
-                Here you have a fullscreen view where you can play and choose between the scale presets.
+                The Scale Library is a fullscreen view where you can play and choose between the scale presets. There is also a play button next to each scale, which will play through its contained notes in order.
                 <br><br>
                 When a scale preset has been selected, the note highlighting updates to be context dependant. For example, if C♯/ D♭ is to be presented as C♯ in the selected scale the highlight colour will be yellow (the colour used for C). But when it's to be displayed as D♭ it will highlight in orange (the colour for D).
 
@@ -230,24 +269,27 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
         
         </div>
         <!--//Panel-->
+
+        
     
     
         <!--Panel-->
-        <div class="dashed-line faq-break"></div>
+        <div class="dashed-line faq-break" id="Guitar Chords"></div>
 
         <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-02.jpg"  alt="Scale Screenshot" />
 
      
-        <span class="cms-sub-heading">Chords</span>
+        <span class="cms-sub-heading">Guitar Chords</span>
 
         <div id="collapse4" class="">
             <br>
             
                 <!--text-->
-                Each cord can be swapped using the gear icon. Open chords display relative to the capo and tuning settings – this means that when choosing a chord you are selecting a chord shape, with the chord note matching in standard E tuning (without a capo). 
-                Both the actual note, as well as the shape, display when either a capo or non-standard tuning are used.
-                
+                Each of the chords in the middle area of the screen can be swapped using the gear icon. Press this button to open up a popup where a new chord can be selected as a combination of a root note and a shape. If you are using a capo then you will also have the option for the chord to be selected either as a relative shape, or as an exact match for the root note.
                 <br><br>
+                When hovering over a chord, a small double-arrow icon appears. You can use this to click and drag the chord, allowing you to quickly rearrange the loaded chords.
+                <br><br>
+
                 There is a 'play' button next to each chord. Press this to see the guitar chord mapped onto the keyboard and the corresponding fretboard notes. You will also notice that under some chords (such as the 'F' chord in the below screenshot) there is another icon to the right of the cog. This appears for all chords that support an alternate position, press this to cycle between the different variations of the chord shape.
                 <br><br>
                 <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-05.jpg"  alt="Scale Screenshot" />
@@ -268,12 +310,12 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
     
     
         <!--Panel-->
-        <div class="dashed-line faq-break"></div>
+        <div class="dashed-line faq-break" id="Guitar Fretboard"></div>
 
         <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-04.jpg"  alt="Fretboard Screenshot" />
 
        
-        <span class="cms-sub-heading">Fretboard</span>
+        <span class="cms-sub-heading">Guitar Fretboard</span>
 
         <div id="collapse5" class="">
             <br>
@@ -290,28 +332,10 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
         </div>
 
-        <!--Panel-->
-        <div class="dashed-line faq-break"></div>
-       
-        <span class="cms-sub-heading">Tuning & Guitar Config.</span>
 
-        <div id="collapse5" class="">
-            <br>
-            
-                <!--text-->
-There is a cog icon in the top right hand corner of the window that can be used to open up the settings popup. In here you have settings controlling both the guitar display (such as tuning, fretboard size etc.) as well as the general configuration of the app.
-                <br><br>
-        There are also options here for saving or loading the current application state as a preset. This works well for quickly swapping between different songs, as you can save and load each song as a preset. The files save the revelant information (chords, notes in scale etc.) as a plain text file.
-                <!--//text-->
-
-                <br><br>
-                <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-config.jpg"  alt="Config. Screenshot" />
-
-
-        </div>
 
                 <!--Panel-->
-        <div class="dashed-line faq-break"></div>
+        <div class="dashed-line faq-break" id="Fullscreen Fretboard"></div>
        
         <span class="cms-sub-heading">Fullscreen Fretboard</span>
 
@@ -327,6 +351,103 @@ Underneath the settings cog icon is a double arrow icon. Pressing this swaps bet
 
        
         <!--//Panel-->
+
+        <!--#region panel-->
+        <div class="dashed-line faq-break" id="Minimalist Mode"></div>
+        <span class="cms-sub-heading">Minimalist Mode</span>
+
+        <div id="collapse4" class="">
+
+            <br>
+
+                <!--#region text-->
+                'Minimalist Mode' is toggled on or off by pressing the eye icon on the right hand side of the screen (just under the chord box). This hides most of the configurable elements of the interface, reducing the amount of items on screen for scenarios where you want to focus on practicing.
+
+                <!--#endregion text-->
+
+        </div>
+        <!--#endregion panel-->
+
+        <!--#region panel-->
+        <div class="dashed-line faq-break" id="Settings"></div>
+        <span class="cms-sub-heading">Settings</span>
+
+        <div id="collapse4" class="">
+
+            <br>
+
+                <!--#region text-->
+                <img class="drop-shadow user-guide-screenshot" src="images/user-guide-guitars-settings.png"  alt="AudioTheory Guitars settings" />
+                The application settings can be opened using the cog icon in the top left. Here you have numerous configuration settings including some tools for debugging MIDI input, and configuration for various other elements of the application. These include visual customisations, such as different backgrounds and a highlighting delay that keeps note colours on the screen for longer.
+                <!--#endregion text-->
+
+        </div>
+        <!--#endregion panel-->
+
+<!--#region panel-->
+<div class="dashed-line faq-break" id="Settings – Tuning & Guitar Configuration"></div>
+<span class="cms-sub-heading">Settings – Tuning & Guitar Configuration</span>
+
+<div id="collapse4" class="">
+
+<br>
+
+<!--#region text-->
+Here in the settings is where the Guitar tuning can be configured. This is set as a root note with the option to drop the 6th string (Drop D and equivalent). When this is set the fretboard and chord diagrams will automatically update to reflect the new tuning.
+<br><br>
+There is also the option to set the tuning at a per-string level, although please note that whilst this is supported by the fretboard diagram, chord shapes will not update to match this.
+<br><br>
+There are additional guitar configuration options to vertically invert the fretboard, choos a 4-string bass instead of a 6-string guitar diagram, select between a 15 fret and 24 fret diagram, and left/ right handed modes (this is essentially a horizontal inversion of the diagrams).
+<!--#endregion text-->
+
+</div>
+<!--#endregion panel-->
+
+ <!--#region panel-->
+ <div class="dashed-line faq-break" id="Settings – Save and Load Presets"></div>
+ <span class="cms-sub-heading">Settings – Save and Load Presets</span>
+
+ <div id="collapse4" class="">
+
+     <br>
+
+         <!--#region text-->
+         The Save and Load icons found within the settings can be used to write your current view to a plain text file and then load it back into the application. This works well for quickly swapping between arrangements.
+         <!--#endregion text-->
+
+ </div>
+ <!--#endregion panel-->
+
+ <!--#region panel-->
+ <div class="dashed-line faq-break" id="Settings – Note Names"></div>
+ <span class="cms-sub-heading">Settings – Note Names</span>
+
+ <div id="collapse4" class="">
+
+     <br>
+
+         <!--#region text-->
+         As well as the default English note names it is possible to change over the notes to either used fixed do solfège (Do, Re, Mi...) or to use relative names (relative Do or relative roman numerals). Please note that relative names require a scale preset to be loaded (as this is what they will be relative to) and otherwise the notes will not display.
+         <!--#endregion text-->
+
+ </div>
+ <!--#endregion panel-->
+
+ <!--#region panel-->
+ <div class="dashed-line faq-break" id="Settings – DSP"></div>
+ <span class="cms-sub-heading">Settings – DSP</span>
+
+ <div id="collapse4" class="">
+
+     <br>
+
+         <!--#region text-->
+         The DSP settings control the audio latency of the application, a lower DSP value means less latency (the delay between input and audio output) however this requires more CPU power. This will typically result in audio glitches such as pops and clicks if the DSP is set too low.
+         <!--#endregion text-->
+
+ </div>
+ <!--#endregion panel-->
+
 
         <div class="dashed-line faq-break"></div>
 
