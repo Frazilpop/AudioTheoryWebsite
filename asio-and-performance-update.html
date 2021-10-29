@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-<title>{{Title}}</title>
+<title>Asio And Performance Update</title>
 <link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
 <link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
 <link rel="stylesheet" type= "text/css" href= "style.css" />
@@ -113,3 +113,185 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 <div class="padded-container">
     <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory-ASIO-gen-banner.jpg" alt="AudioTheory ASIO banner" />
 </div>
+
+<!-- #region text block -->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    A series of new updates are now available across the range of AudioTheory software. These combines a set of 'under the hood' optimisations and performance enhancing features which have been rolled out across the following updates:
+<br><br>
+AudioTheory Guitars version 2.1.0 and version 2.2.0<br>
+AudioTheory Piano Keys version 1.2.0 and version 1.3.0<br>
+AudioTheory Grids version 1.3.0
+<br><br>
+Let's have a look at what's new...
+    <!--&-->
+</div>
+<!-- #endregion text block -->
+
+<!--#region Text Block with subtitle-->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <h3>
+    <div class="subtitle">AudioTheory and the ASIO4ALL driver</div>
+    </h3>
+    <!--&-->
+    ASIO4ALL is a freeware audio driver designed for low latency playback. Most DAWs require the use of an ASIO driver, and whilst it is optional for AudioTheory, it's highly recommended. It's very easy to install and you are guaranteed to get better performance than the built-in Windows driver.
+<br><br>
+And just to confirm, this is a Windows specific feature. Mac and Linux come with audio drivers that can handle very low latencies out-of-the-box. More on how the settings have changed on these platforms in a bit.
+    <!--&-->
+</div>
+<!--#endregion Text Block with subtitle-->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_Guitars_ASIO_01.png" alt="AudioTheory ASIO screenshot" />
+</div>
+
+<!--#region Text Block with subtitle-->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <h3>
+    <div class="subtitle">Windows specific changes</div>
+    </h3>
+    <!--&-->
+    There are a few things now in place designed to help swap you over to the ASIO driver. If you load up the application without this installed you will see a one-time notification directing you to the ASIO4ALL website.
+<br><br>
+Once installed, the application will automatically swap to use the ASIO driver when its next loaded. You can see which driver is currently in use from the settings popup. Here can also swap driver using the dropdown, meaning you can revert back to the built-in driver if required. Any driver changes here require the application to be restarted before they take effect. Oh, and if you swap to ASIO here but the driver isn't installed then it's not going to work. In this scenario the application will prompt you to install it on your machine.
+<br><br>
+Please note that currently the option to record in AudioTheory Grids is only available when using the built-in driver. This works by directly capturing the audio output and writing it to a wav file, which can only happen when the built-in driver is being used to process audio. I am looking into an alternative method of supporting this feature with the ASIO driver, but unfortunately the options are somewhat limited. At least for now, the record button doesn't show if you're using ASIO.
+    <!--&-->
+</div>
+<!--#endregion Text Block with subtitle-->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_Guitars_ASIO_04.png" alt="AudioTheory ASIO screenshot" />
+</div>
+
+<!-- #region text block -->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    If the ASIO driver is in use, you will see a 'config.' button that lets you open up the ASIO4ALL settings. Here is where you configure your output device as well as the DSP buffer size. If you are not receiving any audio, the likely cause is that the correct output has not been selected here.
+    <!--&-->
+</div>
+<!-- #endregion text block -->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_Guitars_ASIO_05.png" alt="AudioTheory ASIO screenshot" />
+</div>
+
+<!--#region Text Block with subtitle-->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <h3>
+    <div class="subtitle">Mac and Linux changes</div>
+    </h3>
+    <!--&-->
+    These still use the DSP latency settings that were previously in place. As above, the built-in drivers are able to support low latency without the need for an external driver. However I have swapped over the selector to a new dropdown which makes it a bit quicker and easier to select the value you're after.
+    <!--&-->
+</div>
+<!--#endregion Text Block with subtitle-->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_Guitars_ASIO_07.png" alt="AudioTheory ASIO screenshot" />
+</div>
+
+<!--#region Text Block with subtitle-->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <h3>
+    <div class="subtitle">Velocity Playback</div>
+    </h3>
+    <!--&-->
+    MIDI input playback now registered the note press velocity, meaning the playback volume is controlled by how hard you are pressing the notes. This helps better simulate the effect of a real instrument.
+    <!--&-->
+</div>
+<!--#endregion Text Block with subtitle-->
+
+<!--#region Text Block with subtitle-->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <h3>
+    <div class="subtitle">Variable Render Rate</div>
+    </h3>
+    <!--&-->
+    The display no longer updates when it doesn't need to. This works well because there are many scenarios where you may find the software idling, it is after all reference material so it makes sense to leave it open up on screen. The software now looks out for these moments and greatly reduces the CPU overhead when possible, before seamlessly resuming to business as usual when any sort of input (or any action that results in a visible change on screen) is detected.
+    <!--&-->
+</div>
+<!--#endregion Text Block with subtitle-->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory-out-of-focus.png" alt="AudioTheory Out of Focus screenshot" />
+</div>
+
+<!--#region Text Block with subtitle-->
+<div class="text-block padding-top ">
+    <!--&-->
+    <h3>
+    <div class="subtitle">Run 'Out of Focus'</div>
+    </h3>
+    <!--&-->
+    The default behaviour of the application has changed so that it pauses running if the window is not in focus. This makes it a lot more practical to leave open in the background.
+<br><br>
+Originally this was not set because I imagined scenarios where it would be useful to poll for MIDI input when using the application alongside a DAW or other piece of software (e.g. you could be working in Logic on one screen and have AudioTheory running in the background on a second monitor). This may still be the case, so if your requirements do in fact mean that it's desirable for the application to run out of focus, then you can turn this back on in the settings.
+    <!--&-->
+</div>
+<!--#endregion Text Block with subtitle-->
+
+<div class="text-block  padding-bottom">
+        <div class="dashed-line faq-break"></div>
+        All updates are free for owners of AudioTheory Guitars. If you purchased directly then you can download the latest version from your Gumroad account. 
+        For Steam users, new updates can be downloaded through the Steam client. 
+        <br><br>For new customers, you will be purchasing and downloading the latest version.
+</div>
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/a-chord-pressed-overlay.png" alt="barre chord note playback" />
+</div>
+
+<!--F-->
+<!--#endregion-->
+
+<!--#region footer-->
+<div class="align-center-d text-block padding-top">
+<!--Signup Form-->
+<div id="mc_embed_signup">
+    <form action="https://gmail.us20.list-manage.com/subscribe/post?u=5e36fd2a9ea42cc4f8b2ce7f9&amp;id=3d4c39abbe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+        <div id="mc_embed_signup_scroll">
+        <div class="newsletter-title">For news and updates subscribe to our newsletter:</div>
+        <div class="mc-field-group">
+            <input type="email" value="" placeholder="email address" name="EMAIL" class="required email sign-up-box" id="mce-EMAIL">
+        </div>
+        <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5e36fd2a9ea42cc4f8b2ce7f9_3d4c39abbe" tabindex="-1" value=""></div>
+        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+        </div>
+    </form>
+</div>
+<!--End Signup Form-->
+</div>
+        
+<!--Modal-->
+<div id="modal-c" class="modal">
+<span class="close">&times;</span>
+<img class="modal-content" id="img01">
+</div> 
+<!--End Modal-->
+
+<footer>
+<ul>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="press.html">Press</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<div class="copywright align-center-d">
+    Copyright ©2021, AudioTheory
+</div>
+</footer>
+
+<!--page-content-wrapper-->
+</div>
+<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html> 
+<!--#endregion-->
