@@ -140,8 +140,12 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
             &nbsp;&nbsp;&nbsp;&nbsp;<a class="url-dark-green"href="#Ear Training – Chord Match">Ear Training – Chord Match</a><br><br>
             <a class="url-dark-green"href="#Settings">Settings</a><br>
             &nbsp;&nbsp;&nbsp;&nbsp;<a class="url-dark-green"href="#Settings – Save and Load Presets">Settings – Save and Load Presets</a><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;<a class="url-dark-green"href="#Settings – Note Names">Settings – Note Names</a><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;<a class="url-dark-green"href="#Settings – DSP">Settings – DSP</a><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a class="url-dark-green"href="#Settings – Note Names">Settings – Note Names</a><br><br>
+            <a class="url-dark-green"href="#Audio Latency – ASIO and DSP">Audio Latency – ASIO and DSP</a><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a class="url-dark-green"href="#Audio Latency – Mac/Linux DSP Settings">Audio Latency – Mac/Linux DSP Settings</a><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a class="url-dark-green"href="#Audio Latency – Windows & the ASIO4ALL Driver">Audio Latency – Windows & the ASIO4ALL Driver</a><br>
+  
+
             <br><br>
              <!--#endregion contents-->
 
@@ -539,7 +543,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
             <br>
 
                 <!--#region text-->
-                As well as the default English note names it is possible to change over the notes to either used fixed do solfège (Do, Re, Mi...) or to use relative names (relative Do or relative roman numerals). Please note that relative names require a scale preset to be loaded (as this is what they will be relative to) and otherwise the notes will not display.
+                As well as the default English note names it is possible to change over the notes to either used fixed do solfège (Do, Re, Mi...) or to use relative names (relative Do or as numerals). Please note that relative names require a scale preset to be loaded (as this is what they will be relative to) and otherwise the notes will not display.
                 <!--#endregion text-->
 
         </div>
@@ -554,11 +558,93 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
             <br>
 
                 <!--#region text-->
+
+                
                 The DSP settings control the audio latency of the application, a lower DSP value means less latency (the delay between input and audio output) however this requires more CPU power. This will typically result in audio glitches such as pops and clicks if the DSP is set too low.
                 <!--#endregion text-->
 
         </div>
         <!--#endregion panel-->
+
+
+ <!--#region panel-->
+ <div class="dashed-line faq-break" id="Audio Latency – ASIO and DSP"></div>
+ <span class="cms-sub-heading">Audio Latency – ASIO and DSP</span>
+
+ <div id="collapse4" class="">
+
+     <br>
+
+         <!--#region text-->
+         Audio latency is the amount of time it takes for the computer to process and play audio. There are features in AudioTheory which simulate the playback of an instrument in real-time and what this means is that a delay in of even a few milliseconds can be noticeable and undesirable.
+        <br><br>
+         To achieve this, AudioTheory comes with some platform-specific options as Mac/Linux and Windows handle audio differently.
+
+         <!--#endregion text-->
+
+ </div>
+ <!--#endregion panel-->
+
+  <!--#region panel-->
+  <div class="dashed-line faq-break" id="Audio Latency – Mac/Linux DSP Settings"></div>
+  <span class="cms-sub-heading">Audio Latency – Mac/Linux DSP Settings</span>
+ 
+  <div id="collapse4" class="">
+ 
+      <br>
+ 
+          <!--#region text-->
+          On Mac and Linux the built-in audio drivers are able to support low latencies out-of-the-box. This means you will likely not have latency issues with the default settings, however there is still a DSP buffer size that can be configured in the options. A lower DSP value means less latency, however this requires more CPU power. If the DSP is set too low for the computer to handle, then this will typically result in audio glitches such as pops and clicks. 
+         
+         <br><br>
+          <img class="drop-shadow user-guide-screenshot" src="images/AudioTheory-DSP-settings.png"  alt="AudioTheory Latency" />
+
+          <br>The DSP value can be set using the dropdown here in the options.
+
+        <br><br>
+          To get the best result may require a bit of trial and error. Essentially you want to have the buffer set to as lower value as possible where the application audio plays still back on your computer without glitches. For many modern computers you will be able to set this all the way down to the smallest (fastest) value, 32kbps.
+<br><br>
+          <img class="drop-shadow user-guide-screenshot" src="images/AudioTheory-DSP-settings-open.png"  alt="AudioTheory Latency" />
+
+          <!--#endregion text-->
+ 
+  </div>
+  <!--#endregion panel-->
+
+    <!--#region panel-->
+    <div class="dashed-line faq-break" id="Audio Latency – Windows & the ASIO4ALL Driver"></div>
+    <span class="cms-sub-heading">Audio Latency – Windows & the ASIO4ALL Driver</span>
+   
+    <div id="collapse4" class="">
+   
+        <br>
+   
+            <!--#region text-->
+            On Windows the ASIO4ALL driver can be used to achieve ultra low latencies. Most DAWs require the use of an ASIO driver, and whilst it is optional for AudioTheory, it's recommended for better performance over the built-in Windows driver. 
+<br><br>
+You can download and install this driver for free from the ASIO4ALL website here:
+<br><br>
+
+<a class="url-dark-green" href="https://www.asio4all.org/">https://www.asio4all.org/</a>
+
+<br><br>
+Once it's installed, load up AudioTheory (if it was open prior to the install you will need to close it and open it up again) and you will be able to swap between the ASIO driver and the built-in driver in the application settings. Any changes made here will require the application to be restarted to take effect.
+<br><br>
+
+<img class="drop-shadow user-guide-screenshot" src="images/AudioTheory-Driver-select.png"  alt="AudioTheory driver select" />
+
+<br>
+When using the ASIO4ALL driver, there are elements of the configuration (notably the output device and the DSP buffer size) that are controlled in the ASIO4ALL settings, not the AudioTheory settings. These can be opened up by pressing the 'config.' button which appears next to the dropdown when the ASIO driver is in use.
+<br><br>
+
+<img class="drop-shadow user-guide-screenshot" src="images/AudioTheory-ASIO-driver-settings.png"  alt="AudioTheory ASIO config" />
+<br>
+It's worth noting that ASIO4ALL requires a dedicated stream for audio output, meaning other application cannot output at the same time when it's in use. You can always swap back to the built-in driver in the settings if this is desirable. Increased latency times may not be an issue depending on how you are using the application.
+
+<!--#endregion text-->
+   
+    </div>
+    <!--#endregion panel-->
         
 
         <div class="dashed-line faq-break"></div>
