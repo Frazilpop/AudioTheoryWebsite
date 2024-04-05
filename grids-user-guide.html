@@ -140,6 +140,25 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
         <!--Full Width Text Block-->
         <div class="content-text-block center">
+          <!--#region contents-->
+          <a class="url-dark-green"href="#collapse1">Getting Started</a><br>
+          <a class="url-dark-green"href="#collapse2">The Grid</a><br>
+          <a class="url-dark-green"href="#on-screen-piano">On-Screen Piano</a><br>
+          <a class="url-dark-green"href="#note-selection">Scales, Presets and Note Selection</a><br>
+          <a class="url-dark-green"href="#guitar-fretboard">Guitar Fretboard</a><br><br>
+
+
+          <a class="url-dark-green"href="#Settings">Settings</a><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<a class="url-dark-green"href="#Settings – Application Colours">Settings – Changing the Application Colours</a><br><br>
+
+          <a class="url-dark-green"href="#Audio Latency – ASIO and DSP">Audio Latency – ASIO and DSP</a><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<a class="url-dark-green"href="#Audio Latency – Mac/Linux DSP Settings">Audio Latency – Mac/Linux DSP Settings</a><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<a class="url-dark-green"href="#Audio Latency – Windows & the ASIO4ALL Driver">Audio Latency – Windows & the ASIO4ALL Driver</a><br>
+
+          <br><br>
+           <!--#endregion contents-->
+
+
         <!--#region panel-->
   
 
@@ -169,13 +188,13 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
         <!--#region panel-->
         <div class="dashed-line faq-break"></div>
 
-        <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-grid-01.jpg"  alt="Grid Screenshot" />
+        <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-grid-01.jpg"  alt="Grid Screenshot" id="collapse2" />
 
             
         <span class="cms-sub-heading">The Grid</span>
 
 
-        <div id="collapse2" class="">
+        <div  class="">
             <br>
             
                 <!--text-->
@@ -194,7 +213,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
            
         </div>
         <!--#region panel-->
-        <div id="collapse2" class="">
+        <div id="collapse3" class="">
 
             <br>
             <br>
@@ -309,13 +328,13 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
         <!--#region panel-->
         <div class="dashed-line faq-break"></div>
 
-        <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-Grids-04.jpg"  alt="Keyboard Screenshot" />
+        <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-Grids-04.jpg"  alt="Keyboard Screenshot" id="on-screen-piano" />
 
             
-        <span class="cms-sub-heading">Piano</span>
+        <span class="cms-sub-heading">On-Screen Piano</span>
 
 
-        <div id="collapse2" class="">
+        <div id="collapse3" class="">
             <br>
             
                 <!--text-->
@@ -350,11 +369,11 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
         <!--#region panel-->
         <div class="dashed-line faq-break"></div>
 
-        <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-03.jpg"  alt="Chords Screenshot" />
+        <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-03.jpg"  alt="Chords Screenshot" id="note-selection" />
 
         
          
-        <span class="cms-sub-heading">Scale</span>
+        <span class="cms-sub-heading">Scales, Presets and Note Selection</span>
 
         <div id="collapse3" class="">
 
@@ -393,10 +412,10 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
         <!--#region panel-->
         <div class="dashed-line faq-break"></div>
 
-        <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-04.jpg"  alt="Fretboard Screenshot" />
+        <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-04.jpg"  alt="Fretboard Screenshot" id="guitar-fretboard" />
 
        
-        <span class="cms-sub-heading">Fretboard</span>
+        <span class="cms-sub-heading">Guitar Fretboard</span>
 
         <div id="collapse5" class="">
             <br>
@@ -419,9 +438,9 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
         <!--#endRegion panel-->
 
         
-        <div class="dashed-line faq-break"></div>
+        <div class="dashed-line faq-break" id="Settings"></div>
        
-        <span class="cms-sub-heading">Config. & Guitar Tuning</span>
+        <span class="cms-sub-heading">Settings</span>
 
         <div id="collapse5" class="">
             <br>
@@ -436,6 +455,30 @@ There is a cog icon in the top right hand corner of the window that can be used 
 
         </div>
 
+                <!--#region panel-->
+                <div class="dashed-line faq-break" id="Settings – Application Colours"></div>
+                <span class="cms-sub-heading">Settings – Changing the Application Colours</span>
+        
+                <div id="collapse4" class="">
+        
+                    <br>
+        
+                        <!--#region text-->
+                        When the application is run for the first time it automatically generates a 'Colours.ini' file that includes the hex values for all of the note highlighting colours. It's possible to change these by opening the Colour.ini file in the text or code editor of your choice and adjusting the hex values as desired.
+                        <br><br>
+                        The 'Colours.ini' file location varies depending on your platform:<br><br>
+                        <strong>Windows and Linux</strong><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;{path to app}/AudioTheory Grids/Data/<br><br>
+                        If you've purchased the app through Steam then you can easily open this folder by right clicking on the application in your Steam library and selecting 'Manage --> Browse Local Files'.<br><br>
+                        <strong>Mac</strong><br>
+                        &nbsp;&nbsp;~Library/Application Support/com.DraculasCave.AudioTheoryGrids/Data/
+                        <br><br>
+                        If you want to revert back to the original colours, the easiest way to do this is to delete the Colours.ini file and then next time the application is run it will make a new one automatically with the default values.
+                        <!--#endregion text-->
+        
+                </div>
+                <!--#endregion panel-->
+
 
 
  <!--#region panel-->
@@ -447,9 +490,9 @@ There is a cog icon in the top right hand corner of the window that can be used 
      <br>
 
          <!--#region text-->
-         Audio latency is the amount of time it takes for the computer to process and play audio. There are features in AudioTheory which simulate the playback of an instrument in real-time and what this means is that a delay in of even a few milliseconds can be noticeable and undesirable.
+         Audio latency is the amount of time it takes for the computer to process and play audio. There are features in AudioTheory Grids which simulate the playback of an instrument in real-time and what this means is that a delay of even a few milliseconds can be noticeable and undesirable.
         <br><br>
-         To optimise response times, AudioTheory comes with some platform-specific options as Mac/Linux and Windows handle audio differently.
+         To optimise response times, AudioTheory Grids comes with some platform-specific options as Mac/Linux and Windows handle audio differently.
 
          <!--#endregion text-->
 
@@ -465,7 +508,7 @@ There is a cog icon in the top right hand corner of the window that can be used 
       <br>
  
           <!--#region text-->
-          On Mac and Linux the built-in audio drivers are able to support low latencies out-of-the-box. This means you will likely not have latency issues with the default settings, however there is still a DSP buffer size that can be configured in the options. A lower DSP value means less latency, however this requires more CPU power. If the DSP is set too low for the computer to handle, then this will typically result in audio glitches such as pops and clicks. 
+          On Mac and Linux the built-in audio drivers are able to support low latencies out-of-the-box. This means you are unlikley to have latency issues with the default settings, however there is still a DSP buffer size that can be configured in the options. A lower DSP value means less latency, however this requires more CPU power. If the DSP is set too low for the computer to handle then this will typically result in audio glitches such as pops and clicks. 
          
          <br><br>
           <img class="drop-shadow user-guide-screenshot" src="images/AudioTheory-DSP-settings.png"  alt="AudioTheory Latency" />
@@ -473,7 +516,7 @@ There is a cog icon in the top right hand corner of the window that can be used 
           <br>The DSP value can be set using the dropdown here in the options.
 
         <br><br>
-          To get the best result may require a bit of trial and error. Essentially you want to have the buffer set to as lower value as possible where the application audio plays still back on your computer without glitches. For many modern computers you will be able to set this all the way down to the smallest (fastest) value, 32kbps.
+          To get the best result may require a bit of trial and error. Essentially you want to have the buffer set to as lower value as possible without audio playback glitching or containing artefacts. For many modern computers you will be able to set this all the way down to the smallest (fastest) value, 32kbps.
 <br><br>
           <img class="drop-shadow user-guide-screenshot" src="images/AudioTheory-DSP-settings-open.png"  alt="AudioTheory Latency" />
 
@@ -491,7 +534,7 @@ There is a cog icon in the top right hand corner of the window that can be used 
         <br>
    
             <!--#region text-->
-            On Windows the ASIO4ALL driver can be used to achieve ultra low latencies. Most DAWs require the use of an ASIO driver, and whilst it is optional for AudioTheory, it's recommended for better performance over the built-in Windows driver. 
+            On Windows the ASIO4ALL driver can be used to achieve ultra low latencies. Most DAWs require the use of an ASIO driver, and whilst it is optional for AudioTheory Guitars, it's recommended for better performance over the built-in Windows driver. 
 <br><br>
 You can download and install this driver for free from the ASIO4ALL website here:
 <br><br>
@@ -499,18 +542,18 @@ You can download and install this driver for free from the ASIO4ALL website here
 <a class="url-dark-green" href="https://www.asio4all.org/">https://www.asio4all.org/</a>
 
 <br><br>
-Once it's installed, load up AudioTheory (if it was open prior to the install you will need to close it and open it up again) and you will be able to swap between the ASIO driver and the built-in driver in the application settings. Any changes made here will require the application to be restarted to take effect.
+Once it's installed, load up AudioTheory Grids (if it was open prior to the install you will need to close it and open it up again) and you will be able to swap between the ASIO driver and the built-in driver in the application settings. Any changes made here will require the application to be restarted to take effect.
 <br><br>
 
 <img class="drop-shadow user-guide-screenshot" src="images/AudioTheory-Driver-select.png"  alt="AudioTheory driver select" />
 
 <br>
-When using the ASIO4ALL driver, there are elements of the configuration (notably the output device and the DSP buffer size) that are controlled in the ASIO4ALL settings, not the AudioTheory settings. These can be opened up by pressing the 'config.' button which appears next to the dropdown when the ASIO driver is in use.
+When using the ASIO4ALL driver, there are elements of the configuration (notably the output device and the DSP buffer size) that are controlled in the ASIO4ALL settings, not the AudioTheory Grids settings. These can be opened up by pressing the 'config.' button which appears next to the dropdown when the ASIO driver is in use.
 <br><br>
 
 <img class="drop-shadow user-guide-screenshot" src="images/AudioTheory-ASIO-driver-settings.png"  alt="AudioTheory ASIO config" />
 <br>
-It's worth noting that ASIO4ALL requires a dedicated stream for audio output, meaning other applications cannot output audio at the same time when it's in use. You can always swap back to the built-in driver in the settings if this is desirable. Increased latency times may not be an issue depending on how you are using the application.
+It's worth noting that ASIO4ALL requires a dedicated stream for audio output, meaning other applications cannot output audio at the same time when it's in use. You can always swap back to the built-in driver in the settings, and increased latency times may not be an issue depending on how you are using the application.
 
 <!--#endregion text-->
    
