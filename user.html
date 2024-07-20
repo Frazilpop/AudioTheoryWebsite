@@ -392,18 +392,16 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
 <!--#region panel-->
 <div class="dashed-line faq-break" id="Settings – Tuning & Guitar Configuration"></div>
-<span class="cms-sub-heading">Settings – Tuning & Guitar Configuration</span>
+<span class="cms-sub-heading">Settings – Chord tuning</span>
 
 <div id="collapse4" class="">
 
 <br>
 
 <!--#region text-->
-Here in the settings is where the Guitar tuning can be configured. This is set as a root note with the option to drop the 6th string (Drop D and equivalent). When this is set the fretboard and chord diagrams will automatically update to reflect the new tuning.
+The guitar fretboard tuning is fully configured using the dropdowns next to the strings (in 'unlocked' mode). But in the settings it is possible to offset the chords to any relative tuning (as in any tuning where the strings are tuned to the same interval as EADGBE) and there's also the option to drop the 6th string (Drop D and equivalent). When this is set the chord diagrams will update automatically, but the fretboard tuning is set independently.
 <br><br>
-There is also the option to set the tuning at a per-string level, although please note that whilst this is supported by the fretboard diagram, chord shapes will not update to match this.
-<br><br>
-There are additional guitar configuration options to vertically invert the fretboard, choos a 4-string bass instead of a 6-string guitar diagram, select between a 15 fret and 24 fret diagram, and left/ right handed modes (this is essentially a horizontal inversion of the diagrams).
+So for example, if you wanted to set the application to display in Drop C tuning then you'd set the Chord tuning offset to D (as Drop C is D with the 6th string lowered to C) set 'Drop 6th' to 'yes' and then configure the per-string tuning of the fretboard to CGCFAD.
 <!--#endregion text-->
 
 </div>
@@ -418,7 +416,7 @@ There are additional guitar configuration options to vertically invert the fretb
      <br>
 
          <!--#region text-->
-         The Save and Load icons found within the settings can be used to write your current view to a plain text file and then load it back into the application. This works well for quickly swapping between arrangements.
+         The save and load options in the File menu can be used to write your current view to a plain text file and then load it back into the application. This works well for quickly swapping between arrangements.
          <!--#endregion text-->
 
  </div>
@@ -433,7 +431,7 @@ There are additional guitar configuration options to vertically invert the fretb
      <br>
 
          <!--#region text-->
-         As well as the default English note names it is possible to change over the notes to either used fixed do solfège (Do, Re, Mi...) or to use relative names (relative Do or as numerals). Please note that relative names require a scale preset to be loaded (as this is what they will be relative to) and otherwise the notes will not display.
+         As well as the default English note names it is possible to change over the notes to either used fixed do solfège (Do, Re, Mi...) or to use names to the scale (such as degrees or movable do).
          <!--#endregion text-->
 
  </div>
@@ -446,9 +444,7 @@ There are additional guitar configuration options to vertically invert the fretb
          <div id="collapse4" class="">
  
              <br>
- 
-                 <!--#region text-->
-                 When the application is run for the first time it automatically generates a 'Colours.ini' file that includes the hex values for all of the note highlighting colours. It's possible to change these by opening the Colour.ini file in the text or code editor of your choice and adjusting the hex values as desired.
+                The note colours can be set using the colour wheel in the settings. It's also possible to set the hex codes directly in the 'Colours.ini' file that is generated when the application is run for the first time.
                  <br><br>
                  The 'Colours.ini' file location varies depending on your platform:<br><br>
                  <strong>Windows and Linux</strong><br>
@@ -457,7 +453,7 @@ There are additional guitar configuration options to vertically invert the fretb
                  <strong>Mac</strong><br>
                  &nbsp;&nbsp;~Library/Application Support/com.DraculasCave.AudioTheoryGuitars/Data/
                  <br><br>
-                 If you want to revert back to the original colours, the easiest way to do this is to delete the Colours.ini file and then next time the application is run it will make a new one automatically with the default values.
+                 If you delete the Colours.ini file then next time the application is run it will make a new one automatically with the default values.
                  <!--#endregion text-->
  
          </div>
@@ -493,14 +489,12 @@ There are additional guitar configuration options to vertically invert the fretb
           On Mac and Linux the built-in audio drivers are able to support low latencies out-of-the-box. This means you are unlikley to have latency issues with the default settings, however there is still a DSP buffer size that can be configured in the options. A lower DSP value means less latency, however this requires more CPU power. If the DSP is set too low for the computer to handle then this will typically result in audio glitches such as pops and clicks. 
          
          <br><br>
-          <img class="drop-shadow user-guide-screenshot" src="images/AudioTheory-DSP-settings.png"  alt="AudioTheory Latency" />
+          <img class="drop-shadow user-guide-screenshot" src="images/AT-latency-mac.jpg"  alt="AudioTheory Latency" />
 
           <br>The DSP value can be set using the dropdown here in the options.
 
         <br><br>
           To get the best result may require a bit of trial and error. Essentially you want to have the buffer set to as lower value as possible without audio playback glitching or containing artefacts. For many modern computers you will be able to set this all the way down to the smallest (fastest) value, 32kbps.
-<br><br>
-          <img class="drop-shadow user-guide-screenshot" src="images/AudioTheory-DSP-settings-open.png"  alt="AudioTheory Latency" />
 
           <!--#endregion text-->
  
