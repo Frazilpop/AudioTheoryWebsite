@@ -9,7 +9,7 @@ html { margin:0; padding:0;font-size: 100% !important; }
 
 body {
     background-color: #e6e6e6 !important;
-    font-family: 'futura_lt_btlight', Arial, Helvetica, sans-serif !important;
+    font-family:  "Nunito",'futura_lt_btlight', Arial, Helvetica, sans-serif !important;
     font-size: 1rem !important;
     font-size: 105% !important;
     line-height: 1.5rem !important;
@@ -26,16 +26,17 @@ a {
     text-decoration: none !important;
 }
 .italic {
-    font-family: 'futura_lt_btlight_italic', Arial, Helvetica, sans-serif;
+    font-family: "Nunito",'futura_lt_btlight_italic', Arial, Helvetica, sans-serif;
+    font-style: italic;
 }
 .sj-dialog-0 .dialog-msg-0 {
-    font-family: 'futura_lt_btlight', Arial, Helvetica, sans-serif !important;
+    font-family: "Nunito",'futura_lt_btlight', Arial, Helvetica, sans-serif !important;
 }
 .additional-info-0 {
     display: none !important;
 }
 .button-0 {
-    font-family: 'futura_lt_btlight', Arial, Helvetica, sans-serif !important;
+    font-family: "Nunito",'futura_lt_btlight', Arial, Helvetica, sans-serif !important;
     overflow: hidden;
     white-space: nowrap;
     margin-left: auto;
@@ -52,13 +53,13 @@ a {
     border-radius: 4px;
 }
 .sj-dialog--1691395329 .dialog-msg--1691395329 {
-    font-family: 'futura_lt_btlight', Arial, Helvetica, sans-serif !important;
+    font-family:  "Nunito",'futura_lt_btlight', Arial, Helvetica, sans-serif !important;
 }
 .additional-info--1691395329 {
     display: none !important;
 }
 .button--1691395329 {
-    font-family: 'futura_lt_btlight', Arial, Helvetica, sans-serif !important;
+    font-family:  "Nunito",'futura_lt_btlight', Arial, Helvetica, sans-serif !important;
     overflow: hidden;
     white-space: nowrap;
     margin-left: auto;
@@ -253,7 +254,7 @@ header {
     align-items: center;
     width: 100%;
     display: flex;
-    font-family: 'futura_lt_btlight', Arial, Helvetica, sans-serif;
+    font-family:  "Nunito",'futura_lt_btlight', Arial, Helvetica, sans-serif;
     max-height: 60px !important;
     z-index: 1;
 }
@@ -1592,7 +1593,7 @@ body:after{
     width:33px;
     height: 33px;
     border-radius: 50%;
-    font-family: 'futura_md_btmedium';
+    font-family:  "Nunito",'futura_md_btmedium';
     top: 25px;
     right: 25px;
 }
@@ -1604,7 +1605,8 @@ body:after{
 }
 
 .bold-menu-item {
-    font-family: 'futura_md_btmedium';
+    font-family:  "Nunito",'futura_md_btmedium';
+    font-weight: 700;
 }
 .update-title {
     padding-bottom: 5px;
@@ -1809,5 +1811,9 @@ p {
     padding-bottom: 25px;
 }
 h3 {
+    margin-top: 0px !important;
+}
+.no-padding-top {
+    padding-top: 0px!important;
     margin-top: 0px !important;
 }
