@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-<title>Asio And Performance Update</title>
+<title>Audiotheory Piano Keys Version 2</title>
 <link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
 <link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
 <link rel="stylesheet" type= "text/css" href= "style.css" />
@@ -122,102 +122,34 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 </div>
 
 <div class="align-center-d article-title">
-    <h2><span class="main-title">AudioTheory</span><br>ASIO & Performance Updates</h2>
+    <h2><span class="main-title">AudioTheory Piano Keys</span><br>Version 2.0.0</h2>
 </div>
 <div class="half-space"></div>
 
 <div class="padded-container">
-    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory-ASIO-gen-banner.jpg" alt="AudioTheory ASIO banner" />
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_Piano_Keys_2_title.jpg" alt="AudioTheory Piano Keys version 2.0" />
 </div>
 
 <!-- #region text block -->
 <div class="text-block padding-top padding-bottom">
     <!--&-->
-    A series of new updates are now available across the range of AudioTheory software. These combines a set of 'under the hood' optimisations and performance enhancing features which have been rolled out across the following updates:
-<br><br>
-AudioTheory Guitars version 2.1.0 and version 2.2.0<br>
-AudioTheory Piano Keys version 1.2.0 and version 1.3.0<br>
-AudioTheory Grids version 1.3.0
-<br><br>
-Let's have a look at what's new...
-    <!--&-->
-</div>
-<!-- #endregion text block -->
-
-<!--#region Text Block with subtitle-->
-<div class="text-block padding-top padding-bottom">
-    <!--&-->
-    <h3>
-    <div class="subtitle">AudioTheory and the ASIO4ALL driver</div>
-    </h3>
-    <!--&-->
-    ASIO4ALL is a freeware audio driver designed for low latency playback. Most DAWs require the use of an ASIO driver, and whilst it is optional for AudioTheory, it's highly recommended. It's very easy to install and you are guaranteed to get better performance than the built-in Windows driver.
-<br><br>
-And just to confirm, this is a Windows specific feature. Mac and Linux come with audio drivers that can handle very low latencies out-of-the-box. More on how the settings have changed on these platforms in a bit.
-    <!--&-->
-</div>
-<!--#endregion Text Block with subtitle-->
-
-<div class="padded-container">
-    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_Guitars_ASIO_01.png" alt="AudioTheory ASIO screenshot" />
-</div>
-
-<!--#region Text Block with subtitle-->
-<div class="text-block padding-top padding-bottom">
-    <!--&-->
-    <h3>
-    <div class="subtitle">Windows specific changes</div>
-    </h3>
-    <!--&-->
-    There are a few things now in place designed to help swap you over to the ASIO driver. If you load up the application without this installed you will see a one-time notification directing you to the ASIO4ALL website.
-<br><br>
-Once installed, the application will automatically swap to use the ASIO driver when its next loaded. You can see which driver is currently in use from the settings popup. Here can also swap driver using the dropdown, meaning you can revert back to the built-in driver if required. Any driver changes here require the application to be restarted before they take effect. Oh, and if you swap to ASIO here but the driver isn't installed then it's not going to work. In this scenario the application will prompt you to install it on your machine.
-<br><br>
-Please note that currently the option to record in AudioTheory Grids is only available when using the built-in driver. This works by directly capturing the audio output and writing it to a wav file, which can only happen when the built-in driver is being used to process audio. I am looking into an alternative method of supporting this feature with the ASIO driver, but unfortunately the options are somewhat limited. At least for now, the record button doesn't show if you're using ASIO.
-    <!--&-->
-</div>
-<!--#endregion Text Block with subtitle-->
-
-<div class="padded-container">
-    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_Guitars_ASIO_04.png" alt="AudioTheory ASIO screenshot" />
-</div>
-
-<!-- #region text block -->
-<div class="text-block padding-top padding-bottom">
-    <!--&-->
-    If the ASIO driver is in use, you will see a 'config.' button that lets you open up the ASIO4ALL settings. Here is where you configure your output device as well as the DSP buffer size. If you are not receiving any audio, the likely cause is that the correct output has not been selected here.
+    AudioTheory Piano Keys 2.0 is the biggest update yet. This new versions adds in many new features and improvements including faster tools for swapping chords, a new light theme, and a colour wheel for selecting the application colours.
     <!--&-->
 </div>
 <!-- #endregion text block -->
 
 <div class="padded-container">
-    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_Guitars_ASIO_05.png" alt="AudioTheory ASIO screenshot" />
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_Piano_Keys_2_01.jpg" alt="AudioTheory Piano Keys version 2.0" />
 </div>
 
 <!--#region Text Block with subtitle-->
 <div class="text-block padding-top padding-bottom">
     <!--&-->
     <h3>
-    <div class="subtitle">Mac and Linux changes</div>
+    <div class="subtitle">Quick Select Chord Types</div>
     </h3>
     <!--&-->
-    These still use the DSP latency settings that were previously in place. As above, the built-in drivers are able to support low latency without the need for an external driver. However I have swapped over the selector to a new dropdown which makes it a bit quicker and easier to select the value you're after.
-    <!--&-->
-</div>
-<!--#endregion Text Block with subtitle-->
-
-<div class="padded-container">
-    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_Guitars_ASIO_07.png" alt="AudioTheory ASIO screenshot" />
-</div>
-
-<!--#region Text Block with subtitle-->
-<div class="text-block padding-top padding-bottom">
-    <!--&-->
-    <h3>
-    <div class="subtitle">Velocity Playback</div>
-    </h3>
-    <!--&-->
-    MIDI input playback now registered the note press velocity, meaning the playback volume is controlled by how hard you are pressing the notes. This helps better simulate the effect of a real instrument.
+    Previously, loading a new chord required finding and selecting it within the chord library. It's still possible to do this, but now there's also a dropdown that you can use to swap chord type much quicker. If you already know what cord you're after – this is a simpler and faster way to load it.
     <!--&-->
 </div>
 <!--#endregion Text Block with subtitle-->
@@ -226,33 +158,111 @@ Please note that currently the option to record in AudioTheory Grids is only ava
 <div class="text-block padding-bottom">
     <!--&-->
     <h3>
-    <div class="subtitle">Variable Render Rate</div>
+    <div class="subtitle">Locked & Unlocked mode</div>
     </h3>
     <!--&-->
-    The display no longer updates when it doesn't need to. This works well because there are many scenarios where you may find the software idling, it is after all reference material so it makes sense to leave it open up on screen. The software now looks out for these moments and greatly reduces the CPU overhead when possible, before seamlessly resuming to business as usual when any sort of input (or any action that results in a visible change on screen) is detected.
+    Initially designed to solve some UI challenges specific to <a class="url-dark-green" href="guitars.html">AudioTheory Guitars</a>, adding the same features here then became an obvious next step.<br><br>The application can now be toggled between an unlocked 'edit' mode and a locked 'view' mode the padlock icon in the top right. As well as the dropdown for selecting the chord type, numerous existing features have been moved into the 'edit' view, and you can now easily show or hide these as required.
+    <!--&-->
+</div>
+<!--#endregion Text Block with subtitle-->
+
+<!--#region Text Block with subtitle-->
+<div class="text-block padding-bottom">
+    <!--&-->
+    <h3>
+    <div class="subtitle">New menu bar</div>
+    </h3>
+    <!--&-->
+    To support the changes above, a new menu bar has been added and numerous options now live here. It's where you can now find the chord and scales libraries, as well as ear training mode.
     <!--&-->
 </div>
 <!--#endregion Text Block with subtitle-->
 
 <div class="padded-container">
-    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory-out-of-focus.png" alt="AudioTheory Out of Focus screenshot" />
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_Piano_Keys_2_04.jpg" alt="AudioTheory Piano Keys version 2.0" />
 </div>
 
 <!--#region Text Block with subtitle-->
-<div class="text-block padding-top ">
+<div class="text-block padding-top padding-bottom">
     <!--&-->
     <h3>
-    <div class="subtitle">Run 'Out of Focus'</div>
+    <div class="subtitle">Light theme</div>
     </h3>
     <!--&-->
-    The default behaviour of the application has changed so that it pauses running if the window is not in focus. This makes it a lot more practical to leave open in the background.
-<br><br>
-Originally this was not set because I imagined scenarios where it would be useful to poll for MIDI input when using the application alongside a DAW or other piece of software (e.g. you could be working in Logic on one screen and have AudioTheory running in the background on a second monitor). This may still be the case, so if your requirements do in fact mean that it's desirable for the application to run out of focus, then you can turn this back on in the settings.
+    A brand-new look is here in the form of the light theme. This mode is perfect if you want to print out a physical copy of your diagrams.
     <!--&-->
 </div>
 <!--#endregion Text Block with subtitle-->
 
-<div class="text-block  padding-bottom">
+<!--#region Text Block with subtitle-->
+<div class="text-block padding-bottom">
+    <!--&-->
+    <h3>
+    <div class="subtitle">Colour wheel</div>
+    </h3>
+    <!--&-->
+    The options screen has been rebuilt as a larger popup. It now includes a colour wheel so you can quickly change the per-note colours. This builds upon the custom colour functionality introduced in AudioTheory Piano Keys 1.5.0, and the colours can still be modified directly in the .ini file if you'd prefer, but now you can easily update the colours at runtime using the new selector. There's also the option to set a colour by hex value, and a set of alternate colours (the ones seen in some of the screenshots) that can be loaded at the press of a button.
+    <!--&-->
+</div>
+<!--#endregion Text Block with subtitle-->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_Piano_Keys_2_12.jpg" alt="AudioTheory Piano Keys version 2.0 options" />
+</div>
+
+<!--#region Text Block with subtitle-->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <h3>
+    <div class="subtitle">Relative note display updates</div>
+    </h3>
+    <!--&-->
+    A few changes have been made to improve how the application handles relative note name formats (Degrees, Roman numerals and movable do). These now display relative to the last selected scale, rather than the current scale. This has the effect of allowing you to subtract notes from the scale and still see the relative intervals for what's left. E.g. if you were to start out with C major you could then remove D, F, A and B to be left with C, E and G, which would be labelled as 1, 3 and 5 respectively.  To further support this, auto scale matching now only checks the current scale set group, as well as and the regular major and minor scales. This prevents accidentally swapping to the pentatonic scale of another key (e.g. G A B D E can be viewed as a subsection of C major, and won't automatically swap to G major pentatonic in this situation). 
+    <!--&-->
+</div>
+<!--#endregion Text Block with subtitle-->
+
+<div class="padded-container">
+    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory_Piano_Keys_2_14.jpg" alt="AudioTheory Piano Keys version 2.0" />
+</div>
+
+<!--#region Text Block with subtitle-->
+<div class="text-block padding-top padding-bottom">
+    <!--&-->
+    <h3>
+    <div class="subtitle">And the rest...</div>
+    </h3>
+    <!--&-->
+    There's a whole load of bug fixes and other things that have made it into this update too:
+<ul>
+<li>Revised application colours and fonts for a modern new look</li>
+<li>Real-Time Scale Highlighting now only updates when the pressed note is enabled in the note selector (i.e. it doesn't update if the key you're pressing is greyed out)</li>
+<li>The settings now include an option to offset the octave at which piano chords are played at/ highlighted</li>
+<li>The settings now include an option to turn off input highlighting across the piano chord set in the main application view</li>
+<li>The note selector now highlights any note added in using the colour it will display as</li>
+<li>The loaded preset name is now an input field that can be edited directly</li>
+<li>Fixed Do: Option to set Si or Ti as the 7th note in the scale</li>
+<li>Movable Do: bugs fixed and new option to set minor scale as 'La-based' or 'Do-based'</li>
+<li>The 'clear highlighting' delay time for the 'high' setting has been increased from 1 second to 2 seconds</li>
+<li>You can now click on the scale name in the bottom left to swap between the major and relative minor scales</li>
+<li>'Interval' label corrected to 'Degrees'</li>
+<li>Splash screen has been removed</li>
+<li>Mode labels now correctly update to major or minor</li>
+<li>Engine upgrade</li>
+<li>Miscellaneous performance enhancements</li>
+<li>Chords now correctly auto load when swapping between major scales</li>
+<li>Scale name label is now in sync with sharp/ flat display</li>
+<li>Bug fixes for piano training modes</li>
+<li>Fixed an issue with the audio latency value not displaying correctly on MacOS</li>
+<li>Fixed an issue where piano chords would not play back at the correct octave when certain keyboard sizes were used</li>
+<li>Hotkeys can no longer be pressed when an input field is active</li>
+<li>Black key highlighting is now consistent between mini-keyboards and the main keyboard</li>
+</ul>
+    <!--&-->
+</div>
+<!--#endregion Text Block with subtitle-->
+
+<div class="text-block padding-top padding-bottom">
         <div class="dashed-line faq-break"></div>
         All updates are free for owners of AudioTheory Guitars. If you purchased directly then you can download the latest version from your Gumroad account. 
         For Steam users, new updates can be downloaded through the Steam client. 
