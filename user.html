@@ -451,8 +451,10 @@ So for example, if you wanted to set the application to display in Drop C tuning
                  &nbsp;&nbsp;&nbsp;&nbsp;{path to app}/AudioTheory Guitars/Data/<br><br>
                  If you've purchased the app through Steam then you can easily open this folder by right clicking on the application in your Steam library and selecting 'Manage --> Browse Local Files'.<br><br>
                  <strong>Mac</strong><br>
-                 &nbsp;&nbsp;~Library/Application Support/com.DraculasCave.AudioTheoryGuitars/Data/
-                 <br><br>
+                 &nbsp;&nbsp;~Library/Application Support/com.DraculasCave.AudioTheoryGuitars/Data/<br><br>
+                 <strong>Please note that in macOS 15+ the file location has changed:</strong><br>
+                 &nbsp;&nbsp;~/Library/Containers/com.DraculasCave.AudioTheoryGuitars/Data/Library/Application Support
+                  <br><br>
                  If you delete the Colours.ini file then next time the application is run it will make a new one automatically with the default values.
                  <!--#endregion text-->
  
@@ -470,7 +472,7 @@ So for example, if you wanted to set the application to display in Drop C tuning
          <!--#region text-->
          Audio latency is the amount of time it takes for the computer to process and play audio. There are features in AudioTheory Guitars which simulate the playback of an instrument in real-time and what this means is that a delay of even a few milliseconds can be noticeable and undesirable.
         <br><br>
-         To optimise response times, AudioTheory Guitars comes with some platform-specific options as Mac/Linux and Windows handle audio differently.
+         To optimise response times, AudioTheory Guitars comes with some platform-specific options, as Mac/Linux and Windows handle audio differently.
 
          <!--#endregion text-->
 
@@ -491,10 +493,10 @@ So for example, if you wanted to set the application to display in Drop C tuning
          <br><br>
           <img class="drop-shadow user-guide-screenshot" src="images/AT-latency-mac.jpg"  alt="AudioTheory Latency" />
 
-          <br>The DSP value can be set using the dropdown here in the options.
+          <br>The DSP value can be set using the dropdown in the options.
 
         <br><br>
-          To get the best result may require a bit of trial and error. Essentially you want to have the buffer set to as lower value as possible without audio playback glitching or containing artefacts. For many modern computers you will be able to set this all the way down to the smallest (fastest) value, 32kbps.
+          To get the best results you want to set the buffer to as lower value as possible without audio playback glitching or containing artefacts. For many modern computers you will be able to set this all the way down to the smallest (fastest) value, 32kbps.
 
           <!--#endregion text-->
  
@@ -510,7 +512,7 @@ So for example, if you wanted to set the application to display in Drop C tuning
         <br>
    
             <!--#region text-->
-            On Windows the ASIO4ALL driver can be used to achieve ultra low latencies. Most DAWs require the use of an ASIO driver, and whilst it is optional for AudioTheory Grids, it's recommended for better performance over the built-in Windows driver. 
+            On Windows the ASIO4ALL driver can be used to achieve ultra low latencies. Most DAWs require the use of an ASIO driver, and whilst it is optional for AudioTheory Guitars, it's recommended for better performance over the built-in Windows driver. 
 <br><br>
 You can download and install this driver for free from the ASIO4ALL website here:
 <br><br>
@@ -529,7 +531,7 @@ When using the ASIO4ALL driver, there are elements of the configuration (notably
 
 <img class="drop-shadow user-guide-screenshot" src="images/AudioTheory-ASIO-driver-settings.png"  alt="AudioTheory ASIO config" />
 <br>
-It's worth noting that ASIO4ALL requires a dedicated stream for audio output, meaning other applications cannot output audio at the same time when it's in use. You can always swap back to the built-in driver in the settings, and increased latency times may not be an issue depending on how you are using the application.
+ASIO4ALL requires a dedicated stream for audio output, which means that other applications cannot output audio at the same time when it's in use. You can always swap back to the built-in driver in the settings, and increased latency times may not be an issue depending on how you are using the application.
 
 <!--#endregion text-->
    

@@ -471,8 +471,10 @@ There is a cog icon in the top right hand corner of the window that can be used 
                         &nbsp;&nbsp;&nbsp;&nbsp;{path to app}/AudioTheory Grids/Data/<br><br>
                         If you've purchased the app through Steam then you can easily open this folder by right clicking on the application in your Steam library and selecting 'Manage --> Browse Local Files'.<br><br>
                         <strong>Mac</strong><br>
-                        &nbsp;&nbsp;~Library/Application Support/com.DraculasCave.AudioTheoryGrids/Data/
-                        <br><br>
+                        &nbsp;&nbsp;~Library/Application Support/com.DraculasCave.AudioTheoryGrids/Data/<br><br>
+                        <strong>Please note that in macOS 15+ the file location has changed:</strong><br>
+                        &nbsp;&nbsp;~/Library/Containers/com.DraculasCave.AudioTheoryGrids/Data/Library/Application Support
+                               <br><br>
                         If you want to revert back to the original colours, the easiest way to do this is to delete the Colours.ini file and then next time the application is run it will make a new one automatically with the default values.
                         <!--#endregion text-->
         
@@ -492,7 +494,7 @@ There is a cog icon in the top right hand corner of the window that can be used 
          <!--#region text-->
          Audio latency is the amount of time it takes for the computer to process and play audio. There are features in AudioTheory Grids which simulate the playback of an instrument in real-time and what this means is that a delay of even a few milliseconds can be noticeable and undesirable.
         <br><br>
-         To optimise response times, AudioTheory Grids comes with some platform-specific options as Mac/Linux and Windows handle audio differently.
+         To optimise response times, AudioTheory Grids comes with some platform-specific options, as Mac/Linux and Windows handle audio differently.
 
          <!--#endregion text-->
 
@@ -550,9 +552,6 @@ Once it's installed, load up AudioTheory Grids (if it was open prior to the inst
 <br>
 When using the ASIO4ALL driver, there are elements of the configuration (notably the output device and the DSP buffer size) that are controlled in the ASIO4ALL settings, not the AudioTheory Grids settings. These can be opened up by pressing the 'config.' button which appears next to the dropdown when the ASIO driver is in use.
 <br><br>
-
-<img class="drop-shadow user-guide-screenshot" src="images/AudioTheory-ASIO-driver-settings.png"  alt="AudioTheory ASIO config" />
-<br>
 It's worth noting that ASIO4ALL requires a dedicated stream for audio output, meaning other applications cannot output audio at the same time when it's in use. You can always swap back to the built-in driver in the settings, and increased latency times may not be an issue depending on how you are using the application.
 
 <!--#endregion text-->

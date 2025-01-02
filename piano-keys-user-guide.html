@@ -178,7 +178,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
             <strong>Note: </strong>AudioTheory Piano Keys is periodically updated with new features. New versions are always free for existing customers and can be downloaded either through your Gumroad account or the Steam client.
             This guide is also updated; to make use of all features described here please ensure you are on the latest version.</div>
             <br><br>-->
-            <img class="drop-shadow user-guide-screenshot" src="images/AudioTheory_Piano_Keys_07.png"  alt="AudioTheory Piano Keys Screenshot" />
+            <img class="drop-shadow user-guide-screenshot" src="images/AudioTheory_Piano_Keys_07.jpg"  alt="AudioTheory Piano Keys Screenshot" />
             <br><br>
 
             <span class="cms-sub-heading">Getting Started</span>
@@ -218,14 +218,20 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
                 <strong style="color: #282828">Mouse</strong> – you can highlight/ play any key by clicking on it directly.
                 <br>
                 <br>
-                <strong style="color: #282828">Keyboard</strong> – press the ‘keyboard’ button (it will highlight in pink when this mode is on) the application will register QWERTY input from your computer keyboard. 
-                In the settings there are two QWERTY keyboard overlay types that you can choose between labeled ‘partial’ and ‘full’. The partial keyboard overlay covers a single octave and is split across two rows of the keyboard. In 'full' mode, all the piano keys are sequentially mapped across the keyboard.
+
+                <img class="drop-shadow user-guide-screenshot" src="images/AT-keyboard-input.jpg"  alt="Input Options" />
+
+
+                <strong style="color: #282828">Keyboard</strong> – there are options within the application settings to use QWERTY input from your computer keyboard to play the notes on the on-screen piano. 
+                There are two QWERTY keyboard overlay types that you can choose between labeled ‘partial’ and ‘full’. The partial keyboard overlay covers a single octave and is split across two rows of the keyboard. In 'full' mode, all the piano keys are sequentially mapped across the keyboard.
                 <br>
                 <br>
-                The on-screen piano has additional options to customise how the application handles playback, including a sustain feature and instrument selector. There are also options to display or hide the keyboard note overlay as well as a 'lock to scale' feature where only notes selected in the scale will give audio feedback.
+                <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-01-unlocked.jpg"  alt="Keyboard Screenshot" />
+
+                There are additional options to customise playback that accompany the on-screen piano when the application is in unlocked mode. This adds in buttons to display or hide the keyboard note overlay as well as a 'lock to scale' feature where only notes selected in the scale will give audio feedback.
                 <br>
                 <br>
-                You will also notice an octave selector, this specifically controls the playback (output) octave. It can be configured independently from the MIDI (input) octave so you can control how the application receives audio in and how it plays it separately.
+                There is an octave selector that controls the playback (output) octave. It can be configured independently from the MIDI (input) octave selector in the settings, so you can control how the application receives audio in and how it plays it back separately.
                 <!--//text-->
                     
            
@@ -593,16 +599,18 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
             <br>
 
                 <!--#region text-->
-                When the application is run for the first time it automatically generates a 'Colours.ini' file that includes the hex values for all of the note highlighting colours. It's possible to change these by opening the Colour.ini file in the text or code editor of your choice and adjusting the hex values as desired.
-                <br><br>
-                The 'Colours.ini' file location varies depending on your platform:<br><br>
+                The note colours can be set using the colour wheel in the settings. It's also possible to modify the hex codes directly in the 'Colours.ini' file that is generated when the application is run for the first time.
+                 <br><br>
+                 The 'Colours.ini' file location varies depending on your platform:<br><br>
                 <strong>Windows and Linux</strong><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;{path to app}/AudioTheory Piano Keys/Data/<br><br>
                 If you've purchased the app through Steam then you can easily open this folder by right clicking on the application in your Steam library and selecting 'Manage --> Browse Local Files'.<br><br>
                 <strong>Mac</strong><br>
-                &nbsp;&nbsp;~Library/Application Support/com.DraculasCave.AudioTheoryPianoKeys/Data/
+                &nbsp;&nbsp;~Library/Application Support/com.DraculasCave.AudioTheoryPianoKeys/Data/<br><br>
+                <strong>Please note that in macOS 15+ the file location has changed:</strong><br>
+                &nbsp;&nbsp;~/Library/Containers/com.DraculasCave.AudioTheoryPianoKeys/Data/Library/Application Support
                 <br><br>
-                If you want to revert back to the original colours, the easiest way to do this is to delete the Colours.ini file and then next time the application is run it will make a new one automatically with the default values.
+                If you delete the Colours.ini file then next time the application is run it will make a new one automatically with the default values.
                 <!--#endregion text-->
 
         </div>
@@ -620,7 +628,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
          <!--#region text-->
          Audio latency is the amount of time it takes for the computer to process and play audio. There are features in AudioTheory Piano Keys which simulate the playback of an instrument in real-time and what this means is that a delay of even a few milliseconds can be noticeable and undesirable.
         <br><br>
-         To optimise response times, AudioTheory Piano Keys comes with some platform-specific options as Mac/Linux and Windows handle audio differently.
+         To optimise response times, AudioTheory Piano Keys comes with some platform-specific options, as Mac/Linux and Windows handle audio differently.
 
          <!--#endregion text-->
 
@@ -639,14 +647,12 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
           On Mac and Linux the built-in audio drivers are able to support low latencies out-of-the-box. This means you are unlikley to have latency issues with the default settings, however there is still a DSP buffer size that can be configured in the options. A lower DSP value means less latency, however this requires more CPU power. If the DSP is set too low for the computer to handle then this will typically result in audio glitches such as pops and clicks. 
          
          <br><br>
-          <img class="drop-shadow user-guide-screenshot" src="images/AudioTheory-DSP-settings.png"  alt="AudioTheory Latency" />
+          <img class="drop-shadow user-guide-screenshot" src="images/AT-latency-mac.jpg"  alt="AudioTheory Latency" />
 
-          <br>The DSP value can be set using the dropdown here in the options.
+          <br>The DSP value can be set using the dropdown in the options.
 
         <br><br>
-          To get the best result may require a bit of trial and error. Essentially you want to have the buffer set to as lower value as possible without audio playback glitching or containing artefacts. For many modern computers you will be able to set this all the way down to the smallest (fastest) value, 32kbps.
-<br><br>
-          <img class="drop-shadow user-guide-screenshot" src="images/AudioTheory-DSP-settings-open.png"  alt="AudioTheory Latency" />
+        To get the best results you want to set the buffer to as lower value as possible without audio playback glitching or containing artefacts. For many modern computers you will be able to set this all the way down to the smallest (fastest) value, 32kbps.
 
           <!--#endregion text-->
  
@@ -673,7 +679,7 @@ You can download and install this driver for free from the ASIO4ALL website here
 Once it's installed, load up AudioTheory Piano Keys (if it was open prior to the install you will need to close it and open it up again) and you will be able to swap between the ASIO driver and the built-in driver in the application settings. Any changes made here will require the application to be restarted to take effect.
 <br><br>
 
-<img class="drop-shadow user-guide-screenshot" src="images/AudioTheory-Driver-select.png"  alt="AudioTheory driver select" />
+<img class="drop-shadow user-guide-screenshot" src="images/AT-driver-select.jpg"  alt="AudioTheory driver select" />
 
 <br>
 When using the ASIO4ALL driver, there are elements of the configuration (notably the output device and the DSP buffer size) that are controlled in the ASIO4ALL settings, not the AudioTheory Piano Keys settings. These can be opened up by pressing the 'config.' button which appears next to the dropdown when the ASIO driver is in use.
@@ -681,7 +687,7 @@ When using the ASIO4ALL driver, there are elements of the configuration (notably
 
 <img class="drop-shadow user-guide-screenshot" src="images/AudioTheory-ASIO-driver-settings.png"  alt="AudioTheory ASIO config" />
 <br>
-It's worth noting that ASIO4ALL requires a dedicated stream for audio output, meaning other applications cannot output audio at the same time when it's in use. You can always swap back to the built-in driver in the settings, and increased latency times may not be an issue depending on how you are using the application.
+ASIO4ALL requires a dedicated stream for audio output, which means that other applications cannot output audio at the same time when it's in use. You can always swap back to the built-in driver in the settings, and increased latency times may not be an issue depending on how you are using the application.
 
 <!--#endregion text-->
    
