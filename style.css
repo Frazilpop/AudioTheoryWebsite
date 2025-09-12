@@ -15,6 +15,7 @@ body {
     line-height: 1.5rem !important;
     color:#172022 !important;
     margin: 0;
+    overflow-x: hidden;
 }
 .sidebar-nav li {
     font-size: 100% !important;
@@ -557,6 +558,7 @@ header {
 .padding-bottom {
     padding-bottom: 40px;
 }
+
 @media(max-width: 480px) {
     .padding-top {
         padding-top: 30px;
@@ -772,6 +774,11 @@ color: #b3b3b3 !important;
 .nav-padding-top {
 padding-top: 35px;
 line-height: 0px;
+}
+@media(max-width: 480px) {
+    .nav-padding-top {
+        padding-top: 20px;
+    }
 }
 /* */
 
@@ -1558,6 +1565,12 @@ body:after{
     display: none;
 }
 
+video {
+       height: 100%;
+   width: 100%;
+
+}
+
 .iframe-container {
   overflow: hidden;
   padding-top: 56%;
@@ -1705,13 +1718,12 @@ p {
     padding-bottom: 0px!important;
 }
 .outline-sign-up-box {
-  /*  background-color: #81cadb; */
-  border: 1px solid  black;
-      border-radius: 25px;
-      padding-top: 30px;
-      padding-bottom: 5px;
-      padding-left: 45px;
-      padding-right: 45px;
+    border: 1px solid  black;
+    border-radius: 25px;
+    padding-top: 30px;
+    padding-bottom: 5px;
+    padding-left: 45px;
+    padding-right: 45px;
 }
 
 .shift-up-image {
@@ -1816,4 +1828,49 @@ h3 {
 .no-padding-top {
     padding-top: 0px!important;
     margin-top: 0px !important;
+}
+
+.svg-logo-dark-bg {
+      background-color: #172022;
+}
+.block-background {
+  margin: 0;
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 30px;
+}
+
+@media (min-width: 1897px) {
+
+    .block-background-image {
+        width: 100vw; 
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        position: relative;
+        display: block;
+
+    }
+}
+@media (max-width: 1897px) {
+  .block-background-image {
+    overflow: hidden;
+    display: block;
+    min-width: 100%;
+    max-width: 250%;
+    height: auto;
+    object-fit: cover; 
+    object-position: left center;
+  }
+}
+.classic-hyperlink a {
+  color: #0066cc !important;     /* classic blue link */
+  text-decoration: underline !important;
+  font-weight: 500;   /* optional: make it a little bolder */
+}
+
+.classic-hyperlink a:hover,
+.classic-hyperlink a:focus {
+  color: #004999 !important;     /* darker blue on hover */
+  text-decoration: underline !important; /* reinforce underline */
 }
