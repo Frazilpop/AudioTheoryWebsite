@@ -219,6 +219,11 @@ img {
         margin-right:20px;
     }
 }
+@media (max-width: 480px) {
+    .reduced-padding-bottom-mobile {
+        padding-bottom: 10px !important;
+    }
+}
 .logo-offset-r {
     margin-right:15px;
 }
@@ -960,6 +965,7 @@ li.b { padding-bottom: 15px; }
     margin-right: auto;
     text-align: center;
     padding-top: 5px;
+    padding-bottom: 5px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: block;
@@ -1116,6 +1122,12 @@ li.b { padding-bottom: 15px; }
     }
     .mobile-only-block {
         display: block !important;
+    }
+    .desktop-only-padding-top {
+        padding-top: 0px !important;
+    }
+    .desktop-only-padding-bottom {
+        padding-top: 0px !important;
     }
 }
 
@@ -1619,11 +1631,12 @@ video {
     right: 25px;
 }
 
-@media (max-width:600px) {
+@media (max-width:767px) {
     header {
         display: none !important;
     }
 }
+
 
 .bold-menu-item {
     font-family:  "Nunito",'futura_md_btmedium';
@@ -1738,10 +1751,45 @@ p {
     position: absolute;
     top: 20%;
 }
+.shift-up-video {
+    position: absolute;
+  width: 100%;
+  height: 100%;
+    top: 7%;
+}
+@media (max-width:1300px) {
+  .shift-up-video {
+        top: 0%;
+  }
+}
+@media (max-width:960px) {
+  .shift-up-video {
+        top: -7%;
+  }
+}
+@media (max-width:600px) {
+  .shift-up-video {
+        top: -15%;
+    }
+}
+@media (max-width:480px) {
+  .shift-up-video {
+        top: -19%;
+    }
+}
+@media (min-width: 1580px) {
 
-
+  .shift-up-video {
+    object-fit: cover;
+  }
+}
 
 .image-spacer {
+    width: 100%;
+    padding-top: 30%;
+}
+
+.image-spacer-LQi {
     width: 100%;
     padding-top: 30%;
 }
@@ -1749,12 +1797,19 @@ p {
   .image-spacer {
     padding-top: 20%;
   }
+  .image-spacer-LQi {
+    padding-top: 20%;
+  }
 }
 @media (min-width:1900px) {
   .image-spacer {
     padding-top: 35%;
   }
+  .image-spacer-LQi {
+    padding-top: 27%;
+  }
 }
+
 .curved-edges {
     border-radius: 15px;
 }
@@ -1881,4 +1936,44 @@ h3 {
 .classic-hyperlink a:focus {
   color: #004999 !important;     /* darker blue on hover */
   text-decoration: underline !important; /* reinforce underline */
+}
+.feature-video-logo {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.dc-bg-grey {
+    background-color: #262e2f !important;
+}
+.st-bg {
+    background-color: #00dac9 !important;
+}
+@media (max-width: 670px) {
+    .feature-video-logo {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .feature-video-logo {
+        padding-top: 28px;
+        padding-bottom: 12px;
+    }
+}
+.steam-widget {
+    width: 720px;
+    height: 190px;
+}
+@media (max-width: 720px) {
+    .steam-widget {
+        max-width: 100%;
+        min-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
