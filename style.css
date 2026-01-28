@@ -488,7 +488,7 @@ header {
 }
 .text-block {
     padding: 0px 20px;
-    max-width:850px;
+    max-width:950px;
     line-height: 1.45rem;
     font-size: 100%;
     font-size:1rem;
@@ -1176,7 +1176,7 @@ li.b { padding-bottom: 15px; }
 .container-c {
     padding-left: 20px;
     padding-right: 20px;
-    max-width: 1400px;
+    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 30px;
@@ -1353,12 +1353,11 @@ li.b { padding-bottom: 15px; }
 .cms-sub-heading {
     font-size: 1.1rem;
     color: #282828;
-    font-weight: bold;
 }
 .cms-sub-heading-med {
     font-size: 1.6rem;
     color: #282828;
-    font-weight: bold;
+    font-weight: 600;
 }
 .cms-sub-heading-large {
     font-size: 33px;
@@ -1468,6 +1467,11 @@ header .min {
 
 h2 .main-title {
     font-weight: 600;
+}
+h2 .sub-title {
+    font-size: 70%;
+        font-weight: 100;
+
 }
 .update-item {
     display: block;
@@ -2000,4 +2004,8 @@ h3 {
 .inline-nav-url a:hover,
 .inline-nav-url a:focus {
   text-decoration: underline !important; 
+}
+.update-bullet-point {
+    padding-left: 40px;
+    text-indent: -20px;
 }

@@ -145,6 +145,8 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
             <a class="url-dark-green"href="#Playback">Playback</a><br>
             <a class="url-dark-green"href="#Scale-Presets">Scale Presets</a><br>
             <a class="url-dark-green"href="#Scale Library">Scale Library</a><br>
+            <a class="url-dark-green"href="#Scale Inspector">Scale Inspector</a><br>
+
             <a class="url-dark-green"href="#Real-Time Scale Highlighting">Real-Time Scale Highlighting</a><br>
             <a class="url-dark-green"href="#The Scale Wheel">The Scale Wheel</a><br>
             <a class="url-dark-green"href="#Piano Chords">Piano Chords</a><br>
@@ -181,7 +183,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
             <img class="drop-shadow user-guide-screenshot" src="images/AudioTheory_Piano_Keys_07.jpg"  alt="AudioTheory Piano Keys Screenshot" />
             <br><br>
 
-            <span class="cms-sub-heading">Getting Started</span>
+            <span class="cms-sub-heading-med">Getting Started</span>
             <br><br>
 
             You can launch AudioTheory Piano Keys from the AudioTheory Piano Keys.exe executable file (Windows) or AudioTheory Piano Keys.app file (Mac OS).
@@ -199,7 +201,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
         <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-01.jpg"  alt="Keyboard Screenshot" />
 
             
-        <span  class="cms-sub-heading">Input</span>
+        <span  class="cms-sub-heading-med">Input</span>
 
 
         <div id="collapse2" class="">
@@ -241,7 +243,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
         <!--#region panel-->
         <div class="dashed-line faq-break" id="Playback"></div>
 
-        <span class="cms-sub-heading">Playback</span>
+        <span class="cms-sub-heading-med">Playback</span>
 
 
         <div id="collapse2" class="">
@@ -266,7 +268,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
         <div class="dashed-line faq-break" id="Scale-Presets"></div>
 
         <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-03.jpg"  alt="Scales Screenshot" />
-        <span class="cms-sub-heading">Scale Presets</span>
+        <span class="cms-sub-heading-med">Scale Presets</span>
 
         <div id="collapse3" class="">
 
@@ -281,11 +283,13 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
                 When a scale preset has been selected, the note highlighting updates to be context dependant. For example, if C♯/ D♭ is to be presented as C♯ in the selected scale the highlight colour will be yellow (the colour used for C). But when it's to be displayed as D♭ it will highlight in orange (the colour for D).
 
                 <br><br>
-                You can also control this manually by pressing the note name directly. For example, if you want C♯ to display as D♭ then press the label here and the highlighting and names will adjust accordingly.                                <br><br>
+
+There are options to customise this behaviour within the application settings. The default assumptions for sharps and flats can be changed to consistently use the desired accidental, and the rules for note highlighting can be changed too. Whilst the default behaviour is for the black keys to automatically match the natural notes (so C♯ uses the colour for C, D♭ uses the colour for D), it's possible to override this behaviour and set independent colours for the black keys instead.
+                <br><br>
 
                 <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-scale.jpg"  alt="scale based highlighting" />
 
-                The 'all scales' button can be used to access the full scale library, where you can view sets of scale diagrams side by side and choose one to load.
+                The 'all scales' button provides a quick link to the full scale library (also accessible from the nav bar). Here you can view sets of scale diagrams side-by-side and choose one to load.
 
 
                 <!--#endregion text-->
@@ -296,7 +300,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
         <!--#region panel-->
         <div class="dashed-line faq-break" id="Scale Library"></div>
 
-        <span class="cms-sub-heading">Scale Library</span>
+        <span class="cms-sub-heading-med">Scale Library</span>
 
         <div id="collapse3" class="">
 
@@ -305,8 +309,24 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
                 <img class="drop-shadow user-guide-screenshot" src="images/user-guide-piano-scale-library.jpg"  alt="Scale Selector" />
 
 
-                The scale library is a fullscreen view where you can play and choose between the scale presets. There is also a play button next to each scale, which will play through its contained notes in order.
+                The scale library is where you can view, play-back, and find out more information about different scales. Each scale has it's own play button, with options on the right-hand side of the screne to configure playback settings.
 
+                <!--#endregion text-->
+
+        </div>
+        <!--#endregion panel-->
+
+                <!--#region panel-->
+        <div class="dashed-line faq-break" id="Scale Inspector"></div>
+
+        <span class="cms-sub-heading-med">Scale Inspector</span>
+
+        <div id="collapse3" class="">
+
+            <br>
+                The info 'i' icon next to each scale here opens up the scale inspector. This gives a dedicated view for that specific scale where you can see a larger version of the scale diagram, as well as information about the scale intervals and movable do.
+                <br><br>
+                The scale itself can be changed from within the scale inspector too. Press the 'edit' cog to show root note and scale type dropdown selectors.
 
                 <!--#endregion text-->
 
@@ -317,7 +337,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
         <!--#region panel-->
         <div class="dashed-line faq-break" id="Real-Time Scale Highlighting"></div>
 
-        <span class="cms-sub-heading">Real-Time Scale Highlighting</span>
+        <span class="cms-sub-heading-med">Real-Time Scale Highlighting</span>
 
         <div id="collapse3" class="">
 
@@ -325,11 +345,11 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
             
                 <img class="drop-shadow user-guide-screenshot" src="images/user-guide-scale-highlighting.jpg"  alt="scale highlighting" />
 
-                This is the second row of piano keys that sits just above the on-screen piano. It is one of the application's more advanced features, but once understood it is a very powerful tool for quickly understanding how a note you play fits into two scales at the same time. Receiving this feedback in real-time makes it a useful tool for improvising.
+                This is the second row of piano keys that sits just above the on-screen piano. It is one of the application's more advanced features, but once understood it is a very powerful tool for quickly understanding how a note you play fits into two scales at the same time – perfect for improvising.
                 <br><br>
-                Scale highlighting is most useful when you are using a scale preset. This is because (as long as 'auto' mode is set on the right hand side) the application will automatically display major/ minor or dim scales relevant to the context of the main scale you are working in.
+                Scale highlighting is most useful when you are using a scale preset. This is because (as long as 'auto' mode is set on the right hand side) the application will automatically display major or minor scales relevant to the context of the main scale.
                 <br><br>
-                The above screenshot illustrates how this works in practice. Here the main scale preset loaded is C Major and the 2nd note in this scale, D, is being played. The 2nd position of a Major scale is associated with a minor chord, which here would be D minor (D, F, A). Therefore it is the minor scale that is relevant to this context.
+                The above screenshot illustrates how this works in practice. Here the main scale preset loaded is C Major and the 2nd note in this scale, D, is being played. The 2nd position of a Major scale is associated with a minor chord, which here would be D minor (D, F, A). Therefore it's the minor scale that is relevant to this context.
                 <br><br>
                 So when pressing the D note we are able to see the relevant scale for this note, and you will notice that it is highlighted against the C Major scale too (here this means that B♭ is marked up as position VI, but it is greyed out as B♭ is not part of C Major). As such, the notes we are viewing that are not greyed out show the D minor scale progression, but also filtered to our main song key (C Major).
                 <br><br>
@@ -339,7 +359,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
                 <br><br>
                 Hold mode gives additional manual control over this, allowing you to press a button on the keyboard and keep the current scale on screen for the duration of the press. By default the hold button is Left Shift, but there is also an option to remap it, and change the behaviour of this button to a toggle (rather than having the requirement for it to be continuously pressed down).
                 <br><br>
-                On the right hand side are options to configure the scale type used. As above, the 'auto' option is recommended for use with a scale preset as this will display the major/ minor or diminished scale relevant to the context. However you can alternatively specify a different scale type (or subsections such pentatonic or blues) to use.
+                On the right hand side are options to configure the scale type used. As above, the 'auto' option is recommended for use with a scale preset as this will display the major or minor scale relevant to the context. However you can alternatively specify a different scale type (or subsections such pentatonic or blues) to use.
                
                 <!--#endregion text-->
 
@@ -352,7 +372,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
         
             
-        <span class="cms-sub-heading">The Scale Wheel</span>
+        <span class="cms-sub-heading-med">The Scale Wheel</span>
 
         <div id="collapse4" class="">
 
@@ -370,9 +390,12 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
                 <br><br>
                 The advantage of using a scale preset is that the application knows which chords within that scale are major, minor or diminished, and indicates this across the relative positions using the following shorthand:
                 <br><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;Uppercase – note in scale plays as a major chord<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;Lowercase – note in scale plays as a minor chord<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;Lowercase° – note in scale plays as a diminished chord<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;• Uppercase – note in scale plays as a major chord<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;• Lowercase – note in scale plays as a minor chord<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;• Lowercase° – note in scale plays as a diminished chord<br>
+                <br><br>
+
+                Note that the application also includes melodic scales that don't imply functional harmony (e.g. jazz, blues etc.). In these cases, the roman numeral indicators are not shown as they are not applicable.
                 <br><br>
                 There are a couple more ways in which you can interact with the scale wheel. By clicking and dragging the outer wheel (the dark grey band with the note names) you can quickly swap the scale root note. Upon doing so, this will load the scale fully into the application so the note highlighting will adjust everywhere. You can also click on the scale type to quickly swap between the Major and Minor scales for the current root note.
                 <!--#endregion text-->
@@ -386,21 +409,23 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
         
             
-        <span class="cms-sub-heading">Piano Chords</span>
+        <span class="cms-sub-heading-med">Piano Chords</span>
 
         <div id="collapse4" class="">
 
             <br>
             
                 <!--#region text-->
-                Piano chords are loaded into the main top left area of the screen. By default, when setting a scale preset the corresponding set of chords are loaded too, although this can be turned off in the settings if desired. There is space for up to 12 chords so additional chords can be added by pressing the '+' icon on any blank space. Alternatively, each piano chord has a mini cog icon under it. You can press this button to bring up the settings for that individual chord, which includes an option to swap it out.
+                Piano chords are loaded into the main top left area of the screen. By default, when setting a scale preset that has a corresponding set of chords, these will be loaded too. This can be turned off in the settings if desired. There is space for up to 12 chords so additional chords can be added by pressing the '+' icon on any blank space. Alternatively, each piano chord has a mini-cog 'edit' icon under it. You can press this button to bring up the settings for that individual chord, which includes an option to swap it out.
                 <br><br>
                 <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-piano-chords.jpg"  alt="scale wheel" />
                 Each chord has a couple more options that sit just underneath it. The play button can be used to directly play back the chord. There is also a green tick which only shows when the chord is playing, this is useful for playing and verifying chord shapes using a MIDI device.
                 <br><br>
                 When hovering the mouse over a chord you will also see an arrow icon, this can be used to drag the chord around and quickly rearrange chords within your view.
                 <br><br>
-                The double arrow icon in the bottom right will display if the chord can play across more than octave on the diagram. If this is the case, you can press the button to cycle between the octave positions and the diagram will update accordingly.
+                The double-arrow icon in the bottom right can be used to cycle the chord up one note at a time. This lets you cycle through the different chord inversions, and transpose the chord up an octave.
+                <br><br>
+                The info 'i' icon in the bottom right opens the chord within the chord inspector. This gives a larger view of the chord diagram, as well as information about the chord intervals and chord type. As with the scale inspector, a dedicated edit button allows for the root note and chord type to be changed from within this view too. The chord inspector also includes movable do notes for the chord that update dynamically based on the applied scale preset, and movable do options configured within the application settings.
                 <!--#endregion text-->
 
         </div>
@@ -408,7 +433,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
         <!--#region panel-->
         <div class="dashed-line faq-break" id="Piano Chord Library"></div>
-        <span class="cms-sub-heading">Piano Chord Library</span>
+        <span class="cms-sub-heading-med">Piano Chord Library</span>
 
         <div id="collapse4" class="">
 
@@ -419,6 +444,8 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
                 <img class="drop-shadow user-guide-screenshot" src="images/user-guide-piano-chord-libaray.jpg"  alt="piano chord library" />
 
                 There is also a button in the top right that lets you load the full set into the main application view all at once.
+                <br><br>
+                Here too, each chord has a play button to hear what it sounds like, as well as an info 'i' icon to open up the chord inspector for that specific chord.
                 <!--#endregion text-->
 
         </div>
@@ -426,7 +453,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
     
         <!--#region panel-->
         <div class="dashed-line faq-break" id="Application View"></div>
-        <span class="cms-sub-heading">Application View</span>
+        <span class="cms-sub-heading-med">Application Window</span>
 
         <div id="collapse4" class="">
 
@@ -434,10 +461,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
             <img class="drop-shadow user-guide-screenshot" src="images/User-Screenshot-view-options.jpg"  alt="piano chord library" />
 
                 <!--#region text-->
-                There are numerous options to customise the application view that are contained within the box in the bottom right of the screen. This box too can be hidden by pressing the cross button (visible when hovering over the area) or opened up by pressing the eye button (only visible when the box is already closed).
-                <br>
-                <br>
-                The view options here control which items display in the top two thirds. By default this is both the chords set and scale wheel, but you can instead choose to focus on just one of these items. There are also buttons here to open up the chord or scale libraries.
+                The Window option in the nav dropdown provides options for configuring the application view. Here you can adjust the presentaton of chords and the scale wheel within the main view, jump directly to the chord or scale inspector, or access the built-in ear training exercises.
                 <!--#endregion text-->
 
         </div>
@@ -446,16 +470,16 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
     
         <!--#region panel-->
         <div class="dashed-line faq-break" id="Ear Training Exercises"></div>
-        <span class="cms-sub-heading">Ear Training Exercises</span>
+        <span class="cms-sub-heading-med">Ear Training Exercises</span>
 
         <div id="collapse4" class="">
 
             <br>
                 <!--#region text-->
-                The application view settings in the bottom right are also where you can swap between the main 'piano practice' mode and the set of included ear training exercises. In 'ear training' mode the view options below are replaced with mode-specific options for configuring the exercises.<br><br>
+                Found under the 'Window' dropdown in the nav.<br><br>
                 <img class="drop-shadow user-guide-screenshot" src="images/user-guide-ear-training-main.jpg"  alt="ear training" />
 
-                Initially when you select the ear training mode you will be prompted to start a game using the button. Ahead of this, you can adjust the game configuration using the options in the bottom right. During the game, you can swap modes at any time. Any other changes to the settings (including changes to the current scale preset) will take affect from the next round (e.g. if you exclude the note C, it may still be present in the current round, it will only be from the next round onwards that it won't be used).
+                Initially when you select the ear training mode you'lll be prompted to start a game using the button. Ahead of this, you can adjust the game configuration using the options in the top-right. During the game, you can swap modes at any time. Any other changes to the settings (including changes to the current scale preset) will take affect from the next round.
                <br><br>
                <img class="drop-shadow user-guide-screenshot" src="images/user-screenshot-chord-match-selector.jpg"  alt="ear training" />
                 When the 'chord match' exercise is selected you will also see a chord type selector on the right hand size of the screen. This will let you choose which chord types will be presented at random for you to identify.
@@ -467,7 +491,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
         <!--#region panel-->
         <div class="dashed-line faq-break" id="Ear Training – Higher or Lower"></div>
-        <span class="cms-sub-heading">Ear Training – Higher or Lower</span>
+        <span class="cms-sub-heading-med">Ear Training – Higher or Lower</span>
 
         <div id="collapse4" class="">
 
@@ -484,7 +508,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
         <!--#region panel-->
         <div class="dashed-line faq-break" id="Ear Training – Note Match"></div>
-        <span class="cms-sub-heading">Ear Training – Note Match</span>
+        <span class="cms-sub-heading-med">Ear Training – Note Match</span>
 
         <div id="collapse4" class="">
 
@@ -505,7 +529,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
         <!--#region panel-->
         <div class="dashed-line faq-break" id="Ear Training – Chord Match"></div>
-        <span class="cms-sub-heading">Ear Training – Chord Match</span>
+        <span class="cms-sub-heading-med">Ear Training – Chord Match</span>
 
         <div id="collapse4" class="">
 
@@ -529,7 +553,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
         <!--#region panel-->
         <div class="dashed-line faq-break" id="Settings"></div>
-        <span class="cms-sub-heading">Settings</span>
+        <span class="cms-sub-heading-med">Settings</span>
 
         <div id="collapse4" class="">
 
@@ -545,7 +569,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
         <!--#region panel-->
         <div class="dashed-line faq-break" id="Settings – Save and Load Presets"></div>
-        <span class="cms-sub-heading">Settings – Save and Load Presets</span>
+        <span class="cms-sub-heading-med">Settings – Save and Load Presets</span>
 
         <div id="collapse4" class="">
 
@@ -560,7 +584,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
         <!--#region panel-->
         <div class="dashed-line faq-break" id="Settings – Note Names"></div>
-        <span class="cms-sub-heading">Settings – Note Names</span>
+        <span class="cms-sub-heading-med">Settings – Note Names</span>
 
         <div id="collapse4" class="">
 
@@ -575,7 +599,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
         <!--#region panel-->
         <div class="dashed-line faq-break" id="Settings – DSP"></div>
-        <span class="cms-sub-heading">Settings – DSP</span>
+        <span class="cms-sub-heading-med">Settings – DSP</span>
 
         <div id="collapse4" class="">
 
@@ -592,7 +616,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
         <!--#region panel-->
         <div class="dashed-line faq-break" id="Settings – Application Colours"></div>
-        <span class="cms-sub-heading">Settings – Changing the Application Colours</span>
+        <span class="cms-sub-heading-med">Settings – Changing the Application Colours</span>
 
         <div id="collapse4" class="">
 
@@ -619,7 +643,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
  <!--#region panel-->
  <div class="dashed-line faq-break" id="Audio Latency – ASIO and DSP"></div>
- <span class="cms-sub-heading">Audio Latency – ASIO and DSP</span>
+ <span class="cms-sub-heading-med">Audio Latency – ASIO and DSP</span>
 
  <div id="collapse4" class="">
 
@@ -637,7 +661,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
   <!--#region panel-->
   <div class="dashed-line faq-break" id="Audio Latency – Mac/Linux DSP Settings"></div>
-  <span class="cms-sub-heading">Audio Latency – Mac/Linux DSP Settings</span>
+  <span class="cms-sub-heading-med">Audio Latency – Mac/Linux DSP Settings</span>
  
   <div id="collapse4" class="">
  
@@ -661,7 +685,7 @@ window.__SJ_BAR_CLR__ = "#3e3e3e";
 
     <!--#region panel-->
     <div class="dashed-line faq-break" id="Audio Latency – Windows & the ASIO4ALL Driver"></div>
-    <span class="cms-sub-heading">Audio Latency – Windows & the ASIO4ALL Driver</span>
+    <span class="cms-sub-heading-med">Audio Latency – Windows & the ASIO4ALL Driver</span>
    
     <div id="collapse4" class="">
    
@@ -742,7 +766,7 @@ ASIO4ALL requires a dedicated stream for audio output, which means that other ap
 <li><a href="contact.html">Contact</a></li>
 </ul>
 <div class="copywright align-center-d">
-    Copyright ©2025, AudioTheory
+    Copyright ©2026, AudioTheory
 </div>
 </footer>
 
