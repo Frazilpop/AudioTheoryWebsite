@@ -130,4 +130,35 @@ $('.slick-slider-center').slick({
     }
   ]
 });
+
+document.querySelectorAll('.promo-video-hover').forEach(function(el) {
+    var video = el.querySelector('video');
+    var videoActive = false;
+
+    // Desktop: hover to play
+    el.addEventListener('mouseenter', function() { video.currentTime = 0; video.play(); });
+    el.addEventListener('mouseleave', function() { video.pause(); });
+
+    // Mobile: first tap shows video, second tap navigates
+    el.addEventListener('click', function(e) {
+        if (window.matchMedia('(hover: none)').matches) {
+            if (!videoActive) {
+                e.preventDefault();
+                video.style.opacity = '1';
+                video.currentTime = 0;
+                video.play();
+                videoActive = true;
+            }
+        }
+    });
+
+    // Reset when tapping outside
+    document.addEventListener('click', function(e) {
+        if (videoActive && !el.contains(e.target)) {
+            video.pause();
+            video.style.opacity = '';
+            videoActive = false;
+        }
+    });
+});
 		
