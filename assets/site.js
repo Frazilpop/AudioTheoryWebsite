@@ -54,8 +54,18 @@
       }
       var prev = wrap.querySelector('.carousel-prev');
       var next = wrap.querySelector('.carousel-next');
+      // an arrow only shows when there is somewhere to scroll — so on load
+      // (newest articles in view) there is no left arrow
+      function sync() {
+        var max = track.scrollWidth - track.clientWidth;
+        if (prev) prev.hidden = track.scrollLeft <= 1;
+        if (next) next.hidden = track.scrollLeft >= max - 1;
+      }
       if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
       if (next) next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+      track.addEventListener('scroll', sync, { passive: true });
+      window.addEventListener('resize', sync);
+      sync();
     });
   });
 
