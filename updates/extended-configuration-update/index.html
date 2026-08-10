@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AudioTheory Guitars 1.16.0 – Improved MIDI Support + Extended Configuration Update – AudioTheory</title>
+<meta name="description" content="Improved customisation with a new settings popup.">
+<link rel="canonical" href="https://audiotheory.co/updates/extended-configuration-update/">
+<meta property="og:site_name" content="AudioTheory">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AudioTheory Guitars 1.16.0 – Improved MIDI Support + Extended Configuration Update – AudioTheory">
+<meta property="og:description" content="Improved customisation with a new settings popup.">
+<meta property="og:url" content="https://audiotheory.co/updates/extended-configuration-update/">
+<meta property="og:image" content="https://audiotheory.co/media/site/thumbnails/extended-configuration-update.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300..1000;1,300..1000&family=Oswald:wght@700&display=swap">
+<link rel="stylesheet" href="/assets/tokens.css">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body class="page-light">
+
+<header class="at-header">
+  <div class="at-topbar">
+    <div class="at-topbar-inner">
+      <span class="side-text">AudioTheory Guitars – Now Available on iPad</span>
+      <a class="inline-button" href="https://apps.apple.com/us/app/audiotheory-guitars/id1492337444" data-goat-event="store-guitars-appstore-topbar" target="_blank" rel="noopener">View on App Store</a>
+    </div>
+  </div>
+  <button class="nav-toggle " data-nav-toggle aria-label="Menu">
+    <svg viewBox="0 0 80 74" aria-hidden="true">
+      <circle class="icon-circle" cx="40" cy="37" r="30"/>
+      <rect class="icon-bars" x="26" y="27" width="28" height="4" rx="2"/>
+      <rect class="icon-bars" x="26" y="35" width="28" height="4" rx="2"/>
+      <rect class="icon-bars" x="26" y="43" width="28" height="4" rx="2"/>
+    </svg>
+  </button>
+  <nav class="at-drawer" aria-label="Site">
+    <ul>
+    <li><a href="/">Home</a></li>
+    <li class="group-gap"><a href="/guitars/"><span class="group-title">AudioTheory Guitars</span></a></li>
+    <li><a href="/guitars-user-guide/">User Guide</a></li>
+    <li><a href="/guitars-update-log/">Update Log</a></li>
+    <li class="group-gap"><a href="/piano-keys/"><span class="group-title">AudioTheory Piano Keys</span></a></li>
+    <li><a href="/piano-keys-user-guide/">User Guide</a></li>
+    <li><a href="/piano-keys-update-log/">Update Log</a></li>
+    <li class="group-gap"><a href="/grids/"><span class="group-title">AudioTheory Grids</span></a></li>
+    <li><a href="/grids-user-guide/">User Guide</a></li>
+    <li><a href="/grids-update-log/">Update Log</a></li>
+    <li class="group-gap"><a href="/updates/"><span class="group-title">Updates &amp; News</span></a></li>
+    <li><a href="/faq/">FAQ</a></li>
+    <li><a href="/press/">Press</a></li>
+    <li><a href="/privacy/">Privacy Policy</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+
+<div class="block-article-title">
+  <h2><span class="main-title">AudioTheory Guitars</span><br>Improved MIDI Support + Extended Configuration Update</h2>
+</div>
+<div class="post-body block-text">
+<p><img src="/media/site/news/extended-configuration-update/audiotheory-settings-update-title.jpeg" alt="" class="feature-img drop-shadow" loading="lazy" data-lightbox=""></p>
+<p>AudioTheory Guitars version 1.16.0 is a reworking of the application settings, which is very exciting because it improves the ways you can customise and control the software.</p>
+<h3>The new settings popup</h3>
+<p>Swapping over to new, much larger popup has solved a whole bunch of problems. There is now a lot more space, giving room for the current settings to breath and making it easy to add in some extra stuff there wasn't previously room for.</p>
+<p><img src="/media/site/news/extended-configuration-update/audiotheory-settings-01.png" alt="" class="feature-img drop-shadow" loading="lazy" data-lightbox=""></p>
+<h3>So let's have a look at what's changed...</h3>
+<p>–The options for saving and loading a preset now come complete with some cool icons (the same as those used in AudioTheory Grids!)</p>
+<p>–Guitar config. now sits as part of the single popup view (rather than in its own separate tab).</p>
+<p>–The keyboard overlay type (previously indicated by a button next to the keyboard icon) now has its own dedicated settings toggle, with options for the full and partial overlay.</p>
+<h3>And here's what's new...</h3>
+<p>–There is now an option to turn off the feature where chords are auto loaded with a scale preset (introduced in <a href="/updates/auto-load-chords-update/">version 1.15.0</a>).</p>
+<p>–The way that MIDI input is handled has been reworked and there are now new settings in place to support this. The main octave (the one just above the piano keys), was previously sensitive to MIDI input, essentially requiring the MIDI device's own octave range to match whatever was set here. This is now no longer the case and the octave here is purely for playback.</p>
+<p>What this last point means is that he MIDI input range is now configured separately (in the new settings popup). The big advantage of doing things this way is that you can ensure everything is synced correctly in the settings and then adjust the main piano octave without the need to also change octave on the MIDI device.</p>
+<p>There is a new plus/ minus selector you will find in the settings under the name 'MIDI input mod'. If your MIDI device is not registering at the correct octave you can adjust this value (and/ or the octave settings on your device itself) to get the two in sync. Plus, if you are ever experiencing issues with MIDI input, there is also a message here that will log any MIDI input that the application receives.</p>
+<p><img src="/media/site/news/extended-configuration-update/audiotheory-settings-01a.png" alt="" class="feature-img drop-shadow" loading="lazy" data-lightbox=""></p>
+<p>This displays as both a raw input value as well as the target note to play, and you can use this info to easily debug any issues with MIDI playback. The note on the far left of the piano is C1, so if the note on the far left of your MIDI device is returning C(-1) you won't receive any output as you're playing two octaves too low! This can be fixed by either increasing the MIDI input mod. by +2, or also by increasing the octave on the device itself by +2.</p>
+<p>You might be wondering if these more comprehensive MIDI options are in part due to the fact that MIDI input is a key component of the upcoming <a href="/updates/introducing-audiotheory-piano-keys/">AudioTheory Piano Keys</a>. The answer is yes, and I'm very please to also bring it back into AudioTheory Guitars too.</p>
+<p><img src="/media/site/news/extended-configuration-update/audiotheory-settings-03.png" alt="" class="feature-img drop-shadow" loading="lazy" data-lightbox=""></p>
+<p>There's also a couple more miscellaneous features that have made their way into this update too:</p>
+<p>–The current scale is now highlighted on the mini selector when it's open.</p>
+<p>–The scale tab selector now remembers its last used position</p>
+
+</div>
+
+<div class="block-update-info">
+<p>All updates are free for owners of AudioTheory Guitars. The app is available now on <a href="https://store.steampowered.com/app/1150920/AudioTheory_Guitars/">Steam</a> and the <a href="https://apps.apple.com/app/audiotheory-guitars/id1479181828">Mac App Store</a>.</p>
+
+  
+</div>
+<div class="post-footer-nav"><a class="url-green" href="/updates/">← All updates &amp; news</a></div>
+</main>
+
+<div class="at-newsletter" style="--mc:#738778">
+  <div class="outline-sign-up-box">
+    <form action="https://gmail.us20.list-manage.com/subscribe/post?u=5e36fd2a9ea42cc4f8b2ce7f9&amp;id=3d4c39abbe" method="post" target="_blank" novalidate>
+      <div class="newsletter-title-b">Subscribe to our newsletter</div>
+      <div class="newsletter-sub-title">News and updates for AudioTheory Guitars, Piano Keys and Grids — new features, releases and offers.</div>
+      <input type="email" value="" placeholder="Email address" name="EMAIL" class="sign-up-box" required aria-label="Email address">
+      <div class="nl-hp" aria-hidden="true"><input type="text" name="b_5e36fd2a9ea42cc4f8b2ce7f9_3d4c39abbe" tabindex="-1" value=""></div>
+      <input type="submit" value="Subscribe" name="subscribe" class="mc-button">
+    </form>
+  </div>
+</div>
+<footer class="at-footer">
+  <nav>
+    <a href="/faq/">FAQ</a>
+    <a href="/press/">Press</a>
+    <a href="/contact/">Contact</a>
+  </nav>
+  <p class="copyright">Copyright ©2026, AudioTheory</p>
+</footer>
+<script defer src="/assets/site.js"></script>
+<!-- GoatCounter analytics: no cookies, no personal data -->
+<script data-goatcounter="https://audiotheory.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AudioTheory ASIO and Performance Updates – AudioTheory</title>
+<meta name="description" content="A series of updates bringing improvements to the full range of AudioTheory software.">
+<link rel="canonical" href="https://audiotheory.co/updates/asio-and-performance-update/">
+<meta property="og:site_name" content="AudioTheory">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AudioTheory ASIO and Performance Updates – AudioTheory">
+<meta property="og:description" content="A series of updates bringing improvements to the full range of AudioTheory software.">
+<meta property="og:url" content="https://audiotheory.co/updates/asio-and-performance-update/">
+<meta property="og:image" content="https://audiotheory.co/media/site/thumbnails/asio-and-performance-update.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300..1000;1,300..1000&family=Oswald:wght@700&display=swap">
+<link rel="stylesheet" href="/assets/tokens.css">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body class="page-light">
+
+<header class="at-header">
+  <div class="at-topbar">
+    <div class="at-topbar-inner">
+      <span class="side-text">AudioTheory Guitars – Now Available on iPad</span>
+      <a class="inline-button" href="https://apps.apple.com/us/app/audiotheory-guitars/id1492337444" data-goat-event="store-guitars-appstore-topbar" target="_blank" rel="noopener">View on App Store</a>
+    </div>
+  </div>
+  <button class="nav-toggle " data-nav-toggle aria-label="Menu">
+    <svg viewBox="0 0 80 74" aria-hidden="true">
+      <circle class="icon-circle" cx="40" cy="37" r="30"/>
+      <rect class="icon-bars" x="26" y="27" width="28" height="4" rx="2"/>
+      <rect class="icon-bars" x="26" y="35" width="28" height="4" rx="2"/>
+      <rect class="icon-bars" x="26" y="43" width="28" height="4" rx="2"/>
+    </svg>
+  </button>
+  <nav class="at-drawer" aria-label="Site">
+    <ul>
+    <li><a href="/">Home</a></li>
+    <li class="group-gap"><a href="/guitars/"><span class="group-title">AudioTheory Guitars</span></a></li>
+    <li><a href="/guitars-user-guide/">User Guide</a></li>
+    <li><a href="/guitars-update-log/">Update Log</a></li>
+    <li class="group-gap"><a href="/piano-keys/"><span class="group-title">AudioTheory Piano Keys</span></a></li>
+    <li><a href="/piano-keys-user-guide/">User Guide</a></li>
+    <li><a href="/piano-keys-update-log/">Update Log</a></li>
+    <li class="group-gap"><a href="/grids/"><span class="group-title">AudioTheory Grids</span></a></li>
+    <li><a href="/grids-user-guide/">User Guide</a></li>
+    <li><a href="/grids-update-log/">Update Log</a></li>
+    <li class="group-gap"><a href="/updates/"><span class="group-title">Updates &amp; News</span></a></li>
+    <li><a href="/faq/">FAQ</a></li>
+    <li><a href="/press/">Press</a></li>
+    <li><a href="/privacy/">Privacy Policy</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+
+<div class="block-article-title">
+  <h2><span class="main-title">AudioTheory ASIO and Performance Updates</span><br>ASIO &amp; Performance Updates</h2>
+</div>
+<div class="post-body block-text">
+<p><img src="/media/site/news/asio-and-performance-update/audiotheory-asio-gen-banner.jpg" alt="" class="feature-img drop-shadow" loading="lazy" data-lightbox=""></p>
+<p>A series of new updates are now available across the range of AudioTheory software. These combines a set of 'under the hood' optimisations and performance enhancing features which have been rolled out across the following updates:</p>
+<p>AudioTheory Guitars version 2.1.0 and version 2.2.0<br>
+AudioTheory Piano Keys version 1.2.0 and version 1.3.0<br>
+AudioTheory Grids version 1.3.0</p>
+<p>Let's have a look at what's new...</p>
+<h3>AudioTheory and the ASIO4ALL driver</h3>
+<p>ASIO4ALL is a freeware audio driver designed for low latency playback. Most DAWs require the use of an ASIO driver, and whilst it is optional for AudioTheory, it's highly recommended. It's very easy to install and you are guaranteed to get better performance than the built-in Windows driver.</p>
+<p>And just to confirm, this is a Windows specific feature. Mac and Linux come with audio drivers that can handle very low latencies out-of-the-box. More on how the settings have changed on these platforms in a bit.</p>
+<p><img src="/media/site/news/asio-and-performance-update/audiotheory-guitars-asio-01.png" alt="" class="feature-img drop-shadow" loading="lazy" data-lightbox=""></p>
+<h3>Windows specific changes</h3>
+<p>There are a few things now in place designed to help swap you over to the ASIO driver. If you load up the application without this installed you will see a one-time notification directing you to the ASIO4ALL website.</p>
+<p>Once installed, the application will automatically swap to use the ASIO driver when its next loaded. You can see which driver is currently in use from the settings popup. Here can also swap driver using the dropdown, meaning you can revert back to the built-in driver if required. Any driver changes here require the application to be restarted before they take effect. Oh, and if you swap to ASIO here but the driver isn't installed then it's not going to work. In this scenario the application will prompt you to install it on your machine.</p>
+<p>Please note that currently the option to record in AudioTheory Grids is only available when using the built-in driver. This works by directly capturing the audio output and writing it to a wav file, which can only happen when the built-in driver is being used to process audio. I am looking into an alternative method of supporting this feature with the ASIO driver, but unfortunately the options are somewhat limited. At least for now, the record button doesn't show if you're using ASIO.</p>
+<p><img src="/media/site/news/asio-and-performance-update/audiotheory-guitars-asio-04.png" alt="" class="feature-img drop-shadow" loading="lazy" data-lightbox=""></p>
+<p>If the ASIO driver is in use, you will see a 'config.' button that lets you open up the ASIO4ALL settings. Here is where you configure your output device as well as the DSP buffer size. If you are not receiving any audio, the likely cause is that the correct output has not been selected here.</p>
+<p><img src="/media/site/news/asio-and-performance-update/audiotheory-guitars-asio-05.png" alt="" class="feature-img drop-shadow" loading="lazy" data-lightbox=""></p>
+<h3>Mac and Linux changes</h3>
+<p>These still use the DSP latency settings that were previously in place. As above, the built-in drivers are able to support low latency without the need for an external driver. However I have swapped over the selector to a new dropdown which makes it a bit quicker and easier to select the value you're after.</p>
+<p><img src="/media/site/news/asio-and-performance-update/audiotheory-guitars-asio-07.png" alt="" class="feature-img drop-shadow" loading="lazy" data-lightbox=""></p>
+<h3>Velocity Playback</h3>
+<p>MIDI input playback now registered the note press velocity, meaning the playback volume is controlled by how hard you are pressing the notes. This helps better simulate the effect of a real instrument.</p>
+<h3>Variable Render Rate</h3>
+<p>The display no longer updates when it doesn't need to. This works well because there are many scenarios where you may find the software idling, it is after all reference material so it makes sense to leave it open up on screen. The software now looks out for these moments and greatly reduces the CPU overhead when possible, before seamlessly resuming to business as usual when any sort of input (or any action that results in a visible change on screen) is detected.</p>
+<p><img src="/media/site/news/asio-and-performance-update/audiotheory-out-of-focus.png" alt="" class="feature-img drop-shadow" loading="lazy" data-lightbox=""></p>
+<h3>Run 'Out of Focus'</h3>
+<p>The default behaviour of the application has changed so that it pauses running if the window is not in focus. This makes it a lot more practical to leave open in the background.</p>
+<p>Originally this was not set because I imagined scenarios where it would be useful to poll for MIDI input when using the application alongside a DAW or other piece of software (e.g. you could be working in Logic on one screen and have AudioTheory running in the background on a second monitor). This may still be the case, so if your requirements do in fact mean that it's desirable for the application to run out of focus, then you can turn this back on in the settings.</p>
+
+</div>
+
+<div class="block-update-info">
+<p>All updates are free for owners of AudioTheory Guitars. The app is available now on <a href="https://store.steampowered.com/app/1150920/AudioTheory_Guitars/">Steam</a> and the <a href="https://apps.apple.com/app/audiotheory-guitars/id1479181828">Mac App Store</a>.</p>
+
+  
+</div>
+<div class="post-footer-nav"><a class="url-green" href="/updates/">← All updates &amp; news</a></div>
+</main>
+
+<div class="at-newsletter" style="--mc:#738778">
+  <div class="outline-sign-up-box">
+    <form action="https://gmail.us20.list-manage.com/subscribe/post?u=5e36fd2a9ea42cc4f8b2ce7f9&amp;id=3d4c39abbe" method="post" target="_blank" novalidate>
+      <div class="newsletter-title-b">Subscribe to our newsletter</div>
+      <div class="newsletter-sub-title">News and updates for AudioTheory Guitars, Piano Keys and Grids — new features, releases and offers.</div>
+      <input type="email" value="" placeholder="Email address" name="EMAIL" class="sign-up-box" required aria-label="Email address">
+      <div class="nl-hp" aria-hidden="true"><input type="text" name="b_5e36fd2a9ea42cc4f8b2ce7f9_3d4c39abbe" tabindex="-1" value=""></div>
+      <input type="submit" value="Subscribe" name="subscribe" class="mc-button">
+    </form>
+  </div>
+</div>
+<footer class="at-footer">
+  <nav>
+    <a href="/faq/">FAQ</a>
+    <a href="/press/">Press</a>
+    <a href="/contact/">Contact</a>
+  </nav>
+  <p class="copyright">Copyright ©2026, AudioTheory</p>
+</footer>
+<script defer src="/assets/site.js"></script>
+<!-- GoatCounter analytics: no cookies, no personal data -->
+<script data-goatcounter="https://audiotheory.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AudioTheory Guitars – User Guide – AudioTheory</title>
+<meta name="description" content="The full AudioTheory Guitars user guide — getting started, input, playback, scales, chords, the fretboard, settings and audio latency configuration.">
+<link rel="canonical" href="https://audiotheory.co/guitars-user-guide/">
+<meta property="og:site_name" content="AudioTheory">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AudioTheory Guitars – User Guide – AudioTheory">
+<meta property="og:description" content="The full AudioTheory Guitars user guide — getting started, input, playback, scales, chords, the fretboard, settings and audio latency configuration.">
+<meta property="og:url" content="https://audiotheory.co/guitars-user-guide/">
+
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300..1000;1,300..1000&family=Oswald:wght@700&display=swap">
+<link rel="stylesheet" href="/assets/tokens.css">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body class="page-wide">
+
+<header class="at-header">
+  <div class="at-topbar">
+    <div class="at-topbar-inner">
+      <span class="side-text">AudioTheory Guitars – Now Available on iPad</span>
+      <a class="inline-button" href="https://apps.apple.com/us/app/audiotheory-guitars/id1492337444" data-goat-event="store-guitars-appstore-topbar" target="_blank" rel="noopener">View on App Store</a>
+    </div>
+  </div>
+  <button class="nav-toggle " data-nav-toggle aria-label="Menu">
+    <svg viewBox="0 0 80 74" aria-hidden="true">
+      <circle class="icon-circle" cx="40" cy="37" r="30"/>
+      <rect class="icon-bars" x="26" y="27" width="28" height="4" rx="2"/>
+      <rect class="icon-bars" x="26" y="35" width="28" height="4" rx="2"/>
+      <rect class="icon-bars" x="26" y="43" width="28" height="4" rx="2"/>
+    </svg>
+  </button>
+  <nav class="at-drawer" aria-label="Site">
+    <ul>
+    <li><a href="/">Home</a></li>
+    <li class="group-gap"><a href="/guitars/"><span class="group-title">AudioTheory Guitars</span></a></li>
+    <li><a href="/guitars-user-guide/" aria-current="page">User Guide</a></li>
+    <li><a href="/guitars-update-log/">Update Log</a></li>
+    <li class="group-gap"><a href="/piano-keys/"><span class="group-title">AudioTheory Piano Keys</span></a></li>
+    <li><a href="/piano-keys-user-guide/">User Guide</a></li>
+    <li><a href="/piano-keys-update-log/">Update Log</a></li>
+    <li class="group-gap"><a href="/grids/"><span class="group-title">AudioTheory Grids</span></a></li>
+    <li><a href="/grids-user-guide/">User Guide</a></li>
+    <li><a href="/grids-update-log/">Update Log</a></li>
+    <li class="group-gap"><a href="/updates/"><span class="group-title">Updates &amp; News</span></a></li>
+    <li><a href="/faq/">FAQ</a></li>
+    <li><a href="/press/">Press</a></li>
+    <li><a href="/privacy/">Privacy Policy</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+
+<div class="block-page-title">
+  <h1>AudioTheory Guitars – User Guide</h1>
+  <hr class="title-rule">
+</div>
+
+<div class="block-text">
+<p><a href="#getting-started">Getting Started</a><br>
+<a href="#locked-and-unlocked-mode">Locked and Unlocked mode</a><br>
+<a href="#input">Input</a><br>
+<a href="#playback">Playback</a><br>
+<a href="#scale-presets">Scale Presets</a><br>
+<a href="#guitar-chords">Guitar Chords</a><br>
+<a href="#guitar-fretboard">Guitar Fretboard</a><br>
+<a href="#settings">Settings</a><br>
+    <a href="#settings-chord-tuning">Settings – Chord tuning</a><br>
+    <a href="#settings-save-and-load-presets">Settings – Save and Load Presets</a><br>
+    <a href="#settings-note-names">Settings – Note Names</a><br>
+    <a href="#settings-changing-the-application-colours">Settings – Changing the Application Colours</a><br>
+<a href="#audio-latency-asio-and-dsp">Audio Latency – ASIO and DSP</a><br>
+    <a href="#audio-latency-mac-linux-dsp-settings">Audio Latency – Mac/Linux DSP Settings</a><br>
+    <a href="#audio-latency-windows-the-asio4all-driver">Audio Latency – Windows &amp; the ASIO4ALL Driver</a></p>
+
+</div>
+
+<div class="block-text">
+<p><em><strong>Note:</strong> AudioTheory Guitars is periodically updated with new features. New versions are always free for existing customers and can be downloaded either through your Gumroad account or the Steam client.
+This guide is also updated, if you're missing a feature described here then it's best to check you are on the latest version.</em></p>
+
+</div>
+
+<div class="block-feature-image" style="--img-maxw:960px">
+  <img class="feature-img drop-shadow" src="/media/site/home/audiotheory-01-promo-notes.jpg" alt="Keyboard Screenshot" loading="lazy" data-lightbox>
+  
+</div>
+
+<h2 class="block-sub-heading" id="getting-started">Getting Started</h2>
+
+<div class="block-text">
+<p>You can launch AudioTheory Guitars from the AudioTheory Guitars.exe executable file (Windows) or AudioTheory Guitars.app file (Mac OS).
+This loads up the main interface from where you can access the features detailed in this guide.</p>
+
+</div>
+
+<hr class="at-divider">
+<h2 class="block-sub-heading" id="locked-and-unlocked-mode">Locked and Unlocked Mode</h2>
+
+<div class="block-feature-image" style="--img-maxw:960px">
+  <img class="feature-img drop-shadow" src="/media/site/guides/guitars/audiotheory-screenshot-unlocked-fretboard.jpg" alt="Unlocked mode screenshot" loading="lazy" data-lightbox>
+  
+</div>
+
+<div class="block-text">
+<p>The main application window can be toggled between unlocked 'edit' mode and locked 'view' mode using the padlock in the top right hand corner. In unlocked mode you will see numerous drop-downs and additional buttons overlaid onto the interface, allowing you to configure the display. Locked mode hides this overlay so that you can practice with a clutter-free view.</p>
+
+</div>
+
+<hr class="at-divider">
+<h2 class="block-sub-heading" id="input">Input</h2>
+
+<div class="block-feature-image" style="--img-maxw:960px">
+  <img class="feature-img drop-shadow" src="/media/site/guides/guitars/user-screenshot-01.jpg" alt="Keyboard Screenshot" loading="lazy" data-lightbox>
+  
+</div>
+
+<div class="block-text">
+<p>The on-screen piano accepts input from any of the following sources:</p>
+<p><strong>MIDI</strong> – AudioTheory Piano Keys works best when you connect a MIDI device. This could either be an electric piano/ keyboard or MIDI controller. With this connected you will receive highlighting and audio feedback in real time when playing.</p>
+<p>You will need ensure the input octave on your device matches that of the application, if these are not aligned then you will find the highlighting is shifted to a different position on the on-screen piano. You can set the input octave in the application settings (opened using the cog in the top right of the interface). If you find yourself changing this setting frequently then there is also an option to add it to the on-screen piano toolbar for easy access.</p>
+<p><strong>Mouse</strong> – you can highlight/ play any key by clicking on it directly.</p>
+<p><strong>Keyboard</strong> – there are options within the application settings to use QWERTY input from your computer keyboard to play the notes on the on-screen piano.
+There are two QWERTY keyboard overlay types that you can choose between labeled 'partial' and 'full'. The partial keyboard overlay covers a single octave and is split across two rows of the keyboard. In 'full' mode, all the piano keys are sequentially mapped across the keyboard.</p>
+
+</div>
+
+<div class="block-feature-image" style="--img-maxw:960px">
+  <img class="feature-img drop-shadow" src="/media/site/guides/guitars/user-screenshot-01-unlocked.jpg" alt="Keyboard Screenshot" loading="lazy" data-lightbox>
+  
+</div>
+
+<div class="block-text">
+<p>There are additional options to customise playback that accompany the on-screen piano when the application is in unlocked mode. This adds in buttons to display or hide the keyboard note overlay as well as a 'lock to scale' feature where only notes selected in the scale will give audio feedback.</p>
+<p>There is an octave selector that controls the playback (output) octave. It can be configured independently from the MIDI (input) octave selector in the settings, so you can control how the application receives audio in and how it plays it back separately.</p>
+
+</div>
+
+<hr class="at-divider">
+<h2 class="block-sub-heading" id="playback">Playback</h2>
+
+<div class="block-text">
+<p>As you play notes on the keyboard you will receive visual and audio highlighting feedback as defined by your settings. This will display across both the on-screen piano and all loaded diagrams, giving you an overview of how what you're playing fits relative to the guitar fretboard and selected chords.</p>
+<p>If you have any issues with MIDI input, there is an indicator in the settings which details exactly what input the application is receiving. This can be used to diagnose any issues you may encounter (e.g. if no notes were highlighting this could be used to asses if the input octave was out of range, or if the device was not properly connected to the computer).</p>
+
+</div>
+
+<hr class="at-divider">
+<h2 class="block-sub-heading" id="scale-presets">Scale Presets</h2>
+
+<div class="block-feature-image" style="--img-maxw:960px">
+  <img class="feature-img drop-shadow" src="/media/site/guides/guitars/user-screenshot-03.jpg" alt="Chords Screenshot" loading="lazy" data-lightbox>
+  
+</div>
+
+<div class="block-text">
+<p>The note boxes in the bottom left of the screen can be used to exclude specific notes from the keyboard, as well as the chord and fretboard diagrams.
+The 'scale' button provides preset options for using a standard piano scale.</p>
+
+</div>
+
+<div class="block-feature-image" style="--img-maxw:960px">
+  <img class="feature-img drop-shadow" src="/media/site/guides/guitars/user-screenshot-03-popup.jpg" alt="Scale Popup" loading="lazy" data-lightbox>
+  
+</div>
+
+<div class="block-text">
+<p>The preset select popup also reveals the 'all scales' button which can be used to access the full Scale Library.</p>
+
+</div>
+
+<div class="block-feature-image" style="--img-maxw:960px">
+  <img class="feature-img drop-shadow" src="/media/site/guides/guitars/user-screenshot-03-scale.jpg" alt="Scale Selector" loading="lazy" data-lightbox>
+  
+</div>
+
+<div class="block-text">
+<p>The Scale Library is a fullscreen view where you can play and choose between the scale presets. There is also a play button next to each scale, which will play through its contained notes in order.</p>
+<p>When a scale preset has been selected, the note highlighting updates to be context dependant. For example, if C♯/ D♭ is to be presented as C♯ in the selected scale the highlight colour will be yellow (the colour used for C). But when it's to be displayed as D♭ it will highlight in orange (the colour for D).</p>
+
+</div>
+
+<div class="block-feature-image" style="--img-maxw:960px">
+  <img class="feature-img drop-shadow" src="/media/site/guides/guitars/user-screenshot-scale.jpg" alt="scale based highlighting" loading="lazy" data-lightbox>
+  
+</div>
+
+<hr class="at-divider">
+<h2 class="block-sub-heading" id="guitar-chords">Guitar Chords</h2>
+
+<div class="block-feature-image" style="--img-maxw:960px">
+  <img class="feature-img drop-shadow" src="/media/site/guides/guitars/user-screenshot-02.jpg" alt="Scale Screenshot" loading="lazy" data-lightbox>
+  
+</div>
+
+<div class="block-text">
+<p>Each of the chords in the middle area of the screen can be swapped using the gear icon. Press this button to open up a popup where a new chord can be selected as a combination of a root note and a shape. If you are using a capo then you will also have the option for the chord to be selected either as a relative shape, or as an exact match for the root note.</p>
+<p>When hovering over a chord, a small double-arrow icon appears. You can use this to click and drag the chord, allowing you to quickly rearrange the loaded chords.</p>
+<p>There is a 'play' button next to each chord. Press this to see the guitar chord mapped onto the keyboard and the corresponding fretboard notes. You will also notice that under some chords (such as the 'F' chord in the below screenshot) there is another icon to the right of the cog. This appears for all chords that support an alternate position, press this to cycle between the different variations of the chord shape.</p>
+
+</div>
+
+<div class="block-feature-image" style="--img-maxw:960px">
+  <img class="feature-img drop-shadow" src="/media/site/guides/guitars/user-screenshot-02-fullscreen.jpg" alt="Fullscreen chords" loading="lazy" data-lightbox>
+  
+</div>
+
+<div class="block-text">
+<p>A fullscreen set of chords can also be viewed using the 'all chords' button that is visible from the cog popup. This is optimised for selecting a new chord (with a series of 'select' buttons) where as the chord sheet includes all notes and is optimised for viewing/ playing.</p>
+<p>On the chord diagrams you can play back the individual notes by selecting them directly.</p>
+
+</div>
+
+<hr class="at-divider">
+<h2 class="block-sub-heading" id="guitar-fretboard">Guitar Fretboard</h2>
+
+<div class="block-feature-image" style="--img-maxw:960px">
+  <img class="feature-img drop-shadow" src="/media/site/guides/guitars/user-screenshot-04.jpg" alt="Fretboard Screenshot" loading="lazy" data-lightbox>
+  
+</div>
+
+<div class="block-text">
+<p>Note playback is supported directly from the fretboard; click on any note to see it hilighted across the chord and piano diagrams. When the application view is unlocked (toggeled using the padlock in the top right hand corner) there is an overlay allowing you to set the number strings, number of frets, the start fret, and the per-string tuning.</p>
+<p>You can add or remove a capo by pressing the desired number/ position on the fretboard.</p>
+
+</div>
+
+<div class="block-feature-image" style="--img-maxw:960px">
+  <img class="feature-img drop-shadow" src="/media/site/guides/guitars/user-screenshot-06.jpg" alt="Fretboard Screenshot" loading="lazy" data-lightbox>
+  
+</div>
+
+<hr class="at-divider">
+<h2 class="block-sub-heading" id="settings">Settings</h2>
+
+<div class="block-feature-image" style="--img-maxw:960px">
+  <img class="feature-img drop-shadow" src="/media/site/guides/guitars/user-guide-guitars-settings.png" alt="AudioTheory Guitars settings" loading="lazy" data-lightbox>
+  
+</div>
+
+<div class="block-text">
+<p>The application settings can be opened using the cog icon in the top left. Here you have numerous configuration settings including some tools for debugging MIDI input, and configuration for various other elements of the application. These include visual customisations, such as different backgrounds and a highlighting delay that keeps note colours on the screen for longer.</p>
+
+</div>
+
+<hr class="at-divider">
+<h2 class="block-sub-heading" id="settings-chord-tuning">Settings – Chord tuning</h2>
+
+<div class="block-text">
+<p>The guitar fretboard tuning is fully configured using the dropdowns next to the strings (in 'unlocked' mode). But in the settings it is possible to offset the chords to any relative tuning (as in any tuning where the strings are tuned to the same interval as EADGBE) and there's also the option to drop the 6th string (Drop D and equivalent). When this is set the chord diagrams will update automatically, but the fretboard tuning is set independently.</p>
+<p>So for example, if you wanted to set the application to display in Drop C tuning then you'd set the Chord tuning offset to D (as Drop C is D with the 6th string lowered to C) set 'Drop 6th' to 'yes' and then configure the per-string tuning of the fretboard to CGCFAD.</p>
+
+</div>
+
+<hr class="at-divider">
+<h2 class="block-sub-heading" id="settings-save-and-load-presets">Settings – Save and Load Presets</h2>
+
+<div class="block-text">
+<p>The save and load options in the File menu can be used to write your current view to a plain text file and then load it back into the application. This works well for quickly swapping between arrangements.</p>
+
+</div>
+
+<hr class="at-divider">
+<h2 class="block-sub-heading" id="settings-note-names">Settings – Note Names</h2>
+
+<div class="block-text">
+<p>As well as the default English note names it is possible to change over the notes to either used fixed do solfège (Do, Re, Mi...) or to use names to the scale (such as degrees or movable do).</p>
+
+</div>
+
+<hr class="at-divider">
+<h2 class="block-sub-heading" id="settings-changing-the-application-colours">Settings – Changing the Application Colours</h2>
+
+<div class="block-text">
+<p>The note colours can be set using the colour wheel in the settings. It's also possible to set the hex codes directly in the 'Colours.ini' file that is generated when the application is run for the first time.</p>
+<p>The 'Colours.ini' file location varies depending on your platform:</p>
+<p><strong>Windows and Linux</strong><br>
+    <code>{path to app}/AudioTheory Guitars/Data/</code></p>
+<p>If you've purchased the app through Steam then you can easily open this folder by right clicking on the application in your Steam library and selecting 'Manage --&gt; Browse Local Files'.</p>
+<p><strong>Mac</strong><br>
+  <code>~Library/Application Support/com.DraculasCave.AudioTheoryGuitars/Data/</code></p>
+<p><strong>Please note that in macOS 15+ the file location has changed:</strong><br>
+  <code>~/Library/Containers/com.DraculasCave.AudioTheoryGuitars/Data/Library/Application Support</code></p>
+<p>If you delete the Colours.ini file then next time the application is run it will make a new one automatically with the default values.</p>
+
+</div>
+
+<hr class="at-divider">
+<h2 class="block-sub-heading" id="audio-latency-asio-and-dsp">Audio Latency – ASIO and DSP</h2>
+
+<div class="block-text">
+<p>Audio latency is the amount of time it takes for the computer to process and play audio. There are features in AudioTheory Guitars which simulate the playback of an instrument in real-time and what this means is that a delay of even a few milliseconds can be noticeable and undesirable.</p>
+<p>To optimise response times, AudioTheory Guitars comes with some platform-specific options, as Mac/Linux and Windows handle audio differently.</p>
+
+</div>
+
+<hr class="at-divider">
+<h2 class="block-sub-heading" id="audio-latency-mac-linux-dsp-settings">Audio Latency – Mac/Linux DSP Settings</h2>
+
+<div class="block-text">
+<p>On Mac and Linux the built-in audio drivers are able to support low latencies out-of-the-box. This means you are unlikley to have latency issues with the default settings, however there is still a DSP buffer size that can be configured in the options. A lower DSP value means less latency, however this requires more CPU power. If the DSP is set too low for the computer to handle then this will typically result in audio glitches such as pops and clicks.</p>
+
+</div>
+
+<div class="block-feature-image" style="--img-maxw:960px">
+  <img class="feature-img drop-shadow" src="/media/site/guides/guitars/at-latency-mac.jpg" alt="AudioTheory Latency" loading="lazy" data-lightbox>
+  
+</div>
+
+<div class="block-text">
+<p>The DSP value can be set using the dropdown in the options.</p>
+<p>To get the best results you want to set the buffer to as lower value as possible without audio playback glitching or containing artefacts. For many modern computers you will be able to set this all the way down to the smallest (fastest) value, 32kbps.</p>
+
+</div>
+
+<hr class="at-divider">
+<h2 class="block-sub-heading" id="audio-latency-windows-the-asio4all-driver">Audio Latency – Windows &amp; the ASIO4ALL Driver</h2>
+
+<div class="block-text">
+<p>On Windows the ASIO4ALL driver can be used to achieve ultra low latencies. Most DAWs require the use of an ASIO driver, and whilst it is optional for AudioTheory Guitars, it's recommended for better performance over the built-in Windows driver.</p>
+<p>You can download and install this driver for free from the ASIO4ALL website here:</p>
+<p><a href="https://www.asio4all.org/">https://www.asio4all.org/</a></p>
+<p>Once it's installed, load up AudioTheory Guitars (if it was open prior to the install you will need to close it and open it up again) and you will be able to swap between the ASIO driver and the built-in driver in the application settings. Any changes made here will require the application to be restarted to take effect.</p>
+
+</div>
+
+<div class="block-feature-image" style="--img-maxw:960px">
+  <img class="feature-img drop-shadow" src="/media/site/guides/guitars/at-driver-select.jpg" alt="AudioTheory driver select" loading="lazy" data-lightbox>
+  
+</div>
+
+<div class="block-text">
+<p>When using the ASIO4ALL driver, there are elements of the configuration (notably the output device and the DSP buffer size) that are controlled in the ASIO4ALL settings, not the AudioTheory Guitars settings. These can be opened up by pressing the 'config.' button which appears next to the dropdown when the ASIO driver is in use.</p>
+
+</div>
+
+<div class="block-feature-image" style="--img-maxw:960px">
+  <img class="feature-img drop-shadow" src="/media/site/guides/guitars/audiotheory-asio-driver-settings.png" alt="AudioTheory ASIO config" loading="lazy" data-lightbox>
+  
+</div>
+
+<div class="block-text">
+<p>ASIO4ALL requires a dedicated stream for audio output, which means that other applications cannot output audio at the same time when it's in use. You can always swap back to the built-in driver in the settings, and increased latency times may not be an issue depending on how you are using the application.</p>
+
+</div>
+</main>
+
+<div class="at-newsletter" style="--mc:#738778">
+  <div class="outline-sign-up-box">
+    <form action="https://gmail.us20.list-manage.com/subscribe/post?u=5e36fd2a9ea42cc4f8b2ce7f9&amp;id=3d4c39abbe" method="post" target="_blank" novalidate>
+      <div class="newsletter-title-b">Subscribe to our newsletter</div>
+      <div class="newsletter-sub-title">News and updates for AudioTheory Guitars, Piano Keys and Grids — new features, releases and offers.</div>
+      <input type="email" value="" placeholder="Email address" name="EMAIL" class="sign-up-box" required aria-label="Email address">
+      <div class="nl-hp" aria-hidden="true"><input type="text" name="b_5e36fd2a9ea42cc4f8b2ce7f9_3d4c39abbe" tabindex="-1" value=""></div>
+      <input type="submit" value="Subscribe" name="subscribe" class="mc-button">
+    </form>
+  </div>
+</div>
+<footer class="at-footer">
+  <nav>
+    <a href="/faq/">FAQ</a>
+    <a href="/press/">Press</a>
+    <a href="/contact/">Contact</a>
+  </nav>
+  <p class="copyright">Copyright ©2026, AudioTheory</p>
+</footer>
+<script defer src="/assets/site.js"></script>
+<!-- GoatCounter analytics: no cookies, no personal data -->
+<script data-goatcounter="https://audiotheory.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

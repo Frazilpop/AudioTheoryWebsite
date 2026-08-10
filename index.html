@@ -1,968 +1,359 @@
-<!--#region head-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-<title>AudioTheory</title>
-<link rel="icon" type="image/png" href="/favicon.png">
-<link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
-<link rel="stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
-<link rel="stylesheet" type= "text/css" href= "style.css" />
-<link rel="stylesheet" type= "text/css" href= "fonts.css" />
-<link rel="stylesheet" type= "text/css" href= "nav.css" />
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script> 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AudioTheory – Revolutionary music theory software</title>
+<meta name="description" content="AudioTheory makes revolutionary music theory software for guitar and piano — AudioTheory Guitars, Piano Keys and Grids for Mac, Windows and Linux.">
+<link rel="canonical" href="https://audiotheory.co/">
+<meta property="og:site_name" content="AudioTheory">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AudioTheory – Revolutionary music theory software">
+<meta property="og:description" content="AudioTheory makes revolutionary music theory software for guitar and piano — AudioTheory Guitars, Piano Keys and Grids for Mac, Windows and Linux.">
+<meta property="og:url" content="https://audiotheory.co/">
+
+<link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css?family=Lusitana&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Oswald:wght@700&display=swap" rel="stylesheet">
-
-
-<!--#region Cookie notice-->
-<script>
-window.__SJ_BAR_CLR__ = "#3e3e3e";
-</script>
-<script src="https://cdn.jsdelivr.net/gh/sprucejoy/cookie-consent-autoblock-gdpr/cookie-consent.js" crossorigin="anonymous"></script>
-<!--#endregion-->
-<!--Global site tag (gtag.js) - Google Analytics-->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149487950-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-149487950-1');
-</script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKF5P7GJ86"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HKF5P7GJ86');
-</script>
-
-<!--Facebook Pixel Code-->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '701042950385257');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=701042950385257&ev=PageView&noscript=1"
-  /></noscript>
-  <!--End Facebook Pixel Code-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300..1000;1,300..1000&family=Oswald:wght@700&display=swap">
+<link rel="stylesheet" href="/assets/tokens.css">
+<link rel="stylesheet" href="/assets/site.css">
 </head>
-<body>
-<!--#endregion-->
+<body class="page-light">
 
-<!--#region nav-left-->
-<div id="wrapper">
-<div id="sidebar-wrapper">
-<ul class="sidebar-nav">
-<div class="nav-icon-alt header-nav-icon_c" id="menu-toggle_c"></div>
-<li> <a href="index.html">Home</a>
-</li>
-<li class="nav-padding-top"><a href="guitars.html"> <span class="bold-menu-item">AudioTheory Guitars</span></a>
-</li>
-<li><a href="user.html">User Guide</a>
-</li>
-<li><a href="guitars-update-log.html">Update Log</a>
-</li>
-<!--
-<li><a href="https://gumroad.com/l/audiotheory" onclick="gtag('event','purchase direct guitars (nav)');">Purchase</a>-->
-
-<!-- AT Piano -->
-<li class="nav-padding-top"><a href="piano-keys.html"><span class="bold-menu-item">AudioTheory Piano Keys</span></a>
-</li>
-
-<li><a href="piano-keys-user-guide.html">User Guide</a>
-</li>
-
-<li><a href="piano-keys-update-log.html">Update Log</a>
-</li>
-
-<!-- AT Grids -->
-<li class="nav-padding-top"><a href="grids.html"><span class="bold-menu-item">AudioTheory Grids</span></a>
-</li>
-
-<li><a href="grids-user-guide.html">User Guide</a>
-</li>
-
-<li><a href="grids-update-log.html">Update Log</a>
-</li>
-<!--
-<li><a href="https://gumroad.com/l/audiotheory-grids" onclick="gtag('event','purchase direct grids (nav)');">Purchase</a>-->
-
-<li class="nav-padding-top"><a href="faq.html">FAQ</a>
-</li>
-<li><a href="press.html">Press</a>
-</li>
-<li><a href="privacy.html">Privacy Policy</a>
-</li>
-</ul>
-</div>
-</div>
-<div class="nav-icon header-nav-icon" id="menu-toggle"></div>
-<!--#endregion-->
-<!--#region page-content-->
-<!--H-->
-<header> 
-<div class="float-right">
-<div class="align-center-d inner-right top-c">
-    <span class="button-side-text">AudioTheory Guitars – Now Available on iPad </span>     
-    <a href="https://apps.apple.com/us/app/audiotheory-guitars/id1492337444" class="no-decoration" onclick="gtag('event','AT Guitars iPad (top)');">
-      <div class="home-button top-button inline-button">
-        View on App Store
-      </div>
-    </a>
-
-<!--
-    <span class="button-side-text">NEW: AudioTheory Grids – now available for MacOS and Windows </span>     
-    <a href="https://gumroad.com/l/audiotheory-grids" class="no-decoration" onclick="gtag('event','purchase direct (top)');">
-      <div class="home-button top-button inline-button">
-        Purchase Direct
-      </div>
-    </a> -->
-</div>
-</div>
+<header class="at-header">
+  <div class="at-topbar">
+    <div class="at-topbar-inner">
+      <span class="side-text">AudioTheory Guitars – Now Available on iPad</span>
+      <a class="inline-button" href="https://apps.apple.com/us/app/audiotheory-guitars/id1492337444" data-goat-event="store-guitars-appstore-topbar" target="_blank" rel="noopener">View on App Store</a>
+    </div>
+  </div>
+  <button class="nav-toggle " data-nav-toggle aria-label="Menu">
+    <svg viewBox="0 0 80 74" aria-hidden="true">
+      <circle class="icon-circle" cx="40" cy="37" r="30"/>
+      <rect class="icon-bars" x="26" y="27" width="28" height="4" rx="2"/>
+      <rect class="icon-bars" x="26" y="35" width="28" height="4" rx="2"/>
+      <rect class="icon-bars" x="26" y="43" width="28" height="4" rx="2"/>
+    </svg>
+  </button>
+  <nav class="at-drawer" aria-label="Site">
+    <ul>
+    <li><a href="/" aria-current="page">Home</a></li>
+    <li class="group-gap"><a href="/guitars/"><span class="group-title">AudioTheory Guitars</span></a></li>
+    <li><a href="/guitars-user-guide/">User Guide</a></li>
+    <li><a href="/guitars-update-log/">Update Log</a></li>
+    <li class="group-gap"><a href="/piano-keys/"><span class="group-title">AudioTheory Piano Keys</span></a></li>
+    <li><a href="/piano-keys-user-guide/">User Guide</a></li>
+    <li><a href="/piano-keys-update-log/">Update Log</a></li>
+    <li class="group-gap"><a href="/grids/"><span class="group-title">AudioTheory Grids</span></a></li>
+    <li><a href="/grids-user-guide/">User Guide</a></li>
+    <li><a href="/grids-update-log/">Update Log</a></li>
+    <li class="group-gap"><a href="/updates/"><span class="group-title">Updates &amp; News</span></a></li>
+    <li><a href="/faq/">FAQ</a></li>
+    <li><a href="/press/">Press</a></li>
+    <li><a href="/privacy/">Privacy Policy</a></li>
+    </ul>
+  </nav>
 </header>
-<!-- 1 -->
+<main>
 
-<div class="logo-offset">
-    <img class="center-image feature-logo logo-padding" src="images/AudioTheroy-logo.svg" alt="" />
-</div>
-<div class="text-block align-center italic">
-    <p>
-        Revolutionary music theory software
-    </p>
+<div class="block-svg-logo" style="--img-maxw:360px">
+  <img class="site-logo" src="/media/site/brand/audiotheroy-logo.svg" alt="AudioTheory">
+  <p class="tagline">Revolutionary music theory software</p>
 </div>
 
-<div class="half-space"></div><br>
-
-
-<div class="padded-container">
-    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory-01-promo-notes.jpg" alt="" />
+<div class="block-feature-image" style="--img-maxw:1100px">
+  <img class="feature-img drop-shadow" src="/media/site/home/audiotheory-01-promo-notes.jpg" alt="AudioTheory Guitars main interface with keyboard, chord and fretboard diagrams" loading="lazy" data-lightbox>
+  
 </div>
-
-
-<div class="text-block align-center-d padding-top padding-bottom">
-    <p>
-    AudioTheory Guitars is the ultimate reference tool for guitar notes and chords. 
-    Featuring a built-in keyboard, each note reacts to your input across customisable chord and fretboard diagrams. 
-    For anyone who's ever wished music theory was that little bit more visual – this is the software you need.
-    </p>
-</div>
-
-<div class="grid-intro-area padding-15">
-    <div class="article-set-title">
-            Updates & News
-    </div>
-    <div class="full-hr"></div>
-</div>
-
-<!-- #region Article Slider -->
-<div class='slick-slider-single article-slider'>
-<!--$-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="audiotheory-piano-keys-version-3.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-33.jpg" alt="update-preview-banners/update-thumbnail-33"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Piano Keys Version 3.0.0 Update</span> 
-        <span class="grid-item-description-l">A major feature update for AudioTheory Piano Keys.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="audiotheory-piano-keys-version-3.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="audiotheory-updates-2025.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-32.jpg" alt="update-preview-banners/update-thumbnail-32"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">Updates Roundup – AudioTheory in 2025</span> 
-        <span class="grid-item-description-l">A look back over a year of improvements.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="audiotheory-updates-2025.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="audiotheory-piano-keys-version-2.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-31.jpg" alt="update-preview-banners/update-thumbnail-31"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Piano Keys Version 2.0.0 Update</span> 
-        <span class="grid-item-description-l">A giant leap forward for AudioTheory Piano Keys.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="audiotheory-piano-keys-version-2.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="audiotheory-guitars-version-3.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-30.jpg" alt="update-preview-banners/update-thumbnail-30"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars Version 3.0.0 Update</span> 
-        <span class="grid-item-description-l">The biggest update yet for AudioTheory Guitars.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="audiotheory-guitars-version-3.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="audiotheory-guitars-ipad.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-24.jpg" alt="update-preview-banners/update-thumbnail-24"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars – Now Available on iPad</span> 
-        <span class="grid-item-description-l">AudioTheory Guitars releases on the iOS App Store for iPad.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="audiotheory-guitars-ipad.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="piano-keys-88-key-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-27.jpg" alt="update-preview-banners/update-thumbnail-27"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Piano Keys 1.4.0 – 88 Key Update</span> 
-        <span class="grid-item-description-l">Support for multiple keyboard sizes up to a full 88 key piano.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="piano-keys-88-key-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="asio-and-performance-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-26.jpg" alt="update-preview-banners/update-thumbnail-26"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory ASIO and Performance Updates</span> 
-        <span class="grid-item-description-l">A series of updates bringing improvements to the full range of AudioTheory software.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="asio-and-performance-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="piano-keys-launch.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-25.jpg" alt="update-preview-banners/update-thumbnail-25"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Piano Keys: Available Now</span> 
-        <span class="grid-item-description-l">AudioTheory Piano Keys releases on Steam, Mac App Store and direct today.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="piano-keys-launch.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="audiotheory-guitars-version-2.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-24.jpg" alt="update-preview-banners/update-thumbnail-24"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars Version 2.0.0 Update</span> 
-        <span class="grid-item-description-l">A big update and new look for AudioTheory Guitars.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="audiotheory-guitars-version-2.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="piano-exercises.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-23.jpg" alt="update-preview-banners/update-thumbnail-23"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Piano Keys – Ear Training</span> 
-        <span class="grid-item-description-l">New ear training exercises for AudioTheory Piano Keys.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="piano-exercises.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="24-fret-view-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-22.jpg" alt="update-preview-banners/update-thumbnail-22"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars 1.18.0 – 24 Fret View + Improved Chord Selector Update</span> 
-        <span class="grid-item-description-l">A new fretboard view mode and an improved selector for open chords.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="24-fret-view-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="audiotheory-piano-keys-release-date.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-18.jpg" alt="update-preview-banners/update-thumbnail-18"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Piano Keys Release Announcement</span> 
-        <span class="grid-item-description-l">Arriving 24th September 2021.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="audiotheory-piano-keys-release-date.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="chord-reordering-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-20.jpg" alt="update-preview-banners/update-thumbnail-20"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars 1.17.0 – Chord Reordering Update</span> 
-        <span class="grid-item-description-l">New click and drag tools for reordering chords.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="chord-reordering-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="extended-configuration-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-19.jpg" alt="update-preview-banners/update-thumbnail-19"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars 1.16.0 – Improved MIDI Support + Extended Configuration Update</span> 
-        <span class="grid-item-description-l">Improved customisation with a new settings popup.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="extended-configuration-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="introducing-audiotheory-piano-keys.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-18.jpg" alt="update-preview-banners/update-thumbnail-18"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">Coming Soon: AudioTheory Piano Keys</span> 
-        <span class="grid-item-description-l">Introducing scale highlighting, the scale wheel and exciting new features.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="introducing-audiotheory-piano-keys.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="auto-load-chords-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-17.jpg" alt="update-preview-banners/update-thumbnail-17"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars 1.15.0 – Auto Load Chords With Scale Update</span> 
-        <span class="grid-item-description-l">Auto load a set of chords with each scale preset.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="auto-load-chords-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="extended-chord-selector-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-16.jpg" alt="update-preview-banners/update-thumbnail-16"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars 1.14.0 – Extended Chord Selector Update</span> 
-        <span class="grid-item-description-l">New features to support a larger library of chords.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="extended-chord-selector-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="relative-highlighting-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-15.jpg" alt="update-preview-banners/update-thumbnail-15"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars 1.13.0 – Relative Highlighting Update</span> 
-        <span class="grid-item-description-l">Relative sharp and flat highlighting for the fretboard and chords.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="relative-highlighting-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="audio-theory-grids-release.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-14.jpg" alt="update-preview-banners/update-thumbnail-14"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Grids: Available Now</span> 
-        <span class="grid-item-description-l">AudioTheory Grids releases on Steam, Mac App Store and direct today.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="audio-theory-grids-release.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="scale-based-highlighting-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-12.jpg" alt="update-preview-banners/update-thumbnail-12"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars 1.12.0 – Scale Based Highlighting Update</span> 
-        <span class="grid-item-description-l">The colour coding system is extended to the black keys with scale based highlighting.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="scale-based-highlighting-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="dim7-chords-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-11.jpg" alt="update-preview-banners/update-thumbnail-11"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars 1.11.0 – Diminished 7 Chords Update</span> 
-        <span class="grid-item-description-l">Dim7 chords with a new selector have been added to the application.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="dim7-chords-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="modal-scales-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-10.jpg" alt="update-preview-banners/update-thumbnail-10"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars 1.10.0 – Modal Scales Update</span> 
-        <span class="grid-item-description-l">Modal scales, or 'modes' are now part of the fullscreen scale presets.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="modal-scales-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="custom-tuning-fullscreen-fretboard-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-09.jpg" alt="update-preview-banners/update-thumbnail-09"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars 1.9.0 – Custom Tuning and Fullscreen Fretboard Update</span> 
-        <span class="grid-item-description-l">A new view mode with a larger fretboard and options to fully configure the guitar tuning.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="custom-tuning-fullscreen-fretboard-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="shifted-tunings-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-08.jpg" alt="update-preview-banners/update-thumbnail-08"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars 1.8.0 – Shifted Tunings Update</span> 
-        <span class="grid-item-description-l">Fretboard and chord diagrams for shifted tunings, with an option to lower the 6th string.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="shifted-tunings-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="https://apps.apple.com/gb/app/audiotheory-guitars/id1492337444" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-072a.jpg" alt="update-preview-banners/update-thumbnail-072a"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">News: AudioTheory Guitars Now on the Mac App Store</span> 
-        <span class="grid-item-description-l">AudioTheory Guitars is now also available on the Mac App Store.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="https://apps.apple.com/gb/app/audiotheory-guitars/id1492337444"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">view on App Store</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="fullscreen-chord-selector-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-02.jpg" alt="update-preview-banners/update-thumbnail-02"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars 1.2.0 – Fullscreen Chord Selector Update</span> 
-        <span class="grid-item-description-l">View all available chords (with diagrams) from a single screen.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="fullscreen-chord-selector-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="exact-chord-playback-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-07.jpg" alt="update-preview-banners/update-thumbnail-07"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars 1.7.0 – Exact Chord Playback + Scale Playback Update</span> 
-        <span class="grid-item-description-l">Specific chord note highlighting and audio preview scales.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="exact-chord-playback-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="save-load-preset-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-06.jpg" alt="update-preview-banners/update-thumbnail-06"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars 1.6.0 – Save and Load Presets Update</span> 
-        <span class="grid-item-description-l">Quickly swap layouts by saving and loading your configuration.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="save-load-preset-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="drop-d-playback-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-05.jpg" alt="update-preview-banners/update-thumbnail-05"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars 1.5.0 – Drop D Tuning + Octave Specific Playback Update</span> 
-        <span class="grid-item-description-l">Octave-specific note highlighting and support for Drop D (plus Drop Db) tuning.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="drop-d-playback-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="fullscreen-scale-selector-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-04.jpg" alt="update-preview-banners/update-thumbnail-04"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars 1.4.0 – Fullscreen Scale Selector Update</span> 
-        <span class="grid-item-description-l">Presets for the pentatonic and blues scales plus a fullscreen selector.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="fullscreen-scale-selector-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="power-barre-chord-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-03.jpg" alt="update-preview-banners/update-thumbnail-03"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars 1.3.0 – Power and Barre Chord Update</span> 
-        <span class="grid-item-description-l">Barre and power chords are now part of the available chord selection.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="power-barre-chord-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--^-->
-<div class="article-slider-item">
-    <article class="grid-article-outline">
-        <a href="chord-update.html" class="">
-            <div class="gridImage"><img src="images/update-preview-banners/update-thumbnail-01.jpg" alt="update-preview-banners/update-thumbnail-01"></div>
-        </a>
-        <div class="inner-article-padding">
-        <span class="grid-item-title-l">AudioTheory Guitars 1.1.0 – Chord & Note Playback Update</span> 
-        <span class="grid-item-description-l">Extended note playback functionality and a play button next to each chord.</span>
-        <div class="read-more-bottom-section">
-            <span class="grid-item-note-l"><a class="url-dark-green" href="chord-update.html"><img class="read-more-arrow" src="images/read-more-arrow.svg" alt="read more arrow"><span class="more-text">read more</span></a></span>
-        </div>
-        </div>
-    </article>                        
-</div>
-<!--^-->
-<!--$-->
-</div>
-<!-- endregion Article Slider -->
-
-<!-- #region software feature -->
-
-<div class="grid-intro-area padding-15">
-    <div class="article-set-title">
-            Our Software
-    </div>
-    <div class="full-hr"></div>
-</div>
-<div class="padding-top padding-bottom desktop-only-padding-top"></div>
-
-<!-- #region AT Guitars promo -->
-<div class="padded-container">
-    <div class="center-image feature-image-960 drop-shadow">
-        <a href="guitars.html">
-        <img class="" src="images/AudioTheory-guitars-main-capsule.jpg" alt="" />
-        </a>
-        <div class="padding-top-r display-inline-block"></div>
-        <span class="grid-name display-inline-block software-promo">AudioTheory Guitars – the ultimate reference tool for guitar notes and chords</span>
-        <div class="inline-button-container padding-top-r padding-bottom-20" >
-        <div class="align-center display-inline-block button-rh mobile-block-button">
-        <a href="guitars.html" class="no-decoration">
-        <div class="home-button inline-button">
-                Find out more
-        </div>
-        </a>
-        </div>
-    </div>
-
-    </div>
-</div><!-- #endregion -->
-
-<div class="padding-top padding-bottom desktop-only-padding-top"></div>
-
-<!-- #region AT Piano Keys promo -->
-<div class="padded-container">
-    <div class="center-image feature-image-960 drop-shadow">
-        <a href="piano-keys.html">
-        <img class="" src="images/AudioTheory-Piano-Keys-main-capsule.jpg" alt="" />
-        </a>
-        <div class="padding-top-r display-inline-block"></div>
-        <span class="grid-name display-inline-block software-promo">AudioTheory Piano Keys – the ultimate interactive reference tool for learning or practising the piano
-        </span>
-        <div class="inline-button-container padding-top-r padding-bottom-20" >
-        <div class="align-center display-inline-block button-rh mobile-block-button">
-        <a href="piano-keys.html" class="no-decoration">
-        <div class="home-button inline-button">
-                Find out more
-        </div>
-        </a>
-        </div>
-    </div>
-
-    </div>
-</div>
-<!-- #endregion -->
-
-<div class="padding-top padding-bottom desktop-only-padding-top"></div>
-
-<!-- #region AT Grids promo -->
-<div class="padded-container">
-    <div class="center-image feature-image-960 drop-shadow">
-        <a href="grids.html">
-        <img class="" src="images/AudioTheory-grids-main-capsule.jpg" alt="" />
-        </a>
-        <div class="padding-top-r display-inline-block"></div>
-        <span class="grid-name display-inline-block software-promo">AudioTheory Grids – music theory with the power of a grid-based sequencer
-        </span>
-        <div class="inline-button-container padding-top-r padding-bottom-20" >
-        <div class="align-center display-inline-block button-rh mobile-block-button">
-        <a href="grids.html" class="no-decoration">
-        <div class="home-button inline-button">
-                Find out more
-        </div>
-        </a>
-        </div>
-    </div>
-
-    </div>
-</div>
-<!-- #endregion -->
-
-
-
-
-
-<!-- #endregion -->
+<div class="blk" style="margin-top:40px;margin-bottom:16px">
+<div class="block-text align-center">
+<p>AudioTheory Guitars is the ultimate reference tool for guitar notes and chords.
+Featuring a built-in keyboard, each note reacts to your input across customisable chord and fretboard diagrams.
+For anyone who's ever wished music theory was that little bit more visual – this is the software you need.</p>
 
 </div>
 </div>
-<div class="padding-top padding-bottom"></div>
 
-
-<div class="grid-intro-area padding-15">
-    <div class="article-set-title">
-            More about AudioTheory Guitars
-    </div>
-    <div class="full-hr"></div>
+<div class="block-news-carousel">
+  <div class="block-section-title"><h2>Updates &amp; News</h2><hr class="section-rule"></div>
+  <div class="news-track" data-carousel>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/audiotheory-piano-keys-version-3/"><img src="/media/site/thumbnails/audiotheory-piano-keys-version-3.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Piano Keys Version 3.0.0 Update</h4>
+      <p class="card-desc">A major feature update for AudioTheory Piano Keys.</p>
+      <a class="card-more" href="/updates/audiotheory-piano-keys-version-3/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/audiotheory-updates-2025/"><img src="/media/site/thumbnails/audiotheory-updates-2025.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">Updates Roundup – AudioTheory in 2025</h4>
+      <p class="card-desc">A look back over a year of improvements.</p>
+      <a class="card-more" href="/updates/audiotheory-updates-2025/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/audiotheory-piano-keys-version-2/"><img src="/media/site/thumbnails/audiotheory-piano-keys-version-2.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Piano Keys Version 2.0.0 Update</h4>
+      <p class="card-desc">A giant leap forward for AudioTheory Piano Keys.</p>
+      <a class="card-more" href="/updates/audiotheory-piano-keys-version-2/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/audiotheory-guitars-version-3/"><img src="/media/site/thumbnails/audiotheory-guitars-version-3.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars Version 3.0.0 Update</h4>
+      <p class="card-desc">The biggest update yet for AudioTheory Guitars.</p>
+      <a class="card-more" href="/updates/audiotheory-guitars-version-3/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/audiotheory-guitars-ipad/"><img src="/media/site/thumbnails/audiotheory-guitars-version-2.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars – Now Available on iPad</h4>
+      <p class="card-desc">AudioTheory Guitars releases on the iOS App Store for iPad.</p>
+      <a class="card-more" href="/updates/audiotheory-guitars-ipad/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/piano-keys-88-key-update/"><img src="/media/site/thumbnails/piano-keys-88-key-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Piano Keys 1.4.0 – 88 Key Update</h4>
+      <p class="card-desc">Support for multiple keyboard sizes up to a full 88 key piano.</p>
+      <a class="card-more" href="/updates/piano-keys-88-key-update/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/asio-and-performance-update/"><img src="/media/site/thumbnails/asio-and-performance-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory ASIO and Performance Updates</h4>
+      <p class="card-desc">A series of updates bringing improvements to the full range of AudioTheory software.</p>
+      <a class="card-more" href="/updates/asio-and-performance-update/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/audiotheory-guitars-version-2/"><img src="/media/site/thumbnails/audiotheory-guitars-version-2.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars Version 2.0.0 Update</h4>
+      <p class="card-desc">A big update and new look for AudioTheory Guitars.</p>
+      <a class="card-more" href="/updates/audiotheory-guitars-version-2/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/piano-keys-launch/"><img src="/media/site/thumbnails/piano-keys-launch.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Piano Keys: Available Now</h4>
+      <p class="card-desc">AudioTheory Piano Keys releases on Steam, Mac App Store and direct today.</p>
+      <a class="card-more" href="/updates/piano-keys-launch/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/piano-exercises/"><img src="/media/site/thumbnails/piano-exercises.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Piano Keys – Ear Training</h4>
+      <p class="card-desc">New ear training exercises for AudioTheory Piano Keys.</p>
+      <a class="card-more" href="/updates/piano-exercises/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/24-fret-view-update/"><img src="/media/site/thumbnails/24-fret-view-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars 1.18.0 – 24 Fret View + Improved Chord Selector Update</h4>
+      <p class="card-desc">A new fretboard view mode and an improved selector for open chords.</p>
+      <a class="card-more" href="/updates/24-fret-view-update/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/audiotheory-piano-keys-release-date/"><img src="/media/site/thumbnails/introducing-audiotheory-piano-keys.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Piano Keys Release Announcement</h4>
+      <p class="card-desc">Arriving 24th September 2021.</p>
+      <a class="card-more" href="/updates/audiotheory-piano-keys-release-date/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/chord-reordering-update/"><img src="/media/site/thumbnails/chord-reordering-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars 1.17.0 – Chord Reordering Update</h4>
+      <p class="card-desc">New click and drag tools for reordering chords.</p>
+      <a class="card-more" href="/updates/chord-reordering-update/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/extended-configuration-update/"><img src="/media/site/thumbnails/extended-configuration-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars 1.16.0 – Improved MIDI Support + Extended Configuration Update</h4>
+      <p class="card-desc">Improved customisation with a new settings popup.</p>
+      <a class="card-more" href="/updates/extended-configuration-update/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/introducing-audiotheory-piano-keys/"><img src="/media/site/thumbnails/introducing-audiotheory-piano-keys.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">Coming Soon: AudioTheory Piano Keys</h4>
+      <p class="card-desc">Introducing scale highlighting, the scale wheel and exciting new features.</p>
+      <a class="card-more" href="/updates/introducing-audiotheory-piano-keys/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/auto-load-chords-update/"><img src="/media/site/thumbnails/auto-load-chords-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars 1.15.0 – Auto Load Chords With Scale Update</h4>
+      <p class="card-desc">Auto load a set of chords with each scale preset.</p>
+      <a class="card-more" href="/updates/auto-load-chords-update/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/extended-chord-selector-update/"><img src="/media/site/thumbnails/extended-chord-selector-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars 1.14.0 – Extended Chord Selector Update</h4>
+      <p class="card-desc">New features to support a larger library of chords.</p>
+      <a class="card-more" href="/updates/extended-chord-selector-update/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/relative-highlighting-update/"><img src="/media/site/thumbnails/relative-highlighting-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars 1.13.0 – Relative Highlighting Update</h4>
+      <p class="card-desc">Relative sharp and flat highlighting for the fretboard and chords.</p>
+      <a class="card-more" href="/updates/relative-highlighting-update/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/audio-theory-grids-release/"><img src="/media/site/thumbnails/audio-theory-grids-release.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Grids: Available Now</h4>
+      <p class="card-desc">AudioTheory Grids releases on Steam, Mac App Store and direct today.</p>
+      <a class="card-more" href="/updates/audio-theory-grids-release/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/scale-based-highlighting-update/"><img src="/media/site/thumbnails/scale-based-highlighting-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars 1.12.0 – Scale Based Highlighting Update</h4>
+      <p class="card-desc">The colour coding system is extended to the black keys with scale based highlighting.</p>
+      <a class="card-more" href="/updates/scale-based-highlighting-update/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/dim7-chords-update/"><img src="/media/site/thumbnails/dim7-chords-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars 1.11.0 – Diminished 7 Chords Update</h4>
+      <p class="card-desc">Dim7 chords with a new selector have been added to the application.</p>
+      <a class="card-more" href="/updates/dim7-chords-update/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/modal-scales-update/"><img src="/media/site/thumbnails/modal-scales-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars 1.10.0 – Modal Scales Update</h4>
+      <p class="card-desc">Modal scales, or 'modes' are now part of the fullscreen scale presets.</p>
+      <a class="card-more" href="/updates/modal-scales-update/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/custom-tuning-fullscreen-fretboard-update/"><img src="/media/site/thumbnails/custom-tuning-fullscreen-fretboard-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars 1.9.0 – Custom Tuning and Fullscreen Fretboard Update</h4>
+      <p class="card-desc">A new view mode with a larger fretboard and options to fully configure the guitar tuning.</p>
+      <a class="card-more" href="/updates/custom-tuning-fullscreen-fretboard-update/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/shifted-tunings-update/"><img src="/media/site/thumbnails/shifted-tunings-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars 1.8.0 – Shifted Tunings Update</h4>
+      <p class="card-desc">Fretboard and chord diagrams for shifted tunings, with an option to lower the 6th string.</p>
+      <a class="card-more" href="/updates/shifted-tunings-update/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/exact-chord-playback-update/"><img src="/media/site/thumbnails/exact-chord-playback-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars 1.7.0 – Exact Chord Playback + Scale Playback Update</h4>
+      <p class="card-desc">Specific chord note highlighting and audio preview scales.</p>
+      <a class="card-more" href="/updates/exact-chord-playback-update/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/save-load-preset-update/"><img src="/media/site/thumbnails/save-load-preset-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars 1.6.0 – Save and Load Presets Update</h4>
+      <p class="card-desc">Quickly swap layouts by saving and loading your configuration.</p>
+      <a class="card-more" href="/updates/save-load-preset-update/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/drop-d-playback-update/"><img src="/media/site/thumbnails/drop-d-playback-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars 1.5.0 – Drop D Tuning + Octave Specific Playback Update</h4>
+      <p class="card-desc">Octave-specific note highlighting and support for Drop D (plus Drop Db) tuning.</p>
+      <a class="card-more" href="/updates/drop-d-playback-update/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/fullscreen-scale-selector-update/"><img src="/media/site/thumbnails/fullscreen-scale-selector-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars 1.4.0 – Fullscreen Scale Selector Update</h4>
+      <p class="card-desc">Presets for the pentatonic and blues scales plus a fullscreen selector.</p>
+      <a class="card-more" href="/updates/fullscreen-scale-selector-update/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/power-barre-chord-update/"><img src="/media/site/thumbnails/power-barre-chord-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars 1.3.0 – Power and Barre Chord Update</h4>
+      <p class="card-desc">Barre and power chords are now part of the available chord selection.</p>
+      <a class="card-more" href="/updates/power-barre-chord-update/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/fullscreen-chord-selector-update/"><img src="/media/site/thumbnails/fullscreen-chord-selector-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars 1.2.0 – Fullscreen Chord Selector Update</h4>
+      <p class="card-desc">View all available chords (with diagrams) from a single screen.</p>
+      <a class="card-more" href="/updates/fullscreen-chord-selector-update/">read more <span class="arrow">→</span></a>
+    </article>
+    <article class="news-card">
+      <a class="card-thumb" href="/updates/chord-update/"><img src="/media/site/thumbnails/chord-update.jpg" alt="" loading="lazy"></a>
+      <h4 class="card-title">AudioTheory Guitars 1.1.0 – Chord &amp; Note Playback Update</h4>
+      <p class="card-desc">Extended note playback functionality and a play button next to each chord.</p>
+      <a class="card-more" href="/updates/chord-update/">read more <span class="arrow">→</span></a>
+    </article>
+  </div>
+  <button class="carousel-prev" aria-label="Previous">‹</button>
+  <button class="carousel-next" aria-label="Next">›</button>
 </div>
-<div class="padding-top desktop-only-padding-top"></div>
 
-
-
-<div class="padded-container display-reduced">
-    <div class='slider-container padding-top-reduced'>
-        <div class='slick-slider drop-shadow'>
-            <div>
-                <img class="feature-image-960" src="images/AudioTheory-02.jpg" alt="" />
-                <span class="grid-name carousel-caption">Adjustable Fretboard</span>
-            </div>
-            <div>
-                <img class="feature-image-960" src="images/AudioTheory-01.jpg" alt="" />
-                <span class="grid-name carousel-caption">Note Highlighting</span>
-
-            </div>
-            <div>
-                <img class="feature-image-960" src="images/AudioTheory-left-2.jpg" alt="" />
-                <span class="grid-name carousel-caption">Customisable Scales</span>
-
-            </div>
-
-        </div>
-    </div>
+<div class="block-section-title">
+  <h2>Our Software</h2>
+  <hr class="section-rule">
+</div>
+<div class="blk" style="margin-top:80px">
+<div class="block-promo-cards">
+  <article class="promo-card">
+    <a href="/guitars/"><img src="/media/site/home/audiotheory-guitars-main-capsule.jpg" alt="AudioTheory Guitars" loading="lazy"></a>
+    <span class="grid-name software-promo">AudioTheory Guitars – The ultimate reference tool for guitar notes and chords.</span>
+    <div class="inline-button-container"><a class="inline-button" href="/guitars/">Find out more</a></div>
+  </article>
+  <article class="promo-card">
+    <a href="/piano-keys/"><img src="/media/site/home/audiotheory-piano-keys-main-capsule.jpg" alt="AudioTheory Piano Keys" loading="lazy"></a>
+    <span class="grid-name software-promo">AudioTheory Piano Keys – The ultimate interactive reference tool for learning or practising the piano.</span>
+    <div class="inline-button-container"><a class="inline-button" href="/piano-keys/">Find out more</a></div>
+  </article>
+  <article class="promo-card">
+    <a href="/grids/"><img src="/media/site/home/audiotheory-grids-main-capsule.jpg" alt="AudioTheory Grids" loading="lazy"></a>
+    <span class="grid-name software-promo">AudioTheory Grids – Music theory with the power of a grid-based sequencer.</span>
+    <div class="inline-button-container"><a class="inline-button" href="/grids/">Find out more</a></div>
+  </article>
+</div>
 </div>
 
-<div class="hide-reduced">
-    <div class="row">
-
-        <div class="column-3-reduced-padding">
-            <img class="drop-shadow-light" src="images/AudioTheory-02.gif" alt="Adjustable capo" />
-            <span class="grid-name">Adjustable Fretboard</span>
-        </div>
-
-        <div class="column-3-reduced-padding">
-            <img class="drop-shadow-light" src="images/AudioTheory-01.gif" alt="Note highlighting" />
-            <span class="grid-name">Note Highlighting</span>
-        </div>
-
-        <div class="column-3-reduced-padding">
-            <img class="drop-shadow-light" src="images/AudioTheory-03.gif" alt="Customisable scales" />
-             <span class="grid-name">Customisable Scales</span>
-        </div>
-
-    </div>
-
-</div>
-<div class="text-block padding-top-r">
-        <ul class="bullet">
-            <li class="b"><strong>Seamlessly transcribe</strong> between piano and guitar using a straight-forward colour coding system and notation highlighting. 
-                Play a note on the keyboard, or directly from the chord and fretboard diagrams to see where it is across all formats.</li>
-            <li class="b"><strong>Set your tuning and capo</strong>. Everything else adjusts accordingly – no need for a chord transposition chart.</li>
-            <li class="b"><strong>Choose your chords</strong> with open, power, barre, sus2 and dim7 chord sheets with fullscreen diagrams and playback options.</li>
-            <li class="b"><strong>Exclude notes</strong> and never play out of key again. Your fretboard diagram now only shows the notes you need and your keyboard doesn't play the ones you don't.</li>
-            <li class="b"><strong>Scale presets</strong> you can quickly apply to the application. Save and load functions to easily swap between customised views. Auto load chords to match the selected scale.</li>
-            <li class="b"><strong>Midi support</strong>. Connect an external Midi input device to control the on-screen keyboard.</li>
-            <li class="b"><strong>Full customisation</strong>. Select the chords you want. Left-handed mode for left-handed players. Set your fretboard size, number of strings, start fret and per-string tuning.</li>
-
-        </ul>
-</div>
- 
-<!--
-<div class="padded-container">
-    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory-left-3.jpg" alt="" />
-</div>
- -->
-
-<!--
-
-<div class="align-center-d padding-bottom text-block">
-    <div class="quote-block">
-        <p>
-        “The idea behind the AudioTheory is customisation. It all started when I couldn’t find a diagram of a left-handed fretboard tuned half-a-step-down and had to create my own. 
-        Then I tuned back to E and had to update my diagram. Then I wanted to share it with a right handed bass player and... well you get the idea. 
-        I realised that I needed to rebuild my diagram in an interactive format. Everything else followed from there.”
-        </p>
-    </div>
-    <div class="quote-attribution">
-        <p>
-        <strong>–Fraser Mackenzie</strong>, creator of AudioTheory Guitars
-        </p>
-    </div>
-
-    
-</div>
- -->
- <div class="dashed-line faq-break no-padding-top"></div>
-
-<div class="inline-button-container padding-bottom" >
-    <div class="align-center-d text-block button-intro">
-        <p>
-        AudioTheory Guitars is available for <strong>$6.99</strong>. This includes all features and future updates.
-        <div class="desktop-only"><br></div>
-        <div class="break-m"></div>
-
-        It can be downloaded dirctly, through Steam, or the Mac App Store.
-        </p>
-    </div>
-
-    <div class="align-center display-inline-block mobile-block-button">
-        <a href="https://store.steampowered.com/app/1176110/AudioTheory_Guitars/" class="no-decoration" onclick="gtag('event','purchase Steam');">
-        <div class="home-button inline-button"> Steam
-            <img class="steam-logo" src="images/steam-logo-s.png">
-
-        </div>
-        </a>
-    </div>
-
-    <div class="align-center display-inline-block button-rh mobile-block-button">
-        <a href="https://apps.apple.com/gb/app/audiotheory-guitars/id1492337444" class="no-decoration" onclick="gtag('event','purchase Mac App Store');">
-        <div class="home-button inline-button">
-                Mac App Store
-        </div>
-        </a>
-    </div>
-
-    <div class="align-center display-inline-block button-rh mobile-block-button">
-        <a href="https://gumroad.com/l/audiotheory" class="no-decoration" onclick="gtag('event','purchase direct (body)');">
-        <div class="home-button inline-button">
-                Purchase Direct
-        </div>
-        </a>
-    </div>
-</div>
-<div class="padded-container">
-    <img id="modalImage"onclick="openModal(this)" class="center-image feature-image-960 drop-shadow" src="images/AudioTheory-notes.jpg" alt="" />
+<div class="block-section-title">
+  <h2>More about AudioTheory Guitars</h2>
+  <hr class="section-rule">
 </div>
 
-<!--F-->
-<!--#endregion-->
+<div class="block-gallery" data-carousel-mobile>
+  <figure><video src="/media/site/home/audiotheory-02.mp4" poster="/media/site/home/audiotheory-02-poster.jpg" autoplay muted loop playsinline class="gallery-img drop-shadow-light"></video><figcaption class="grid-name">Adjustable Fretboard</figcaption></figure>
+  <figure><video src="/media/site/home/audiotheory-01.mp4" poster="/media/site/home/audiotheory-01-poster.jpg" autoplay muted loop playsinline class="gallery-img drop-shadow-light"></video><figcaption class="grid-name">Note Highlighting</figcaption></figure>
+  <figure><video src="/media/site/home/audiotheory-03.mp4" poster="/media/site/home/audiotheory-03-poster.jpg" autoplay muted loop playsinline class="gallery-img drop-shadow-light"></video><figcaption class="grid-name">Customisable Scales</figcaption></figure>
+</div>
 
-<!--#region footer-->
-<div class="align-center-d text-block padding-top">
-<!--Signup Form-->
-<div id="mc_embed_signup">
-    <form action="https://gmail.us20.list-manage.com/subscribe/post?u=5e36fd2a9ea42cc4f8b2ce7f9&amp;id=3d4c39abbe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-        <div id="mc_embed_signup_scroll">
-        <div class="newsletter-title">For news and updates subscribe to our newsletter:</div>
-        <div class="mc-field-group">
-            <input type="email" value="" placeholder="email address" name="EMAIL" class="required email sign-up-box" id="mce-EMAIL">
-        </div>
-        <div id="mce-responses" class="clear">
-            <div class="response" id="mce-error-response" style="display:none"></div>
-            <div class="response" id="mce-success-response" style="display:none"></div>
-        </div>
-        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5e36fd2a9ea42cc4f8b2ce7f9_3d4c39abbe" tabindex="-1" value=""></div>
-        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-        </div>
+<div class="block-feature-list">
+  <ul class="bullet">
+    <li><strong>Seamlessly transcribe</strong> between piano and guitar using a straight-forward colour coding system and notation highlighting. Play a note on the keyboard, or directly from the chord and fretboard diagrams to see where it is across all formats.</li>
+    <li><strong>Set your tuning and capo</strong>. Everything else adjusts accordingly – no need for a chord transposition chart.</li>
+    <li><strong>Choose your chords</strong> with open, power, barre, sus2 and dim7 chord sheets with fullscreen diagrams and playback options.</li>
+    <li><strong>Exclude notes</strong> and never play out of key again. Your fretboard diagram now only shows the notes you need and your keyboard doesn't play the ones you don't.</li>
+    <li><strong>Scale presets</strong> you can quickly apply to the application. Save and load functions to easily swap between customised views. Auto load chords to match the selected scale.</li>
+    <li><strong>Midi support</strong>. Connect an external Midi input device to control the on-screen keyboard.</li>
+    <li><strong>Full customisation</strong>. Select the chords you want. Left-handed mode for left-handed players. Set your fretboard size, number of strings, start fret and per-string tuning.</li>
+  </ul>
+</div>
+<hr class="at-divider">
+
+<div class="block-store-buttons">
+  
+  <p class="price">AudioTheory Guitars is available for <strong>$6.99</strong>. This includes all features and future updates.<br>It can be downloaded directly, through Steam, or the Mac App Store.</p>
+  <div class="inline-button-container">
+    <a class="inline-button" href="https://store.steampowered.com/app/1176110/AudioTheory_Guitars/" data-goat-event="store-guitars-steam-home" target="_blank" rel="noopener">Steam <img class="steam-logo" src="/media/site/home/steam-logo-s.png" alt=""></a>
+    <a class="inline-button" href="https://apps.apple.com/gb/app/audiotheory-guitars/id1492337444" data-goat-event="store-guitars-appstore-home" target="_blank" rel="noopener">Mac App Store</a>
+    <a class="inline-button" href="https://gumroad.com/l/audiotheory" data-goat-event="store-guitars-direct-home" target="_blank" rel="noopener">Purchase Direct</a>
+  </div>
+</div>
+
+<div class="block-feature-image" style="--img-maxw:1100px">
+  <img class="feature-img drop-shadow" src="/media/site/home/audiotheory-notes.jpg" alt="AudioTheory Guitars notes overview" loading="lazy" data-lightbox>
+  
+</div>
+</main>
+
+<div class="at-newsletter" style="--mc:#738778">
+  <div class="outline-sign-up-box">
+    <form action="https://gmail.us20.list-manage.com/subscribe/post?u=5e36fd2a9ea42cc4f8b2ce7f9&amp;id=3d4c39abbe" method="post" target="_blank" novalidate>
+      <div class="newsletter-title-b">Subscribe to our newsletter</div>
+      <div class="newsletter-sub-title">News and updates for AudioTheory Guitars, Piano Keys and Grids — new features, releases and offers.</div>
+      <input type="email" value="" placeholder="Email address" name="EMAIL" class="sign-up-box" required aria-label="Email address">
+      <div class="nl-hp" aria-hidden="true"><input type="text" name="b_5e36fd2a9ea42cc4f8b2ce7f9_3d4c39abbe" tabindex="-1" value=""></div>
+      <input type="submit" value="Subscribe" name="subscribe" class="mc-button">
     </form>
+  </div>
 </div>
-<!--End Signup Form-->
-</div>
-        
-<!--Modal-->
-<div id="modal-c" class="modal">
-<span class="close">&times;</span>
-<img class="modal-content" id="img01">
-</div> 
-<!--End Modal-->
-
-<footer>
-<ul>
-<li><a href="faq.html">FAQ</a></li>
-<li><a href="press.html">Press</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-<div class="copywright align-center-d">
-    Copyright ©2026, AudioTheory
-</div>
+<footer class="at-footer">
+  <nav>
+    <a href="/faq/">FAQ</a>
+    <a href="/press/">Press</a>
+    <a href="/contact/">Contact</a>
+  </nav>
+  <p class="copyright">Copyright ©2026, AudioTheory</p>
 </footer>
-
-<!--page-content-wrapper-->
-</div>
-<script type="text/javascript" src="scripts.js"></script>
+<script defer src="/assets/site.js"></script>
+<!-- GoatCounter analytics: no cookies, no personal data -->
+<script data-goatcounter="https://audiotheory.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
-</html> 
-<!--#endregion-->
+</html>

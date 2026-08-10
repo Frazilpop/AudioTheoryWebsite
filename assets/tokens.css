@@ -1,0 +1,68 @@
+/* AudioTheory — design tokens, extracted from the live site's computed styles.
+   The legacy h1/h2/h3 sizes actually came from Bootstrap 3 (36/30/24px), so
+   the heading tokens here record the COMPUTED look, chosen deliberately. */
+:root {
+  /* light theme (default) */
+  --bg: #e6e6e6;
+  --text: #172022;
+  --heading: #282828;
+  --title: #2c383b;
+
+  /* dark product pages */
+  --dark-bg: #242424;
+  --dark-text: #ececec;
+  --dark-body: #d4d4d4;
+
+  /* links */
+  --link-green: #738778;
+  --link-green-hover: #98a79c;
+  --link-dark: #737373;
+
+  /* chrome */
+  --bar-bg: #f7f7f7;
+  --bar-border: #b8b8b8;
+  --bar-dark-bg: #3a394094;
+  --bar-dark-border: #6f6f6f;
+  --drawer-bg: #363636;
+  --drawer-link: #b3b3b3;
+  --drawer-link-hover: rgb(201, 201, 201);
+  --drawer-divider: #d5d5d517;
+  --footer-bg: #f1f1f1;
+  --footer-dark-bg: #404040;
+  --copyright-bg: #363636;
+
+  /* buttons */
+  --btn-border: #172022;
+  --btn-hover: #65b8e2;
+  --btn-active: #5ca4c9;
+  --btn-dark-border: #e6e6e6;
+  --btn-dark-text: #d4d4d4;
+  --btn-dark-hover: #292739;
+
+  /* rules & dividers */
+  --rule: #8a9191;
+
+  /* cards */
+  --card-border: #8a9191;
+  --card-hover-shadow: 0 0 20px 5px rgba(119, 118, 118, 0.25);
+  --shadow: 5px 5px 8px 0 rgba(22, 22, 22, 0.25), 0 6px 20px 0 rgba(22, 22, 22, 0.19);
+  --shadow-light: 5px 5px 8px 0 rgba(22, 22, 22, 0.10), 0 6px 20px 0 rgba(22, 22, 22, 0.05);
+
+  /* type */
+  --font-body: 'Nunito', 'futura-light', Arial, Helvetica, sans-serif;
+  --font-futura-md: 'futura-medium', 'Nunito', Arial, sans-serif;
+  --fs-body: 105%;          /* 16.8px */
+  --lh-body: 1.5rem;        /* 24px */
+  --fs-page-title: 33px;    /* .blog-title */
+  --fs-article-title: 30px; /* legacy h2 via Bootstrap */
+  --fs-sub-heading: 1.1rem; /* guide/FAQ headings */
+  --fs-subtitle: 24px;      /* text-with-subtitle (legacy h3 via Bootstrap) */
+
+  /* layout */
+  --maxw-text: 950px;
+  --maxw-feature: 1100px;   /* the legacy .feature-image-960 workhorse */
+  --maxw-card: 850px;
+
+  /* spacing */
+  --space-section: 40px;    /* .padding-top/.padding-bottom (30px on phones) */
+}
