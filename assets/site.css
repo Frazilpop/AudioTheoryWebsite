@@ -355,15 +355,24 @@ body.page-dark .inline-button:hover, .band .inline-button:hover { background: va
 .news-card .card-title { font-size: 1.4rem; line-height: 1.15; font-weight: 500; text-align: left; padding: 25px 35px 0; }
 .news-card .card-desc { font-size: .9rem; line-height: 1.45; text-align: left; padding: 15px 35px 0; margin: 0; flex: 1; }
 .news-card .card-more { display: block; text-align: left; padding: 10px 35px 30px; text-decoration: none; }
-.news-card .card-more .arrow { display: inline-block; }
+/* the legacy read-more arrow: 15px dark circle + white chevron before the text */
+.read-more-arrow { width: 15px; height: 15px; vertical-align: middle; margin-top: -1px; }
+.read-more-arrow .arrow-circle { fill: #2b373b; }
+.read-more-arrow .arrow-chevron { fill: #fff; }
+.more-text { padding-left: 8px; }
 .news-viewport { position: relative; }
 .carousel-prev, .carousel-next {
   position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
-  width: 40px; height: 40px; border-radius: 50%;
-  border: 0; background: #2b373b; color: #fff; font-size: 22px; line-height: 1;
-  cursor: pointer; opacity: .85;
+  width: 40px; height: 50px; padding: 0;
+  border: 0; background: none; cursor: pointer;
 }
-.carousel-prev:hover, .carousel-next:hover { opacity: 1; }
+/* the legacy light arrow art (read-more-arrow-light.svg): grey circle,
+   off-white chevron, darkening on hover */
+.carousel-arrow { display: block; width: 40px; height: 40px; margin: 5px 0; }
+.carousel-arrow .arrow-circle { fill: #d3d3d3; }
+.carousel-arrow .arrow-chevron { fill: #fcfcfc; }
+.carousel-prev:hover .arrow-circle, .carousel-next:hover .arrow-circle { fill: #b2b2b2; }
+.carousel-prev:hover .arrow-chevron, .carousel-next:hover .arrow-chevron { fill: #f4f4f4; }
 .carousel-prev { left: 10px; }
 .carousel-next { right: 10px; }
 @media (min-width: 1240px) { .carousel-prev { left: -12px; } .carousel-next { right: -12px; } }
