@@ -438,5 +438,16 @@ body.page-dark .inline-button:hover, .band .inline-button:hover { background: va
 .listing-pages a { color: var(--link-green) !important; text-decoration: none; }
 .post-footer-nav { text-align: center; padding: 30px 0 50px; }
 .post-footer-nav a { text-decoration: none; }
-.post-body img { display: block; margin: 0 auto 24px; max-width: min(1100px, 100%); }
-.post-body { max-width: var(--maxw-feature); }
+/* article bodies, matched to the live layout: text in the 950px column
+   (910px content), images and video escaping to the 1100px feature width,
+   40px block rhythm, 24px subtitles */
+.post-body { max-width: var(--maxw-feature); padding: 0 15px; }
+.post-body p, .post-body ul, .post-body ol { max-width: 910px; margin-left: auto; margin-right: auto; }
+.post-body h3 {
+  max-width: 910px; margin: 40px auto 10px;
+  font-size: var(--fs-subtitle); font-weight: 500; line-height: 1.2;
+}
+.post-body img { display: block; margin: 40px auto; max-width: min(1100px, 100%); }
+.post-body p img { margin: 40px auto; }
+.post-body .at-video { max-width: min(1100px, 100%); margin: 40px auto; }
+.post-body .block-video { max-width: 1100px; margin: 40px auto; padding: 0; }
