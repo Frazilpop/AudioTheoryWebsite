@@ -54,12 +54,17 @@
       }
       var prev = wrap.querySelector('.carousel-prev');
       var next = wrap.querySelector('.carousel-next');
-      // an arrow only shows when there is somewhere to scroll — so on load
-      // (newest articles in view) there is no left arrow
+      // An arrow only shows when there is somewhere to scroll — so on load
+      // (newest articles in view) there is no left arrow. Measured off the
+      // cards rather than scrollLeft: the track's side padding and scroll-snap
+      // park it a few pixels in, so scrollLeft is never 0 at the start.
       function sync() {
-        var max = track.scrollWidth - track.clientWidth;
-        if (prev) prev.hidden = track.scrollLeft <= 1;
-        if (next) next.hidden = track.scrollLeft >= max - 1;
+        var cards = track.querySelectorAll('.news-card');
+        var box = track.getBoundingClientRect();
+        var first = cards.length ? cards[0].getBoundingClientRect() : box;
+        var last = cards.length ? cards[cards.length - 1].getBoundingClientRect() : box;
+        if (prev) prev.hidden = !cards.length || first.left >= box.left - 1;
+        if (next) next.hidden = !cards.length || last.right <= box.right + 1;
       }
       if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
       if (next) next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
