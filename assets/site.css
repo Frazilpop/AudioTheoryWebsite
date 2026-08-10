@@ -457,7 +457,7 @@ body.page-dark .inline-button:hover, .band .inline-button:hover { background: va
   max-width: 910px; margin: 40px auto 10px;
   font-size: var(--fs-subtitle); font-weight: 500; line-height: 1.2;
 }
-.post-body img { display: block; margin: 40px auto; max-width: min(1100px, 100%); }
-.post-body p img { margin: 40px auto; }
+.post-body .post-img { margin: 40px auto; }
+.post-body .post-img img, .post-body img { display: block; margin: 0 auto; max-width: min(1100px, 100%); box-shadow: var(--shadow); }
 .post-body .at-video { max-width: min(1100px, 100%); margin: 40px auto; }
 .post-body .block-video { max-width: 1100px; margin: 40px auto; padding: 0; }
