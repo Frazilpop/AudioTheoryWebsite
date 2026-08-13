@@ -501,4 +501,9 @@ body.page-dark .inline-button:hover, .band .inline-button:hover { background: va
 .post-body img.img-medium { width: min(560px, 100%); }
 .post-body img.img-small { width: min(360px, 100%); }
 .post-body .at-video { max-width: min(1100px, 100%); margin: 40px auto; }
+/* captioned media: the post editor wraps a captioned image or clip in a raw
+   <figure> (see site.js postFigureImg) — spaced like an uncaptioned one */
+.post-body figure { margin: 40px auto; text-align: center; }
+.post-body figure img, .post-body figure .at-video { margin: 0 auto; }
+.post-body figcaption { font-size: 0.85rem; font-style: italic; color: var(--text); opacity: 0.65; margin-top: 12px; }
 .post-body .block-video { max-width: 1100px; margin: 40px auto; padding: 0; }
