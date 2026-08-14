@@ -27,9 +27,11 @@
   --drawer-link: #b3b3b3;
   --drawer-link-hover: rgb(201, 201, 201);
   --drawer-divider: #d5d5d517;
-  --footer-bg: #f1f1f1;
-  --footer-dark-bg: #404040;
-  --copyright-bg: #363636;
+  /* one footer band on every page, light or dark — it used to be a light strip
+     of links sitting on a darker copyright bar */
+  --footer-bg: #404040;
+  --footer-link: #d4d4d4;
+  --footer-link-hover: #fff;
 
   /* buttons */
   --btn-border: #172022;
