@@ -176,15 +176,42 @@ body.page-dark .at-footer { background: var(--footer-dark-bg); }
 .band--dark { background: var(--dark-bg); }
 
 /* ---------- shared block bits ---------- */
-/* per-block extra margins (the editor's "extra space above/below" fields):
-   renderBlocks writes --mt/--mb on the .blk wrapper, with --mt-m/--mb-m as
-   the phone-only twins that win under 768px */
-.blk { margin-top: var(--mt); margin-bottom: var(--mb); }
+/* Every block renders inside a .blk .blk--<type> wrapper, and the wrapper owns
+   the block's vertical spacing — nothing below sets its own outer margin, so
+   there is one number per edge and one place to change it.
+     .blk--<type>  the type's default (the editor shows it as the placeholder)
+     --mt / --mb   the page's own value, written inline by renderBlocks from
+                   the editor's "space above/below" fields, replacing the
+                   default; --mt-m / --mb-m are the phone-only twins
+   Padding, not margin: adjacent margins would collapse into each other, so a
+   block asking for 40px under it could silently get whatever the next block
+   asked for above it instead. */
+.blk { padding-top: var(--mt, 0); padding-bottom: var(--mb, 0); }
 @media (max-width: 767px) {
-  .blk { margin-top: var(--mt-m, var(--mt)); margin-bottom: var(--mb-m, var(--mb)); }
+  .blk { padding-top: var(--mt-m, var(--mt, 0)); padding-bottom: var(--mb-m, var(--mb, 0)); }
 }
+/* the per-type defaults. Where a type has a site-wide option in the globe
+   panel it stays the middle tier here: hard-coded fallback < globe value <
+   the page's own --mt/--mb. Keep in step with BLOCK_SPACING in lib/schemas.js,
+   which mirrors these numbers as the editor's placeholders. */
+.blk--page-title { --mt: var(--page-title-pad-top, 40px); --mb: 20px; }
+.blk--article-title { --mt: var(--article-title-pad, 25px); --mb: var(--article-title-pad, 25px); }
+.blk--text, .blk--text-with-subtitle { --mb: var(--text-pad-bottom, 24px); }
+.blk--sub-heading { --mb: var(--sub-heading-pad-bottom, 24px); }
+.blk--feature-list { --mb: var(--feature-list-pad-bottom, 24px); }
+.blk--feature-image { --mb: var(--feature-image-pad-bottom, 24px); }
+.blk--video { --mb: var(--video-pad-bottom, 24px); }
+.blk--svg-logo { --mt: var(--svg-logo-pad-top, 30px); }
+.blk--gallery { --mb: var(--gallery-pad-bottom, 24px); }
+.blk--dark-feature { --mt: var(--dark-feature-pad, 40px); --mb: var(--dark-feature-pad, 40px); }
+.blk--card-pair { --mt: 30px; --mb: 50px; }
+.blk--store-buttons { --mt: var(--store-buttons-pad-top, 40px); --mb: var(--store-buttons-pad-bottom, 40px); }
+.blk--promo-cards { --mb: 40px; }
+.blk--news-carousel { --mb: 30px; }
+.blk--update-info { --mb: var(--update-info-pad-bottom, 24px); }
+.blk--update-log { --mb: 40px; }
 /* site-wide per-block-type options (globe panel) land as --<type>-<key> on
-   :root — every var(--…-pad…) below is one of those hooks */
+   :root — every var(--…-pad…) above and below is one of those hooks */
 .at-divider { border: 0; border-top: 1px dashed var(--rule); margin: 40px auto; max-width: var(--maxw-text); }
 .drop-shadow { box-shadow: var(--shadow); }
 .drop-shadow-light { box-shadow: var(--shadow-light); }
@@ -194,10 +221,11 @@ body.page-dark .at-footer { background: var(--footer-dark-bg); }
 .block-page-title { text-align: center; }
 .block-page-title h1 {
   font-size: var(--fs-page-title); font-weight: 600; color: var(--title);
-  padding: var(--page-title-pad-top, 40px) 0 var(--page-title-pad-bottom, 20px); line-height: 1.1;
+  padding: 0 0 var(--page-title-pad-bottom, 20px); line-height: 1.1;
 }
+/* the space above the title and under the rule is the wrapper's (.blk--page-title) */
 .block-page-title .title-rule, .section-rule {
-  border: 0; border-bottom: 1px solid var(--rule); margin: 0 0 20px; padding-top: 0;
+  border: 0; border-bottom: 1px solid var(--rule); margin: 0; padding-top: 0;
 }
 
 .block-section-title { text-align: left; padding: 0 15px; }
@@ -206,12 +234,12 @@ body.page-dark .at-footer { background: var(--footer-dark-bg); }
 .block-section-title .section-rule { margin: 0; padding-top: var(--section-title-rule-gap, 15px); }
 @media (max-width: 470px) { .block-section-title h2 { font-size: 1rem; } .block-section-title { padding: 0 20px; } }
 
-.block-article-title { text-align: center; padding: var(--article-title-pad, 25px) 0; }
+.block-article-title { text-align: center; }
 .block-article-title h2 { font-size: var(--fs-article-title); line-height: 40px; }
 .block-article-title .main-title { font-weight: 600; }
 @media (max-width: 767px) { .block-article-title { text-align: left; padding-left: 20px; } }
 
-.block-text { padding: 0 20px; max-width: var(--maxw-text); line-height: 1.45rem; font-size: 1rem; margin: 0 auto var(--text-pad-bottom, 24px); }
+.block-text { padding: 0 20px; max-width: var(--maxw-text); line-height: 1.45rem; font-size: 1rem; margin: 0 auto; }
 .block-text p { margin: 0 0 1.45rem; }
 .block-text.align-center { text-align: center; }
 @media (max-width: 767px) { .block-text.align-center { text-align: left; padding-left: 20px; } }
@@ -220,30 +248,30 @@ body.page-dark .at-footer { background: var(--footer-dark-bg); }
 
 .block-sub-heading {
   font-size: var(--fs-sub-heading); color: var(--heading); font-weight: 500;
-  max-width: var(--maxw-text); margin: 0 auto var(--sub-heading-pad-bottom, 24px); padding: 0 20px;
+  max-width: var(--maxw-text); margin: 0 auto; padding: 0 20px;
 }
 body.page-dark .block-sub-heading { color: var(--dark-text); }
 
-.block-feature-list { max-width: var(--maxw-text); margin: 0 auto var(--feature-list-pad-bottom, 24px); padding: 0 20px; }
+.block-feature-list { max-width: var(--maxw-text); margin: 0 auto; padding: 0 20px; }
 .block-feature-list ul.bullet { list-style-type: circle; padding: 0 0 20px 40px; margin: 0; }
 .block-feature-list li { padding-bottom: 15px; }
 .block-feature-list.cols-2 ul { columns: 2; column-gap: 40px; }
 @media (max-width: 480px) { .block-feature-list ul.bullet { padding-left: 15px; } .block-feature-list.cols-2 ul { columns: 1; } }
 
 /* ---------- media blocks ---------- */
-.block-feature-image { padding: 0 15px; margin-bottom: var(--feature-image-pad-bottom, 24px); text-align: center; }
+.block-feature-image { padding: 0 15px; text-align: center; }
 .block-feature-image.img-full { padding: 0; }
 .block-feature-image.img-full .feature-img { max-width: 100%; width: 100%; }
 .block-feature-image .feature-img { display: block; margin: 0 auto; max-width: min(var(--img-maxw, 1100px), 100%); }
 [data-lightbox] { cursor: pointer; transition: 0.3s; }
 [data-lightbox]:hover { opacity: 0.9; }
 
-.block-video { padding: 0 15px; margin: 0 auto var(--video-pad-bottom, 24px); max-width: min(var(--img-maxw, 960px), 100%); }
+.block-video { padding: 0 15px; margin: 0 auto; max-width: min(var(--img-maxw, 960px), 100%); }
 .iframe-container { overflow: hidden; padding-top: 56.3%; position: relative; box-shadow: var(--shadow); }
 .iframe-container iframe { border: 0; height: 100%; width: 100%; position: absolute; top: 0; left: 0; }
 .at-video { display: block; width: 100%; }
 
-.block-svg-logo { text-align: center; padding: var(--svg-logo-pad-top, 30px) 20px 0; }
+.block-svg-logo { text-align: center; padding: 0 20px; }
 /* legacy .logo-offset: the wrapper carried margin-right:40px, nudging the
    optical centre ~20px left — reproduced with asymmetric padding */
 .block-svg-logo { padding-right: 60px; }
@@ -254,7 +282,7 @@ body.page-dark .block-sub-heading { color: var(--dark-text); }
   .block-svg-logo .site-logo { max-width: 90%; }
 }
 
-.block-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin: 0 5px var(--gallery-pad-bottom, 24px); padding: 0; }
+.block-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin: 0 5px; padding: 0; }
 .block-gallery figure { margin: 0; padding: 10px; text-align: center; }
 .block-gallery img, .block-gallery video { display: block; width: 100%; }
 .block-gallery .grid-name { display: block; text-align: center; padding: 5px 20px; overflow: hidden; text-overflow: ellipsis; }
@@ -278,7 +306,7 @@ body.page-dark .block-sub-heading { color: var(--dark-text); }
 /* ---------- dark product features ---------- */
 .block-dark-feature {
   color: var(--dark-body); font-size: 1rem; line-height: 1.45rem;
-  max-width: var(--maxw-card); margin: 0 auto; padding: var(--dark-feature-pad, 40px) 0;
+  max-width: var(--maxw-card); margin: 0 auto;
 }
 .block-dark-feature .feature-copy {
   border-left: .5px solid #d4d4d447; border-right: .5px solid #d4d4d447;
@@ -300,7 +328,7 @@ body.page-dark .block-sub-heading { color: var(--dark-text); }
 .block-dark-feature .feature-media { padding-top: 40px; }
 .block-dark-feature .feature-media img { display: block; margin: 0 auto; }
 
-.block-card-pair { display: flex; gap: 40px; justify-content: center; padding: 30px 20px 50px; max-width: 1600px; margin: 0 auto; }
+.block-card-pair { display: flex; gap: 40px; justify-content: center; padding: 0 20px; max-width: 1600px; margin: 0 auto; }
 .block-card-pair .feature-card {
   flex: 1; max-width: var(--maxw-card); min-height: 600px;
   color: var(--dark-body); font-size: 1rem; line-height: 1.45rem; text-align: left;
@@ -320,7 +348,7 @@ body.page-dark .block-sub-heading { color: var(--dark-text); }
 @media (max-width: 480px) { .block-card-pair .feature-card { min-height: inherit; } }
 
 /* ---------- buttons / store CTAs ---------- */
-.block-store-buttons { text-align: center; padding: var(--store-buttons-pad-top, 40px) 20px var(--store-buttons-pad-bottom, 40px); }
+.block-store-buttons { text-align: center; padding: 0 20px; }
 .block-store-buttons h3 { font-family: var(--font-futura-md); font-size: 1.7rem; line-height: 1.9rem; padding-bottom: 20px; }
 body.page-dark .block-store-buttons h3 { color: #fff; }
 .block-store-buttons .price { padding-bottom: 25px; margin: 0; }
@@ -344,31 +372,44 @@ body.page-dark .inline-button:hover, .band .inline-button:hover { background: va
 .block-promo-cards { padding: 0 15px; }
 .block-promo-cards .promo-card {
   max-width: var(--maxw-feature); margin: 0 auto 80px; text-align: center;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow); padding-bottom: 20px;
 }
-.block-promo-cards .promo-card:last-child { margin-bottom: 40px; }
+/* the 80px (40px on phones) is the gap between cards; the space under the last
+   one is the block's, and lives on the wrapper (.blk--promo-cards) */
+.block-promo-cards .promo-card:last-child { margin-bottom: 0; }
 .block-promo-cards img { display: block; width: 100%; }
 /* legacy: img baseline gap (~4px) + 15px spacer div + the caption's 5px pad */
 .block-promo-cards .grid-name {
   display: block; text-align: center; margin: 0 auto;
   padding: 24px 20px 5px; overflow: hidden; text-overflow: ellipsis;
 }
-/* legacy: .padding-top-r (15px) above, .padding-bottom-20 below */
-.block-promo-cards .inline-button { margin: 15px 10px 20px; }
+/* legacy: .padding-top-r (15px) above, .padding-bottom-20 below. The 20px is
+   the card's padding-bottom, not margin here: under 480px the button turns
+   display:block, and a block child's bottom margin collapses straight out of
+   the card — leaving the button flush against the shadow on phones only. */
+.block-promo-cards .inline-button { margin: 15px 10px 0; }
 @media (max-width: 767px) { .block-promo-cards .promo-card { margin-bottom: 40px; } }
 
 /* ---------- news carousel ---------- */
 .block-news-carousel { position: relative; max-width: none; margin: 0 auto; padding: 0 15px; }
+/* the carousel already supplies the gutter, so its heading must drop the
+   standalone section-title padding — stacked, the two put "Updates & News"
+   15px right of every other section heading on the page */
+.block-news-carousel > .block-section-title { padding: 0; }
+@media (max-width: 470px) { .block-news-carousel > .block-section-title { padding: 0 5px; } }
+/* the gap between the heading and the cards is the carousel's own business, so
+   it stays here as track padding; the space under the cards is the block's and
+   lives on the wrapper (.blk--news-carousel) */
 .news-track {
   display: flex; gap: 30px;
   overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; padding: 0 5px;
+  scrollbar-width: none; padding: var(--track-pad-top, 40px) 5px 0;
 }
 .news-track::-webkit-scrollbar { display: none; }
 .news-card {
   flex: 0 0 calc(25% - 23px); scroll-snap-align: start;
   border: 1px solid var(--card-border);
-  margin: 40px 0 30px; display: flex; flex-direction: column;
+  margin: 0; display: flex; flex-direction: column;
 }
 .news-card:hover { box-shadow: var(--card-hover-shadow); }
 .news-card .card-thumb img { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; }
@@ -381,8 +422,10 @@ body.page-dark .inline-button:hover, .band .inline-button:hover { background: va
 .read-more-arrow .arrow-chevron { fill: #fff; }
 .more-text { padding-left: 8px; }
 .news-viewport { position: relative; }
+/* centred on the cards, not on the viewport — the track's top padding sits
+   inside the viewport, so half of it has to come back as an offset */
 .carousel-prev, .carousel-next {
-  position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
+  position: absolute; top: calc(50% + var(--track-pad-top, 40px) / 2); transform: translateY(-50%); z-index: 2;
   width: 40px; height: 50px; padding: 0;
   border: 0; background: none; cursor: pointer;
 }
@@ -403,16 +446,16 @@ body.page-dark .inline-button:hover, .band .inline-button:hover { background: va
 .carousel-prev { left: 5px; }
 .carousel-next { right: 5px; }
 @media (max-width: 1200px) { .news-card { flex-basis: calc(33.34% - 20px); } }
-@media (max-width: 767px) { .news-card { flex-basis: calc(50% - 15px); margin-top: 20px; } }
+@media (max-width: 767px) { .news-card { flex-basis: calc(50% - 15px); } .news-viewport { --track-pad-top: 20px; } }
 @media (max-width: 540px) { .news-card { flex-basis: 92%; } }
 
 /* ---------- update info ---------- */
-.block-update-info { padding: 0 20px; max-width: var(--maxw-text); margin: 0 auto var(--update-info-pad-bottom, 24px); line-height: 1.45rem; font-size: 1rem; }
+.block-update-info { padding: 0 20px; max-width: var(--maxw-text); margin: 0 auto; line-height: 1.45rem; font-size: 1rem; }
 .block-update-info p { margin: 0 0 1.45rem; }
 .block-update-info .update-info-img { display: block; margin: 0 auto; }
 
 /* ---------- update log ---------- */
-.block-update-log { max-width: var(--maxw-text); margin: 0 auto; padding: 0 20px 40px; text-align: left; }
+.block-update-log { max-width: var(--maxw-text); margin: 0 auto; padding: 0 20px; text-align: left; }
 .update-divider { border: 0; border-top: 1px dashed var(--rule); margin: 40px 0; }
 .update-version { font-size: var(--fs-sub-heading); color: var(--heading); font-weight: 600; padding-bottom: 12px; }
 .update-date { font-weight: 400; color: inherit; }
