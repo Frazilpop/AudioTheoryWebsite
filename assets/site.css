@@ -127,7 +127,14 @@ body.nav-open { overflow: hidden; }
 /* ---------- footer ---------- */
 /* the outlined signup block, same design as Dracula's Cave's newsletter,
    sitting on AudioTheory's light palette */
-.at-newsletter { text-align: center; padding: 40px 20px; max-width: 950px; margin: 0 auto; }
+/* width:100% is load-bearing: this box is a direct flex item of body (column
+   flex), and `margin: 0 auto` cancels the default stretch — so without an
+   explicit width it is sized shrink-to-fit from its own content. Its content's
+   max-content width is the button's 480px (a percentage max-width does not
+   constrain an intrinsic contribution), so on a phone the box resolved to 544px
+   and hung off the right edge, and the 100% widths inside it then matched that
+   544px rather than the screen. */
+.at-newsletter { text-align: center; padding: 40px 20px; width: 100%; max-width: 950px; margin: 0 auto; }
 .outline-sign-up-box { border: 2px solid var(--text); border-radius: 25px; padding: 30px 45px 5px; }
 @media (min-width: 860px) { .outline-sign-up-box { padding-left: 160px; padding-right: 160px; } }
 @media (max-width: 767px) { .outline-sign-up-box { padding-left: 30px; padding-right: 30px; } .at-newsletter { padding-left: 15px; padding-right: 15px; } }
@@ -231,7 +238,16 @@ body.page-dark .at-footer { background: var(--footer-dark-bg); }
 .block-section-title { text-align: left; padding: 0 15px; }
 .block-section-title h2 { font-size: 1.2rem; line-height: 2.5rem; }
 .block-section-title h3 { font-size: 1.1rem; line-height: 2rem; }
+/* the heading-to-rule gap: the site-wide option by default, replaced per block
+   by an inline --section-title-rule-gap that blocks.js writes from the block's
+   own Heading to rule gap field. Every per-block spacing var works this way —
+   the desktop name plus a -m twin that wins under 768px (as with --mt/--mt-m) */
 .block-section-title .section-rule { margin: 0; padding-top: var(--section-title-rule-gap, 15px); }
+@media (max-width: 767px) {
+  .block-section-title .section-rule {
+    padding-top: var(--section-title-rule-gap-m, var(--section-title-rule-gap, 15px));
+  }
+}
 @media (max-width: 470px) { .block-section-title h2 { font-size: 1rem; } .block-section-title { padding: 0 20px; } }
 
 .block-article-title { text-align: center; }
@@ -283,12 +299,19 @@ body.page-dark .block-sub-heading { color: var(--dark-text); }
 }
 
 .block-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin: 0 5px; padding: 0; }
-.block-gallery figure { margin: 0; padding: 10px; text-align: center; }
+/* the space between images is each cell's own padding, so one number sets both
+   the gutter between neighbours and the breathing room at the grid's edges.
+   --gallery-gap is the per-block override blocks.js writes inline; --gallery-gap-m
+   is its phone twin, and both fall back to the 10px this grid has always used */
+.block-gallery figure { margin: 0; padding: var(--gallery-gap, 10px); text-align: center; }
 .block-gallery img, .block-gallery video { display: block; width: 100%; }
 .block-gallery .grid-name { display: block; text-align: center; padding: 5px 20px; overflow: hidden; text-overflow: ellipsis; }
 @media (max-width: 1020px) {
   .block-gallery { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
   .block-gallery figure { flex: 0 0 85%; scroll-snap-align: center; }
+}
+@media (max-width: 767px) {
+  .block-gallery figure { padding: var(--gallery-gap-m, var(--gallery-gap, 10px)); }
 }
 
 /* ---------- page banner ---------- */
@@ -371,11 +394,12 @@ body.page-dark .inline-button:hover, .band .inline-button:hover { background: va
 /* ---------- promo cards (Our Software) ---------- */
 .block-promo-cards { padding: 0 15px; }
 .block-promo-cards .promo-card {
-  max-width: var(--maxw-feature); margin: 0 auto 80px; text-align: center;
+  max-width: var(--maxw-feature); margin: 0 auto var(--promo-cards-gap, 80px); text-align: center;
   box-shadow: var(--shadow); padding-bottom: 20px;
 }
-/* the 80px (40px on phones) is the gap between cards; the space under the last
-   one is the block's, and lives on the wrapper (.blk--promo-cards) */
+/* the 80px (40px on phones) is the gap between cards, and the block's own Space
+   between cards field replaces it through --promo-cards-gap / -gap-m. The space
+   under the last one is the block's, on the wrapper (.blk--promo-cards) */
 .block-promo-cards .promo-card:last-child { margin-bottom: 0; }
 .block-promo-cards img { display: block; width: 100%; }
 /* legacy: img baseline gap (~4px) + 15px spacer div + the caption's 5px pad */
@@ -388,7 +412,9 @@ body.page-dark .inline-button:hover, .band .inline-button:hover { background: va
    display:block, and a block child's bottom margin collapses straight out of
    the card — leaving the button flush against the shadow on phones only. */
 .block-promo-cards .inline-button { margin: 15px 10px 0; }
-@media (max-width: 767px) { .block-promo-cards .promo-card { margin-bottom: 40px; } }
+@media (max-width: 767px) {
+  .block-promo-cards .promo-card { margin-bottom: var(--promo-cards-gap-m, var(--promo-cards-gap, 40px)); }
+}
 
 /* ---------- news carousel ---------- */
 .block-news-carousel { position: relative; max-width: none; margin: 0 auto; padding: 0 15px; }
