@@ -85,6 +85,76 @@
     });
   });
 
+  // ---------- newsletter signup (first-party capture worker) ----------
+  // Submits in the background and swaps the form for an inline thanks. The
+  // Turnstile spam-check script only loads once someone focuses the email box,
+  // so pages stay light. With JS off the form still POSTs natively and the
+  // worker bounces back to /?subscribed=…, which the load-time check renders.
+  // Turnstile calls this (data-before-interactive-callback) when it needs to
+  // show a visible challenge — until then CSS keeps its box collapsed.
+  window.dcmsxTurnstileInteractive = function () {
+    document.querySelectorAll('.cf-turnstile').forEach(function (el) { el.classList.add('cf-turnstile-show'); });
+  };
+  document.querySelectorAll('form[data-newsletter]').forEach(function (form) {
+    once(form, function () {
+      var msg = form.querySelector('.nl-msg');
+      function show(text, isError) {
+        if (!msg) return;
+        msg.hidden = false;
+        msg.textContent = text;
+        msg.classList.toggle('nl-msg-error', !!isError);
+      }
+      function done() {
+        form.querySelectorAll('.sign-up-box, .mc-button, .cf-turnstile').forEach(function (el) {
+          el.style.display = 'none';
+        });
+        show('Thank you – your details have been received');
+      }
+      if (/[?&]subscribed=1\b/.test(location.search)) return done();
+      if (/[?&]subscribed=error\b/.test(location.search)) {
+        show('Something went wrong — please try signing up again.', true);
+      }
+      function loadTurnstile() {
+        if (!form.querySelector('.cf-turnstile')) return;
+        if (document.querySelector('script[src*="challenges.cloudflare.com/turnstile"]')) return;
+        var s = document.createElement('script');
+        s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+        s.async = true;
+        document.head.appendChild(s);
+      }
+      var email = form.querySelector('input[type="email"]');
+      if (email) email.addEventListener('focus', loadTurnstile, { once: true });
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        loadTurnstile();
+        var needsToken = !!form.querySelector('.cf-turnstile');
+        var tries = 0;
+        (function attempt() {
+          // the invisible check may still be running — wait for its token
+          var token = form.querySelector('[name="cf-turnstile-response"]');
+          if (needsToken && !(token && token.value)) {
+            if (++tries > 40) return show('Couldn’t run the spam check — please reload and try again.', true);
+            show('Checking…');
+            return setTimeout(attempt, 250);
+          }
+          var button = form.querySelector('.mc-button');
+          if (button) button.disabled = true;
+          var data = new URLSearchParams(new FormData(form));
+          data.set('source', location.origin + location.pathname);
+          data.set('js', '1');
+          fetch(form.action, { method: 'POST', body: data })
+            .then(function (r) { return r.json(); })
+            .then(function (j) {
+              if (j.ok) return done();
+              show(j.error || 'Something went wrong — please try again.', true);
+              if (button) button.disabled = false;
+            })
+            .catch(function () { form.submit(); }); // fetch blocked → native POST
+        })();
+      });
+    });
+  });
+
   // ---------- GoatCounter events on store buttons ----------
   // any element with data-goat-event fires a named event; shows up in the
   // GoatCounter dashboard alongside pageviews (replaces the old gtag calls)

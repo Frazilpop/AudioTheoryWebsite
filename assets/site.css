@@ -153,7 +153,16 @@ body.nav-open { overflow: hidden; }
   width: 480px; max-width: 100%; border: none; border-radius: 4px; cursor: pointer;
 }
 .mc-button:hover { background: color-mix(in srgb, var(--mc, #738778) 71%, black); }
+.mc-button:disabled { opacity: .6; cursor: default; }
 .nl-hp { position: absolute; left: -5000px; }
+.nl-msg { margin: 0 0 25px; font-weight: 700; color: var(--text); }
+.nl-msg[hidden] { display: none; }
+.nl-msg-error { color: #b04a4a; }
+/* interaction-only Turnstile is invisible but still reserves ~72px once its
+   script renders — keep the box collapsed until Cloudflare actually needs to
+   show a challenge (site.js adds .cf-turnstile-show via its callback) */
+.cf-turnstile { height: 0; overflow: hidden; }
+.cf-turnstile-show { height: auto; overflow: visible; margin-bottom: 17px; }
 
 /* one band on every page — the Dracula's Cave footer shape: copyright left, the
    software-by credit centred, socials + links right. The old two-tone version
@@ -250,6 +259,7 @@ body.nav-open { overflow: hidden; }
 .blk--sub-heading { --mb: var(--sub-heading-pad-bottom, 24px); }
 .blk--feature-list { --mb: var(--feature-list-pad-bottom, 24px); }
 .blk--feature-image { --mb: var(--feature-image-pad-bottom, 24px); }
+.blk--framed-image { --mb: var(--framed-image-pad-bottom, 24px); }
 .blk--video { --mb: var(--video-pad-bottom, 24px); }
 .blk--svg-logo { --mt: var(--svg-logo-pad-top, 30px); }
 .blk--gallery { --mb: var(--gallery-pad-bottom, 24px); }
@@ -334,6 +344,28 @@ body.page-dark .block-sub-heading { color: var(--dark-text); }
 .block-feature-image .feature-img { display: block; margin: 0 auto; max-width: min(var(--img-maxw, 1100px), 100%); }
 [data-lightbox] { cursor: pointer; transition: 0.3s; }
 [data-lightbox]:hover { opacity: 0.9; }
+
+/* framed image — a screenshot inside device chrome (blocks.js framed-image).
+   The window is pure CSS: light title bar, traffic lights, rounded corners.
+   The shadow is filter: drop-shadow so it hugs the monitor artwork's
+   silhouette (stand included), not its bounding box. */
+.block-framed-image { padding: 0 15px; text-align: center; }
+.block-framed-image .at-frame { display: block; margin: 0 auto; max-width: min(var(--img-maxw, 960px), 100%); }
+.at-frame-shadow { filter: drop-shadow(5px 8px 12px rgba(22, 22, 22, 0.28)); }
+.at-frame--window { border-radius: 10px; overflow: hidden; background: #f6f5f4; }
+.at-frame--window .window-bar { display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 14px;
+  background: #f6f5f4; border-bottom: 1px solid #d9d8d7; }
+.at-frame--window .tl { width: 13px; height: 13px; border-radius: 50%; flex: none; }
+.at-frame--window .tl-r { background: #ff5f57; border: 1px solid #e0443e; }
+.at-frame--window .tl-y { background: #febc2e; border: 1px solid #d89e24; }
+.at-frame--window .tl-g { background: #28c840; border: 1px solid #1eab29; }
+.at-frame--window .window-shot { display: block; width: 100%; }
+/* the monitor artwork overlays the screenshot: the shot rect matches the
+   PNG's transparent 16:9 screen (x 71-1667, y 38-934 of 1741x1235), grown a
+   hair on every side so its edges tuck under the bezel */
+.at-frame--monitor { position: relative; }
+.at-frame--monitor .monitor-bezel { position: relative; display: block; width: 100%; pointer-events: none; }
+.at-frame--monitor .monitor-shot { position: absolute; left: 3.95%; top: 2.95%; width: 92%; height: 73%; object-fit: cover; }
 
 .block-video { padding: 0 15px; margin: 0 auto; max-width: min(var(--img-maxw, 960px), 100%); }
 .iframe-container { overflow: hidden; padding-top: 56.3%; position: relative; box-shadow: var(--shadow); }
