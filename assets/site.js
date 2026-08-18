@@ -43,6 +43,36 @@
     });
   });
 
+  // ---------- back to top on long pages ----------
+  // The user guides and update logs run to several screens; short pages never
+  // get the button, so it lives here rather than in the template. Built fresh
+  // only when it isn't already in the DOM, and torn down if a soft refresh
+  // lands on a page too short to warrant it.
+  (function () {
+    var btn = document.querySelector('.at-top-link');
+    if (document.documentElement.scrollHeight < 3000) {
+      if (btn) btn.remove();
+      return;
+    }
+    if (!btn) {
+      btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'at-top-link';
+      btn.setAttribute('aria-label', 'Back to top');
+      btn.innerHTML = '<svg viewBox="0 0 16 16" aria-hidden="true">'
+        + '<path d="M8 2.6 2.6 8l1.15 1.15L7.2 5.7V13.4h1.6V5.7l3.45 3.45L13.4 8z"/></svg>';
+      document.body.appendChild(btn);
+    }
+    once(btn, function () {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      function sync() { btn.classList.toggle('is-visible', window.scrollY > 700); }
+      window.addEventListener('scroll', sync, { passive: true });
+      sync();
+    });
+  })();
+
   // ---------- carousel prev/next (the track itself is CSS scroll-snap) ----------
   document.querySelectorAll('.block-news-carousel').forEach(function (wrap) {
     once(wrap, function () {

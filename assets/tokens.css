@@ -62,8 +62,21 @@
   --lh-body: 1.5rem;        /* 24px */
   --fs-page-title: 33px;    /* .blog-title */
   --fs-article-title: 30px; /* legacy h2 via Bootstrap */
-  --fs-sub-heading: 1.1rem; /* guide/FAQ headings */
+  --fs-sub-heading: 1.1rem; /* the update log's version headings */
   --fs-subtitle: 24px;      /* text-with-subtitle (legacy h3 via Bootstrap) */
+  /* the guides' and FAQ's two heading levels. Body <strong> is Nunito 700 at
+     16px, so a section heading has to clear that or the bold run-in terms
+     inside a section out-shout the heading above it — hence futura-medium and
+     a real jump in size at level 1, and a smaller-but-still-futura level 2. */
+  --fs-section-heading: clamp(21px, 4.2vw, 26px);
+  --fs-section-heading-2: 19px;
+  /* the log-header kicker ("UPDATE LOG"), tracked caps under the product logo —
+     viewport-scaled so it never has to wrap on a phone */
+  --fs-log-header-kicker: clamp(15px, 3.6vw, 20px);
+
+  /* the log-header band: the product pages' radial gradient, its glow pulled
+     below the band so a header this short still catches the lift */
+  --log-header-bg: radial-gradient(circle at 50% 210%, rgb(70, 60, 100), #22253a 68%);
 
   /* layout */
   --maxw-text: 950px;
@@ -72,4 +85,39 @@
 
   /* spacing */
   --space-section: 40px;    /* .padding-top/.padding-bottom (30px on phones) */
+
+  /* The guides' and FAQ's vertical rhythm, as three steps of one scale rather
+     than numbers that happen to add up. Each is the TOTAL air above the thing
+     it names, measured text to text — the preceding block's own bottom padding
+     (--gap-block) is part of it, which is why the rules below subtract that.
+     A section break used to come from the "dashed divider above" tickbox, so a
+     heading that drew no rule got --gap-block and nothing more (23px against
+     its siblings' 104px). These belong to the heading's level now; the rule is
+     decoration that sits inside the gap rather than creating it. */
+  --gap-block: 24px;        /* between peer blocks inside a section */
+  --gap-sub: 58px;          /* above a sub-section heading (level 2) */
+  --gap-section: 104px;     /* above a section heading that draws a dashed rule */
+  --gap-section-bare: 56px; /* above one that does not — deliberately much less */
+}
+/* Why --gap-section-bare is barely half of --gap-section, when both mark the
+   same size of break: a gap with a rule in it reads as SMALLER than the same
+   gap empty, because the rule gives the eye something to land on and splits the
+   distance in two. An empty gap of 104px is just a hole. It shows up worst
+   where a bare heading follows a screenshot, because an image ends on a hard
+   full-width edge, where a paragraph ends on a ragged line that already carries
+   its own white space. Setting these two to the same number to look consistent
+   in the stylesheet is what made the first section of every guide look broken —
+   they are equal PERCEIVED breaks, not equal distances. Check any change to
+   either against the rendered page, not against the other number.
+   (--gap-sub lands near --gap-section-bare for the same reason: both are empty
+   gaps. The levels are told apart by type size, not by these.) */
+
+/* phones get the same proportions at a smaller scale — 104px of air is a third
+   of the viewport on a phone, where a section break needs far less to read */
+@media (max-width: 767px) {
+  :root {
+    --gap-sub: 44px;
+    --gap-section: 68px;
+    --gap-section-bare: 40px;
+  }
 }

@@ -254,9 +254,14 @@ body.nav-open { overflow: hidden; }
    the page's own --mt/--mb. Keep in step with BLOCK_SPACING in lib/schemas.js,
    which mirrors these numbers as the editor's placeholders. */
 .blk--page-title { --mt: var(--page-title-pad-top, 40px); --mb: 20px; }
+.blk--log-header { --mt: 46px; --mb: 40px; }
 .blk--article-title { --mt: var(--article-title-pad, 25px); --mb: var(--article-title-pad, 25px); }
 .blk--text, .blk--text-with-subtitle { --mb: var(--text-pad-bottom, 24px); }
+/* guide-text renders a .block-text, so it takes the text block's own spacing
+   unless the globe panel gives it its own */
+.blk--guide-text { --mb: var(--guide-text-pad-bottom, var(--text-pad-bottom, 24px)); }
 .blk--sub-heading { --mb: var(--sub-heading-pad-bottom, 24px); }
+.blk--guide-contents { --mb: var(--guide-contents-pad-bottom, 40px); }
 .blk--feature-list { --mb: var(--feature-list-pad-bottom, 24px); }
 .blk--feature-image { --mb: var(--feature-image-pad-bottom, 24px); }
 .blk--framed-image { --mb: var(--framed-image-pad-bottom, 24px); }
@@ -276,6 +281,10 @@ body.nav-open { overflow: hidden; }
    --divider-space (and --divider-space-m for phones) from its Divider space field */
 .at-divider {
   border: 0; border-top: 1px dashed var(--rule); max-width: var(--maxw-text);
+  /* the 40px keeps the rule off the screen edges once the viewport is narrower
+     than the text column, so it stops where the paragraphs stop; on desktop
+     max-width wins and the rule brackets the column */
+  width: calc(100% - 40px);
   margin: var(--divider-space, 40px) auto;
 }
 @media (max-width: 767px) {
@@ -311,6 +320,46 @@ body.nav-open { overflow: hidden; }
 }
 @media (max-width: 470px) { .block-section-title h2 { font-size: 1rem; } .block-section-title { padding: 0 20px; } }
 
+/* ---------- the stylised log/guide header ---------- */
+/* Full-bleed, and self-painting: the gradient and the note-colour strip are two
+   background layers on the .blk wrapper, so the strip pins itself to the bottom
+   edge of the band no matter how much space the block is given below the text
+   (padding grows the band; the strip stays flush). Dropped into one of the
+   product-page bands it steps aside and lets the band's own gradient show. */
+.blk--log-header {
+  background-image: url('/media/site/guitars/colour-line.jpg'), var(--log-header-bg);
+  background-size: 100% var(--log-header-strip-h, 4px), auto;
+  background-position: bottom left, center;
+  background-repeat: no-repeat, no-repeat;
+  /* margin, not padding: the gap under the band must NOT be painted dark */
+  margin-bottom: var(--log-header-gap-after, 40px);
+}
+.band .blk--log-header { background-image: url('/media/site/guitars/colour-line.jpg'); }
+.block-log-header { text-align: center; padding: 0 20px; }
+.log-header-logo {
+  display: block; margin: 0 auto; width: min(var(--logo-maxw, 330px), 78%);
+  padding-bottom: var(--log-header-logo-gap, 26px);
+}
+/* the kicker sits between two hairlines that take up whatever width the text
+   leaves — flex does the measuring, so nothing needs a fixed length */
+.log-header-kicker {
+  display: flex; align-items: center; justify-content: center;
+  gap: 18px; max-width: 420px; margin: 0 auto;
+}
+.log-header-kicker::before, .log-header-kicker::after {
+  content: ''; flex: 1; height: 1px; background: rgba(255, 255, 255, .28);
+}
+.log-header-kicker.no-rules::before, .log-header-kicker.no-rules::after { display: none; }
+.log-header-kicker > span {
+  font-family: var(--font-futura-md); color: rgba(255, 255, 255, .8);
+  font-size: var(--fs-log-header-kicker); line-height: 1;
+  text-transform: uppercase; letter-spacing: .28em;
+  /* letter-spacing trails the last letter too — pull it back so the words sit
+     optically centred between the hairlines rather than half a gap to the left */
+  margin-right: -.28em;
+}
+@media (max-width: 767px) { .log-header-kicker { gap: 14px; max-width: 340px; } }
+
 .block-article-title { text-align: center; }
 .block-article-title h2 { font-size: var(--fs-article-title); line-height: 40px; }
 .block-article-title .main-title { font-weight: 600; }
@@ -321,15 +370,88 @@ body.nav-open { overflow: hidden; }
 .block-text.align-center { text-align: center; }
 @media (max-width: 767px) { .block-text.align-center { text-align: left; padding-left: 20px; } }
 .block-text p:last-child { margin-bottom: 0; }
+/* the guides' run-in definitions ("**Bars** – select the number of bars…"),
+   tagged by the text block's style: definitions. A hanging indent: the term
+   keeps the left margin and the explanation's wrapped lines tuck in behind it,
+   so eight of them in a row scan as a list of terms rather than eight
+   paragraphs. Ordinary paragraphs in the same block are untouched. */
+.block-text p.def { padding-left: 1.6em; text-indent: -1.6em; }
 /* was 10px padding plus 10px margin — one 20px gap in two properties. Kept as
    padding, which can never collapse away if the block's body is ever empty. */
 .block-text-subtitled .subtitle { font-size: var(--fs-subtitle); font-weight: 500; padding-bottom: var(--text-subtitle-gap, 20px); }
 
+/* ---------- guide section headings ---------- */
+/* The guides are built from these, so they carry the page's structure and have
+   to out-weigh the body text they sit above — including its <strong> run-in
+   terms, which are Nunito 700. Hence futura-medium: the size jump alone would
+   leave a section title looking like a slightly larger bold sentence.
+   scroll-margin-top gives a heading room to breathe when a contents link jumps
+   to it, instead of landing flush against the top of the window. */
 .block-sub-heading {
-  font-size: var(--fs-sub-heading); color: var(--heading); font-weight: 500;
+  font-family: var(--font-futura-md);
+  font-size: var(--fs-section-heading); line-height: 1.2;
+  color: var(--heading); font-weight: 500;
   max-width: var(--maxw-text); margin: 0 auto; padding: 0 20px;
+  scroll-margin-top: 30px;
+}
+/* level 2: a sub-section, grouped under the section above it — smaller type and
+   less air than a section break, so it reads as part of what precedes it */
+.block-sub-heading--sub { font-size: var(--fs-section-heading-2); }
+
+/* ---------- the air above a heading ---------- */
+/* One gap per case, supplied from exactly one place. A heading that draws a
+   dashed rule gets its air from the rule's margins (below); one that doesn't
+   takes it as its own padding here, and takes LESS of it — an empty gap reads
+   bigger than one with a rule in it, so the two are different numbers on
+   purpose (see the note by the tokens). Both subtract --gap-block because the
+   preceding block's bottom padding is already part of the measured gap.
+   A rule always means a section-sized break, so a level-2 heading that draws
+   one gets the section gap rather than the smaller sub-section gap. */
+/* resolved once on the wrapper so the heading and its rule both inherit it, and
+   so the globe panel can retune any of the gaps site-wide */
+.blk--sub-heading {
+  --section-air: var(--sub-heading-section-gap, var(--gap-section));
+  --bare-air: var(--sub-heading-section-gap-bare, var(--gap-section-bare));
+  --sub-air: var(--sub-heading-sub-gap, var(--gap-sub));
+}
+.block-sub-heading--own-air { padding-top: calc(var(--bare-air) - var(--gap-block)); }
+.block-sub-heading--sub.block-sub-heading--own-air { padding-top: calc(var(--sub-air) - var(--gap-block)); }
+/* the rule sits centred in the section gap — half the remaining air each side.
+   An explicit Divider space on the block still overrides it. */
+.blk--sub-heading .at-divider {
+  margin-top: var(--divider-space, calc((var(--section-air) - var(--gap-block) - 1px) / 2));
+  margin-bottom: var(--divider-space, calc((var(--section-air) - var(--gap-block) - 1px) / 2));
 }
 body.page-dark .block-sub-heading { color: var(--dark-text); }
+
+/* ---------- guide contents ---------- */
+/* A bordered panel at the top of a long guide, holding the auto-built list of
+   its sections. Two columns on desktop keeps 23 entries to a readable height;
+   break-inside stops a section being split from its own sub-sections. */
+.block-guide-contents { max-width: var(--maxw-text); margin: 0 auto; padding: 0 20px; }
+.contents-panel { border: 1px solid var(--card-border); border-radius: 10px; padding: 24px 30px 26px; }
+.contents-title {
+  font-family: var(--font-futura-md); color: var(--heading);
+  font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em;
+  margin: 0 0 18px;
+  /* letter-spacing trails the last letter, so pull it back to keep the label
+     optically flush with the list below it */
+  margin-right: -0.2em;
+}
+.contents-list { list-style: none; margin: 0; padding: 0; }
+.contents-list.cols-2 { columns: 2; column-gap: 44px; }
+.contents-list > li { break-inside: avoid; padding-bottom: 9px; }
+.contents-list a { color: var(--link-green); text-decoration: none; }
+.contents-list a:hover { color: var(--link-green-hover); text-decoration: underline; }
+/* sub-sections sit under their section, indented and a size down — the same
+   parent/child relationship the headings themselves now show */
+.contents-sub { list-style: none; margin: 6px 0 0; padding: 0 0 0 18px; font-size: 0.92rem; }
+.contents-sub li { padding-bottom: 6px; }
+.contents-sub li:last-child { padding-bottom: 0; }
+@media (max-width: 767px) {
+  .contents-panel { padding: 20px 22px 22px; }
+  .contents-list.cols-2 { columns: 1; }
+}
 
 .block-feature-list { max-width: var(--maxw-text); margin: 0 auto; padding: 0 20px; }
 .block-feature-list ul.bullet { list-style-type: circle; padding: 0 0 var(--feature-list-list-bottom, 20px) 40px; margin: 0; }
@@ -638,6 +760,32 @@ body.page-dark .inline-button:hover, .band .inline-button:hover { background: va
 .update-note { color: #666; }
 .update-post-link { display: inline-block; padding-top: var(--update-log-link-gap, 10px); text-decoration: underline; }
 
+/* ---------- back to top ---------- */
+/* site.js adds this only on pages long enough to need it (the Piano Keys guide
+   runs to 20,000px), and only reveals it once you have scrolled. Bottom-right,
+   diagonally clear of the drawer's fixed burger at the top left. */
+.at-top-link {
+  position: fixed; right: 25px; bottom: 25px; z-index: 9;
+  width: 42px; height: 42px; border-radius: 50%;
+  display: grid; place-items: center;
+  border: 1px solid var(--rule); background: var(--bar-bg);
+  cursor: pointer; transition: opacity 0.25s, background 0.3s;
+  opacity: 0; pointer-events: none;
+  /* it floats over the prose on a narrow screen, so the shadow is what tells
+     you it is a control sitting above the page rather than part of it */
+  box-shadow: var(--shadow-light);
+}
+.at-top-link.is-visible { opacity: 1; pointer-events: auto; }
+.at-top-link:hover { background: #fff; }
+.at-top-link svg { width: 16px; height: 16px; fill: var(--heading); display: block; }
+@media (max-width: 767px) { .at-top-link { right: 18px; bottom: 18px; } }
+
+/* anchor jumps glide rather than teleport, for anyone who hasn't asked for less
+   motion — the guides' contents links are the main beneficiary */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
 /* ---------- lightbox ---------- */
 .at-lightbox { border: 0; padding: 0; background: none; max-width: 100vw; max-height: 100vh; }
 .at-lightbox::backdrop { background: rgba(0, 0, 0, 0.9); }
@@ -653,21 +801,13 @@ body.page-dark .inline-button:hover, .band .inline-button:hover { background: va
 .at-lightbox .lightbox-close:active { background: #a1a1a1; }
 @media (max-width: 700px) { .at-lightbox img { width: 100vw; } }
 
-/* ---------- wide shell (legacy .content-text-block pages: guides, FAQ, …) ---------- */
-.page-wide .block-text, .page-wide .block-sub-heading, .page-wide .block-update-log,
-.page-wide .block-feature-image, .page-wide .block-video,
-.page-wide .at-divider { max-width: 1600px; padding-left: 160px; padding-right: 160px; }
-.page-wide .at-divider { width: calc(100% - 320px); max-width: 1280px; padding: 0; }
-/* images scale to the wide shell, as the legacy pages did (img max-width:100%) */
-.page-wide .block-feature-image { margin-left: auto; margin-right: auto; }
-.page-wide .block-feature-image .feature-img,
-.page-wide .block-video { --img-maxw: 100%; }
-.page-wide .block-video { margin-left: auto; margin-right: auto; }
-@media (max-width: 1200px) {
-  .page-wide .block-text, .page-wide .block-sub-heading, .page-wide .block-update-log,
-  .page-wide .block-feature-image, .page-wide .block-video { padding-left: 20px; padding-right: 20px; }
-  .page-wide .at-divider { width: calc(100% - 40px); max-width: none; padding: 0; }
-}
+/* The .page-wide shell that used to live here is gone. It let the guides, the
+   update logs and the info pages run their prose out to 1280px — half again
+   the comfortable reading width, and unlike every other page on the site.
+   Those pages now use the ordinary block defaults, so their text sits in the
+   same 950px column as the homepage and the blog, and their images keep
+   whatever width the block itself asks for. Nothing replaced it: the whole
+   point was to stop overriding the defaults. */
 
 /* ---------- visibility (block show option) ---------- */
 @media (max-width: 767px) { .only-desktop { display: none !important; } }

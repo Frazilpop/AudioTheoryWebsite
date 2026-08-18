@@ -20,15 +20,9 @@
 <link rel="stylesheet" href="/assets/site.css">
 
 </head>
-<body class="page-wide">
+<body class="page-light">
 
 <header class="at-header">
-  <div class="at-topbar">
-    <div class="at-topbar-inner">
-      <span class="side-text">AudioTheory Guitars – Now Available on iPad</span>
-      <a class="inline-button" href="https://apps.apple.com/us/app/audiotheory-guitars/id1492337444" data-goat-event="store-guitars-appstore-topbar" target="_blank" rel="noopener">View on App Store</a>
-    </div>
-  </div>
   <button class="nav-toggle " data-nav-toggle aria-label="Menu">
     <svg viewBox="0 0 80 74" aria-hidden="true">
       <circle class="icon-circle" cx="40" cy="37" r="30"/>
@@ -57,25 +51,44 @@
   </nav>
 </header>
 <main>
-<div class="blk blk--page-title">
-<div class="block-page-title">
-  <h1>AudioTheory Grids – User Guide</h1>
-  <hr class="title-rule">
+<div class="blk blk--log-header">
+<div class="block-log-header">
+  <h1 class="log-header-lockup">
+    <img class="log-header-logo" src="/media/site/brand/audiotheroy-grids-logo-w.svg" alt="AudioTheory Grids">
+    <span class="log-header-kicker"><span>User Guide</span></span>
+  </h1>
 </div>
 </div>
-<div class="blk blk--text">
-<div class="block-text">
-<p><a href="#getting-started">Getting Started</a><br>
-<a href="#the-grid">The Grid</a><br>
-<a href="#on-screen-piano">On-Screen Piano</a><br>
-<a href="#scales-presets-and-note-selection">Scales, Presets and Note Selection</a><br>
-<a href="#guitar-fretboard">Guitar Fretboard</a><br>
-<a href="#settings">Settings</a><br>
-    <a href="#settings-changing-the-application-colours">Settings – Changing the Application Colours</a><br>
-<a href="#audio-latency-asio-and-dsp">Audio Latency – ASIO and DSP</a><br>
-    <a href="#audio-latency-mac-linux-dsp-settings">Audio Latency – Mac/Linux DSP Settings</a><br>
-    <a href="#audio-latency-windows-the-asio4all-driver">Audio Latency – Windows &amp; the ASIO4ALL Driver</a></p>
-
+<div class="blk blk--guide-contents">
+<div class="block-guide-contents">
+  <nav class="contents-panel" aria-label="Contents">
+    <p class="contents-title">Contents</p>
+    <ol class="contents-list cols-2">
+      <li><a href="#getting-started">Getting Started</a></li>
+      <li><a href="#the-grid">The Grid</a>
+        <ul class="contents-sub">
+          <li><a href="#grid-top-bar">Top Bar</a></li>
+          <li><a href="#grid-bottom-bar">Bottom Bar</a></li>
+          <li><a href="#grid-drum-grid">Drum Grid</a></li>
+          <li><a href="#grid-number-pad">Number Pad</a></li>
+        </ul>
+      </li>
+      <li><a href="#on-screen-piano">On-Screen Piano</a></li>
+      <li><a href="#scales-presets-and-note-selection">Scales, Presets and Note Selection</a></li>
+      <li><a href="#guitar-fretboard">Guitar Fretboard</a></li>
+      <li><a href="#settings">Settings</a>
+        <ul class="contents-sub">
+          <li><a href="#settings-changing-the-application-colours">Changing the Application Colours</a></li>
+        </ul>
+      </li>
+      <li><a href="#audio-latency-asio-and-dsp">Audio Latency</a>
+        <ul class="contents-sub">
+          <li><a href="#audio-latency-mac-linux-dsp-settings">Mac/Linux DSP Settings</a></li>
+          <li><a href="#audio-latency-windows-the-asio4all-driver">Windows &amp; the ASIO4ALL Driver</a></li>
+        </ul>
+      </li>
+    </ol>
+  </nav>
 </div>
 </div>
 <div class="blk blk--feature-image">
@@ -85,9 +98,9 @@
 </div>
 </div>
 <div class="blk blk--sub-heading">
-<h2 class="block-sub-heading" id="getting-started">Getting Started</h2>
+<h2 class="block-sub-heading block-sub-heading--own-air" id="getting-started">Getting Started</h2>
 </div>
-<div class="blk blk--text">
+<div class="blk blk--guide-text">
 <div class="block-text">
 <p>You can launch AudioTheory Grids from the AudioTheory Grids.exe executable file (Windows) or AudioTheory Grids.app file (Mac OS).
 This loads up the main interface from where you can access the features detailed in this guide.</p>
@@ -113,8 +126,7 @@ This loads up the main interface from where you can access the features detailed
 </div>
 </div>
 <div class="blk blk--sub-heading">
-<hr class="at-divider">
-<h2 class="block-sub-heading" id="grid-top-bar">Grid – Top Bar</h2>
+<h3 class="block-sub-heading block-sub-heading--sub block-sub-heading--own-air" id="grid-top-bar">Top Bar</h3>
 </div>
 <div class="blk blk--feature-image">
 <div class="block-feature-image" style="--img-maxw:960px">
@@ -125,19 +137,18 @@ This loads up the main interface from where you can access the features detailed
 <div class="blk blk--text">
 <div class="block-text">
 <p>Just above the grid is a row of tools that can be used to configure and control the grid. These are (left to right) as follows:</p>
-<p><strong>Bars</strong> – select the number of bars the grid should be. This will define the horizontal size of the grid.</p>
-<p><strong>Tempo</strong> – the speed (in BPM – beats per minute) at which the grid will play. Click and drag the slider or use the plus and minus keys to adjust.</p>
-<p><strong>Play/ Pause</strong> – the play button will begin grid playback. If the grid is already running then this will instead be a pause button.</p>
-<p><strong>Stop</strong> – the grid will stop playing and the playback position will revert back to zero.</p>
-<p><strong>Up and Down arrows</strong> – these can be used to shift all grid notes up or down on the grid.</p>
-<p><strong>Clear all button</strong> – clear all girds (both the visiable grid and any others loaded) with a single button press.</p>
-<p><strong>Copy and paste buttons</strong> – copy the current grid content or paste the current content from the clipboard. Standard Command-C/V (Mac) or Control-C/V (Windows) shortcuts also work.</p>
+<p class="def"><strong>Bars</strong> – select the number of bars the grid should be. This will define the horizontal size of the grid.</p>
+<p class="def"><strong>Tempo</strong> – the speed (in BPM – beats per minute) at which the grid will play. Click and drag the slider or use the plus and minus keys to adjust.</p>
+<p class="def"><strong>Play/ Pause</strong> – the play button will begin grid playback. If the grid is already running then this will instead be a pause button.</p>
+<p class="def"><strong>Stop</strong> – the grid will stop playing and the playback position will revert back to zero.</p>
+<p class="def"><strong>Up and Down arrows</strong> – these can be used to shift all grid notes up or down on the grid.</p>
+<p class="def"><strong>Clear all button</strong> – clear all girds (both the visiable grid and any others loaded) with a single button press.</p>
+<p class="def"><strong>Copy and paste buttons</strong> – copy the current grid content or paste the current content from the clipboard. Standard Command-C/V (Mac) or Control-C/V (Windows) shortcuts also work.</p>
 
 </div>
 </div>
 <div class="blk blk--sub-heading">
-<hr class="at-divider">
-<h2 class="block-sub-heading" id="grid-bottom-bar">Grid – Bottom Bar</h2>
+<h3 class="block-sub-heading block-sub-heading--sub block-sub-heading--own-air" id="grid-bottom-bar">Bottom Bar</h3>
 </div>
 <div class="blk blk--feature-image">
 <div class="block-feature-image" style="--img-maxw:960px">
@@ -148,14 +159,13 @@ This loads up the main interface from where you can access the features detailed
 <div class="blk blk--text">
 <div class="block-text">
 <p>Below the grid is a second row of options. The tools on the left are for configuring note and drum grids whilst the tools on the right are for recording a composition.</p>
-<p><strong>Note/ Drum Grids</strong> – press either 'notes' or 'drums' to view the corresponding grid. Each can be configured independently and then both will play in sync. There are also options here to mute or clear an individual grid, as well as plus/ minus buttons to cycle between the different instrument presets.</p>
-<p><strong>Recording</strong> – press the 'start recording' button to record your composition. Once complete, press the 'pause recording' button. This brings up options to either save (as a .WAV file) or clear the current recording.</p>
+<p class="def"><strong>Note/ Drum Grids</strong> – press either 'notes' or 'drums' to view the corresponding grid. Each can be configured independently and then both will play in sync. There are also options here to mute or clear an individual grid, as well as plus/ minus buttons to cycle between the different instrument presets.</p>
+<p class="def"><strong>Recording</strong> – press the 'start recording' button to record your composition. Once complete, press the 'pause recording' button. This brings up options to either save (as a .WAV file) or clear the current recording.</p>
 
 </div>
 </div>
 <div class="blk blk--sub-heading">
-<hr class="at-divider">
-<h2 class="block-sub-heading" id="grid-drum-grid">Grid – Drum Grid</h2>
+<h3 class="block-sub-heading block-sub-heading--sub block-sub-heading--own-air" id="grid-drum-grid">Drum Grid</h3>
 </div>
 <div class="blk blk--feature-image">
 <div class="block-feature-image" style="--img-maxw:960px">
@@ -170,8 +180,7 @@ This loads up the main interface from where you can access the features detailed
 </div>
 </div>
 <div class="blk blk--sub-heading">
-<hr class="at-divider">
-<h2 class="block-sub-heading" id="grid-number-pad">Grid – Number Pad</h2>
+<h3 class="block-sub-heading block-sub-heading--sub block-sub-heading--own-air" id="grid-number-pad">Number Pad</h3>
 </div>
 <div class="blk blk--feature-image">
 <div class="block-feature-image" style="--img-maxw:960px">
@@ -183,14 +192,14 @@ This loads up the main interface from where you can access the features detailed
 <div class="block-text">
 <p>The number pad can be toggled using the dotted grid icon on the right hand side of the screen.</p>
 <p>The options here can be used to create multiple grids and configure how these are cycled through. The layout is built to resemble that of a keyboard number pad – if you have one of these you can use the keys to quickly control these settings.</p>
-<p><strong>Plus/ minus</strong> – use the plus and minus buttons to add more numbers to the pad. Each number corresponds to a new grid that can be configured.</p>
-<p><strong>Numbers 0–9</strong> – press a number to load up the desired grid.</p>
-<p><strong>Return</strong> – number pad shortcut for play/ pause functionality.</p>
-<p><strong>Pediod/ full stop</strong> – number pad shortcut for stop functionality.</p>
-<p><strong>Del</strong> – clear the current grid only (note: this is not the same as the 'clear all' button which will clear all grids).</p>
-<p><strong>Asterisk (*)</strong> – shortcut for recording.</p>
-<p><strong>C</strong> – toggle 'copy' mode. When this is active (the c button has a pink square around it) new grids made with the plus button are duplications of the previous grid. When this is turned off, new grids start out completely blank.</p>
-<p><strong>Double arrow</strong> – toggle 'cycle playback' mode. When this is active (the button has a pink square around it) the grids are sequentially cycled through. When this is turned off, the current grid loops around on itself.</p>
+<p class="def"><strong>Plus/ minus</strong> – use the plus and minus buttons to add more numbers to the pad. Each number corresponds to a new grid that can be configured.</p>
+<p class="def"><strong>Numbers 0–9</strong> – press a number to load up the desired grid.</p>
+<p class="def"><strong>Return</strong> – number pad shortcut for play/ pause functionality.</p>
+<p class="def"><strong>Pediod/ full stop</strong> – number pad shortcut for stop functionality.</p>
+<p class="def"><strong>Del</strong> – clear the current grid only (note: this is not the same as the 'clear all' button which will clear all grids).</p>
+<p class="def"><strong>Asterisk (*)</strong> – shortcut for recording.</p>
+<p class="def"><strong>C</strong> – toggle 'copy' mode. When this is active (the c button has a pink square around it) new grids made with the plus button are duplications of the previous grid. When this is turned off, new grids start out completely blank.</p>
+<p class="def"><strong>Double arrow</strong> – toggle 'cycle playback' mode. When this is active (the button has a pink square around it) the grids are sequentially cycled through. When this is turned off, the current grid loops around on itself.</p>
 
 </div>
 </div>
@@ -207,10 +216,10 @@ This loads up the main interface from where you can access the features detailed
 <div class="blk blk--text">
 <div class="block-text">
 <p>The on-screen piano accepts input from any of the following sources:</p>
-<p><strong>Mouse</strong> – click on the desired key to play it.</p>
-<p><strong>Keyboard</strong> – press the 'keyboard' button to register QWERTY input from your computer keyboard.
+<p class="def"><strong>Mouse</strong> – click on the desired key to play it.</p>
+<p class="def"><strong>Keyboard</strong> – press the 'keyboard' button to register QWERTY input from your computer keyboard.
 There are two input modes labeled '1' and '2'. In mode 1, a single octave is split across two keyboard rows. In mode 2, all the piano keys are sequentially mapped across the keyboard.</p>
-<p><strong>MIDI</strong> – connect an external MIDI device for full control of the keyboard. Note: you will need to sync up the onscreen octave value to the octave on your device for accurate input.</p>
+<p class="def"><strong>MIDI</strong> – connect an external MIDI device for full control of the keyboard. Note: you will need to sync up the onscreen octave value to the octave on your device for accurate input.</p>
 <p>Using the buttons just above the keyboard you can select the instrument used for sound output as well as the current octave. There are also options to display or hide the keyboard note overlay as well as a 'lock to scale' feature where only notes selected in the scale will give audio feedback.</p>
 <p>Play notes on the keyboard using any of the above input methods for visual and audio highlighting across the application relative to the applied settings. By default the piano keys highlight the corresponding row on the note grid. This can be configured in the application settings.</p>
 
@@ -307,8 +316,7 @@ The 'scale' button provides preset options for using a standard piano scale.</p>
 </div>
 </div>
 <div class="blk blk--sub-heading">
-<hr class="at-divider">
-<h2 class="block-sub-heading" id="settings-changing-the-application-colours">Settings – Changing the Application Colours</h2>
+<h3 class="block-sub-heading block-sub-heading--sub block-sub-heading--own-air" id="settings-changing-the-application-colours">Changing the Application Colours</h3>
 </div>
 <div class="blk blk--text">
 <div class="block-text">
@@ -327,9 +335,9 @@ The 'scale' button provides preset options for using a standard piano scale.</p>
 </div>
 <div class="blk blk--sub-heading">
 <hr class="at-divider">
-<h2 class="block-sub-heading" id="audio-latency-asio-and-dsp">Audio Latency – ASIO and DSP</h2>
+<h2 class="block-sub-heading" id="audio-latency-asio-and-dsp">Audio Latency</h2>
 </div>
-<div class="blk blk--text">
+<div class="blk blk--guide-text">
 <div class="block-text">
 <p>Audio latency is the amount of time it takes for the computer to process and play audio. There are features in AudioTheory Grids which simulate the playback of an instrument in real-time and what this means is that a delay of even a few milliseconds can be noticeable and undesirable.</p>
 <p>To optimise response times, AudioTheory Grids comes with some platform-specific options, as Mac/Linux and Windows handle audio differently.</p>
@@ -337,29 +345,42 @@ The 'scale' button provides preset options for using a standard piano scale.</p>
 </div>
 </div>
 <div class="blk blk--sub-heading">
-<hr class="at-divider">
-<h2 class="block-sub-heading" id="audio-latency-mac-linux-dsp-settings">Audio Latency – Mac/Linux DSP Settings</h2>
+<h3 class="block-sub-heading block-sub-heading--sub block-sub-heading--own-air" id="audio-latency-mac-linux-dsp-settings">Mac/Linux DSP Settings</h3>
 </div>
-<div class="blk blk--text">
+<div class="blk blk--guide-text">
 <div class="block-text">
 <p>On Mac and Linux the built-in audio drivers are able to support low latencies out-of-the-box. This means you are unlikley to have latency issues with the default settings, however there is still a DSP buffer size that can be configured in the options. A lower DSP value means less latency, however this requires more CPU power. If the DSP is set too low for the computer to handle then this will typically result in audio glitches such as pops and clicks.</p>
-<p>The DSP value can be set using the dropdown here in the options.</p>
-<p>To get the best result may require a bit of trial and error. Essentially you want to have the buffer set to as lower value as possible without audio playback glitching or containing artefacts. For many modern computers you will be able to set this all the way down to the smallest (fastest) value, 32kbps.</p>
+
+</div>
+</div>
+<div class="blk blk--guide-text">
+<div class="block-text">
+<p>The DSP value can be set using the dropdown in the options.</p>
+<p>To get the best results you want to set the buffer to as lower value as possible without audio playback glitching or containing artefacts. For many modern computers you will be able to set this all the way down to the smallest (fastest) value, 32kbps.</p>
 
 </div>
 </div>
 <div class="blk blk--sub-heading">
-<hr class="at-divider">
-<h2 class="block-sub-heading" id="audio-latency-windows-the-asio4all-driver">Audio Latency – Windows &amp; the ASIO4ALL Driver</h2>
+<h3 class="block-sub-heading block-sub-heading--sub block-sub-heading--own-air" id="audio-latency-windows-the-asio4all-driver">Windows &amp; the ASIO4ALL Driver</h3>
 </div>
-<div class="blk blk--text">
+<div class="blk blk--guide-text">
 <div class="block-text">
-<p>On Windows the ASIO4ALL driver can be used to achieve ultra low latencies. Most DAWs require the use of an ASIO driver, and whilst it is optional for AudioTheory Guitars, it's recommended for better performance over the built-in Windows driver.</p>
+<p>On Windows the ASIO4ALL driver can be used to achieve ultra low latencies. Most DAWs require the use of an ASIO driver, and whilst it is optional for AudioTheory Grids, it's recommended for better performance over the built-in Windows driver.</p>
 <p>You can download and install this driver for free from the ASIO4ALL website here:</p>
 <p><a href="https://www.asio4all.org/">https://www.asio4all.org/</a></p>
 <p>Once it's installed, load up AudioTheory Grids (if it was open prior to the install you will need to close it and open it up again) and you will be able to swap between the ASIO driver and the built-in driver in the application settings. Any changes made here will require the application to be restarted to take effect.</p>
+
+</div>
+</div>
+<div class="blk blk--guide-text">
+<div class="block-text">
 <p>When using the ASIO4ALL driver, there are elements of the configuration (notably the output device and the DSP buffer size) that are controlled in the ASIO4ALL settings, not the AudioTheory Grids settings. These can be opened up by pressing the 'config.' button which appears next to the dropdown when the ASIO driver is in use.</p>
-<p>It's worth noting that ASIO4ALL requires a dedicated stream for audio output, meaning other applications cannot output audio at the same time when it's in use. You can always swap back to the built-in driver in the settings, and increased latency times may not be an issue depending on how you are using the application.</p>
+
+</div>
+</div>
+<div class="blk blk--guide-text">
+<div class="block-text">
+<p>ASIO4ALL requires a dedicated stream for audio output, which means that other applications cannot output audio at the same time when it's in use. You can always swap back to the built-in driver in the settings, and increased latency times may not be an issue depending on how you are using the application.</p>
 
 </div>
 </div>
