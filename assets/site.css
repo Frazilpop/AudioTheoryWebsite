@@ -489,11 +489,16 @@ body.page-dark .block-sub-heading { color: var(--dark-text); }
 .at-frame--window .tl-g { background: #28c840; box-shadow: inset 0 0 0 0.5px #1eab29; }
 .at-frame--window .window-shot { display: block; width: 100%; }
 /* the monitor artwork overlays the screenshot: the shot rect matches the
-   PNG's transparent 16:9 screen (x 71-1667, y 38-934 of 1741x1235), grown a
-   hair on every side so its edges tuck under the bezel */
+   PNG's transparent screen, measured by flood fill as x 71-1667, y 38-934 of
+   1741x1235 — i.e. left 4.078%, right 95.807%, top 3.077%, bottom 75.708%.
+   The rect below grows that by ~0.5px per side at a 1100px render width so the
+   shot's edges tuck under the bezel. Keep the grow at half a pixel: it fits
+   inside the bezel's own 1px antialiased inner edge, so nothing visible is
+   lost, while an exact fit leaks up to 0.5px of page background as a hairline
+   seam on some widths. The old 3.95%/2.95%/92%/73% hid 1.5-2px of the shot. */
 .at-frame--monitor { position: relative; }
 .at-frame--monitor .monitor-bezel { position: relative; display: block; width: 100%; pointer-events: none; }
-.at-frame--monitor .monitor-shot { position: absolute; left: 3.95%; top: 2.95%; width: 92%; height: 73%; object-fit: cover; }
+.at-frame--monitor .monitor-shot { position: absolute; left: 4.03%; top: 3.01%; width: 91.82%; height: 72.76%; object-fit: cover; }
 
 .block-video { padding: 0 15px; margin: 0 auto; max-width: min(var(--img-maxw, 960px), 100%); }
 .iframe-container { overflow: hidden; padding-top: 56.3%; position: relative; box-shadow: var(--shadow); }
