@@ -45,7 +45,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 500; }
 /* dark product pages */
 body.page-dark { background: var(--dark-bg); color: var(--dark-text); font-family: 'futura-light', 'Nunito', Arial, sans-serif; }
 
-/* ---------- header: promo bar ---------- */
+/* ---------- header: wordmark + promo bar ---------- */
 .at-topbar {
   height: 60px;
   padding: 10px 0;
@@ -55,10 +55,12 @@ body.page-dark { background: var(--dark-bg); color: var(--dark-text); font-famil
   align-items: center;
   width: 100%;
 }
-.at-topbar-inner { margin-left: auto; margin-right: 40px; display: flex; align-items: center; gap: 5px; }
+.at-topbar-inner { margin-left: auto; margin-right: 40px; display: flex; align-items: center; gap: 5px; min-width: 0; }
 .at-topbar .inline-button { margin-bottom: 0; }
-.at-topbar .side-text { padding-right: 5px; }
-@media (max-width: 767px) { .at-topbar { display: none; } }
+/* the strapline is the one elastic thing in the bar: min-width:0 lets it shrink
+   past its own content, so a long line ellipses at a narrow window instead of
+   shouldering the buttons off the edge */
+.at-topbar .side-text { padding-right: 5px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /* dark sticky variant (product pages) */
 body.page-dark .at-topbar {
@@ -74,12 +76,6 @@ body.page-dark .at-topbar {
 body.page-dark main { padding-top: 95px; }
 body.page-dark main:has(> .band:first-child) { padding-top: 60px; }
 body.page-dark main > .band:first-child { padding-top: 35px; }
-@media (max-width: 767px) {
-  /* no topbar on phones — the band runs to the very top of the page */
-  body.page-dark main { padding-top: 45px; }
-  body.page-dark main:has(> .band:first-child) { padding-top: 0; }
-  body.page-dark main > .band:first-child { padding-top: 45px; }
-}
 .at-topbar .badge-link img { display: block; width: 156px; height: 40px; }
 .at-topbar .steam-pill {
   display: inline-block; padding: 8px 17px 10px;
@@ -87,6 +83,31 @@ body.page-dark main > .band:first-child { padding-top: 35px; }
   color: var(--btn-dark-text); text-decoration: none; margin: 0 10px;
 }
 .steam-logo { width: 20px; height: 20px; margin-left: 5px; position: relative; bottom: 2px; vertical-align: middle; }
+
+/* ---- the phone bar ----
+   This bar used to be display:none below 767px, which left a phone with
+   nothing to buy from on any page. It stays now, as short as the button in it
+   allows and stripped to just that button — Steam on a product page or
+   article, "All software" everywhere else. The strapline and any second button
+   drop. Short matters: these pages open on their big logo, and every pixel of
+   bar pushes that logo down the screen.
+   The .at-topbar prefixes are load-bearing: they outrank the plain
+   .inline-button rules further down the file, which turn a button into a
+   full-width block at 480px. */
+@media (max-width: 767px) {
+  .at-topbar { height: 46px; padding: 4px 0; }
+  .at-topbar-inner { margin-right: 12px; }
+  .at-topbar .side-text { display: none; }
+  .at-topbar .promo-btn:not(.is-primary) { display: none; }
+  .at-topbar .inline-button { display: inline-block; padding: 5px 12px; margin: 0; font-size: 14px; }
+  .at-topbar .steam-pill { padding: 5px 12px 7px; margin: 0; font-size: 14px; }
+  .at-topbar .badge-link img { width: 117px; height: 30px; }
+  /* the band clears the fixed bar and little else, so the logo it opens on
+     sits back where it did before the bar existed */
+  body.page-dark main { padding-top: 76px; }
+  body.page-dark main:has(> .band:first-child) { padding-top: 46px; }
+  body.page-dark main > .band:first-child { padding-top: 12px; }
+}
 
 /* ---------- off-canvas drawer nav ---------- */
 .nav-toggle {
@@ -362,9 +383,33 @@ body.nav-open { overflow: hidden; }
 @media (max-width: 767px) { .log-header-kicker { gap: 14px; max-width: 340px; } }
 
 .block-article-title { text-align: center; }
-.block-article-title h2 { font-size: var(--fs-article-title); line-height: 40px; }
-.block-article-title .main-title { font-weight: 600; }
-@media (max-width: 767px) { .block-article-title { text-align: left; padding-left: 20px; } }
+.block-article-title h2 { font-size: var(--fs-article-title); line-height: 40px; margin: 0; }
+.block-article-title .main-title { display: block; font-weight: 600; }
+/* the second line ("Version 3.0.0 Update") is the log-header kicker's motif at
+   article scale: tracked caps between two hairlines. Rules and text draw from
+   currentColor so the lockup works unchanged on light and dark pages. */
+.article-subtitle {
+  display: flex; align-items: center; justify-content: center;
+  gap: 16px; max-width: 460px; margin: 10px auto 0;
+}
+.article-subtitle::before, .article-subtitle::after {
+  content: ''; flex: 1; height: 1px; background: currentColor; opacity: .35;
+}
+.article-subtitle > span {
+  font-family: var(--font-futura-md); font-weight: 500;
+  font-size: clamp(13px, 3.2vw, 16px); line-height: 1.4;
+  text-transform: uppercase; letter-spacing: .24em;
+  /* letter-spacing trails the last letter — pull it back so the words sit
+     optically centred between the hairlines */
+  margin-right: -.24em;
+  opacity: .8;
+}
+@media (max-width: 767px) {
+  .block-article-title { text-align: left; padding-left: 20px; padding-right: 20px; }
+  /* left-aligned lockup on phones: the kicker keeps only its trailing rule */
+  .article-subtitle { justify-content: flex-start; margin-left: 0; max-width: none; }
+  .article-subtitle::before { display: none; }
+}
 
 .block-text { padding: 0 20px; max-width: var(--maxw-text); line-height: 1.45rem; font-size: 1rem; margin: 0 auto; }
 .block-text p { margin: 0 0 var(--text-para-gap, 1.45rem); }
@@ -608,14 +653,77 @@ body.page-dark .inline-button, .band .inline-button {
   border: .5px solid var(--btn-dark-border); color: var(--btn-dark-text);
 }
 body.page-dark .inline-button:hover, .band .inline-button:hover { background: var(--btn-dark-hover); }
-.block-store-buttons .badge-link img { display: inline-block; width: 156px; height: 40px; vertical-align: middle; margin: 0 10px 10px; }
-/* the space between one store button/badge and the next — same 10px the shared
-   .inline-button and .badge-link img rules above set, now as one editable knob */
-.block-store-buttons .inline-button,
-.block-store-buttons .badge-link img {
-  margin: 0 var(--store-buttons-button-gap, 10px) var(--store-buttons-button-gap, 10px);
+/* ---- the store CTAs: one row, three boxes, one size ----
+   The row is a flex line rather than inline-blocks on a text baseline. That was
+   what pushed everything out of true: the items were vertical-align:middle on a
+   line box, so they sat at three different heights, and the newlines between
+   them in the markup rendered as extra word-spacing that the margins then added
+   to unevenly. A flex row with a real gap lines them up on one centre and makes
+   the space between them exactly the gap and nothing else.
+   Every item is the same box: same width, same height, same outline. The width
+   comes from the App Store badge, the one item whose proportions are fixed —
+   195px is what Apple's 156:40 artwork measures at the shared 50px height, so
+   matching it means nothing has to be stretched. */
+.block-store-buttons .inline-button-container {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  gap: max(20px, var(--store-buttons-button-gap, 10px));
 }
+.block-store-buttons .inline-button,
+.block-store-buttons .badge-link,
+.block-store-buttons .steam-lockup {
+  display: inline-flex; align-items: center; justify-content: center;
+  box-sizing: border-box; width: 195px; height: 50px; margin: 0; padding: 0 16px;
+}
+/* Our two boxes borrow Apple's corner so the three read as one set. Their badge
+   artwork rounds at 8.44 of its 40 units tall, which is 10.5px once it is drawn
+   at the row's 50px — the site's usual 4px button looked square beside it. */
+.block-store-buttons .inline-button { border-radius: 10.5px; }
+/* A text button in this row sits between two wordmarks — "STEAM" and "Mac App
+   Store" — and 16px Nunito went limp between them. Tracked futura-medium caps
+   instead: it is the site's own display face (headings, card titles, the log
+   header kicker), and its geometry answers the Steam wordmark's without the
+   condensed industrial note a face like Oswald brings. The text-indent is the
+   house trick for tracked caps — letter-spacing trails the last letter too, so
+   centring lands a hair left without it. */
+.block-store-buttons .inline-button:not(.steam-lockup) {
+  font-family: var(--font-futura-md);
+  font-size: 15px; text-transform: uppercase;
+  letter-spacing: .08em; text-indent: .08em;
+}
+/* Apple's badge is its own frame, so it keeps its own edge and fills the box */
+.block-store-buttons .badge-link { padding: 0; }
+.block-store-buttons .badge-link img { display: block; width: auto; height: 50px; margin: 0; }
+/* The Steam logo in a button, at the site's own outline rather than Valve's bare
+   logo. Note this is a deliberate departure from the brand guidelines, which say
+   the logo must stand alone and may not be combined with design features, and
+   set a 50px floor on its on-screen height — boxed and scaled to fit a 50px
+   button it lands at 34px. Both colourways are still Valve's own artwork,
+   unaltered and unstretched (positive r0 g0 b0, inverse r255 g255 b255): the
+   positive shows on the light grey page, the inverse takes over inside a band or
+   on a dark product page. */
+.block-store-buttons .steam-lockup img { display: block; width: auto; height: 34px; }
+.block-store-buttons .steam-lockup .logo-inverse { display: none; }
+body.page-dark .block-store-buttons .steam-lockup .logo-positive,
+.band .block-store-buttons .steam-lockup .logo-positive { display: none; }
+body.page-dark .block-store-buttons .steam-lockup .logo-inverse,
+.band .block-store-buttons .steam-lockup .logo-inverse { display: block; }
+/* The Steam button fills dark rather than taking the row's light blue: the mark
+   inverts to white on hover, and white artwork wants a dark field under it.
+   Steam's own store navy, so the one moment the button carries a colour it is
+   Steam's. Four classes to outrank the body.page-dark / .band hover further up. */
+.block-store-buttons .inline-button.steam-lockup:hover { background: #1b2838; }
+.block-store-buttons .inline-button.steam-lockup:active { background: #24354a; }
+.block-store-buttons .steam-lockup:hover .logo-positive { display: none; }
+.block-store-buttons .steam-lockup:hover .logo-inverse { display: block; }
 @media (max-width: 480px) { .inline-button { display: block; margin: 0 10px 10px; } }
+/* On a phone the same three boxes stack into a column, one width, one height —
+   the row rule above already sized them, so this only turns the line. */
+@media (max-width: 480px) {
+  .block-store-buttons .inline-button-container { flex-direction: column; width: 220px; margin: 0 auto; }
+  .block-store-buttons .inline-button,
+  .block-store-buttons .badge-link,
+  .block-store-buttons .steam-lockup { width: 100%; }
+}
 
 /* ---------- promo cards (Our Software) ---------- */
 .block-promo-cards { padding: 0 15px; }
@@ -638,6 +746,23 @@ body.page-dark .inline-button:hover, .band .inline-button:hover { background: va
    display:block, and a block child's bottom margin collapses straight out of
    the card — leaving the button flush against the shadow on phones only. */
 .block-promo-cards .inline-button { margin: var(--promo-cards-button-gap, 15px) 10px 0; }
+/* the block's "Text link with an arrow" style. It reuses the carousel's
+   read-more lockup (.read-more-arrow + .more-text), so there is one drawing and
+   one spacing for "go and read this" across the site — but centred, since the
+   card is, and taking the same --promo-cards-button-gap above it as the button
+   it replaces, so switching styles does not move anything else on the card. */
+.block-promo-cards .promo-more {
+  display: inline-block; margin: var(--promo-cards-button-gap, 15px) 10px 0;
+  text-decoration: none; font-size: 16px;
+}
+/* the arrow sits a touch high against the centred label, and the hover rule
+   drops the underline clear of the descenders rather than through them */
+.block-promo-cards .promo-more .read-more-arrow { margin-top: -3px; }
+.block-promo-cards .promo-more:hover .more-text { text-decoration: underline; text-underline-offset: 4px; }
+body.page-dark .block-promo-cards .promo-more .arrow-circle,
+.band .block-promo-cards .promo-more .arrow-circle { fill: #e6e6e6; }
+body.page-dark .block-promo-cards .promo-more .arrow-chevron,
+.band .block-promo-cards .promo-more .arrow-chevron { fill: #2b373b; }
 @media (max-width: 767px) {
   .block-promo-cards .promo-card { margin-bottom: var(--promo-cards-gap-m, var(--promo-cards-gap, 40px)); }
 }
@@ -866,6 +991,21 @@ body.page-dark .inline-button:hover, .band .inline-button:hover { background: va
 .post-body img.img-large { width: min(760px, 100%); }
 .post-body img.img-medium { width: min(560px, 100%); }
 .post-body img.img-small { width: min(360px, 100%); }
+/* an article image inside device chrome (picked in the post editor, drawn by
+   build.js frameImages from the same markup the Image block uses). The frame is
+   what sizes now, so it takes the width class and the widths above repeat here;
+   the shot gives up its own box-shadow — .at-frame-shadow on the frame is the
+   shadow, and it hugs the chrome's silhouette. */
+.post-body .at-frame { display: block; margin: 0 auto; max-width: min(1100px, 100%); }
+.post-body .at-frame.img-large { width: min(760px, 100%); }
+.post-body .at-frame.img-medium { width: min(560px, 100%); }
+.post-body .at-frame.img-small { width: min(360px, 100%); }
+.post-body .at-frame img { box-shadow: none; }
+/* a framed clip: the frame takes over .at-video's margin and cap, so the bare
+   frame keeps the clip's vertical spacing — except inside a figure, which
+   spaces itself */
+.post-body .at-frame--video { margin: 40px auto; }
+.post-body figure .at-frame--video { margin: 0 auto; }
 .post-body .at-video { max-width: min(1100px, 100%); margin: 40px auto; }
 /* captioned media: the post editor wraps a captioned image or clip in a raw
    <figure> (see site.js postFigureImg) — spaced like an uncaptioned one */

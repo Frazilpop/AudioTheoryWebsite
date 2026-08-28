@@ -4,6 +4,13 @@
   <link>https://audiotheory.co/updates/</link>
   <description>Music theory tools for guitar and piano</description>
   <item>
+    <title>AudioTheory Grids 3.0.0</title>
+    <link>https://audiotheory.co/updates/audiotheory-grids-3-0-0-update/</link>
+    <guid>https://audiotheory.co/updates/audiotheory-grids-3-0-0-update/</guid>
+    <pubDate>Sun, 23 Aug 2026 09:00:00 GMT</pubDate>
+    <description>A big new update for AudioTheory Grids.</description>
+  </item>
+  <item>
     <title>AudioTheory Piano Keys Version 3.0.0 Update</title>
     <link>https://audiotheory.co/updates/audiotheory-piano-keys-version-3/</link>
     <guid>https://audiotheory.co/updates/audiotheory-piano-keys-version-3/</guid>
@@ -135,12 +142,5 @@
     <guid>https://audiotheory.co/updates/audio-theory-grids-release/</guid>
     <pubDate>Fri, 25 Sep 2020 09:00:00 GMT</pubDate>
     <description>AudioTheory Grids releases on Steam, Mac App Store and direct today.</description>
-  </item>
-  <item>
-    <title>AudioTheory Guitars 1.12.0 – Scale Based Highlighting Update</title>
-    <link>https://audiotheory.co/updates/scale-based-highlighting-update/</link>
-    <guid>https://audiotheory.co/updates/scale-based-highlighting-update/</guid>
-    <pubDate>Sat, 05 Sep 2020 09:00:00 GMT</pubDate>
-    <description>The colour coding system is extended to the black keys with scale based highlighting.</description>
   </item>
 </channel></rss>
