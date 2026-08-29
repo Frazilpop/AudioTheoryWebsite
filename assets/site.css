@@ -96,11 +96,14 @@ body.page-dark main > .band:first-child { padding-top: 35px; }
 
 /* ---- the phone bar ----
    This bar used to be display:none below 767px, which left a phone with
-   nothing to buy from on any page. It stays now, as short as the button in it
-   allows and stripped to just that button — Steam on a product page or
-   article, "All software" everywhere else. The strapline and any second button
-   drop. Short matters: these pages open on their big logo, and every pixel of
-   bar pushes that logo down the screen.
+   nothing to buy from on any page. It stays now, as short as its buttons allow
+   and stripped to them — the strapline drops, the buttons do not: a product
+   page's bar carries Steam AND the App Store badge here exactly as it does on
+   a desktop, because the phone is where the App Store link matters most and
+   hiding it left half the ways to buy off the page. Two 117px boxes, the gap
+   and the margins clear a 320px screen with room over. Short matters: these
+   pages open on their big logo, and every pixel of bar pushes that logo down
+   the screen.
    The .at-topbar prefixes are load-bearing: they outrank the plain
    .inline-button rules further down the file, which turn a button into a
    full-width block at 480px. */
@@ -108,12 +111,14 @@ body.page-dark main > .band:first-child { padding-top: 35px; }
   .at-topbar { height: 46px; padding: 4px 0; }
   .at-topbar-inner { margin-right: 12px; }
   .at-topbar .side-text { display: none; }
-  .at-topbar .promo-btn:not(.is-primary) { display: none; }
   .at-topbar .inline-button { display: inline-block; padding: 5px 12px; margin: 0; font-size: 14px; }
   /* after the .inline-button rule above on purpose: same specificity, so
      source order is what keeps the lockup its own box rather than that rule's
-     padded text button. Sized off the badge again, 117x30 to its 117x30. */
-  .at-topbar .steam-lockup { width: 117px; height: 30px; margin: 0; padding: 0 10px; border-radius: 6.3px; }
+     padded text button. Sized off the badge again, 117x30 to its 117x30.
+     display is part of that: the lockup centres Valve's artwork in its box with
+     flex, and inheriting the text button's inline-block instead left the logo
+     jammed against the left edge and riding high in a box half empty. */
+  .at-topbar .steam-lockup { display: inline-flex; width: 117px; height: 30px; margin: 0 6px 0 0; padding: 0 10px; border-radius: 6.3px; }
   .at-topbar .steam-lockup img { height: 20px; }
   .at-topbar .badge-link img { width: 117px; height: 30px; }
   /* the band clears the fixed bar and little else, so the logo it opens on
@@ -783,13 +788,24 @@ body.page-dark .steam-lockup .logo-inverse,
 .steam-lockup:hover .logo-inverse { display: block; }
 .store-row .steam-lockup img { height: 34px; }
 @media (max-width: 480px) { .inline-button { display: block; margin: 0 10px 10px; } }
-/* On a phone the same three boxes stack into a column, one width, one height —
-   the row rule above already sized them, so this only turns the line. */
+/* On a phone the same three boxes stack into a column, one width, one height.
+   The column is 195px for the same reason the desktop row's boxes are: that is
+   what Apple's 156:40 artwork measures at the shared 50px height, so the badge
+   fills its box exactly and the two outlined boxes beside it match it edge for
+   edge. The column used to be 220px, which no badge can fill — it left Apple's
+   box visibly 25px narrower than the Steam and Purchase Direct boxes under it.
+   Widening the badge to fit instead is not an option: stretching the artwork is
+   the one thing Apple's guidelines are unambiguous about, and it is what a
+   promo card's row was quietly doing to it inside its padding.
+   The badge is sized off the box here rather than off its own height — one
+   fewer place for the 195 and the 50 to disagree by a rounding hair, which at
+   width:auto had it shrink-fitting by .1px inside its own box. */
 @media (max-width: 480px) {
-  .store-row { flex-direction: column; width: 220px; margin: 0 auto; }
+  .store-row { flex-direction: column; width: 195px; margin: 0 auto; }
   .store-row .inline-button,
   .store-row .badge-link,
   .store-row .steam-lockup { width: 100%; }
+  .store-row .badge-link img { width: 100%; height: auto; }
 }
 
 /* ---------- App Store card ----------
@@ -934,6 +950,13 @@ body.page-dark .block-promo-cards .store-lead,
 .band .block-promo-cards .store-lead { color: var(--dark-body); }
 /* the row is edge-to-edge in a card that has no side padding of its own */
 .block-promo-cards .promo-store .store-row { padding: 0 20px; }
+/* Once the row is a phone's column it drops that padding again: the column is
+   already a fixed 195px centred inside the card, and the padding would only eat
+   into the one width all three boxes share — which is what used to squeeze
+   Apple's badge to 180px and stretch its artwork to fill. Down here rather than
+   in the column's own media block above because that block comes earlier in the
+   file and these two selectors weigh the same. */
+@media (max-width: 480px) { .block-promo-cards .promo-store .store-row { padding: 0; } }
 /* The divider between the card's two halves — what the app is above it, where
    to buy it below. It takes the BUTTON row's width, not the card's: 3 x 195px
    plus the row's two 20px gaps is 625px, so the line lands exactly on the outer
