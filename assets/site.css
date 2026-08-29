@@ -77,12 +77,22 @@ body.page-dark main { padding-top: 95px; }
 body.page-dark main:has(> .band:first-child) { padding-top: 60px; }
 body.page-dark main > .band:first-child { padding-top: 35px; }
 .at-topbar .badge-link img { display: block; width: 156px; height: 40px; }
-.at-topbar .steam-pill {
-  display: inline-block; padding: 8px 17px 10px;
-  background: #171515; border: .5px solid #e6e6e673; border-radius: 4px;
-  color: var(--btn-dark-text); text-decoration: none; margin: 0 10px;
+/* The bar's Steam button is the store rows' button at bar height: same outline,
+   same Valve artwork, same colourway swap — all of which lives once under the
+   store CTAs (.steam-lockup), so only the box is set here. 156x40 is Apple's
+   badge sitting beside it, and it is what the row's 195x50 box measures scaled
+   to that height, so the two read as a pair and the Steam button is the same
+   button everywhere on the site. It replaced a black pill with the word
+   "Steam" set beside our small round mark: two things the brand guidelines
+   rule out, and a black slab in an article's light bar next to a black badge.
+   The artwork lands at 27px here, further under Valve's 50px floor than the
+   store row's 34px — a 60px bar (46px on a phone) has no way to clear it, and
+   the choice is between this and no Steam link in the bar at all. */
+.at-topbar .steam-lockup {
+  box-sizing: border-box; width: 156px; height: 40px;
+  margin: 0 10px; padding: 0 14px; border-radius: 8.44px;
 }
-.steam-logo { width: 20px; height: 20px; margin-left: 5px; position: relative; bottom: 2px; vertical-align: middle; }
+.at-topbar .steam-lockup img { height: 27px; }
 
 /* ---- the phone bar ----
    This bar used to be display:none below 767px, which left a phone with
@@ -100,7 +110,11 @@ body.page-dark main > .band:first-child { padding-top: 35px; }
   .at-topbar .side-text { display: none; }
   .at-topbar .promo-btn:not(.is-primary) { display: none; }
   .at-topbar .inline-button { display: inline-block; padding: 5px 12px; margin: 0; font-size: 14px; }
-  .at-topbar .steam-pill { padding: 5px 12px 7px; margin: 0; font-size: 14px; }
+  /* after the .inline-button rule above on purpose: same specificity, so
+     source order is what keeps the lockup its own box rather than that rule's
+     padded text button. Sized off the badge again, 117x30 to its 117x30. */
+  .at-topbar .steam-lockup { width: 117px; height: 30px; margin: 0; padding: 0 10px; border-radius: 6.3px; }
+  .at-topbar .steam-lockup img { height: 20px; }
   .at-topbar .badge-link img { width: 117px; height: 30px; }
   /* the band clears the fixed bar and little else, so the logo it opens on
      sits back where it did before the bar existed */
@@ -115,6 +129,10 @@ body.page-dark main > .band:first-child { padding-top: 35px; }
   width: 40px; height: 40px; padding: 0; border: 0; background: none; cursor: pointer;
 }
 .nav-toggle svg { display: block; width: 40px; height: 40px; }
+/* the phone bar is 46px, not 60px, so the 40px icon is centred in it — at the
+   desktop top:10px it hung 4px below the bar. This lives after the base rule
+   on purpose: same specificity, so source order decides. */
+@media (max-width: 767px) { .nav-toggle { top: 3px; } }
 .nav-toggle .icon-circle { fill: #f7f7f7; }
 .nav-toggle .icon-bars { fill: #515151; }
 .nav-toggle:hover .icon-circle { fill: #d6d6d6; }
@@ -277,6 +295,7 @@ body.nav-open { overflow: hidden; }
 .blk--page-title { --mt: var(--page-title-pad-top, 40px); --mb: 20px; }
 .blk--log-header { --mt: 46px; --mb: 40px; }
 .blk--article-title { --mt: var(--article-title-pad, 25px); --mb: var(--article-title-pad, 25px); }
+.blk--rule-label { --mt: 40px; --mb: var(--rule-label-pad-bottom, 18px); }
 .blk--text, .blk--text-with-subtitle { --mb: var(--text-pad-bottom, 24px); }
 /* guide-text renders a .block-text, so it takes the text block's own spacing
    unless the globe panel gives it its own */
@@ -293,6 +312,7 @@ body.nav-open { overflow: hidden; }
 .blk--dark-feature { --mt: var(--dark-feature-pad, 40px); --mb: var(--dark-feature-pad, 40px); }
 .blk--card-pair { --mt: 30px; --mb: 50px; }
 .blk--store-buttons { --mt: var(--store-buttons-pad-top, 40px); --mb: var(--store-buttons-pad-bottom, 40px); }
+.blk--appstore-widget { --mt: var(--appstore-widget-pad-top, 40px); --mb: var(--appstore-widget-pad-bottom, 40px); }
 .blk--promo-cards { --mb: 40px; }
 .blk--news-carousel { --mb: 30px; }
 .blk--update-info { --mb: var(--update-info-pad-bottom, 24px); }
@@ -341,6 +361,38 @@ body.nav-open { overflow: hidden; }
   }
 }
 @media (max-width: 470px) { .block-section-title h2 { font-size: 1rem; } .block-section-title { padding: 0 20px; } }
+
+/* ---------- rule label ---------- */
+/* The lead-in line above a block ("ALSO AVAILABLE ON"): tracked caps with a
+   hairline running out to either side. Same motif as the log-header kicker and
+   the article subtitle, and drawn the same way — flex with two ::before/::after
+   rules taking the leftover width — but from currentColor, so one rule serves
+   the light page, a gradient band and a dark product page. */
+.block-rule-label { padding: 0 20px; }
+.rule-label {
+  display: flex; align-items: center; justify-content: center;
+  gap: var(--rule-label-gap, 16px);
+  max-width: var(--label-maxw, 460px); margin: 0 auto;
+  color: var(--heading);
+}
+.rule-label::before, .rule-label::after {
+  content: ''; flex: 1; height: 1px; background: currentColor; opacity: .35;
+}
+.rule-label > span {
+  font-family: var(--font-futura-md); font-weight: 500;
+  font-size: var(--fs-rule-label); line-height: 1.4;
+  text-transform: uppercase; letter-spacing: .24em;
+  /* letter-spacing trails the last letter too — pull it back so the words sit
+     optically centred between the hairlines rather than half a gap to the left */
+  margin-right: -.24em;
+  opacity: .8;
+}
+/* left-aligned it keeps only the trailing rule, so the text starts on the
+   page's own left edge instead of a hairline's width in */
+.block-rule-label.align-left .rule-label { justify-content: flex-start; margin-left: 0; max-width: none; }
+.block-rule-label.align-left .rule-label::before { display: none; }
+body.page-dark .rule-label, .band .rule-label { color: #fff; }
+@media (max-width: 767px) { .rule-label { gap: 12px; } }
 
 /* ---------- the stylised log/guide header ---------- */
 /* Full-bleed, and self-painting: the gradient and the note-colour strip are two
@@ -654,6 +706,12 @@ body.page-dark .inline-button, .band .inline-button {
 }
 body.page-dark .inline-button:hover, .band .inline-button:hover { background: var(--btn-dark-hover); }
 /* ---- the store CTAs: one row, three boxes, one size ----
+   .store-row is the row itself, wherever it is drawn: the Store buttons block
+   sets it, and so does a promo card with its buy links turned on. Every rule
+   below hangs off that class rather than off .block-store-buttons, so the two
+   places are the same row and cannot drift. The gap keeps the Store buttons
+   block's var name because that block is the only one with a field for it — a
+   promo card's row falls through to the 20px floor.
    The row is a flex line rather than inline-blocks on a text baseline. That was
    what pushed everything out of true: the items were vertical-align:middle on a
    line box, so they sat at three different heights, and the newlines between
@@ -664,20 +722,20 @@ body.page-dark .inline-button:hover, .band .inline-button:hover { background: va
    comes from the App Store badge, the one item whose proportions are fixed —
    195px is what Apple's 156:40 artwork measures at the shared 50px height, so
    matching it means nothing has to be stretched. */
-.block-store-buttons .inline-button-container {
+.store-row {
   display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
   gap: max(20px, var(--store-buttons-button-gap, 10px));
 }
-.block-store-buttons .inline-button,
-.block-store-buttons .badge-link,
-.block-store-buttons .steam-lockup {
+.store-row .inline-button,
+.store-row .badge-link,
+.store-row .steam-lockup {
   display: inline-flex; align-items: center; justify-content: center;
   box-sizing: border-box; width: 195px; height: 50px; margin: 0; padding: 0 16px;
 }
 /* Our two boxes borrow Apple's corner so the three read as one set. Their badge
    artwork rounds at 8.44 of its 40 units tall, which is 10.5px once it is drawn
    at the row's 50px — the site's usual 4px button looked square beside it. */
-.block-store-buttons .inline-button { border-radius: 10.5px; }
+.store-row .inline-button { border-radius: 10.5px; }
 /* A text button in this row sits between two wordmarks — "STEAM" and "Mac App
    Store" — and 16px Nunito went limp between them. Tracked futura-medium caps
    instead: it is the site's own display face (headings, card titles, the log
@@ -685,57 +743,131 @@ body.page-dark .inline-button:hover, .band .inline-button:hover { background: va
    condensed industrial note a face like Oswald brings. The text-indent is the
    house trick for tracked caps — letter-spacing trails the last letter too, so
    centring lands a hair left without it. */
-.block-store-buttons .inline-button:not(.steam-lockup) {
+.store-row .inline-button:not(.steam-lockup) {
   font-family: var(--font-futura-md);
   font-size: 15px; text-transform: uppercase;
   letter-spacing: .08em; text-indent: .08em;
 }
 /* Apple's badge is its own frame, so it keeps its own edge and fills the box */
-.block-store-buttons .badge-link { padding: 0; }
-.block-store-buttons .badge-link img { display: block; width: auto; height: 50px; margin: 0; }
-/* The Steam logo in a button, at the site's own outline rather than Valve's bare
-   logo. Note this is a deliberate departure from the brand guidelines, which say
-   the logo must stand alone and may not be combined with design features, and
-   set a 50px floor on its on-screen height — boxed and scaled to fit a 50px
-   button it lands at 34px. Both colourways are still Valve's own artwork,
-   unaltered and unstretched (positive r0 g0 b0, inverse r255 g255 b255): the
-   positive shows on the light grey page, the inverse takes over inside a band or
-   on a dark product page. */
-.block-store-buttons .steam-lockup img { display: block; width: auto; height: 34px; }
-.block-store-buttons .steam-lockup .logo-inverse { display: none; }
-body.page-dark .block-store-buttons .steam-lockup .logo-positive,
-.band .block-store-buttons .steam-lockup .logo-positive { display: none; }
-body.page-dark .block-store-buttons .steam-lockup .logo-inverse,
-.band .block-store-buttons .steam-lockup .logo-inverse { display: block; }
-/* The Steam button fills dark rather than taking the row's light blue: the mark
-   inverts to white on hover, and white artwork wants a dark field under it.
-   Steam's own store navy, so the one moment the button carries a colour it is
-   Steam's. Four classes to outrank the body.page-dark / .band hover further up. */
-.block-store-buttons .inline-button.steam-lockup:hover { background: #1b2838; }
-.block-store-buttons .inline-button.steam-lockup:active { background: #24354a; }
-.block-store-buttons .steam-lockup:hover .logo-positive { display: none; }
-.block-store-buttons .steam-lockup:hover .logo-inverse { display: block; }
+.store-row .badge-link { padding: 0; }
+.store-row .badge-link img { display: block; width: auto; height: 50px; margin: 0; }
+/* ---- the Steam button, wherever it is drawn ----
+   Everything below hangs off .steam-lockup alone rather than off .store-row, so
+   the store rows and the promo bar at the top of a product page or an article
+   carry one button that can only be restyled in one place. Each context sets
+   its own box — size, padding, corner, and the height of the artwork in it —
+   and nothing else.
+   The Steam logo sits in the site's own outline rather than standing bare. Note
+   this is a deliberate departure from the brand guidelines, which say the logo
+   must stand alone and may not be combined with design features, and set a 50px
+   floor on its on-screen height — boxed and scaled to fit a 50px button it lands
+   at 34px. Both colourways are still Valve's own artwork, unaltered and
+   unstretched (positive r0 g0 b0, inverse r255 g255 b255): the positive shows on
+   the light grey page, the inverse takes over inside a band or on a dark product
+   page. */
+.steam-lockup { display: inline-flex; align-items: center; justify-content: center; }
+.steam-lockup img { display: block; width: auto; }
+.steam-lockup .logo-inverse { display: none; }
+body.page-dark .steam-lockup .logo-positive,
+.band .steam-lockup .logo-positive { display: none; }
+body.page-dark .steam-lockup .logo-inverse,
+.band .steam-lockup .logo-inverse { display: block; }
+/* The Steam button fills dark rather than taking the site's light blue hover:
+   the mark inverts to white on hover, and white artwork wants a dark field
+   under it. Steam's own store navy, so the one moment the button carries a
+   colour it is Steam's. Two classes to outrank the body.page-dark / .band
+   hover further up. */
+.inline-button.steam-lockup:hover { background: #1b2838; }
+.inline-button.steam-lockup:active { background: #24354a; }
+.steam-lockup:hover .logo-positive { display: none; }
+.steam-lockup:hover .logo-inverse { display: block; }
+.store-row .steam-lockup img { height: 34px; }
 @media (max-width: 480px) { .inline-button { display: block; margin: 0 10px 10px; } }
 /* On a phone the same three boxes stack into a column, one width, one height —
    the row rule above already sized them, so this only turns the line. */
 @media (max-width: 480px) {
-  .block-store-buttons .inline-button-container { flex-direction: column; width: 220px; margin: 0 auto; }
-  .block-store-buttons .inline-button,
-  .block-store-buttons .badge-link,
-  .block-store-buttons .steam-lockup { width: 100%; }
+  .store-row { flex-direction: column; width: 220px; margin: 0 auto; }
+  .store-row .inline-button,
+  .store-row .badge-link,
+  .store-row .steam-lockup { width: 100%; }
+}
+
+/* ---------- App Store card ----------
+   Apple has no embeddable widget, so the card is ours: a listing drawn the way
+   the App Store draws one — icon, name, copy, price, badge — in the site's own
+   clothes rather than Apple's. It borrows the store row's two conventions so
+   the two blocks read as a family: the 10.5px corner taken from the badge
+   artwork, and both badge colourways shipped with the stylesheet choosing.
+   The whole card is the link; nothing inside it is separately clickable. */
+.block-appstore-widget { padding: 0 20px; }
+.appstore-widget {
+  display: flex; align-items: center; gap: var(--appstore-widget-icon-gap, 20px);
+  max-width: var(--maxw-card); margin: 0 auto; padding: 20px;
+  background: var(--bar-bg); border-radius: 10.5px; box-shadow: var(--shadow-light);
+  text-align: left; text-decoration: none !important; color: var(--text);
+}
+.appstore-widget:hover { box-shadow: var(--card-hover-shadow); }
+.asw-icon { width: 100px; height: 100px; border-radius: 22px; flex: none; }
+/* min-width:0 so a long blurb wraps inside the card instead of shouldering the
+   badge off the end — the badge is fixed artwork and cannot give way */
+.asw-info { min-width: 0; }
+.asw-name {
+  font-family: var(--font-futura-md); font-size: 20px; line-height: 1.3;
+  color: var(--title); padding-bottom: var(--appstore-widget-name-gap, 6px);
+}
+.asw-name-suffix { color: var(--link-dark); }
+.asw-blurb { font-size: 15px; line-height: 1.45; }
+.asw-get { margin-left: auto; flex: none; text-align: center; }
+.asw-price {
+  font-family: var(--font-futura-md); font-size: 16px; letter-spacing: .04em;
+  color: var(--title); padding-bottom: var(--appstore-widget-price-gap, 8px);
+}
+.asw-badge img { display: block; width: auto; height: 44px; }
+/* the colourway switch, as on the Steam lockup: positive (black) on the light
+   page, inverse (white) inside a band or on a dark product page */
+.asw-badge .logo-inverse { display: none; }
+body.page-dark .asw-badge .logo-positive,
+.band .asw-badge .logo-positive { display: none; }
+body.page-dark .asw-badge .logo-inverse,
+.band .asw-badge .logo-inverse { display: block; }
+body.page-dark .appstore-widget, .band .appstore-widget {
+  background: rgba(255, 255, 255, .05); border: .5px solid var(--btn-dark-border);
+  box-shadow: none; color: var(--dark-body);
+}
+body.page-dark .appstore-widget:hover, .band .appstore-widget:hover { background: rgba(255, 255, 255, .09); }
+body.page-dark .asw-name, .band .asw-name { color: #fff; }
+body.page-dark .asw-price, .band .asw-price { color: #fff; }
+body.page-dark .asw-name-suffix, .band .asw-name-suffix { color: #a8a8a8; }
+/* On a phone the row becomes a column and everything centres: side by side,
+   the icon and the badge would leave the blurb a column two words wide. */
+@media (max-width: 600px) {
+  .appstore-widget { flex-direction: column; text-align: center; }
+  .asw-icon { width: 80px; height: 80px; border-radius: 18px; }
+  .asw-get { margin-left: 0; }
+  .asw-badge img { margin: 0 auto; }
 }
 
 /* ---------- promo cards (Our Software) ---------- */
 .block-promo-cards { padding: 0 15px; }
 .block-promo-cards .promo-card {
-  max-width: var(--maxw-feature); margin: 0 auto var(--promo-cards-gap, 80px); text-align: center;
+  max-width: var(--maxw-feature); text-align: center;
   box-shadow: var(--shadow); padding-bottom: var(--promo-cards-card-bottom, 20px);
 }
+/* the centring is its own declaration, apart from the gap. In one shorthand a
+   bad value out of the block's gap field invalidates the whole thing, auto
+   included, and the card silently goes and sits against the left gutter — which
+   is exactly what a unitless "-33" did. Separated, the worst a bad gap can do
+   is drop the gap. */
+.block-promo-cards .promo-card { margin-left: auto; margin-right: auto; }
+.block-promo-cards .promo-card { margin-bottom: var(--promo-cards-gap, 80px); }
 /* the 80px (40px on phones) is the gap between cards, and the block's own Space
    between cards field replaces it through --promo-cards-gap / -gap-m. The space
    under the last one is the block's, on the wrapper (.blk--promo-cards) */
 .block-promo-cards .promo-card:last-child { margin-bottom: 0; }
-.block-promo-cards img { display: block; width: 100%; }
+/* the card's own picture, and only that: the buy row inside a card carries the
+   Steam lockup and Apple's badge, and a blanket width:100% here stretched both
+   to the width of the button around them */
+.block-promo-cards .promo-card > a > img { display: block; width: 100%; }
 /* legacy: img baseline gap (~4px) + 15px spacer div + the caption's 5px pad */
 .block-promo-cards .grid-name {
   display: block; text-align: center; margin: 0 auto;
@@ -745,7 +877,7 @@ body.page-dark .block-store-buttons .steam-lockup .logo-inverse,
    the card's padding-bottom, not margin here: under 480px the button turns
    display:block, and a block child's bottom margin collapses straight out of
    the card — leaving the button flush against the shadow on phones only. */
-.block-promo-cards .inline-button { margin: var(--promo-cards-button-gap, 15px) 10px 0; }
+.block-promo-cards .promo-card > .inline-button-container .inline-button { margin: var(--promo-cards-button-gap, 15px) 10px 0; }
 /* the block's "Text link with an arrow" style. It reuses the carousel's
    read-more lockup (.read-more-arrow + .more-text), so there is one drawing and
    one spacing for "go and read this" across the site — but centred, since the
@@ -763,9 +895,66 @@ body.page-dark .block-promo-cards .promo-more .arrow-circle,
 .band .block-promo-cards .promo-more .arrow-circle { fill: #e6e6e6; }
 body.page-dark .block-promo-cards .promo-more .arrow-chevron,
 .band .block-promo-cards .promo-more .arrow-chevron { fill: #2b373b; }
+/* the block's "Pill button" style. Same outline as the site's buttons, but
+   short, fully round and set in the body face — deliberately unlike the store
+   row under it, which is 50px tall, barely rounded and in tracked caps. The
+   card's two actions have to be told apart at a glance, and shape does that
+   faster than size alone. No arrow: the box is the affordance, and the arrow
+   lockup belongs to the quieter "read this" link above. */
+.block-promo-cards .promo-pill {
+  display: inline-block; margin: var(--promo-cards-button-gap, 15px) 10px 0;
+  padding: 6px 22px; font-size: 15px; line-height: 22px;
+  border: 1px solid var(--btn-border); border-radius: 999px;
+  color: var(--text); text-decoration: none !important;
+}
+.block-promo-cards .promo-pill:hover { color: #fff !important; background: var(--btn-hover); }
+.block-promo-cards .promo-pill:active { color: #fff !important; background: var(--btn-active); }
+body.page-dark .block-promo-cards .promo-pill,
+.band .block-promo-cards .promo-pill { border-color: var(--btn-dark-border); color: var(--btn-dark-text); }
+body.page-dark .block-promo-cards .promo-pill:hover,
+.band .block-promo-cards .promo-pill:hover { background: var(--btn-dark-hover); }
+
+/* the card's own buy links, when the block turns them on. The row itself is
+   .store-row above — identical to the standalone Store buttons block, because
+   it is the same rules — so all this adds is the air above it and the small
+   tracked-caps lead-in ("Available on:"). futura-medium caps rather than body
+   text: it is a label for the row under it, not a sentence, and the same face
+   the buttons beside it are set in. */
+.block-promo-cards .promo-store { margin-top: var(--promo-cards-store-gap, 22px); }
+/* The card's foot is 20px, which was measured under a text button; a 50px
+   button box sat too close to the shadow at that figure, so a card that ends on
+   the buy row gets a little more. Still the same var, so the block's "Space
+   under the button" field goes on overriding it either way. */
+.block-promo-cards .promo-card:has(.promo-store) { padding-bottom: var(--promo-cards-card-bottom, 28px); }
+.block-promo-cards .store-lead {
+  margin: 0 0 14px; font-family: var(--font-futura-md); font-size: 13px;
+  text-transform: uppercase; letter-spacing: .08em; text-indent: .08em;
+}
+body.page-dark .block-promo-cards .store-lead,
+.band .block-promo-cards .store-lead { color: var(--dark-body); }
+/* the row is edge-to-edge in a card that has no side padding of its own */
+.block-promo-cards .promo-store .store-row { padding: 0 20px; }
+/* The divider between the card's two halves — what the app is above it, where
+   to buy it below. It takes the BUTTON row's width, not the card's: 3 x 195px
+   plus the row's two 20px gaps is 625px, so the line lands exactly on the outer
+   edges of the buttons under it and reads as the top of that group rather than
+   a line drawn across the card. Narrower than that and it tracks the row as it
+   shrinks. Above the lead-in, never below: "Available on:" belongs to the
+   buttons it introduces, and a rule between them would cut it loose. */
+.block-promo-cards .store-rule {
+  width: calc(100% - 40px); max-width: 625px; margin: 0 auto 18px;
+  border: 0; border-top: 1px solid var(--rule); opacity: .45;
+}
+body.page-dark .block-promo-cards .store-rule,
+.band .block-promo-cards .store-rule { border-top-color: var(--btn-dark-border); opacity: .3; }
 @media (max-width: 767px) {
   .block-promo-cards .promo-card { margin-bottom: var(--promo-cards-gap-m, var(--promo-cards-gap, 40px)); }
 }
+/* On a phone the buttons stack into a 220px column, and the rule used to
+   follow them down to it — but a short line floating in the middle of a card
+   read as a stray mark rather than a divider. It keeps the card's text inset
+   instead (the same 20px the caption and the store row sit at), so on a narrow
+   screen it spans the full text width and reads as the card's own crease. */
 
 /* ---------- news carousel ---------- */
 .block-news-carousel { position: relative; max-width: none; margin: 0 auto; padding: 0 15px; }

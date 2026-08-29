@@ -73,6 +73,9 @@
   /* the log-header kicker ("UPDATE LOG"), tracked caps under the product logo —
      viewport-scaled so it never has to wrap on a phone */
   --fs-log-header-kicker: clamp(15px, 3.6vw, 20px);
+  /* the rule-label block ("ALSO AVAILABLE ON") — the same tracked caps a size
+     down, since it labels the block under it rather than heading a page */
+  --fs-rule-label: clamp(12px, 3vw, 15px);
 
   /* the log-header band: the product pages' radial gradient, its glow pulled
      below the band so a header this short still catches the lift */

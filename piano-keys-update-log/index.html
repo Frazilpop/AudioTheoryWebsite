@@ -13,6 +13,7 @@
 <meta property="og:url" content="https://audiotheory.co/piano-keys-update-log/">
 
 <link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="alternate" type="application/rss+xml" title="AudioTheory &raquo; Updates &amp; News" href="/updates/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300..1000;1,300..1000&family=Oswald:wght@700&display=swap">
@@ -64,6 +65,29 @@
 <div class="block-update-log">
   <div class="update-entry">
     
+    <h3 class="update-version">3.1.0<span class="update-date"> – 28th August 2026</span></h3>
+    <span class="update-section-title">Added</span>
+    <ul class="update-bullets">
+      <li>Audio interface support for ASIO output</li>
+      <li>Swap audio drivers at runtime without the need for an application restart</li>
+    </ul>
+
+    <span class="update-section-title">Changed</span>
+    <ul class="update-bullets">
+      <li>Refactored save/load system. This is mostly internal but does have some user benefits. Partial preset files can now be loaded, whereas previously the system was quite strict in requiring a line match for the original preset save file.</li>
+      <li>Keyboard overlay type has been simplified into a dropdown in the application settings</li>
+    </ul>
+
+    <span class="update-section-title">Fixed</span>
+    <ul class="update-bullets">
+      <li>Faster application load times specifically when using ASIO</li>
+    </ul>
+    
+    
+  </div>
+
+  <div class="update-entry">
+    <hr class="update-divider">
     <h3 class="update-version">3.0.1<span class="update-date"> – 5th February 2026</span></h3>
     <span class="update-section-title">Changed</span>
     <ul class="update-bullets">
