@@ -32,7 +32,7 @@ AudioTheory makes interactive music theory software for guitar and piano — Aud
 ## Updates & News
 
 - [Updates & News](https://audiotheory.co/updates/): Every AudioTheory release note and announcement, newest first.
-- [AudioTheory Grids 3.0.0](https://audiotheory.co/updates/audiotheory-grids-3-0-0-update/): A big new update for AudioTheory Grids.
+- [AudioTheory Grids 3.0.0 Update](https://audiotheory.co/updates/audiotheory-grids-3-0-0-update/): A big new update for AudioTheory Grids.
 - [AudioTheory Piano Keys Version 3.0.0 Update](https://audiotheory.co/updates/audiotheory-piano-keys-version-3/): A major feature update for AudioTheory Piano Keys.
 - [Updates Roundup – AudioTheory in 2025](https://audiotheory.co/updates/audiotheory-updates-2025/): A look back over a year of improvements.
 - [AudioTheory Piano Keys Version 2.0.0 Update](https://audiotheory.co/updates/audiotheory-piano-keys-version-2/): A giant leap forward for AudioTheory Piano Keys.
